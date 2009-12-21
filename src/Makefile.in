@@ -131,7 +131,7 @@ am_gcx_OBJECTS = callbacks.$(OBJEXT) camera.$(OBJEXT) \
 	guide.$(OBJEXT) multiband.$(OBJEXT) mbandgui.$(OBJEXT) \
 	plots.$(OBJEXT) mbandrep.$(OBJEXT) starfile.$(OBJEXT)
 gcx_OBJECTS = $(am_gcx_OBJECTS)
-gcx_DEPENDENCIES = ccd/libccd.a gsc/libgsc.a
+gcx_DEPENDENCIES = ccd/libccd.a gsc/libgsc.a gcx-sx/libgcx-sx.a
 gcx_LDFLAGS =
 
 DEFS = @DEFS@
