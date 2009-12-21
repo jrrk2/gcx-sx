@@ -30,8 +30,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <ltdl.h>
-
 #include "gcx-sx-port-info-list.h"
 #include "gcx-sx-port.h"
 #include "gcx-sx-port-library.h"

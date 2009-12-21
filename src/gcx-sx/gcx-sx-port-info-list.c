@@ -31,7 +31,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <regex.h>
-#include <ltdl.h>
 
 #include "gcx-sx-port-result.h"
 #include "gcx-sx-port.h"
