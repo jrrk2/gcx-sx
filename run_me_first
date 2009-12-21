@@ -1,0 +1,6 @@
+aclocal
+automake
+autoconf
+./configure
+make
+src/gcx

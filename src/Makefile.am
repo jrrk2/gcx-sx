@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-SUBDIRS = ccd gsc
+SUBDIRS = ccd gsc gcx-sx
 
 PAM_CPP_FLAGS=-g 
 
@@ -25,6 +25,6 @@ gcx_SOURCES = \
 	mbandrep.c starfile.c getline.h
 
 
-gcx_LDADD = @GTK_LIBS@ ccd/libccd.a gsc/libgsc.a 
+gcx_LDADD = @GTK_LIBS@ ccd/libccd.a gsc/libgsc.a gcx-sx/libgcx-sx.a -lusb
 
 CLEANFILES = *~
