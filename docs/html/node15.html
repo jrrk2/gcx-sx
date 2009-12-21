@@ -1,0 +1,3476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Global Options</TITLE>
+<META NAME="description" CONTENT="Global Options">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html722"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html718"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html712"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html720"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html723"
+  HREF="node16.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html719"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html713"
+  HREF="node14.html">Report Converter</A>
+ &nbsp <B>  <A NAME="tex2html721"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html724"
+  HREF="node15.html#SECTION001510000000000000000">File and Device Options</A>
+<UL>
+<LI><A NAME="tex2html725"
+  HREF="node15.html#SECTION001510100000000000000">Serial line for gps receiver control</A>
+<LI><A NAME="tex2html726"
+  HREF="node15.html#SECTION001510200000000000000">Command for uncompressing files</A>
+<LI><A NAME="tex2html727"
+  HREF="node15.html#SECTION001510300000000000000">Command for compressing files</A>
+<LI><A NAME="tex2html728"
+  HREF="node15.html#SECTION001510400000000000000">Gnuplot command</A>
+<LI><A NAME="tex2html729"
+  HREF="node15.html#SECTION001510500000000000000">Monospaced Font</A>
+<LI><A NAME="tex2html730"
+  HREF="node15.html#SECTION001510600000000000000">Phot report file</A>
+<LI><A NAME="tex2html731"
+  HREF="node15.html#SECTION001510700000000000000">Obs files search path</A>
+<LI><A NAME="tex2html732"
+  HREF="node15.html#SECTION001510800000000000000">Rcp files search path</A>
+<LI><A NAME="tex2html733"
+  HREF="node15.html#SECTION001510900000000000000">GSC location</A>
+<LI><A NAME="tex2html734"
+  HREF="node15.html#SECTION0015101000000000000000">Tycho2 location</A>
+<LI><A NAME="tex2html735"
+  HREF="node15.html#SECTION0015101100000000000000">Catalog files</A>
+<LI><A NAME="tex2html736"
+  HREF="node15.html#SECTION0015101200000000000000">Preload catalogs</A>
+<LI><A NAME="tex2html737"
+  HREF="node15.html#SECTION0015101300000000000000">Edb directory</A>
+<LI><A NAME="tex2html738"
+  HREF="node15.html#SECTION0015101400000000000000">Aavso validation file</A>
+<LI><A NAME="tex2html739"
+  HREF="node15.html#SECTION0015101500000000000000">Force unsigned FITS</A>
+<LI><A NAME="tex2html740"
+  HREF="node15.html#SECTION0015101600000000000000">Western longitudes</A>
+<LI><A NAME="tex2html741"
+  HREF="node15.html#SECTION0015101700000000000000">Report converter output format</A>
+<LI><A NAME="tex2html742"
+  HREF="node15.html#SECTION0015101800000000000000">Auto-unload frames</A>
+<LI><A NAME="tex2html743"
+  HREF="node15.html#SECTION0015101900000000000000">New frame width</A>
+<LI><A NAME="tex2html744"
+  HREF="node15.html#SECTION0015102000000000000000">New frame height</A>
+<LI><A NAME="tex2html745"
+  HREF="node15.html#SECTION0015102100000000000000">New frame scale</A>
+<LI><A NAME="tex2html746"
+  HREF="node15.html#SECTION0015102200000000000000">Merge positional tolerance </A>
+<LI><A NAME="tex2html747"
+  HREF="node15.html#SECTION001511000000000000000">Fits Field Names</A>
+<UL>
+<LI><A NAME="tex2html748"
+  HREF="node15.html#SECTION001511100000000000000">Fits field for X coordinate of reference pixel</A>
+<LI><A NAME="tex2html749"
+  HREF="node15.html#SECTION001511200000000000000">Fits field for Y coordinate of reference pixel</A>
+<LI><A NAME="tex2html750"
+  HREF="node15.html#SECTION001511300000000000000">Fits field for WCS R.A. of reference pixel</A>
+<LI><A NAME="tex2html751"
+  HREF="node15.html#SECTION001511400000000000000">Fits field for WCS Dec of reference pixel</A>
+<LI><A NAME="tex2html752"
+  HREF="node15.html#SECTION001511500000000000000">Fits field for degrees/pixel in R.A.</A>
+<LI><A NAME="tex2html753"
+  HREF="node15.html#SECTION001511600000000000000">Fits field for degrees/pixel in dec</A>
+<LI><A NAME="tex2html754"
+  HREF="node15.html#SECTION001511700000000000000">Fits field for field rotation</A>
+<LI><A NAME="tex2html755"
+  HREF="node15.html#SECTION001511800000000000000">Fits field for equinox of WCS</A>
+<LI><A NAME="tex2html756"
+  HREF="node15.html#SECTION001511900000000000000">Fits field for equinox of WCS</A>
+<LI><A NAME="tex2html757"
+  HREF="node15.html#SECTION0015111000000000000000">Fits field for object name</A>
+<LI><A NAME="tex2html758"
+  HREF="node15.html#SECTION0015111100000000000000">Fits field for object R.A.</A>
+<LI><A NAME="tex2html759"
+  HREF="node15.html#SECTION0015111200000000000000">Fits field for object dec</A>
+<LI><A NAME="tex2html760"
+  HREF="node15.html#SECTION0015111300000000000000">Fits field for image scale</A>
+<LI><A NAME="tex2html761"
+  HREF="node15.html#SECTION0015111400000000000000">Fits field for field center</A>
+<LI><A NAME="tex2html762"
+  HREF="node15.html#SECTION0015111500000000000000">Fits field for field center</A>
+<LI><A NAME="tex2html763"
+  HREF="node15.html#SECTION0015111600000000000000">Fits field for filter name</A>
+<LI><A NAME="tex2html764"
+  HREF="node15.html#SECTION0015111700000000000000">Fits field for exposure time</A>
+<LI><A NAME="tex2html765"
+  HREF="node15.html#SECTION0015111800000000000000">Fits field for julian date of observation</A>
+<LI><A NAME="tex2html766"
+  HREF="node15.html#SECTION0015111900000000000000">Fits field for modified julian date of observation</A>
+<LI><A NAME="tex2html767"
+  HREF="node15.html#SECTION0015112000000000000000">Fits field for date/time of observation</A>
+<LI><A NAME="tex2html768"
+  HREF="node15.html#SECTION0015112100000000000000">Fits field for time of observation</A>
+<LI><A NAME="tex2html769"
+  HREF="node15.html#SECTION0015112200000000000000">Fits field for telescope name</A>
+<LI><A NAME="tex2html770"
+  HREF="node15.html#SECTION0015112300000000000000">Fits field for focus designation</A>
+<LI><A NAME="tex2html771"
+  HREF="node15.html#SECTION0015112400000000000000">Fits field for telescope aperture</A>
+<LI><A NAME="tex2html772"
+  HREF="node15.html#SECTION0015112500000000000000">Fits field for focal length</A>
+<LI><A NAME="tex2html773"
+  HREF="node15.html#SECTION0015112600000000000000">Fits field for instrument name</A>
+<LI><A NAME="tex2html774"
+  HREF="node15.html#SECTION0015112700000000000000">Fits field for observer name</A>
+<LI><A NAME="tex2html775"
+  HREF="node15.html#SECTION0015112800000000000000">Fits field for latitude of observing site</A>
+<LI><A NAME="tex2html776"
+  HREF="node15.html#SECTION0015112900000000000000">Fits field for longitude of observing site</A>
+<LI><A NAME="tex2html777"
+  HREF="node15.html#SECTION0015113000000000000000">Fits field for altitude of observing site</A>
+<LI><A NAME="tex2html778"
+  HREF="node15.html#SECTION0015113100000000000000">Fits field for airmas</A>
+<LI><A NAME="tex2html779"
+  HREF="node15.html#SECTION0015113200000000000000">Fits field for sensor temperature</A>
+<LI><A NAME="tex2html780"
+  HREF="node15.html#SECTION0015113300000000000000">Fits field for horisontal binning</A>
+<LI><A NAME="tex2html781"
+  HREF="node15.html#SECTION0015113400000000000000">Fits field for vertical binning</A>
+<LI><A NAME="tex2html782"
+  HREF="node15.html#SECTION0015113500000000000000">Fits field for horisontal window origin</A>
+<LI><A NAME="tex2html783"
+  HREF="node15.html#SECTION0015113600000000000000">Fits field for vertical window origin</A>
+<LI><A NAME="tex2html784"
+  HREF="node15.html#SECTION0015113700000000000000">Fits field for electrons per ADU</A>
+<LI><A NAME="tex2html785"
+  HREF="node15.html#SECTION0015113800000000000000">Fits field for average bias of frame</A>
+<LI><A NAME="tex2html786"
+  HREF="node15.html#SECTION0015113900000000000000">Fits field for readout noise</A>
+<LI><A NAME="tex2html787"
+  HREF="node15.html#SECTION0015114000000000000000">Fits field for multiplicative noise coefficient</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html788"
+  HREF="node15.html#SECTION001520000000000000000">General Observation Setup Data</A>
+<UL>
+<LI><A NAME="tex2html789"
+  HREF="node15.html#SECTION001520100000000000000">Latitude of observing site</A>
+<LI><A NAME="tex2html790"
+  HREF="node15.html#SECTION001520200000000000000">Longitude of observing site</A>
+<LI><A NAME="tex2html791"
+  HREF="node15.html#SECTION001520300000000000000">Altitude of observing site</A>
+<LI><A NAME="tex2html792"
+  HREF="node15.html#SECTION001520400000000000000">Observer name</A>
+<LI><A NAME="tex2html793"
+  HREF="node15.html#SECTION001520500000000000000">Observer code</A>
+<LI><A NAME="tex2html794"
+  HREF="node15.html#SECTION001520600000000000000">Telescope name</A>
+<LI><A NAME="tex2html795"
+  HREF="node15.html#SECTION001520700000000000000">Telescope focal length</A>
+<LI><A NAME="tex2html796"
+  HREF="node15.html#SECTION001520800000000000000">Flipped field</A>
+<LI><A NAME="tex2html797"
+  HREF="node15.html#SECTION001520900000000000000">Telescope aperture</A>
+<LI><A NAME="tex2html798"
+  HREF="node15.html#SECTION0015201000000000000000">Focus designation</A>
+<LI><A NAME="tex2html799"
+  HREF="node15.html#SECTION0015201100000000000000">List of filters</A>
+<LI><A NAME="tex2html800"
+  HREF="node15.html#SECTION0015201200000000000000">Status window pop-up</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html801"
+  HREF="node15.html#SECTION001530000000000000000">Telescope control options</A>
+<UL>
+<LI><A NAME="tex2html802"
+  HREF="node15.html#SECTION001530100000000000000">Serial line for telescope control</A>
+<LI><A NAME="tex2html803"
+  HREF="node15.html#SECTION001530200000000000000">Serial line for filter wheel control</A>
+<LI><A NAME="tex2html804"
+  HREF="node15.html#SECTION001530300000000000000">Eastern limit for goto ops (hour angle)</A>
+<LI><A NAME="tex2html805"
+  HREF="node15.html#SECTION001530400000000000000">Enable eastern limit</A>
+<LI><A NAME="tex2html806"
+  HREF="node15.html#SECTION001530500000000000000">Western limit for goto ops (hour angle)</A>
+<LI><A NAME="tex2html807"
+  HREF="node15.html#SECTION001530600000000000000">Enable western limit</A>
+<LI><A NAME="tex2html808"
+  HREF="node15.html#SECTION001530700000000000000">Southern limit for goto ops (degrees)</A>
+<LI><A NAME="tex2html809"
+  HREF="node15.html#SECTION001530800000000000000">Enable southern limit</A>
+<LI><A NAME="tex2html810"
+  HREF="node15.html#SECTION001530900000000000000">Northern limit for goto ops (degrees)</A>
+<LI><A NAME="tex2html811"
+  HREF="node15.html#SECTION0015301000000000000000">Enable northern limit</A>
+<LI><A NAME="tex2html812"
+  HREF="node15.html#SECTION0015301100000000000000">Abort obscript gotos that cause a meridian flip</A>
+<LI><A NAME="tex2html813"
+  HREF="node15.html#SECTION0015301200000000000000">Mount speed when centering (times sidereal rate)</A>
+<LI><A NAME="tex2html814"
+  HREF="node15.html#SECTION0015301300000000000000">Mount speed when guiding (times sidereal rate)</A>
+<LI><A NAME="tex2html815"
+  HREF="node15.html#SECTION0015301400000000000000">Use timed centering moves for small slews</A>
+<LI><A NAME="tex2html816"
+  HREF="node15.html#SECTION0015301500000000000000">Precess coordinated sent to the scope to the epoch of the day</A>
+<LI><A NAME="tex2html817"
+  HREF="node15.html#SECTION0015301600000000000000">Amount of gear play we take out at the end of slews (degrees)</A>
+<LI><A NAME="tex2html818"
+  HREF="node15.html#SECTION0015301700000000000000">Mount stabilisation delay (ms)</A>
+<LI><A NAME="tex2html819"
+  HREF="node15.html#SECTION0015301800000000000000">Amount of pointing dither between frames (arcmin)</A>
+<LI><A NAME="tex2html820"
+  HREF="node15.html#SECTION0015301900000000000000">Enable pointing dithering</A>
+<LI><A NAME="tex2html821"
+  HREF="node15.html#SECTION0015302000000000000000">Max error we accept in telescope pointing (degrees)</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html822"
+  HREF="node15.html#SECTION001540000000000000000">Guiding options</A>
+<UL>
+<LI><A NAME="tex2html823"
+  HREF="node15.html#SECTION001540100000000000000">Guiding algorithm</A>
+<LI><A NAME="tex2html824"
+  HREF="node15.html#SECTION001540200000000000000">Reticle size</A>
+<LI><A NAME="tex2html825"
+  HREF="node15.html#SECTION001540300000000000000">Centroid area radius</A>
+<LI><A NAME="tex2html826"
+  HREF="node15.html#SECTION001540400000000000000">Guide box size</A>
+<LI><A NAME="tex2html827"
+  HREF="node15.html#SECTION001540500000000000000">Guide box zoom</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html828"
+  HREF="node15.html#SECTION001550000000000000000">CCD Reduction options</A>
+<UL>
+<LI><A NAME="tex2html829"
+  HREF="node15.html#SECTION001550100000000000000">Minimum backgound sigmas</A>
+<LI><A NAME="tex2html830"
+  HREF="node15.html#SECTION001550200000000000000">Method used for stacking frames</A>
+<LI><A NAME="tex2html831"
+  HREF="node15.html#SECTION001550300000000000000">Iteration limit for stacking operations</A>
+<LI><A NAME="tex2html832"
+  HREF="node15.html#SECTION001550400000000000000">Clipping sigmas for mmedian and k-s</A>
+<LI><A NAME="tex2html833"
+  HREF="node15.html#SECTION001550500000000000000">Run CCD reductions automatically on frame display</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html834"
+  HREF="node15.html#SECTION001560000000000000000">Star Detection and Search Options</A>
+<UL>
+<LI><A NAME="tex2html835"
+  HREF="node15.html#SECTION001560100000000000000">Star Detection SNR</A>
+<LI><A NAME="tex2html836"
+  HREF="node15.html#SECTION001560200000000000000">Maximum Detected Stars</A>
+<LI><A NAME="tex2html837"
+  HREF="node15.html#SECTION001560300000000000000">Maximum Catalog Stars</A>
+<LI><A NAME="tex2html838"
+  HREF="node15.html#SECTION001560400000000000000">Faintest Magnitude for Catalog Stars</A>
+<LI><A NAME="tex2html839"
+  HREF="node15.html#SECTION001560500000000000000">Maximum Radius for Catalog Stars</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html840"
+  HREF="node15.html#SECTION001570000000000000000">Wcs Fitting Options</A>
+<UL>
+<LI><A NAME="tex2html841"
+  HREF="node15.html#SECTION001570100000000000000">Scale tolerance</A>
+<LI><A NAME="tex2html842"
+  HREF="node15.html#SECTION001570200000000000000">Star position tolerance</A>
+<LI><A NAME="tex2html843"
+  HREF="node15.html#SECTION001570300000000000000">Rotation tolerance</A>
+<LI><A NAME="tex2html844"
+  HREF="node15.html#SECTION001570400000000000000">Minimum number of pairs</A>
+<LI><A NAME="tex2html845"
+  HREF="node15.html#SECTION001570500000000000000">Max skip</A>
+<LI><A NAME="tex2html846"
+  HREF="node15.html#SECTION001570600000000000000">Maximum pairs</A>
+<LI><A NAME="tex2html847"
+  HREF="node15.html#SECTION001570700000000000000">Min A-B distance </A>
+<LI><A NAME="tex2html848"
+  HREF="node15.html#SECTION001570800000000000000">Max error for WCS validation</A>
+<LI><A NAME="tex2html849"
+  HREF="node15.html#SECTION001570900000000000000">Min pairs for WCS validation</A>
+<LI><A NAME="tex2html850"
+  HREF="node15.html#SECTION0015701000000000000000">Scale change per iteration</A>
+<LI><A NAME="tex2html851"
+  HREF="node15.html#SECTION0015701100000000000000">Default image scale</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html852"
+  HREF="node15.html#SECTION001580000000000000000">Aperture Photometry Options</A>
+<UL>
+<LI><A NAME="tex2html853"
+  HREF="node15.html#SECTION001580100000000000000">Radius of central aperture</A>
+<LI><A NAME="tex2html854"
+  HREF="node15.html#SECTION001580200000000000000">Inner radius of sky annulus </A>
+<LI><A NAME="tex2html855"
+  HREF="node15.html#SECTION001580300000000000000">Outer radius of sky annulus </A>
+<LI><A NAME="tex2html856"
+  HREF="node15.html#SECTION001580400000000000000">Center apertures</A>
+<LI><A NAME="tex2html857"
+  HREF="node15.html#SECTION001580500000000000000">Max centering error</A>
+<LI><A NAME="tex2html858"
+  HREF="node15.html#SECTION001580600000000000000">Discard unlocated standards</A>
+<LI><A NAME="tex2html859"
+  HREF="node15.html#SECTION001580700000000000000">Max center distance</A>
+<LI><A NAME="tex2html860"
+  HREF="node15.html#SECTION001580800000000000000">Sky method</A>
+<LI><A NAME="tex2html861"
+  HREF="node15.html#SECTION001580900000000000000">Sigmas</A>
+<LI><A NAME="tex2html862"
+  HREF="node15.html#SECTION0015801000000000000000">Saturation limit</A>
+<LI><A NAME="tex2html863"
+  HREF="node15.html#SECTION0015801100000000000000">Instrumental band</A>
+<LI><A NAME="tex2html864"
+  HREF="node15.html#SECTION0015801200000000000000">Force iband </A>
+<LI><A NAME="tex2html865"
+  HREF="node15.html#SECTION0015801300000000000000">Default catalog error</A>
+<LI><A NAME="tex2html866"
+  HREF="node15.html#SECTION0015801400000000000000">Alpha</A>
+<LI><A NAME="tex2html867"
+  HREF="node15.html#SECTION0015801500000000000000">Beta</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html868"
+  HREF="node15.html#SECTION001590000000000000000">Multi-Frame Photometry Options</A>
+<UL>
+<LI><A NAME="tex2html869"
+  HREF="node15.html#SECTION001590100000000000000">Bands setup</A>
+<LI><A NAME="tex2html870"
+  HREF="node15.html#SECTION001590200000000000000">Outlier threshold </A>
+<LI><A NAME="tex2html871"
+  HREF="node15.html#SECTION001590300000000000000">Zeropoint outlier threshold </A>
+<LI><A NAME="tex2html872"
+  HREF="node15.html#SECTION001590400000000000000">Minimum airmass variance </A>
+<LI><A NAME="tex2html873"
+  HREF="node15.html#SECTION001590500000000000000">Minimum airmass variance </A>
+<LI><A NAME="tex2html874"
+  HREF="node15.html#SECTION001590600000000000000">Airmass range </A>
+<LI><A NAME="tex2html875"
+  HREF="node15.html#SECTION001590700000000000000">Airmass maximum range </A>
+<LI><A NAME="tex2html876"
+  HREF="node15.html#SECTION001590800000000000000">Limiting magnitude from zeropoint </A>
+</UL>
+<BR>
+<LI><A NAME="tex2html877"
+  HREF="node15.html#SECTION0015100000000000000000">Star Display Options</A>
+<UL>
+<LI><A NAME="tex2html878"
+  HREF="node15.html#SECTION0015100100000000000000">Label Target Stars</A>
+<LI><A NAME="tex2html879"
+  HREF="node15.html#SECTION0015100200000000000000">Label Catalog Objects</A>
+<LI><A NAME="tex2html880"
+  HREF="node15.html#SECTION0015100300000000000000">Label Standard Stars</A>
+<LI><A NAME="tex2html881"
+  HREF="node15.html#SECTION0015100400000000000000">Standard Star Label Band</A>
+<LI><A NAME="tex2html882"
+  HREF="node15.html#SECTION0015100500000000000000">Minimum star size</A>
+<LI><A NAME="tex2html883"
+  HREF="node15.html#SECTION0015100600000000000000">Maximum display star size</A>
+<LI><A NAME="tex2html884"
+  HREF="node15.html#SECTION0015100700000000000000">Default display star size</A>
+<LI><A NAME="tex2html885"
+  HREF="node15.html#SECTION0015100800000000000000">Display pixels per magnitude</A>
+<LI><A NAME="tex2html886"
+  HREF="node15.html#SECTION0015100900000000000000">Brightest symbol magnitude</A>
+<LI><A NAME="tex2html887"
+  HREF="node15.html#SECTION00151001000000000000000">Display limiting magnitude</A>
+<LI><A NAME="tex2html888"
+  HREF="node15.html#SECTION00151001100000000000000">Show fainter stars</A>
+<LI><A NAME="tex2html889"
+  HREF="node15.html#SECTION00151001200000000000000">Zoom star shapes</A>
+<LI><A NAME="tex2html890"
+  HREF="node15.html#SECTION00151001300000000000000">Star shapes zoom limit</A>
+<LI><A NAME="tex2html891"
+  HREF="node15.html#SECTION00151001400000000000000">Plot error scale</A>
+<LI><A NAME="tex2html892"
+  HREF="node15.html#SECTION0015101000000000000000">Star Display Colors</A>
+<UL>
+<LI><A NAME="tex2html893"
+  HREF="node15.html#SECTION0015101100000000000000">Autodected Stars Color</A>
+<LI><A NAME="tex2html894"
+  HREF="node15.html#SECTION0015101200000000000000">Field Stars Color</A>
+<LI><A NAME="tex2html895"
+  HREF="node15.html#SECTION0015101300000000000000">Standard Stars Color</A>
+<LI><A NAME="tex2html896"
+  HREF="node15.html#SECTION0015101400000000000000">Target Stars Color</A>
+<LI><A NAME="tex2html897"
+  HREF="node15.html#SECTION0015101500000000000000">Catalog Objects Color</A>
+<LI><A NAME="tex2html898"
+  HREF="node15.html#SECTION0015101600000000000000">User-Marked Stars Color</A>
+<LI><A NAME="tex2html899"
+  HREF="node15.html#SECTION0015101700000000000000">Align Stars Color</A>
+<LI><A NAME="tex2html900"
+  HREF="node15.html#SECTION0015101800000000000000">Selected Stars Color</A>
+</UL>
+<LI><A NAME="tex2html901"
+  HREF="node15.html#SECTION0015102000000000000000">Star Display Shapes</A>
+<UL>
+<LI><A NAME="tex2html902"
+  HREF="node15.html#SECTION0015102100000000000000">Autodected Stars Shape</A>
+<LI><A NAME="tex2html903"
+  HREF="node15.html#SECTION0015102200000000000000">Field Stars Shape</A>
+<LI><A NAME="tex2html904"
+  HREF="node15.html#SECTION0015102300000000000000">Standard Stars Shape</A>
+<LI><A NAME="tex2html905"
+  HREF="node15.html#SECTION0015102400000000000000">Target Stars Shape</A>
+<LI><A NAME="tex2html906"
+  HREF="node15.html#SECTION0015102500000000000000">Catalog Objects Shape</A>
+<LI><A NAME="tex2html907"
+  HREF="node15.html#SECTION0015102600000000000000">User-Marked Stars Shape</A>
+<LI><A NAME="tex2html908"
+  HREF="node15.html#SECTION0015102700000000000000">Align Stars Shape</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION001500000000000000000"></A><A NAME="ap:options"></A>
+<BR>
+Global Options
+</H1>
+
+<P>
+<SMALL>GCX </SMALL>has a large number of configuration options. They can be accesses through the options 
+dialog, which can be brought up by pressing <B>O</B> or <EM>File/Edit Options</EM>. Clicking on
+``save'' in the options dialog will update the default configuration file (<TT>.gcxrc</TT>), located
+in the home directory.
+
+<P>
+When the program stars, it looks for the configuration file. If it cannot be read, it will 
+initialise all parameters with defaults. 
+
+<P>
+There are two ways of modifying some of the options for a specific
+run: either use the <TT>-S</TT> command-line option for each option that
+needs to change, or make a configuration file that contains the option
+changes for the run and use the <TT>-r</TT> command-line option. The name
+used in the configuration file is listed with each option.
+
+<P>
+
+<H1><A NAME="SECTION001510000000000000000">
+File and Device Options</A>
+</H1>
+
+<H3><A NAME="SECTION001510100000000000000">
+Serial line for gps receiver control</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.gps_serial</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>/dev/ttyS0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001510200000000000000">
+Command for uncompressing files</A>
+</H3> The command used to uncompress files; it should take the filename as an argument, and output the uncompressed stream on stdout. The command is called when trying to open files with the name ending in .gz, .zip or .z
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.uncompress</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>zcat</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001510300000000000000">
+Command for compressing files</A>
+</H3> The command used to uncompress files; it should take the filename as an argument, and replace the file with the compressed version.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.compress</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>gzip -f</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001510400000000000000">
+Gnuplot command</A>
+</H3> Command used to invoke gnuplot for ploting graphs in a window.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.gnuplot</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>gnuplot -persist</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001510500000000000000">
+Monospaced Font</A>
+</H3> The XFLD for the monospaced font used to display FITS headers and help pages.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.mono_font</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>-misc-fixed-medium-r-*-*-*-120-*-*-*-*-*-*</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001510600000000000000">
+Phot report file</A>
+</H3> Output file for obscript phot commands.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.phot_out_fn</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>phot.out</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001510700000000000000">
+Obs files search path</A>
+</H3> Path (colon-delimited list of directories) searched when opening observation script files.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.obs_path</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.:../obs</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001510800000000000000">
+Rcp files search path</A>
+</H3> Path (colon-delimited list of directories) searched when opening recipy files.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.rcp_path</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.:../rcp</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001510900000000000000">
+GSC location</A>
+</H3> Location of gsc catalog files. Full pathname of the toplevel gsc directory.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.gsc_path</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code></code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101000000000000000">
+Tycho2 location</A>
+</H3> Full pathname of the tycho2 catalog file.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.tycho2_path</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code></code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101100000000000000">
+Catalog files</A>
+</H3> Colon-delimited list of catalog files to be searched or loaded into the in-memory catalog. The elements of the list are glob- and tilde-expanded so for instance&nbsp;/*.gcx will load all .gcx files from the home directory. The files are expected to be in gcx recipy format.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.catalog_path</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>./*.gcx</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101200000000000000">
+Preload catalogs</A>
+</H3> Enable preloading the native format catalog files into memory for faster searching. Preloading takes significantly more time that searching the on-disk files by name; it's reccomended only for merging catalogs or similar operations.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.catalog_preload</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101300000000000000">
+Edb directory</A>
+</H3> Directory containing edb object files.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.edb_dir</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code></code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101400000000000000">
+Aavso validation file</A>
+</H3> Location of aavso validation file. The validation file is used to determine the designation given a star name. Any of the validation file formats can be used, except the 'short form by name'. The designation should start in column 0 and the name in column 10.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.validation</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>valnam.txt</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101500000000000000">
+Force unsigned FITS</A>
+</H3> Force all values read from a fits file to be interpreted as unsigned numbers (supporting broken files generated that way).
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.unsigned_fits</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101600000000000000">
+Western longitudes</A>
+</H3> Interpret fits header longitudes as western, rather than eastern. Report file longitudes are always western. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.west_long</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101700000000000000">
+Report converter output format</A>
+</H3> The output format string used by the report converter. See the on-line help for a description.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.tab_format</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>name ra dec mjd smag "v" flags</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101800000000000000">
+Auto-unload frames</A>
+</H3> Unload unmodified frames from the frame list whenever possible to reduce memory usage. The frames will have to be reloaded if needed again.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.mem_save</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101900000000000000">
+New frame width</A>
+</H3> The width of a newly-created blank frame in pixels.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.new_width</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1024</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102000000000000000">
+New frame height</A>
+</H3> The height of a newly-created blank frame in pixels.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.new_height</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>768</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102100000000000000">
+New frame scale</A>
+</H3> The default wcs scale of a newly-created blank frame in arc seconds per pixel.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.new_scale</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>4.00</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102200000000000000">
+Merge positional tolerance </A>
+</H3> The distance in arc seconds below which we consider two stars to be the same object when merging recipy files.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.merge_tolerance</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>3.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION001511000000000000000">
+Fits Field Names</A>
+</H2>
+
+<H3><A NAME="SECTION001511100000000000000">
+Fits field for X coordinate of reference pixel</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.crpix1</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CRPIX1</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001511200000000000000">
+Fits field for Y coordinate of reference pixel</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.crpix2</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CRPIX2</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001511300000000000000">
+Fits field for WCS R.A. of reference pixel</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.crval1</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CRVAL1</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001511400000000000000">
+Fits field for WCS Dec of reference pixel</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.crval2</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CRVAL2</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001511500000000000000">
+Fits field for degrees/pixel in R.A.</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.cdelt1</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CDELT1</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001511600000000000000">
+Fits field for degrees/pixel in dec</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.cdelt2</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CDELT2</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001511700000000000000">
+Fits field for field rotation</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.crota1</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CROTA1</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001511800000000000000">
+Fits field for equinox of WCS</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.equinox</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>EQUINOX</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001511900000000000000">
+Fits field for equinox of WCS</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.epoch</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>EPOCH</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111000000000000000">
+Fits field for object name</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.object</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>OBJECT</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111100000000000000">
+Fits field for object R.A.</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.objctra</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>OBJCTRA</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111200000000000000">
+Fits field for object dec</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.objctdec</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>OBJCTDEC</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111300000000000000">
+Fits field for image scale</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.secpix</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>SECPIX</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111400000000000000">
+Fits field for field center</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.ra</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>RA</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111500000000000000">
+Fits field for field center</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.dec</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>DEC</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111600000000000000">
+Fits field for filter name</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.filter</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>FILTER</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111700000000000000">
+Fits field for exposure time</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.exptime</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>EXPTIME</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111800000000000000">
+Fits field for julian date of observation</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.jdate</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>JDATE</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015111900000000000000">
+Fits field for modified julian date of observation</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.mjd</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>MJD</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112000000000000000">
+Fits field for date/time of observation</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.dateobs</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>DATE-OBS</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112100000000000000">
+Fits field for time of observation</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.timeobs</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>TIME-OBS</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112200000000000000">
+Fits field for telescope name</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.telescop</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>TELESCOP</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112300000000000000">
+Fits field for focus designation</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.focus</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>FOCUS</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112400000000000000">
+Fits field for telescope aperture</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.aperture</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>APERT</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112500000000000000">
+Fits field for focal length</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.flen</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>FLEN</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112600000000000000">
+Fits field for instrument name</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.instrument</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>INSTRUME</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112700000000000000">
+Fits field for observer name</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.observer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>OBSERVER</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112800000000000000">
+Fits field for latitude of observing site</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.latitude</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>LAT-OBS</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015112900000000000000">
+Fits field for longitude of observing site</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.longitude</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>LONG-OBS</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113000000000000000">
+Fits field for altitude of observing site</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.altitude</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>ALT-OBS</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113100000000000000">
+Fits field for airmas</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.airmass</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>AIRMASS</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113200000000000000">
+Fits field for sensor temperature</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.snstemp</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>SNS_TEMP</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113300000000000000">
+Fits field for horisontal binning</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.binx</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CCDBIN1</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113400000000000000">
+Fits field for vertical binning</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.biny</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CCDBIN2</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113500000000000000">
+Fits field for horisontal window origin</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.skipx</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CCDSKIP1</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113600000000000000">
+Fits field for vertical window origin</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.skipy</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CCDSKIP2</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113700000000000000">
+Fits field for electrons per ADU</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.eladu</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>ELADU</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113800000000000000">
+Fits field for average bias of frame</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.dcbias</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>DCBIAS</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015113900000000000000">
+Fits field for readout noise</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.rdnoise</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>RDNOISE</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015114000000000000000">
+Fits field for multiplicative noise coefficient</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.file.fits.flnoise</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>FLNOISE</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION001520000000000000000">
+General Observation Setup Data</A>
+</H1>
+
+<H3><A NAME="SECTION001520100000000000000">
+Latitude of observing site</A>
+</H3> Used to annotate frames' fits header, and for calculation of objects' hour angle and airmass. Set in decimal degress.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.latitude</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>44.431</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001520200000000000000">
+Longitude of observing site</A>
+</H3> Used to annotate frames' fits header, and for calculation of objects' hour angle and airmass. Set in decimal degress, E longitudes negative.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.longitude</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>-26.114</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001520300000000000000">
+Altitude of observing site</A>
+</H3> Used to annotate frames' fits header, and for scintillation calculations; In meters above sea level.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.altitude</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>75.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001520400000000000000">
+Observer name</A>
+</H3> Used to annotate frames' fits header. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.observer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>R. Corlan</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001520500000000000000">
+Observer code</A>
+</H3> Used to annotate AAVSO format reports. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.obscode</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>CXR</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001520600000000000000">
+Telescope name</A>
+</H3> Used to annotate frames' fits header. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.telescope</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>SCT</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001520700000000000000">
+Telescope focal length</A>
+</H3> Used to annotate frames' fits header, and for calculating the initial WCS image scale (together with the camera pixel size). In centimeters.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.flen</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>200.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001520800000000000000">
+Flipped field</A>
+</H3> Set the inital wcs as flipped (CDELT1 and CDELT2 having opposite signs). The star matching algorithm does not handle flips, so this has to be set right. A normal (non-flipped) field has N up and W to the right.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.flipped</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001520900000000000000">
+Telescope aperture</A>
+</H3> Used to annotate frames' fits header, and for estimating scintillation noise. In centimeters.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.aperture</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>30.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015201000000000000000">
+Focus designation</A>
+</H3> Used to annotate frames' fits header.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.focus</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>Cassergrain</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015201100000000000000">
+List of filters</A>
+</H3> Space-delimited list of filters used to set the choices in the obscript dialog. They are also used as default names for the filters in filter wheels that don't supply their own names
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.filters</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>v r b i RI GI BI clear</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015201200000000000000">
+Status window pop-up</A>
+</H3> Enable pop-up of a colored status window when the observation script stops (for an error, or at the end of the script. The window is visible from a distance, and useful to attract attention something needs to be done during a scripted session.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.obs.status_popup</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION001530000000000000000">
+Telescope control options</A>
+</H1>
+
+<H3><A NAME="SECTION001530100000000000000">
+Serial line for telescope control</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.scope_serial</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>/dev/ttyS0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001530200000000000000">
+Serial line for filter wheel control</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.fwheel_serial</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>/dev/ttyUSB0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001530300000000000000">
+Eastern limit for goto ops (hour angle)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.elimit</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>-1.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001530400000000000000">
+Enable eastern limit</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.elimit_en</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001530500000000000000">
+Western limit for goto ops (hour angle)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.wlimit</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001530600000000000000">
+Enable western limit</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.wlimit_en</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001530700000000000000">
+Southern limit for goto ops (degrees)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.slimit</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>-45.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001530800000000000000">
+Enable southern limit</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.slimit_en</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001530900000000000000">
+Northern limit for goto ops (degrees)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.nlimit</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>80.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301000000000000000">
+Enable northern limit</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.nlimit_en</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301100000000000000">
+Abort obscript gotos that cause a meridian flip</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.abort_flip</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301200000000000000">
+Mount speed when centering (times sidereal rate)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.centering_speed</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>32.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301300000000000000">
+Mount speed when guiding (times sidereal rate)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.centering_speed</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.5</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301400000000000000">
+Use timed centering moves for small slews</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.use_centering</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301500000000000000">
+Precess coordinated sent to the scope to the epoch of the day</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.precess_eod</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301600000000000000">
+Amount of gear play we take out at the end of slews (degrees)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.gear_play</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.10</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301700000000000000">
+Mount stabilisation delay (ms)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.stabilisation_delay</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301800000000000000">
+Amount of pointing dither between frames (arcmin)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.dither</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.5</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015301900000000000000">
+Enable pointing dithering</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.dither_en</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015302000000000000000">
+Max error we accept in telescope pointing (degrees)</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.tel.max_point_err</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.05</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION001540000000000000000">
+Guiding options</A>
+</H1>
+
+<H3><A NAME="SECTION001540100000000000000">
+Guiding algorithm</A>
+</H3> Algorithm used to determine the guide star position error. The reticle algorithm determines the error as the ratio between the total flux in box-shaped areas located horisontally and vertically around the target position; The ratioed reticle tries to maintain the initial flux ratio, rather than a unit ratio. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.guide.algorithm</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>centroid</code> <code>reticle</code> <code>ratioed_reticle</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>centroid</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001540200000000000000">
+Reticle size</A>
+</H3> Size of the reticle in pixels. Must be an even value.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.guide.reticle_size</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>2</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001540300000000000000">
+Centroid area radius</A>
+</H3> Radius of area inside which the target centroid is calculated.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.guide.centroid_box</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>2</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001540400000000000000">
+Guide box size</A>
+</H3> Size of box around the target guide star position used by the guiding algorithm.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.guide.box_size</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>16</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001540500000000000000">
+Guide box zoom</A>
+</H3> Zoom level of the small image of the guide box
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.guide.zoom</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>4</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION001550000000000000000">
+CCD Reduction options</A>
+</H1>
+
+<H3><A NAME="SECTION001550100000000000000">
+Minimum backgound sigmas</A>
+</H3> Minimum number of sigmas the background must have for multiplicative background alignment to be performed when stacking frames.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.ccdred.min_bg_sigmas</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>3.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001550200000000000000">
+Method used for stacking frames</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.ccdred.stack_method</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>average</code> <code>median</code> <code>kappa_sigma</code> <code>mean_median</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>kappa_sigma</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001550300000000000000">
+Iteration limit for stacking operations</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.ccdred.iterations</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>4</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001550400000000000000">
+Clipping sigmas for mmedian and k-s</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.ccdred.sigmas</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1.5</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001550500000000000000">
+Run CCD reductions automatically on frame display</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.ccdred.auto</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION001560000000000000000">
+Star Detection and Search Options</A>
+</H1>
+
+<H3><A NAME="SECTION001560100000000000000">
+Star Detection SNR</A>
+</H3> A star must be above this treshold above the backround to be considered for detection. Expressed in sigmas of the image. Useful range between 3 and 24.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.stars.det_snr</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>9.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001560200000000000000">
+Maximum Detected Stars</A>
+</H3> The maximum number of starts the program will extract from an image. If more are found, only the brightest are kept.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.stars.det_maxstars</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>200</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001560300000000000000">
+Maximum Catalog Stars</A>
+</H3> The maximum number of starts the program will extract from a field star catalog. If more are found, only the brightest are kept.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.stars.cat_maxstars</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>300</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001560400000000000000">
+Faintest Magnitude for Catalog Stars</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.stars.cat_maxmag</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>16.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001560500000000000000">
+Maximum Radius for Catalog Stars</A>
+</H3> The maximum radius from the frame center in which we look for catalog stars. The actual radius depends on the frame size; this is a global limit. In minutes of arc.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.stars.cat_maxradius</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>120.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION001570000000000000000">
+Wcs Fitting Options</A>
+</H1>
+
+<H3><A NAME="SECTION001570100000000000000">
+Scale tolerance</A>
+</H3> The maximum amount by which the image scale is changed during the fit. A value of 0.1 implies that scales between 0.9 and 1.1 are accepted. Using a lower value for this parameter will decrease the running time and reduce the chances for an incorrect fit. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.fit_scale</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.10</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001570200000000000000">
+Star position tolerance</A>
+</H3> The maxiumum position error, in pixels, between a star and a catalog position at which we still consider that the two match. It is unadvisable to increase this parameter much without a coresponding increase in the minimum number of pairs, or the chances for incorrect fits are greatly augumented.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.fit_tol</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1.5</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001570300000000000000">
+Rotation tolerance</A>
+</H3> Maximum accepted field rotation, in degress A value of 180 will match fields with any rotation. Using a lower value for this parameter will decrease the running time and reduce the chances for an incorrect fit. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.fit_rot</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>180.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001570400000000000000">
+Minimum number of pairs</A>
+</H3> When the algorithm finds a solution with at least this many pairs, it considers it has found a good match and stops. Using less than 5 pairs will likely give many incorrect fits in crowded fields
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.fit_min_pairs</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>5</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001570500000000000000">
+Max skip</A>
+</H3> The maximum number of stars that don't seem to have a match in the catalog and are skipped during the search
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.max_skip</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>20</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001570600000000000000">
+Maximum pairs</A>
+</H3> Maximum number of pairs fitted. After finding this many, the algorithm stops.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.max_pairs</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>50</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001570700000000000000">
+Min A-B distance </A>
+</H3> The minimum distance between two stars to be used as an initial wcs hypothesis. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.min_ab_dist</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>100.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001570800000000000000">
+Max error for WCS validation</A>
+</H3> Maximum RMS position error of all pairs at which the WCS is validated. Expressed in pixels.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.validate_err</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1.50</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001570900000000000000">
+Min pairs for WCS validation</A>
+</H3> The minimum number of pairs needed to validate a WCS solution.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.validate_pairs</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>3</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015701000000000000000">
+Scale change per iteration</A>
+</H3> Maximum scale change accepted when iterating the WCS solution. This is an internal parameter few people (if any) will want to change.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.max_s_chg</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.0200</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015701100000000000000">
+Default image scale</A>
+</H3> Default image scale used for setting the initial WCS when this information is not available from the frame header. In arc seconds per pixel
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.wcs.default_scale</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1.50</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION001580000000000000000">
+Aperture Photometry Options</A>
+</H1>
+
+<H3><A NAME="SECTION001580100000000000000">
+Radius of central aperture</A>
+</H3> Radius, in pixels, of the central aperture from which the star flux is measured.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.r1</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>4.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001580200000000000000">
+Inner radius of sky annulus </A>
+</H3> Inner radius, in pixels, of the annulus surrounding the star from which the sky flux is estimated.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.r2</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>9.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001580300000000000000">
+Outer radius of sky annulus </A>
+</H3> Outer radius, in pixels, of the annulus surrounding the star from which the sky flux is estimated.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.r3</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>13.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001580400000000000000">
+Center apertures</A>
+</H3> Try to center the measuring aperture on the star before performing the measurement.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.auto_center</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001580500000000000000">
+Max centering error</A>
+</H3> The maximum amount a measuring aperture is moved when auto-centering (in pixels).
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.center_err</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>2.00</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001580600000000000000">
+Discard unlocated standards</A>
+</H3> When this option is set, standard stars than cannot be located within the specified error radius when centering apertures are not used in the solution.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.discard_unlocated</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001580700000000000000">
+Max center distance</A>
+</H3> The maximum distance from the frame center at which a standard star must lie in order to be used in the photometry solution. The distance is expressed relative to half the frame's diagonal. A value of 1 will include all stars. This option is useful when we expect large flat-fielding errors or distorted star images at the frame's corners.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.std_max_distance</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1.00</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001580800000000000000">
+Sky method</A>
+</H3> Method used for sky estimation: Average uses the average of the sky annulus pixels; it's not reccomended, as it will not reject nearby stars. Median uses the median of the sky pixels; it's fast and robust, but will not average out quantisation noise. Mean-median uses the average of sky values not farther than sigmas (see below) from the median; Kappa-Sigma computes the sky value by clipping off pixels too far away from the median, and averaging the rest; the standard deviation of the remaining pixels is calculated, and the clipping/averaging is iterated until values converge; Synthetic mode is calaulated as 3*median - 2*mean, where median and mean are the statistics of the kappa-sigma clipped sky annulus. It is the reccomended method.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.sky_method</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>average</code> <code>median</code> <code>kappa_sigma</code> <code>mean_median</code> <code>synthetic_mode</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>average</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001580900000000000000">
+Sigmas</A>
+</H3> Half-width of the acceptance band for kappa-sigma and mean-median sky estimation methods, in sigmas.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.sigmas</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1.5</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015801000000000000000">
+Saturation limit</A>
+</H3> The value over which we mark the stars as being "bright", i.e. possibly saturated.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.sat_limit</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>48000.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015801100000000000000">
+Instrumental band</A>
+</H3> Name of band the stars are measured into. Used when the frame being reduced does not specify a filter or the Force iband option is set.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.iband</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>v</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015801200000000000000">
+Force iband </A>
+</H3> Override the filter specification from the frame header with the one set in the Instrumental band parameter.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.force_iband</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015801300000000000000">
+Default catalog error</A>
+</H3> Default standard magnitude error used when a value is not available.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.def_std_err</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.050</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015801400000000000000">
+Alpha</A>
+</H3> Parameter of the robust fitting alogorithm. It sets the fwhm of the rejection function (in standard deviations).
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.alpha</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>2.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015801500000000000000">
+Beta</A>
+</H3> Parameter of the robust fitting alogorithm. It sets the sharpness of the rejection function, with higher values resulting in a sharper falloff.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.aphot.beta</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>2.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION001590000000000000000">
+Multi-Frame Photometry Options</A>
+</H1>
+
+<H3><A NAME="SECTION001590100000000000000">
+Bands setup</A>
+</H3> A string which specifies the color indices against which we reduce various bands. It consists of a space-separated list of specifiers of the form: band(b1-b2)[=k/kerr]. In this case, "band" will be reduced against the b1-b2 color index. The optional k and kerr set the default transformation coefficient and it's error for the specified band, like for example v(b-v)=0.06/0.002.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.mframe.bands</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>b(b-v) v(b-v) r(v-r) i(v-i)</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001590200000000000000">
+Outlier threshold </A>
+</H3> Threshold in standard error over which we flag stars as "outliers" for easy identification. Outliers are not excluded from the fit; they are down-weighted by a factor depending on the values of the alpha and beta robust fit parameters. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.mframe.outlier</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>3.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001590300000000000000">
+Zeropoint outlier threshold </A>
+</H3> Threshold in standard error over which an image frame is marked as an outlier of the extinction fit. The existance of an outlier frame usually shows that transparency has had a significant change around that time. As a result, calculation of all-sky zeropoints is inhibited in the vicinity of an outlier frame, until a well-fitting frame is encountered. 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.mframe.zp_outlier</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>2.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001590400000000000000">
+Minimum airmass variance </A>
+</H3> The minimum variance of a data set's airmass for which we try to fit an extinction coefficient. For datasets with lower variance, the extinction coefficient is not considered - which doesn't affect the result, as all frames are taken at nearly the same airmass.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.mframe.min_am_variance</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.0010</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001590500000000000000">
+Minimum airmass variance </A>
+</H3> The minimum variance of a data set's color index for which we try to fit a transformation coefficient. For datasets with lower variance, the transformation coefficient is not fitted, as the possibility of obtaining a meaningless value is quite real.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.mframe.min_color_variance</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.0100</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001590600000000000000">
+Airmass range </A>
+</H3> Relative size of the range of airmasses over which we calculate frame zeropoints when doing all-sky reduction. It is expressed relative to the airmass range of the valid standard frames. For example, if the standard frames are taken at airmasses between 1.5 and 2.0, an airmass range of 2.0 will enable all-sky zeropoint calculations for frames with airmasses between 1.25 and 2.25.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.mframe.airmass_range</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>2.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001590700000000000000">
+Airmass maximum range </A>
+</H3> The absolute maximum amount we add to or subtract from the standard frames' airmass range when calculating the range in which frames which are reduced all-sky must lie.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.mframe.airmass_max_range</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>0.500</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION001590800000000000000">
+Limiting magnitude from zeropoint </A>
+</H3> The amount we subtract from the zeropoint of a frame in order to obtain the limiting magnitude used for reporting purposes.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.mframe.lmag_from_zp</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>7.000</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION0015100000000000000000">
+Star Display Options</A>
+</H1>
+
+<H3><A NAME="SECTION0015100100000000000000">
+Label Target Stars</A>
+</H3> Show name labels for target stars
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.target_labels</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015100200000000000000">
+Label Catalog Objects</A>
+</H3> Show name labels for catalog objects
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.cat_labels</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015100300000000000000">
+Label Standard Stars</A>
+</H3> Show magitude labels (with the decimal point omitted) for standard stars
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.std_labels</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015100400000000000000">
+Standard Star Label Band</A>
+</H3> The band from which the magnitude used for standard star labeling is taken
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.std_label_band</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>string</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>v</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015100500000000000000">
+Minimum star size</A>
+</H3> The minimum radius of a star symbol on screen, in pixels
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.min_sz</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015100600000000000000">
+Maximum display star size</A>
+</H3> The maximum radius of a star symbol on screen, in pixels.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.max_sz</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>18</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015100700000000000000">
+Default display star size</A>
+</H3> The default radius of a star symbol on screen, used when no magnitude information is known; in pixels.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.default_sz</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>6</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015100800000000000000">
+Display pixels per magnitude</A>
+</H3> The amount the star symbols increase in radius for an increase in brightness of 1 magnitude; in pixels
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.pix_per_mag</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>1.00</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015100900000000000000">
+Brightest symbol magnitude</A>
+</H3> The magnitude at which we stop increasing star symbol sizes
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.maxmag</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>5.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION00151001000000000000000">
+Display limiting magnitude</A>
+</H3> Magnitude of the faintest displayed objects
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.dlimmag</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>17.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION00151001100000000000000">
+Show fainter stars</A>
+</H3> Show stars fainter than the display limiting magnitude (at minimum size)
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.dlimfainter</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>no</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION00151001200000000000000">
+Zoom star shapes</A>
+</H3> Scale star shapes when the image is zoomed. Regardless of the value of this parameter, aphot shapes are always zoomed, while blob symbols never are.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.zoom</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>boolean</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yes</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION00151001300000000000000">
+Star shapes zoom limit</A>
+</H3> The maximum scale factor applied to star shapes. This limit does not apply to aphot shapes.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.zoom_limit</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>integer</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>4</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION00151001400000000000000">
+Plot error scale</A>
+</H3> The amount by which the position errors are multiplied when the position error plot is generated.
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.plot_err_scale</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>real</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>100.0</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION0015101000000000000000">
+Star Display Colors</A>
+</H2>
+
+<H3><A NAME="SECTION0015101100000000000000">
+Autodected Stars Color</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.color.simple</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code> <code>orange</code> <code>yellow</code> <code>green</code> <code>cyan</code> <code>blue</code> <code>light_blue</code> <code>gray</code> <code>white</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>green</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101200000000000000">
+Field Stars Color</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.color.field</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code> <code>orange</code> <code>yellow</code> <code>green</code> <code>cyan</code> <code>blue</code> <code>light_blue</code> <code>gray</code> <code>white</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101300000000000000">
+Standard Stars Color</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.color.apstd</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code> <code>orange</code> <code>yellow</code> <code>green</code> <code>cyan</code> <code>blue</code> <code>light_blue</code> <code>gray</code> <code>white</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101400000000000000">
+Target Stars Color</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.color.target</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code> <code>orange</code> <code>yellow</code> <code>green</code> <code>cyan</code> <code>blue</code> <code>light_blue</code> <code>gray</code> <code>white</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101500000000000000">
+Catalog Objects Color</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.color.catalog</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code> <code>orange</code> <code>yellow</code> <code>green</code> <code>cyan</code> <code>blue</code> <code>light_blue</code> <code>gray</code> <code>white</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>yellow</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101600000000000000">
+User-Marked Stars Color</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.color.usel</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code> <code>orange</code> <code>yellow</code> <code>green</code> <code>cyan</code> <code>blue</code> <code>light_blue</code> <code>gray</code> <code>white</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>green</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101700000000000000">
+Align Stars Color</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.color.align</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code> <code>orange</code> <code>yellow</code> <code>green</code> <code>cyan</code> <code>blue</code> <code>light_blue</code> <code>gray</code> <code>white</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>orange</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015101800000000000000">
+Selected Stars Color</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.color.selected</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>red</code> <code>orange</code> <code>yellow</code> <code>green</code> <code>cyan</code> <code>blue</code> <code>light_blue</code> <code>gray</code> <code>white</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>white</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION0015102000000000000000">
+Star Display Shapes</A>
+</H2>
+
+<H3><A NAME="SECTION0015102100000000000000">
+Autodected Stars Shape</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.shape.simple</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code> <code>square</code> <code>blob</code> <code>aphot</code> <code>diamond</code> <code>cross</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>square</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102200000000000000">
+Field Stars Shape</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.shape.field</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code> <code>square</code> <code>blob</code> <code>aphot</code> <code>diamond</code> <code>cross</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>diamond</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102300000000000000">
+Standard Stars Shape</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.shape.apstd</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code> <code>square</code> <code>blob</code> <code>aphot</code> <code>diamond</code> <code>cross</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>aphot</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102400000000000000">
+Target Stars Shape</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.shape.target</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code> <code>square</code> <code>blob</code> <code>aphot</code> <code>diamond</code> <code>cross</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>cross</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102500000000000000">
+Catalog Objects Shape</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.shape.catalog</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code> <code>square</code> <code>blob</code> <code>aphot</code> <code>diamond</code> <code>cross</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>diamond</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102600000000000000">
+User-Marked Stars Shape</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.shape.usel</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code> <code>square</code> <code>blob</code> <code>aphot</code> <code>diamond</code> <code>cross</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H3><A NAME="SECTION0015102700000000000000">
+Align Stars Shape</A>
+</H3><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Config file</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>.display.shape.align</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>multiple choice</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Choices</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code> <code>square</code> <code>blob</code> <code>aphot</code> <code>diamond</code> <code>cross</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Default</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255><code>circle</code></TD>
+</TR>
+</TABLE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html722"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html718"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html712"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html720"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html723"
+  HREF="node16.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html719"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html713"
+  HREF="node14.html">Report Converter</A>
+ &nbsp <B>  <A NAME="tex2html721"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

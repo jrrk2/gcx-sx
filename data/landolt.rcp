@@ -1,0 +1,1583 @@
+(   catalog (comments "landolt standards" )
+    sequence "landolt"
+    stars (
+      ( name "TPHE-A" type std ra "00:30:09.50" dec "-46:31:29.0"
+        comments "T Phe A   "
+        mag 14.7 smags "v(landolt)=14.651/0.005 b(landolt)=15.444/0.005 u(landolt)=15.824/0.005 r(landolt)=14.216/0.005 i(landolt)=13.811/0.005" flags ( astrom ) )
+      ( name "TPHE-B" type std ra "00:30:16.30" dec "-46:27:59.0"
+        comments "T Phe B   "
+        mag 12.3 smags "v(landolt)=12.334/0.005 b(landolt)=12.739/0.005 u(landolt)=12.895/0.005 r(landolt)=12.072/0.005 i(landolt)=11.801/0.005" flags ( astrom ) )
+      ( name "TPHE-C" type std ra "00:30:17.00" dec "-46:32:22.0"
+        comments "T Phe C   "
+        mag 14.4 smags "v(landolt)=14.376/0.005 b(landolt)=14.078/0.005 u(landolt)=12.861/0.005 r(landolt)=14.524/0.005 i(landolt)=14.735/0.005" flags ( astrom ) )
+      ( name "TPHE-D" type std ra "00:30:18.30" dec "-46:31:20.0"
+        comments "T Phe D   "
+        mag 13.1 smags "v(landolt)=13.118/0.005 b(landolt)=14.669/0.005 u(landolt)=16.540/0.005 r(landolt)=12.269/0.005 i(landolt)=11.459/0.005" flags ( astrom ) )
+      ( name "TPHE-E" type std ra "00:30:19.60" dec "-46:24:36.0"
+        comments "T Phe E   "
+        mag 11.6 smags "v(landolt)=11.630/0.005 b(landolt)=12.073/0.005 u(landolt)=11.970/0.005 r(landolt)=11.354/0.005 i(landolt)=11.071/0.005" flags ( astrom ) )
+      ( name "TPHE-F" type std ra "00:30:49.60" dec "-46:33:24.0"
+        comments "T Phe F   "
+        mag 12.5 smags "v(landolt)=12.474/0.005 b(landolt)=13.329/0.005 u(landolt)=13.861/0.005 r(landolt)=11.982/0.005 i(landolt)=11.547/0.005" flags ( astrom ) )
+      ( name "TPHE-G" type std ra "00:31:04.20" dec "-46:22:52.0"
+        comments "T Phe G   "
+        mag 10.4 smags "v(landolt)=10.442/0.005 b(landolt)=11.988/0.005 u(landolt)=13.903/0.005 r(landolt)=9.508/0.005 i(landolt)=8.423/0.005" flags ( astrom ) )
+      ( name "0029+024" type std ra "00:31:42.10" dec "02:37:45.0"
+        comments "PG0029+024"
+        mag 15.3 smags "v(landolt)=15.268/0.005 b(landolt)=15.630/0.005 u(landolt)=15.446/0.005 r(landolt)=15.017/0.005 i(landolt)=14.680/0.005" flags ( astrom ) )
+      ( name "0039+049" type std ra "00:42:06.10" dec "05:09:23.0"
+        comments "PG0039+049"
+        mag 12.9 smags "v(landolt)=12.877/0.005 b(landolt)=12.858/0.005 u(landolt)=11.987/0.005 r(landolt)=12.810/0.005 i(landolt)=12.713/0.005" flags ( astrom ) )
+      ( name "92-309" type std ra "00:53:14.00" dec "00:46:02.0"
+        comments "SA92 309  "
+        mag 13.8 smags "v(landolt)=13.842/0.005 b(landolt)=14.355/0.005 u(landolt)=14.331/0.005 r(landolt)=13.516/0.005 i(landolt)=13.191/0.005" flags ( astrom ) )
+      ( name "92-235" type std ra "00:53:15.00" dec "00:36:18.0"
+        comments "SA92 235  "
+        mag 10.6 smags "v(landolt)=10.595/0.005 b(landolt)=12.233/0.005 u(landolt)=14.217/0.005 r(landolt)=9.701/0.005 i(landolt)=8.790/0.005" flags ( astrom ) )
+      ( name "92-322" type std ra "00:53:46.90" dec "00:47:35.0"
+        comments "SA92 322  "
+        mag 12.7 smags "v(landolt)=12.676/0.005 b(landolt)=13.204/0.005 u(landolt)=13.202/0.005 r(landolt)=12.374/0.005 i(landolt)=12.069/0.005" flags ( astrom ) )
+      ( name "92-245" type std ra "00:54:16.10" dec "00:39:54.0"
+        comments "SA92 245  "
+        mag 13.8 smags "v(landolt)=13.818/0.005 b(landolt)=15.236/0.005 u(landolt)=16.425/0.005 r(landolt)=12.889/0.005 i(landolt)=11.982/0.005" flags ( astrom ) )
+      ( name "92-248" type std ra "00:54:30.70" dec "00:40:17.0"
+        comments "SA92 248  "
+        mag 15.3 smags "v(landolt)=15.346/0.005 b(landolt)=16.474/0.005 u(landolt)=17.763/0.005 r(landolt)=14.656/0.005 i(landolt)=14.103/0.005" flags ( astrom ) )
+      ( name "92-249" type std ra "00:54:33.60" dec "00:41:05.0"
+        comments "SA92 249  "
+        mag 14.3 smags "v(landolt)=14.325/0.005 b(landolt)=15.024/0.005 u(landolt)=15.264/0.005 r(landolt)=13.926/0.005 i(landolt)=13.556/0.005" flags ( astrom ) )
+      ( name "92-250" type std ra "00:54:37.10" dec "00:38:58.0"
+        comments "SA92 250  "
+        mag 13.2 smags "v(landolt)=13.178/0.005 b(landolt)=13.992/0.005 u(landolt)=14.472/0.005 r(landolt)=12.732/0.005 i(landolt)=12.338/0.005" flags ( astrom ) )
+      ( name "92-330" type std ra "00:54:43.40" dec "00:43:26.0"
+        comments "SA92 330  "
+        mag 15.1 smags "v(landolt)=15.073/0.005 b(landolt)=15.641/0.005 u(landolt)=15.526/0.005 r(landolt)=14.742/0.005 i(landolt)=14.408/0.005" flags ( astrom ) )
+      ( name "92-252" type std ra "00:54:47.20" dec "00:39:24.0"
+        comments "SA92 252  "
+        mag 14.9 smags "v(landolt)=14.932/0.005 b(landolt)=15.449/0.005 u(landolt)=15.309/0.005 r(landolt)=14.606/0.005 i(landolt)=14.274/0.005" flags ( astrom ) )
+      ( name "92-253" type std ra "00:54:51.30" dec "00:40:20.0"
+        comments "SA92 253  "
+        mag 14.1 smags "v(landolt)=14.085/0.005 b(landolt)=15.216/0.005 u(landolt)=16.171/0.005 r(landolt)=13.366/0.005 i(landolt)=12.750/0.005" flags ( astrom ) )
+      ( name "92-335" type std ra "00:54:58.30" dec "00:44:01.0"
+        comments "SA92 335  "
+        mag 12.5 smags "v(landolt)=12.523/0.005 b(landolt)=13.195/0.005 u(landolt)=13.403/0.005 r(landolt)=12.143/0.005 i(landolt)=11.805/0.005" flags ( astrom ) )
+      ( name "92-339" type std ra "00:55:03.20" dec "00:44:11.0"
+        comments "SA92 339  "
+        mag 15.6 smags "v(landolt)=15.579/0.005 b(landolt)=16.028/0.005 u(landolt)=15.851/0.005 r(landolt)=15.273/0.005 i(landolt)=14.934/0.005" flags ( astrom ) )
+      ( name "92-342" type std ra "00:55:09.90" dec "00:43:13.0"
+        comments "SA92 342  "
+        mag 11.6 smags "v(landolt)=11.613/0.005 b(landolt)=12.049/0.005 u(landolt)=12.007/0.005 r(landolt)=11.347/0.005 i(landolt)=11.077/0.005" flags ( astrom ) )
+      ( name "92-188" type std ra "00:55:10.50" dec "00:23:10.0"
+        comments "SA92 188  "
+        mag 14.8 smags "v(landolt)=14.751/0.005 b(landolt)=15.801/0.005 u(landolt)=16.552/0.005 r(landolt)=14.072/0.005 i(landolt)=13.499/0.005" flags ( astrom ) )
+      ( name "92-409" type std ra "00:55:12.20" dec "00:55:59.0"
+        comments "SA92 409  "
+        mag 10.6 smags "v(landolt)=10.627/0.005 b(landolt)=11.765/0.005 u(landolt)=12.901/0.005 r(landolt)=9.893/0.005 i(landolt)=9.268/0.005" flags ( astrom ) )
+      ( name "92-410" type std ra "00:55:14.20" dec "01:01:51.0"
+        comments "SA92 410  "
+        mag 15.0 smags "v(landolt)=14.984/0.005 b(landolt)=15.382/0.005 u(landolt)=15.248/0.005 r(landolt)=14.745/0.005 i(landolt)=14.503/0.005" flags ( astrom ) )
+      ( name "92-412" type std ra "00:55:15.70" dec "01:01:54.0"
+        comments "SA92 412  "
+        mag 15.0 smags "v(landolt)=15.036/0.005 b(landolt)=15.493/0.005 u(landolt)=15.341/0.005 r(landolt)=14.751/0.005 i(landolt)=14.447/0.005" flags ( astrom ) )
+      ( name "92-259" type std ra "00:55:21.70" dec "00:40:31.0"
+        comments "SA92 259  "
+        mag 15.0 smags "v(landolt)=14.997/0.005 b(landolt)=15.639/0.005 u(landolt)=15.747/0.005 r(landolt)=14.627/0.005 i(landolt)=14.175/0.005" flags ( astrom ) )
+      ( name "92-345" type std ra "00:55:23.70" dec "00:51:08.0"
+        comments "SA92 345  "
+        mag 15.2 smags "v(landolt)=15.216/0.005 b(landolt)=15.961/0.005 u(landolt)=16.082/0.005 r(landolt)=14.751/0.005 i(landolt)=14.275/0.005" flags ( astrom ) )
+      ( name "92-347" type std ra "00:55:26.10" dec "00:50:49.0"
+        comments "SA92 347  "
+        mag 15.8 smags "v(landolt)=15.752/0.005 b(landolt)=16.295/0.005 u(landolt)=16.198/0.005 r(landolt)=15.413/0.005 i(landolt)=15.095/0.005" flags ( astrom ) )
+      ( name "92-260" type std ra "00:55:29.00" dec "00:37:08.0"
+        comments "SA92 260  "
+        mag 15.1 smags "v(landolt)=15.071/0.005 b(landolt)=16.233/0.005 u(landolt)=17.348/0.005 r(landolt)=14.352/0.005 i(landolt)=13.744/0.005" flags ( astrom ) )
+      ( name "92-348" type std ra "00:55:29.40" dec "00:44:33.0"
+        comments "SA92 348  "
+        mag 12.1 smags "v(landolt)=12.109/0.005 b(landolt)=12.707/0.005 u(landolt)=12.763/0.005 r(landolt)=11.764/0.005 i(landolt)=11.423/0.005" flags ( astrom ) )
+      ( name "92-417" type std ra "00:55:32.10" dec "00:53:07.0"
+        comments "SA92 417  "
+        mag 15.9 smags "v(landolt)=15.922/0.005 b(landolt)=16.399/0.005 u(landolt)=16.214/0.005 r(landolt)=15.571/0.005 i(landolt)=15.266/0.005" flags ( astrom ) )
+      ( name "92-263" type std ra "00:55:39.30" dec "00:36:20.0"
+        comments "SA92 263  "
+        mag 11.8 smags "v(landolt)=11.782/0.005 b(landolt)=12.830/0.005 u(landolt)=13.673/0.005 r(landolt)=11.219/0.005 i(landolt)=10.697/0.005" flags ( astrom ) )
+      ( name "92-497" type std ra "00:55:54.30" dec "01:11:43.0"
+        comments "SA92 497  "
+        mag 13.6 smags "v(landolt)=13.642/0.005 b(landolt)=14.371/0.005 u(landolt)=14.628/0.005 r(landolt)=13.238/0.005 i(landolt)=12.860/0.005" flags ( astrom ) )
+      ( name "92-498" type std ra "00:55:56.50" dec "01:10:41.0"
+        comments "SA92 498  "
+        mag 14.4 smags "v(landolt)=14.408/0.005 b(landolt)=15.418/0.005 u(landolt)=16.212/0.005 r(landolt)=13.760/0.005 i(landolt)=13.229/0.005" flags ( astrom ) )
+      ( name "92-500" type std ra "00:55:58.00" dec "01:10:25.0"
+        comments "SA92 500  "
+        mag 15.8 smags "v(landolt)=15.841/0.005 b(landolt)=16.844/0.005 u(landolt)=17.055/0.005 r(landolt)=15.103/0.005 i(landolt)=14.504/0.005" flags ( astrom ) )
+      ( name "92-425" type std ra "00:55:58.20" dec "00:52:59.0"
+        comments "SA92 425  "
+        mag 13.9 smags "v(landolt)=13.941/0.005 b(landolt)=15.132/0.005 u(landolt)=16.305/0.005 r(landolt)=13.186/0.005 i(landolt)=12.559/0.005" flags ( astrom ) )
+      ( name "92-501" type std ra "00:56:00.10" dec "01:10:51.0"
+        comments "SA92 501  "
+        mag 13.0 smags "v(landolt)=12.958/0.005 b(landolt)=13.568/0.005 u(landolt)=13.636/0.005 r(landolt)=12.613/0.005 i(landolt)=12.282/0.005" flags ( astrom ) )
+      ( name "92-426" type std ra "00:55:59.60" dec "00:52:55.0"
+        comments "SA92 426  "
+        mag 14.5 smags "v(landolt)=14.466/0.005 b(landolt)=15.195/0.005 u(landolt)=15.379/0.005 r(landolt)=14.054/0.005 i(landolt)=13.658/0.005" flags ( astrom ) )
+      ( name "92-355" type std ra "00:56:05.70" dec "00:50:47.0"
+        comments "SA92 355  "
+        mag 15.0 smags "v(landolt)=14.965/0.005 b(landolt)=16.129/0.005 u(landolt)=17.330/0.005 r(landolt)=14.206/0.005 i(landolt)=13.561/0.005" flags ( astrom ) )
+      ( name "92-427" type std ra "00:56:06.70" dec "01:00:20.0"
+        comments "SA92 427  "
+        mag 15.0 smags "v(landolt)=14.953/0.005 b(landolt)=15.762/0.005 u(landolt)=16.114/0.005 r(landolt)=14.491/0.005 i(landolt)=11.569/0.005" flags ( astrom ) )
+      ( name "92-502" type std ra "00:56:08.10" dec "01:04:25.0"
+        comments "SA92 502  "
+        mag 11.8 smags "v(landolt)=11.812/0.005 b(landolt)=12.298/0.005 u(landolt)=12.203/0.005 r(landolt)=11.528/0.005 i(landolt)=11.236/0.005" flags ( astrom ) )
+      ( name "92-430" type std ra "00:56:15.20" dec "00:53:18.0"
+        comments "SA92 430  "
+        mag 14.4 smags "v(landolt)=14.440/0.005 b(landolt)=15.007/0.005 u(landolt)=14.967/0.005 r(landolt)=14.102/0.005 i(landolt)=13.764/0.005" flags ( astrom ) )
+      ( name "92-276" type std ra "00:56:26.60" dec "00:41:51.0"
+        comments "SA92 276  "
+        mag 12.0 smags "v(landolt)=12.036/0.005 b(landolt)=12.665/0.005 u(landolt)=12.732/0.005 r(landolt)=11.668/0.005 i(landolt)=11.311/0.005" flags ( astrom ) )
+      ( name "92-282" type std ra "00:56:46.80" dec "00:38:29.0"
+        comments "SA92 282  "
+        mag 13.0 smags "v(landolt)=12.969/0.005 b(landolt)=13.287/0.005 u(landolt)=13.249/0.005 r(landolt)=12.768/0.005 i(landolt)=12.547/0.005" flags ( astrom ) )
+      ( name "92-508" type std ra "00:56:51.20" dec "01:09:34.0"
+        comments "SA92 508  "
+        mag 11.7 smags "v(landolt)=11.679/0.005 b(landolt)=12.208/0.005 u(landolt)=12.161/0.005 r(landolt)=11.361/0.005 i(landolt)=11.041/0.005" flags ( astrom ) )
+      ( name "92-507" type std ra "00:56:50.70" dec "01:05:59.0"
+        comments "SA92 507  "
+        mag 11.3 smags "v(landolt)=11.332/0.005 b(landolt)=12.264/0.005 u(landolt)=12.952/0.005 r(landolt)=10.825/0.005 i(landolt)=10.364/0.005" flags ( astrom ) )
+      ( name "92-364" type std ra "00:56:52.20" dec "00:43:56.0"
+        comments "SA92 364  "
+        mag 11.7 smags "v(landolt)=11.673/0.005 b(landolt)=12.280/0.005 u(landolt)=12.243/0.005 r(landolt)=11.317/0.005 i(landolt)=10.960/0.005" flags ( astrom ) )
+      ( name "92-433" type std ra "00:56:53.70" dec "01:00:42.0"
+        comments "SA92 433  "
+        mag 11.7 smags "v(landolt)=11.667/0.005 b(landolt)=12.322/0.005 u(landolt)=12.432/0.005 r(landolt)=11.300/0.005 i(landolt)=10.952/0.005" flags ( astrom ) )
+      ( name "92-288" type std ra "00:57:17.00" dec "00:36:48.0"
+        comments "SA92 288  "
+        mag 11.6 smags "v(landolt)=11.630/0.005 b(landolt)=12.485/0.005 u(landolt)=12.957/0.005 r(landolt)=11.141/0.005 i(landolt)=10.700/0.005" flags ( astrom ) )
+      ( name "F-11" type std ra "01:04:21.70" dec "04:13:37.0"
+        comments "Feige 11      "
+        mag 12.1 smags "v(landolt)=12.065/0.005 b(landolt)=11.825/0.005 u(landolt)=10.847/0.005 r(landolt)=12.185/0.005 i(landolt)=12.327/0.005" flags ( astrom ) )
+      ( name "F-16" type std ra "01:54:34.60" dec "-06:46:00.0"
+        comments "Feige 16      "
+        mag 12.4 smags "v(landolt)=12.406/0.005 b(landolt)=12.394/0.005 u(landolt)=12.403/0.005 r(landolt)=12.409/0.005 i(landolt)=12.407/0.005" flags ( astrom ) )
+      ( name "93-407" type std ra "01:54:36.90" dec "00:53:49.0"
+        comments "SA93 407  "
+        mag 12.0 smags "v(landolt)=11.971/0.005 b(landolt)=12.823/0.005 u(landolt)=13.387/0.005 r(landolt)=11.484/0.005 i(landolt)=11.063/0.005" flags ( astrom ) )
+      ( name "93-317" type std ra "01:54:37.80" dec "00:43:01.0"
+        comments "SA93 317  "
+        mag 11.5 smags "v(landolt)=11.546/0.005 b(landolt)=12.034/0.005 u(landolt)=11.979/0.005 r(landolt)=11.253/0.005 i(landolt)=10.955/0.005" flags ( astrom ) )
+      ( name "93-333" type std ra "01:55:05.10" dec "00:45:42.0"
+        comments "SA93 333  "
+        mag 12.0 smags "v(landolt)=12.011/0.005 b(landolt)=12.843/0.005 u(landolt)=13.279/0.005 r(landolt)=11.542/0.005 i(landolt)=11.120/0.005" flags ( astrom ) )
+      ( name "93-424" type std ra "01:55:26.40" dec "00:56:42.0"
+        comments "SA93 424  "
+        mag 11.6 smags "v(landolt)=11.620/0.005 b(landolt)=12.703/0.005 u(landolt)=13.646/0.005 r(landolt)=11.066/0.005 i(landolt)=10.564/0.005" flags ( astrom ) )
+      ( name "G3-33" type std ra "02:00:13.00" dec "13:03:07.0"
+        comments "G3-33     "
+        mag 12.3 smags "v(landolt)=12.298/0.005 b(landolt)=14.102/0.005 u(landolt)=15.418/0.005 r(landolt)=10.943/0.005 i(landolt)=9.192/0.005" flags ( astrom ) )
+      ( name "0220+132" type std ra "02:23:33.90" dec "13:28:04.0"
+        comments "PG0220+132"
+        mag 14.2 smags "v(landolt)=14.216/0.005 b(landolt)=15.153/0.005 u(landolt)=15.472/0.005 r(landolt)=13.654/0.005 i(landolt)=13.158/0.005" flags ( astrom ) )
+      ( name "0220+132" type std ra "02:23:38.40" dec "13:27:35.0"
+        comments "PG0220+132"
+        mag 14.8 smags "v(landolt)=14.760/0.005 b(landolt)=14.628/0.005 u(landolt)=13.706/0.005 r(landolt)=14.810/0.005 i(landolt)=14.930/0.005" flags ( astrom ) )
+      ( name "0220+132" type std ra "02:23:39.90" dec "13:27:30.0"
+        comments "PG0220+132"
+        mag 15.8 smags "v(landolt)=15.771/0.005 b(landolt)=16.554/0.005 u(landolt)=16.215/0.005 r(landolt)=15.257/0.005 i(landolt)=14.776/0.005" flags ( astrom ) )
+      ( name "F-22" type std ra "02:30:16.60" dec "05:15:52.0"
+        comments "Feige 22      "
+        mag 12.8 smags "v(landolt)=12.799/0.005 b(landolt)=12.745/0.005 u(landolt)=11.939/0.005 r(landolt)=12.902/0.005 i(landolt)=13.007/0.005" flags ( astrom ) )
+      ( name "0231+051" type std ra "02:33:28.90" dec "05:19:49.0"
+        comments "PG0231+051"
+        mag 13.8 smags "v(landolt)=13.804/0.005 b(landolt)=14.481/0.005 u(landolt)=14.682/0.005 r(landolt)=13.414/0.005 i(landolt)=13.045/0.005" flags ( astrom ) )
+      ( name "0231+051" type std ra "02:33:33.90" dec "05:19:33.0"
+        comments "PG0231+051"
+        mag 14.0 smags "v(landolt)=14.027/0.005 b(landolt)=15.115/0.005 u(landolt)=16.161/0.005 r(landolt)=13.352/0.005 i(landolt)=12.766/0.005" flags ( astrom ) )
+      ( name "0231+051" type std ra "02:33:40.10" dec "05:17:43.0"
+        comments "PG0231+051"
+        mag 12.8 smags "v(landolt)=12.772/0.005 b(landolt)=13.482/0.005 u(landolt)=13.752/0.005 r(landolt)=12.367/0.005 i(landolt)=11.973/0.005" flags ( astrom ) )
+      ( name "0231+051" type std ra "02:33:48.20" dec "05:20:28.0"
+        comments "PG0231+051"
+        mag 13.7 smags "v(landolt)=13.702/0.005 b(landolt)=14.373/0.005 u(landolt)=14.487/0.005 r(landolt)=13.303/0.005 i(landolt)=12.918/0.005" flags ( astrom ) )
+      ( name "0231+051" type std ra "02:33:41.30" dec "05:18:45.0"
+        comments "PG0231+051"
+        mag 16.1 smags "v(landolt)=16.105/0.005 b(landolt)=15.776/0.005 u(landolt)=14.584/0.005 r(landolt)=16.267/0.005 i(landolt)=16.638/0.005" flags ( astrom ) )
+      ( name "0231+051" type std ra "02:33:45.50" dec "05:17:34.0"
+        comments "PG0231+051"
+        mag 14.7 smags "v(landolt)=14.735/0.005 b(landolt)=16.183/0.005 u(landolt)=17.525/0.005 r(landolt)=13.781/0.005 i(landolt)=12.783/0.005" flags ( astrom ) )
+      ( name "F-24" type std ra "02:35:07.50" dec "03:43:57.0"
+        comments "Feige 24      "
+        mag 12.4 smags "v(landolt)=12.411/0.005 b(landolt)=12.208/0.005 u(landolt)=11.039/0.005 r(landolt)=12.321/0.005 i(landolt)=11.957/0.005" flags ( astrom ) )
+      ( name "94-171" type std ra "02:53:38.80" dec "00:17:18.0"
+        comments "SA94 171  "
+        mag 12.7 smags "v(landolt)=12.659/0.005 b(landolt)=13.476/0.005 u(landolt)=13.780/0.005 r(landolt)=12.179/0.005 i(landolt)=11.696/0.005" flags ( astrom ) )
+      ( name "94-296" type std ra "02:55:20.00" dec "00:28:12.0"
+        comments "SA94 296  "
+        mag 12.3 smags "v(landolt)=12.255/0.005 b(landolt)=13.005/0.005 u(landolt)=13.240/0.005 r(landolt)=11.840/0.005 i(landolt)=11.453/0.005" flags ( astrom ) )
+      ( name "94-394" type std ra "02:56:14.30" dec "00:35:12.0"
+        comments "SA94 394  "
+        mag 12.3 smags "v(landolt)=12.273/0.005 b(landolt)=12.818/0.005 u(landolt)=12.771/0.005 r(landolt)=11.929/0.005 i(landolt)=11.599/0.005" flags ( astrom ) )
+      ( name "94-401" type std ra "02:56:30.80" dec "00:40:07.0"
+        comments "SA94 401  "
+        mag 14.3 smags "v(landolt)=14.293/0.005 b(landolt)=14.931/0.005 u(landolt)=15.029/0.005 r(landolt)=13.904/0.005 i(landolt)=13.535/0.005" flags ( astrom ) )
+      ( name "94-242" type std ra "02:57:21.20" dec "00:18:39.0"
+        comments "SA94 242  "
+        mag 11.7 smags "v(landolt)=11.728/0.005 b(landolt)=12.029/0.005 u(landolt)=12.136/0.005 r(landolt)=11.550/0.005 i(landolt)=11.366/0.005" flags ( astrom ) )
+      ( name "94-251" type std ra "02:57:47.00" dec "00:16:03.0"
+        comments "SA94 251  "
+        mag 11.2 smags "v(landolt)=11.204/0.005 b(landolt)=12.423/0.005 u(landolt)=13.704/0.005 r(landolt)=10.545/0.005 i(landolt)=9.958/0.005" flags ( astrom ) )
+      ( name "94-702" type std ra "02:58:13.40" dec "01:10:54.0"
+        comments "SA94 702  "
+        mag 11.6 smags "v(landolt)=11.594/0.005 b(landolt)=13.012/0.005 u(landolt)=14.633/0.005 r(landolt)=10.838/0.005 i(landolt)=10.165/0.005" flags ( astrom ) )
+      ( name "GD-50" type std ra "03:48:50.10" dec "-00:58:33.0"
+        comments "GD 50     "
+        mag 14.1 smags "v(landolt)=14.063/0.005 b(landolt)=13.787/0.005 u(landolt)=12.596/0.005 r(landolt)=14.208/0.005 i(landolt)=14.388/0.005" flags ( astrom ) )
+      ( name "95-15" type std ra "03:52:40.20" dec "-00:05:23.0"
+        comments "SA95 15  "
+        mag 11.3 smags "v(landolt)=11.302/0.005 b(landolt)=12.014/0.005 u(landolt)=12.171/0.005 r(landolt)=10.878/0.005 i(landolt)=10.493/0.005" flags ( astrom ) )
+      ( name "95-301" type std ra "03:52:41.10" dec "00:31:22.0"
+        comments "SA95 301  "
+        mag 11.2 smags "v(landolt)=11.216/0.005 b(landolt)=12.506/0.005 u(landolt)=13.802/0.005 r(landolt)=10.524/0.005 i(landolt)=9.904/0.005" flags ( astrom ) )
+      ( name "95-16" type std ra "03:52:40.60" dec "-00:05:06.0"
+        comments "SA95 16  "
+        mag 14.3 smags "v(landolt)=14.313/0.005 b(landolt)=15.619/0.005 u(landolt)=16.941/0.005 r(landolt)=13.517/0.005 i(landolt)=12.841/0.005" flags ( astrom ) )
+      ( name "95-302" type std ra "03:52:42.00" dec "00:31:19.0"
+        comments "SA95 302  "
+        mag 11.7 smags "v(landolt)=11.694/0.005 b(landolt)=12.519/0.005 u(landolt)=12.966/0.005 r(landolt)=11.223/0.005 i(landolt)=10.803/0.005" flags ( astrom ) )
+      ( name "95-96" type std ra "03:52:54.00" dec "00:00:19.0"
+        comments "SA95 96  "
+        mag 10.0 smags "v(landolt)=10.010/0.005 b(landolt)=10.157/0.005 u(landolt)=10.229/0.005 r(landolt)=9.931/0.005 i(landolt)=9.836/0.005" flags ( astrom ) )
+      ( name "95-97" type std ra "03:52:57.50" dec "-00:00:19.0"
+        comments "SA95 97  "
+        mag 14.8 smags "v(landolt)=14.818/0.005 b(landolt)=15.724/0.005 u(landolt)=16.104/0.005 r(landolt)=14.296/0.005 i(landolt)=13.750/0.005" flags ( astrom ) )
+      ( name "95-98" type std ra "03:53:00.20" dec "00:02:49.0"
+        comments "SA95 98  "
+        mag 14.4 smags "v(landolt)=14.448/0.005 b(landolt)=15.629/0.005 u(landolt)=16.721/0.005 r(landolt)=13.725/0.005 i(landolt)=13.105/0.005" flags ( astrom ) )
+      ( name "95-100" type std ra "03:53:00.80" dec "00:00:16.0"
+        comments "SA95 100  "
+        mag 15.6 smags "v(landolt)=15.633/0.005 b(landolt)=16.424/0.005 u(landolt)=16.475/0.005 r(landolt)=15.095/0.005 i(landolt)=14.674/0.005" flags ( astrom ) )
+      ( name "95-101" type std ra "03:53:04.10" dec "00:02:52.0"
+        comments "SA95 101  "
+        mag 12.7 smags "v(landolt)=12.677/0.005 b(landolt)=13.455/0.005 u(landolt)=13.718/0.005 r(landolt)=12.241/0.005 i(landolt)=11.815/0.005" flags ( astrom ) )
+      ( name "95-102" type std ra "03:53:07.50" dec "00:01:10.0"
+        comments "SA95 102  "
+        mag 15.6 smags "v(landolt)=15.622/0.005 b(landolt)=16.623/0.005 u(landolt)=16.785/0.005 r(landolt)=15.174/0.005 i(landolt)=14.556/0.005" flags ( astrom ) )
+      ( name "95-252" type std ra "03:53:10.60" dec "00:27:23.0"
+        comments "SA95 252  "
+        mag 15.4 smags "v(landolt)=15.394/0.005 b(landolt)=16.846/0.005 u(landolt)=18.024/0.005 r(landolt)=14.578/0.005 i(landolt)=13.831/0.005" flags ( astrom ) )
+      ( name "95-190" type std ra "03:53:13.20" dec "00:16:23.0"
+        comments "SA95 190  "
+        mag 12.6 smags "v(landolt)=12.627/0.005 b(landolt)=12.914/0.005 u(landolt)=13.150/0.005 r(landolt)=12.432/0.005 i(landolt)=12.212/0.005" flags ( astrom ) )
+      ( name "95-193" type std ra "03:53:20.50" dec "00:16:35.0"
+        comments "SA95 193  "
+        mag 14.3 smags "v(landolt)=14.338/0.005 b(landolt)=15.549/0.005 u(landolt)=16.788/0.005 r(landolt)=13.590/0.005 i(landolt)=12.974/0.005" flags ( astrom ) )
+      ( name "95-105" type std ra "03:53:21.30" dec "-00:00:19.0"
+        comments "SA95 105  "
+        mag 13.6 smags "v(landolt)=13.574/0.005 b(landolt)=14.550/0.005 u(landolt)=15.177/0.005 r(landolt)=13.024/0.005 i(landolt)=12.488/0.005" flags ( astrom ) )
+      ( name "95-107" type std ra "03:53:25.60" dec "00:02:20.0"
+        comments "SA95 107  "
+        mag 16.3 smags "v(landolt)=16.275/0.005 b(landolt)=17.599/0.005 u(landolt)=18.714/0.005 r(landolt)=15.328/0.005 i(landolt)=14.366/0.005" flags ( astrom ) )
+      ( name "95-106" type std ra "03:53:25.10" dec "00:01:23.0"
+        comments "SA95 106  "
+        mag 15.1 smags "v(landolt)=15.137/0.005 b(landolt)=16.388/0.005 u(landolt)=16.757/0.005 r(landolt)=14.743/0.005 i(landolt)=14.235/0.005" flags ( astrom ) )
+      ( name "95-112" type std ra "03:53:40.00" dec "-00:01:11.0"
+        comments "SA95 112  "
+        mag 15.5 smags "v(landolt)=15.502/0.005 b(landolt)=16.164/0.005 u(landolt)=16.241/0.005 r(landolt)=14.897/0.005 i(landolt)=14.277/0.005" flags ( astrom ) )
+      ( name "95-41" type std ra "03:53:41.10" dec "-00:02:32.0"
+        comments "SA95 41  "
+        mag 14.1 smags "v(landolt)=14.060/0.005 b(landolt)=14.963/0.005 u(landolt)=15.260/0.005 r(landolt)=13.471/0.005 i(landolt)=12.886/0.005" flags ( astrom ) )
+      ( name "95-317" type std ra "03:53:44.10" dec "00:29:50.0"
+        comments "SA95 317  "
+        mag 13.4 smags "v(landolt)=13.449/0.005 b(landolt)=14.769/0.005 u(landolt)=15.889/0.005 r(landolt)=12.681/0.005 i(landolt)=11.973/0.005" flags ( astrom ) )
+      ( name "95-42" type std ra "03:53:43.70" dec "-00:04:33.0"
+        comments "SA95 42  "
+        mag 15.6 smags "v(landolt)=15.606/0.005 b(landolt)=15.391/0.005 u(landolt)=14.280/0.005 r(landolt)=15.725/0.005 i(landolt)=15.905/0.005" flags ( astrom ) )
+      ( name "95-263" type std ra "03:53:47.00" dec "00:26:41.0"
+        comments "SA95 263  "
+        mag 12.7 smags "v(landolt)=12.679/0.005 b(landolt)=14.179/0.005 u(landolt)=15.738/0.005 r(landolt)=11.878/0.005 i(landolt)=11.167/0.005" flags ( astrom ) )
+      ( name "95-115" type std ra "03:53:47.70" dec "-00:00:47.0"
+        comments "SA95 115  "
+        mag 14.7 smags "v(landolt)=14.680/0.005 b(landolt)=15.516/0.005 u(landolt)=15.612/0.005 r(landolt)=14.103/0.005 i(landolt)=13.524/0.005" flags ( astrom ) )
+      ( name "95-43" type std ra "03:53:48.60" dec "-00:03:02.0"
+        comments "SA95 43  "
+        mag 10.8 smags "v(landolt)=10.803/0.005 b(landolt)=11.313/0.005 u(landolt)=11.297/0.005 r(landolt)=10.495/0.005 i(landolt)=10.179/0.005" flags ( astrom ) )
+      ( name "95-271" type std ra "03:54:16.20" dec "00:18:52.0"
+        comments "SA95 271  "
+        mag 13.7 smags "v(landolt)=13.669/0.005 b(landolt)=14.956/0.005 u(landolt)=15.872/0.005 r(landolt)=12.935/0.005 i(landolt)=12.218/0.005" flags ( astrom ) )
+      ( name "95-328" type std ra "03:54:19.40" dec "00:36:31.0"
+        comments "SA95 328  "
+        mag 13.5 smags "v(landolt)=13.525/0.005 b(landolt)=15.057/0.005 u(landolt)=16.355/0.005 r(landolt)=12.617/0.005 i(landolt)=11.749/0.005" flags ( astrom ) )
+      ( name "95-329" type std ra "03:54:23.90" dec "00:37:07.0"
+        comments "SA95 329  "
+        mag 14.6 smags "v(landolt)=14.617/0.005 b(landolt)=15.801/0.005 u(landolt)=16.894/0.005 r(landolt)=13.851/0.005 i(landolt)=13.209/0.005" flags ( astrom ) )
+      ( name "95-330" type std ra "03:54:30.70" dec "00:29:05.0"
+        comments "SA95 330  "
+        mag 12.2 smags "v(landolt)=12.174/0.005 b(landolt)=14.173/0.005 u(landolt)=16.406/0.005 r(landolt)=11.008/0.005 i(landolt)=9.908/0.005" flags ( astrom ) )
+      ( name "95-275" type std ra "03:54:44.20" dec "00:27:20.0"
+        comments "SA95 275  "
+        mag 13.5 smags "v(landolt)=13.479/0.005 b(landolt)=15.242/0.005 u(landolt)=16.982/0.005 r(landolt)=12.468/0.005 i(landolt)=11.537/0.005" flags ( astrom ) )
+      ( name "95-276" type std ra "03:54:45.80" dec "00:25:55.0"
+        comments "SA95 276  "
+        mag 14.1 smags "v(landolt)=14.118/0.005 b(landolt)=15.343/0.005 u(landolt)=16.561/0.005 r(landolt)=13.370/0.005 i(landolt)=12.724/0.005" flags ( astrom ) )
+      ( name "95-60" type std ra "03:54:49.50" dec "-00:07:04.0"
+        comments "SA95 60  "
+        mag 13.4 smags "v(landolt)=13.429/0.005 b(landolt)=14.205/0.005 u(landolt)=14.402/0.005 r(landolt)=12.965/0.005 i(landolt)=12.516/0.005" flags ( astrom ) )
+      ( name "95-218" type std ra "03:54:49.90" dec "00:10:09.0"
+        comments "SA95 218  "
+        mag 12.1 smags "v(landolt)=12.095/0.005 b(landolt)=12.803/0.005 u(landolt)=13.011/0.005 r(landolt)=11.698/0.005 i(landolt)=11.328/0.005" flags ( astrom ) )
+      ( name "95-132" type std ra "03:54:51.70" dec "00:05:22.0"
+        comments "SA95 132  "
+        mag 12.1 smags "v(landolt)=12.064/0.005 b(landolt)=12.512/0.005 u(landolt)=12.812/0.005 r(landolt)=11.805/0.005 i(landolt)=11.518/0.005" flags ( astrom ) )
+      ( name "95-62" type std ra "03:55:00.30" dec "-00:02:54.0"
+        comments "SA95 62  "
+        mag 13.5 smags "v(landolt)=13.538/0.005 b(landolt)=14.893/0.005 u(landolt)=16.074/0.005 r(landolt)=12.796/0.005 i(landolt)=12.111/0.005" flags ( astrom ) )
+      ( name "95-137" type std ra "03:55:03.70" dec "00:03:28.0"
+        comments "SA95 137  "
+        mag 14.4 smags "v(landolt)=14.440/0.005 b(landolt)=15.897/0.005 u(landolt)=17.033/0.005 r(landolt)=13.547/0.005 i(landolt)=12.702/0.005" flags ( astrom ) )
+      ( name "95-139" type std ra "03:55:04.60" dec "00:03:09.0"
+        comments "SA95 139  "
+        mag 12.2 smags "v(landolt)=12.196/0.005 b(landolt)=13.119/0.005 u(landolt)=13.796/0.005 r(landolt)=11.634/0.005 i(landolt)=11.158/0.005" flags ( astrom ) )
+      ( name "95-66" type std ra "03:55:06.40" dec "-00:09:32.0"
+        comments "SA95 66  "
+        mag 12.9 smags "v(landolt)=12.892/0.005 b(landolt)=13.607/0.005 u(landolt)=13.774/0.005 r(landolt)=12.466/0.005 i(landolt)=12.028/0.005" flags ( astrom ) )
+      ( name "95-227" type std ra "03:55:08.60" dec "00:14:35.0"
+        comments "SA95 227  "
+        mag 15.8 smags "v(landolt)=15.779/0.005 b(landolt)=16.550/0.005 u(landolt)=16.584/0.005 r(landolt)=15.264/0.005 i(landolt)=14.712/0.005" flags ( astrom ) )
+      ( name "95-142" type std ra "03:55:09.30" dec "00:01:20.0"
+        comments "SA95 142  "
+        mag 12.9 smags "v(landolt)=12.927/0.005 b(landolt)=13.515/0.005 u(landolt)=13.612/0.005 r(landolt)=12.556/0.005 i(landolt)=12.181/0.005" flags ( astrom ) )
+      ( name "95-74" type std ra "03:55:31.10" dec "-00:09:13.0"
+        comments "SA95 74  "
+        mag 11.5 smags "v(landolt)=11.531/0.005 b(landolt)=12.657/0.005 u(landolt)=13.343/0.005 r(landolt)=10.931/0.005 i(landolt)=10.364/0.005" flags ( astrom ) )
+      ( name "95-231" type std ra "03:55:38.80" dec "00:10:43.0"
+        comments "SA95 231  "
+        mag 14.2 smags "v(landolt)=14.216/0.005 b(landolt)=14.668/0.005 u(landolt)=14.965/0.005 r(landolt)=13.946/0.005 i(landolt)=13.656/0.005" flags ( astrom ) )
+      ( name "95-284" type std ra "03:55:41.50" dec "00:26:37.0"
+        comments "SA95 284  "
+        mag 13.7 smags "v(landolt)=13.669/0.005 b(landolt)=15.067/0.005 u(landolt)=16.140/0.005 r(landolt)=12.851/0.005 i(landolt)=12.085/0.005" flags ( astrom ) )
+      ( name "95-149" type std ra "03:55:44.40" dec "00:07:04.0"
+        comments "SA95 149  "
+        mag 10.9 smags "v(landolt)=10.938/0.005 b(landolt)=12.531/0.005 u(landolt)=14.095/0.005 r(landolt)=10.064/0.005 i(landolt)=9.253/0.005" flags ( astrom ) )
+      ( name "95-285" type std ra "03:55:44.10" dec "00:25:10.0"
+        comments "SA95 285  "
+        mag 15.6 smags "v(landolt)=15.561/0.005 b(landolt)=16.498/0.005 u(landolt)=17.201/0.005 r(landolt)=14.954/0.005 i(landolt)=14.352/0.005" flags ( astrom ) )
+      ( name "95-236" type std ra "03:56:13.30" dec "00:08:46.0"
+        comments "SA95 236  "
+        mag 11.5 smags "v(landolt)=11.491/0.005 b(landolt)=12.227/0.005 u(landolt)=12.389/0.005 r(landolt)=11.071/0.005 i(landolt)=10.660/0.005" flags ( astrom ) )
+      ( name "96-21" type std ra "04:51:15.70" dec "-00:14:50.0"
+        comments "SA96 21  "
+        mag 12.2 smags "v(landolt)=12.182/0.005 b(landolt)=12.672/0.005 u(landolt)=12.668/0.005 r(landolt)=11.883/0.005 i(landolt)=11.586/0.005" flags ( astrom ) )
+      ( name "96-36" type std ra "04:51:42.40" dec "-00:10:10.0"
+        comments "SA96 36  "
+        mag 10.6 smags "v(landolt)=10.591/0.005 b(landolt)=10.838/0.005 u(landolt)=10.956/0.005 r(landolt)=10.457/0.005 i(landolt)=10.321/0.005" flags ( astrom ) )
+      ( name "96-737" type std ra "04:52:35.30" dec "00:22:30.0"
+        comments "SA96 737  "
+        mag 11.7 smags "v(landolt)=11.716/0.005 b(landolt)=13.050/0.005 u(landolt)=14.210/0.005 r(landolt)=10.983/0.005 i(landolt)=10.288/0.005" flags ( astrom ) )
+      ( name "96-409" type std ra "04:52:58.50" dec "00:09:04.0"
+        comments "SA96 409  "
+        mag 13.8 smags "v(landolt)=13.778/0.005 b(landolt)=14.321/0.005 u(landolt)=14.363/0.005 r(landolt)=13.438/0.005 i(landolt)=13.098/0.005" flags ( astrom ) )
+      ( name "96-83" type std ra "04:52:58.80" dec "-00:14:41.0"
+        comments "SA96 83  "
+        mag 11.7 smags "v(landolt)=11.719/0.005 b(landolt)=11.898/0.005 u(landolt)=12.100/0.005 r(landolt)=11.626/0.005 i(landolt)=11.529/0.005" flags ( astrom ) )
+      ( name "96-235" type std ra "04:53:18.80" dec "-00:05:02.0"
+        comments "SA96 235  "
+        mag 11.1 smags "v(landolt)=11.140/0.005 b(landolt)=12.214/0.005 u(landolt)=13.112/0.005 r(landolt)=10.581/0.005 i(landolt)=10.071/0.005" flags ( astrom ) )
+      ( name "G97-42" type std ra "05:28:00.00" dec "09:38:39.0"
+        comments "G97-42    "
+        mag 12.4 smags "v(landolt)=12.443/0.005 b(landolt)=14.082/0.005 u(landolt)=15.341/0.005 r(landolt)=11.272/0.005 i(landolt)=9.787/0.005" flags ( astrom ) )
+      ( name "G102-22" type std ra "05:42:09.20" dec "12:29:21.0"
+        comments "G102-22   "
+        mag 11.5 smags "v(landolt)=11.509/0.005 b(landolt)=13.130/0.005 u(landolt)=14.264/0.005 r(landolt)=10.298/0.005 i(landolt)=8.708/0.005" flags ( astrom ) )
+      ( name "GD-71" type std ra "05:52:27.60" dec "15:53:12.0"
+        comments "GD 71     "
+        mag 13.0 smags "v(landolt)=13.032/0.005 b(landolt)=12.783/0.005 u(landolt)=11.676/0.005 r(landolt)=13.169/0.005 i(landolt)=13.333/0.005" flags ( astrom ) )
+      ( name "97-249" type std ra "05:57:07.50" dec "00:01:11.0"
+        comments "SA97 249  "
+        mag 11.7 smags "v(landolt)=11.733/0.005 b(landolt)=12.381/0.005 u(landolt)=12.481/0.005 r(landolt)=11.364/0.005 i(landolt)=11.011/0.005" flags ( astrom ) )
+      ( name "97-42" type std ra "05:57:00.00" dec "09:00:00.0"
+        comments "SA97 42   "
+        mag 12.4 smags "v(landolt)=12.443/0.005 b(landolt)=14.082/0.005 u(landolt)=15.277/0.005 r(landolt)=11.288/0.005 i(landolt)=9.802/0.005" flags ( astrom ) )
+      ( name "97-345" type std ra "05:57:33.10" dec "00:21:16.0"
+        comments "SA97 345  "
+        mag 11.6 smags "v(landolt)=11.608/0.005 b(landolt)=13.263/0.005 u(landolt)=14.943/0.005 r(landolt)=10.680/0.005 i(landolt)=9.836/0.005" flags ( astrom ) )
+      ( name "97-351" type std ra "05:57:37.30" dec "00:13:44.0"
+        comments "SA97 351  "
+        mag 9.8 smags "v(landolt)=9.781/0.005 b(landolt)=9.983/0.005 u(landolt)=10.079/0.005 r(landolt)=9.657/0.005 i(landolt)=9.516/0.005" flags ( astrom ) )
+      ( name "97-75" type std ra "05:57:55.10" dec "-00:09:29.0"
+        comments "SA97 75  "
+        mag 11.5 smags "v(landolt)=11.483/0.005 b(landolt)=13.355/0.005 u(landolt)=15.455/0.005 r(landolt)=10.436/0.005 i(landolt)=9.484/0.005" flags ( astrom ) )
+      ( name "97-284" type std ra "05:58:25.10" dec "00:05:14.0"
+        comments "SA97 284  "
+        mag 10.8 smags "v(landolt)=10.788/0.005 b(landolt)=12.151/0.005 u(landolt)=13.238/0.005 r(landolt)=10.014/0.005 i(landolt)=9.289/0.005" flags ( astrom ) )
+      ( name "97-224" type std ra "05:58:45.50" dec "-00:04:46.0"
+        comments "SA97 224  "
+        mag 14.1 smags "v(landolt)=14.085/0.005 b(landolt)=14.995/0.005 u(landolt)=15.336/0.005 r(landolt)=13.532/0.005 i(landolt)=12.985/0.005" flags ( astrom ) )
+      ( name "98-961" type std ra "06:51:27.00" dec "-00:15:36.0"
+        comments "SA98 961  "
+        mag 13.1 smags "v(landolt)=13.089/0.005 b(landolt)=14.372/0.005 u(landolt)=15.375/0.005 r(landolt)=12.388/0.005 i(landolt)=11.726/0.005" flags ( astrom ) )
+      ( name "98-966" type std ra "06:51:28.30" dec "-00:16:25.0"
+        comments "SA98 966  "
+        mag 14.0 smags "v(landolt)=14.001/0.005 b(landolt)=14.470/0.005 u(landolt)=14.827/0.005 r(landolt)=13.718/0.005 i(landolt)=13.387/0.005" flags ( astrom ) )
+      ( name "98-556" type std ra "06:51:29.50" dec "-00:24:51.0"
+        comments "SA98 556  "
+        mag 14.1 smags "v(landolt)=14.137/0.005 b(landolt)=14.475/0.005 u(landolt)=14.601/0.005 r(landolt)=13.941/0.005 i(landolt)=13.698/0.005" flags ( astrom ) )
+      ( name "98-557" type std ra "06:51:29.50" dec "-00:25:06.0"
+        comments "SA98 557  "
+        mag 14.8 smags "v(landolt)=14.780/0.005 b(landolt)=16.177/0.005 u(landolt)=17.249/0.005 r(landolt)=14.025/0.005 i(landolt)=13.284/0.005" flags ( astrom ) )
+      ( name "98-562" type std ra "06:51:30.60" dec "-00:18:59.0"
+        comments "SA98 562  "
+        mag 12.2 smags "v(landolt)=12.185/0.005 b(landolt)=12.707/0.005 u(landolt)=12.705/0.005 r(landolt)=11.880/0.005 i(landolt)=11.577/0.005" flags ( astrom ) )
+      ( name "98-563" type std ra "06:51:31.50" dec "-00:26:26.0"
+        comments "SA98 563  "
+        mag 14.2 smags "v(landolt)=14.162/0.005 b(landolt)=14.578/0.005 u(landolt)=14.388/0.005 r(landolt)=13.868/0.005 i(landolt)=13.551/0.005" flags ( astrom ) )
+      ( name "98-978" type std ra "06:51:33.70" dec "-00:11:30.0"
+        comments "SA98 978  "
+        mag 10.6 smags "v(landolt)=10.572/0.005 b(landolt)=11.181/0.005 u(landolt)=11.275/0.005 r(landolt)=10.223/0.005 i(landolt)=9.901/0.005" flags ( astrom ) )
+      ( name "98-L1" type std ra "06:51:39.00" dec "-00:26:36.0"
+        comments "SA98 L1  "
+        mag 15.7 smags "v(landolt)=15.672/0.005 b(landolt)=16.915/0.005 u(landolt)=17.691/0.005 r(landolt)=14.942/0.005 i(landolt)=14.230/0.005" flags ( astrom ) )
+      ( name "98-L2" type std ra "06:51:40.50" dec "-00:21:59.0"
+        comments "SA98 L2  "
+        mag 15.9 smags "v(landolt)=15.859/0.005 b(landolt)=17.199/0.005 u(landolt)=18.696/0.005 r(landolt)=15.105/0.005 i(landolt)=14.533/0.005" flags ( astrom ) )
+      ( name "98-581" type std ra "06:51:39.90" dec "-00:25:42.0"
+        comments "SA98 581  "
+        mag 14.6 smags "v(landolt)=14.556/0.005 b(landolt)=14.794/0.005 u(landolt)=14.955/0.005 r(landolt)=14.438/0.005 i(landolt)=14.194/0.005" flags ( astrom ) )
+      ( name "98-580" type std ra "06:51:39.70" dec "-00:26:42.0"
+        comments "SA98 580  "
+        mag 14.7 smags "v(landolt)=14.728/0.005 b(landolt)=15.095/0.005 u(landolt)=15.398/0.005 r(landolt)=14.487/0.005 i(landolt)=14.182/0.005" flags ( astrom ) )
+      ( name "98-L3" type std ra "06:51:42.20" dec "-00:15:55.0"
+        comments "SA98 L3  "
+        mag 14.6 smags "v(landolt)=14.614/0.005 b(landolt)=16.550/0.005 u(landolt)=18.387/0.005 r(landolt)=13.523/0.005 i(landolt)=12.476/0.005" flags ( astrom ) )
+      ( name "98-L4" type std ra "06:51:42.20" dec "-00:16:21.0"
+        comments "SA98 L4  "
+        mag 16.3 smags "v(landolt)=16.332/0.005 b(landolt)=17.676/0.005 u(landolt)=18.762/0.005 r(landolt)=15.396/0.005 i(landolt)=14.611/0.005" flags ( astrom ) )
+      ( name "98-1002" type std ra "06:51:43.00" dec "-00:15:54.0"
+        comments "SA98 1002 "
+        mag 14.6 smags "v(landolt)=14.568/0.005 b(landolt)=15.142/0.005 u(landolt)=15.115/0.005 r(landolt)=14.214/0.005 i(landolt)=13.835/0.005" flags ( astrom ) )
+      ( name "98-590" type std ra "06:51:42.90" dec "-00:22:19.0"
+        comments "SA98 590  "
+        mag 14.6 smags "v(landolt)=14.642/0.005 b(landolt)=15.994/0.005 u(landolt)=16.847/0.005 r(landolt)=13.889/0.005 i(landolt)=13.142/0.005" flags ( astrom ) )
+      ( name "98-614" type std ra "06:51:48.60" dec "-00:20:33.0"
+        comments "SA98 614  "
+        mag 15.7 smags "v(landolt)=15.674/0.005 b(landolt)=16.737/0.005 u(landolt)=17.136/0.005 r(landolt)=14.840/0.005 i(landolt)=14.195/0.005" flags ( astrom ) )
+      ( name "98-618" type std ra "06:51:49.50" dec "-00:21:16.0"
+        comments "SA98 618  "
+        mag 12.7 smags "v(landolt)=12.723/0.005 b(landolt)=14.915/0.005 u(landolt)=17.059/0.005 r(landolt)=11.469/0.005 i(landolt)=10.318/0.005" flags ( astrom ) )
+      ( name "98-624" type std ra "06:51:51.80" dec "-00:20:15.0"
+        comments "SA98 624  "
+        mag 13.8 smags "v(landolt)=13.811/0.005 b(landolt)=14.602/0.005 u(landolt)=14.996/0.005 r(landolt)=13.394/0.005 i(landolt)=12.990/0.005" flags ( astrom ) )
+      ( name "98-626" type std ra "06:51:52.30" dec "-00:20:43.0"
+        comments "SA98 626  "
+        mag 14.8 smags "v(landolt)=14.758/0.005 b(landolt)=16.164/0.005 u(landolt)=17.231/0.005 r(landolt)=13.952/0.005 i(landolt)=13.136/0.005" flags ( astrom ) )
+      ( name "98-627" type std ra "06:51:52.90" dec "-00:22:01.0"
+        comments "SA98 627  "
+        mag 14.9 smags "v(landolt)=14.900/0.005 b(landolt)=15.589/0.005 u(landolt)=15.667/0.005 r(landolt)=14.472/0.005 i(landolt)=14.085/0.005" flags ( astrom ) )
+      ( name "98-634" type std ra "06:51:55.70" dec "-00:20:55.0"
+        comments "SA98 634  "
+        mag 14.6 smags "v(landolt)=14.608/0.005 b(landolt)=15.255/0.005 u(landolt)=15.378/0.005 r(landolt)=14.226/0.005 i(landolt)=13.854/0.005" flags ( astrom ) )
+      ( name "98-642" type std ra "06:51:58.90" dec "-00:21:33.0"
+        comments "SA98 642  "
+        mag 15.3 smags "v(landolt)=15.290/0.005 b(landolt)=15.861/0.005 u(landolt)=16.179/0.005 r(landolt)=14.988/0.005 i(landolt)=14.595/0.005" flags ( astrom ) )
+      ( name "98-185" type std ra "06:52:01.80" dec "-00:27:22.0"
+        comments "SA98 185  "
+        mag 10.5 smags "v(landolt)=10.536/0.005 b(landolt)=10.738/0.005 u(landolt)=10.851/0.005 r(landolt)=10.427/0.005 i(landolt)=10.303/0.005" flags ( astrom ) )
+      ( name "98-646" type std ra "06:52:02.30" dec "-00:21:16.0"
+        comments "SA98 646  "
+        mag 15.8 smags "v(landolt)=15.839/0.005 b(landolt)=16.899/0.005 u(landolt)=18.325/0.005 r(landolt)=15.256/0.005 i(landolt)=14.752/0.005" flags ( astrom ) )
+      ( name "98-193" type std ra "06:52:03.30" dec "-00:27:17.0"
+        comments "SA98 193  "
+        mag 10.0 smags "v(landolt)=10.030/0.005 b(landolt)=11.210/0.005 u(landolt)=12.362/0.005 r(landolt)=9.415/0.005 i(landolt)=8.878/0.005" flags ( astrom ) )
+      ( name "98-653" type std ra "06:52:04.90" dec "-00:18:18.0"
+        comments "SA98 653  "
+        mag 9.5 smags "v(landolt)=9.539/0.005 b(landolt)=9.535/0.005 u(landolt)=9.436/0.005 r(landolt)=9.530/0.005 i(landolt)=9.522/0.005" flags ( astrom ) )
+      ( name "98-650" type std ra "06:52:04.40" dec "-00:19:39.0"
+        comments "SA98 650  "
+        mag 12.3 smags "v(landolt)=12.271/0.005 b(landolt)=12.428/0.005 u(landolt)=12.538/0.005 r(landolt)=12.191/0.005 i(landolt)=12.105/0.005" flags ( astrom ) )
+      ( name "98-652" type std ra "06:52:04.70" dec "-00:21:56.0"
+        comments "SA98 652  "
+        mag 14.8 smags "v(landolt)=14.817/0.005 b(landolt)=15.428/0.005 u(landolt)=15.554/0.005 r(landolt)=14.541/0.005 i(landolt)=14.202/0.005" flags ( astrom ) )
+      ( name "98-666" type std ra "06:52:09.90" dec "-00:23:32.0"
+        comments "SA98 666  "
+        mag 12.7 smags "v(landolt)=12.732/0.005 b(landolt)=12.896/0.005 u(landolt)=12.892/0.005 r(landolt)=12.641/0.005 i(landolt)=12.533/0.005" flags ( astrom ) )
+      ( name "98-671" type std ra "06:52:11.80" dec "-00:18:24.0"
+        comments "SA98 671  "
+        mag 13.4 smags "v(landolt)=13.385/0.005 b(landolt)=14.353/0.005 u(landolt)=15.072/0.005 r(landolt)=12.810/0.005 i(landolt)=12.316/0.005" flags ( astrom ) )
+      ( name "98-670" type std ra "06:52:11.50" dec "-00:19:16.0"
+        comments "SA98 670  "
+        mag 11.9 smags "v(landolt)=11.930/0.005 b(landolt)=13.286/0.005 u(landolt)=14.599/0.005 r(landolt)=11.207/0.005 i(landolt)=10.554/0.005" flags ( astrom ) )
+      ( name "98-676" type std ra "06:52:13.70" dec "-00:19:20.0"
+        comments "SA98 676  "
+        mag 13.1 smags "v(landolt)=13.068/0.005 b(landolt)=14.214/0.005 u(landolt)=14.880/0.005 r(landolt)=12.385/0.005 i(landolt)=11.712/0.005" flags ( astrom ) )
+      ( name "98-675" type std ra "06:52:13.30" dec "-00:19:40.0"
+        comments "SA98 675  "
+        mag 13.4 smags "v(landolt)=13.398/0.005 b(landolt)=15.307/0.005 u(landolt)=17.243/0.005 r(landolt)=12.316/0.005 i(landolt)=11.314/0.005" flags ( astrom ) )
+      ( name "98-L5" type std ra "06:52:15.70" dec "-00:19:44.0"
+        comments "SA98 L5  "
+        mag 7.8 smags "v(landolt)=7.800/0.005 b(landolt)=19.700/0.005 u(landolt)=19.600/0.005 r(landolt)=14.700/0.005 i(landolt)=12.100/0.005" flags ( astrom ) )
+      ( name "98-682" type std ra "06:52:16.40" dec "-00:19:41.0"
+        comments "SA98 682  "
+        mag 13.7 smags "v(landolt)=13.749/0.005 b(landolt)=14.381/0.005 u(landolt)=14.479/0.005 r(landolt)=13.383/0.005 i(landolt)=13.031/0.005" flags ( astrom ) )
+      ( name "98-685" type std ra "06:52:18.40" dec "-00:20:20.0"
+        comments "SA98 685  "
+        mag 12.0 smags "v(landolt)=11.954/0.005 b(landolt)=12.417/0.005 u(landolt)=12.513/0.005 r(landolt)=11.664/0.005 i(landolt)=11.384/0.005" flags ( astrom ) )
+      ( name "98-688" type std ra "06:52:18.80" dec "-00:23:33.0"
+        comments "SA98 688  "
+        mag 12.8 smags "v(landolt)=12.754/0.005 b(landolt)=13.047/0.005 u(landolt)=13.292/0.005 r(landolt)=12.596/0.005 i(landolt)=12.416/0.005" flags ( astrom ) )
+      ( name "98-1082" type std ra "06:52:20.10" dec "-00:14:14.0"
+        comments "SA98 1082 "
+        mag 15.0 smags "v(landolt)=15.010/0.005 b(landolt)=15.845/0.005 u(landolt)=15.844/0.005 r(landolt)=14.525/0.005 i(landolt)=13.906/0.005" flags ( astrom ) )
+      ( name "98-1087" type std ra "06:52:21.10" dec "-00:15:51.0"
+        comments "SA98 1087 "
+        mag 14.4 smags "v(landolt)=14.439/0.005 b(landolt)=16.034/0.005 u(landolt)=17.318/0.005 r(landolt)=13.511/0.005 i(landolt)=12.629/0.005" flags ( astrom ) )
+      ( name "98-1102" type std ra "06:52:27.90" dec "-00:13:43.0"
+        comments "SA98 1102 "
+        mag 12.1 smags "v(landolt)=12.113/0.005 b(landolt)=12.427/0.005 u(landolt)=12.516/0.005 r(landolt)=11.920/0.005 i(landolt)=11.725/0.005" flags ( astrom ) )
+      ( name "98-1112" type std ra "06:52:34.80" dec "-00:15:25.0"
+        comments "SA98 1112 "
+        mag 14.0 smags "v(landolt)=13.975/0.005 b(landolt)=14.789/0.005 u(landolt)=15.075/0.005 r(landolt)=13.532/0.005 i(landolt)=13.101/0.005" flags ( astrom ) )
+      ( name "98-1119" type std ra "06:52:36.60" dec "-00:14:32.0"
+        comments "SA98 1119 "
+        mag 11.9 smags "v(landolt)=11.878/0.005 b(landolt)=12.429/0.005 u(landolt)=12.498/0.005 r(landolt)=11.566/0.005 i(landolt)=11.267/0.005" flags ( astrom ) )
+      ( name "98-1124" type std ra "06:52:38.00" dec "-00:16:34.0"
+        comments "SA98 1124 "
+        mag 13.7 smags "v(landolt)=13.707/0.005 b(landolt)=14.022/0.005 u(landolt)=14.280/0.005 r(landolt)=13.534/0.005 i(landolt)=13.333/0.005" flags ( astrom ) )
+      ( name "98-1122" type std ra "06:52:37.50" dec "-00:17:04.0"
+        comments "SA98 1122 "
+        mag 14.1 smags "v(landolt)=14.090/0.005 b(landolt)=14.685/0.005 u(landolt)=14.388/0.005 r(landolt)=13.714/0.005 i(landolt)=13.272/0.005" flags ( astrom ) )
+      ( name "98-724" type std ra "06:52:37.20" dec "-00:19:21.0"
+        comments "SA98 724  "
+        mag 11.1 smags "v(landolt)=11.118/0.005 b(landolt)=12.222/0.005 u(landolt)=13.126/0.005 r(landolt)=10.543/0.005 i(landolt)=10.016/0.005" flags ( astrom ) )
+      ( name "98-733" type std ra "06:52:40.00" dec "-00:17:15.0"
+        comments "SA98 733  "
+        mag 12.2 smags "v(landolt)=12.238/0.005 b(landolt)=13.523/0.005 u(landolt)=14.610/0.005 r(landolt)=11.540/0.005 i(landolt)=10.890/0.005" flags ( astrom ) )
+      ( name "RU-149G" type std ra "07:24:11.90" dec "-00:31:58.0"
+        comments "Rubin 149G    "
+        mag 12.8 smags "v(landolt)=12.829/0.005 b(landolt)=13.370/0.005 u(landolt)=13.403/0.005 r(landolt)=12.507/0.005 i(landolt)=12.185/0.005" flags ( astrom ) )
+      ( name "RU-149A" type std ra "07:24:13.20" dec "-00:32:53.0"
+        comments "Rubin 149A    "
+        mag 14.5 smags "v(landolt)=14.495/0.005 b(landolt)=14.793/0.005 u(landolt)=14.911/0.005 r(landolt)=14.299/0.005 i(landolt)=14.103/0.005" flags ( astrom ) )
+      ( name "RU-149F" type std ra "07:24:14.00" dec "-00:31:38.0"
+        comments "Rubin 149F    "
+        mag 13.5 smags "v(landolt)=13.471/0.005 b(landolt)=14.586/0.005 u(landolt)=15.611/0.005 r(landolt)=12.877/0.005 i(landolt)=12.339/0.005" flags ( astrom ) )
+      ( name "RU-149" type std ra "07:24:14.40" dec "-00:33:04.0"
+        comments "Rubin 149     "
+        mag 13.9 smags "v(landolt)=13.866/0.005 b(landolt)=13.737/0.005 u(landolt)=12.958/0.005 r(landolt)=13.906/0.005 i(landolt)=13.974/0.005" flags ( astrom ) )
+      ( name "RU-149D" type std ra "07:24:15.40" dec "-00:32:48.0"
+        comments "Rubin 149D    "
+        mag 11.5 smags "v(landolt)=11.480/0.005 b(landolt)=11.443/0.005 u(landolt)=11.156/0.005 r(landolt)=11.459/0.005 i(landolt)=11.451/0.005" flags ( astrom ) )
+      ( name "RU-149C" type std ra "07:24:17.20" dec "-00:32:25.0"
+        comments "Rubin 149C    "
+        mag 14.4 smags "v(landolt)=14.425/0.005 b(landolt)=14.620/0.005 u(landolt)=14.761/0.005 r(landolt)=14.332/0.005 i(landolt)=14.205/0.005" flags ( astrom ) )
+      ( name "RU-149B" type std ra "07:24:17.60" dec "-00:33:05.0"
+        comments "Rubin 149B    "
+        mag 12.6 smags "v(landolt)=12.642/0.005 b(landolt)=13.304/0.005 u(landolt)=13.455/0.005 r(landolt)=12.268/0.005 i(landolt)=11.914/0.005" flags ( astrom ) )
+      ( name "RU-149E" type std ra "07:24:18.30" dec "-00:31:18.0"
+        comments "Rubin 149E    "
+        mag 13.7 smags "v(landolt)=13.718/0.005 b(landolt)=14.240/0.005 u(landolt)=14.233/0.005 r(landolt)=13.397/0.005 i(landolt)=13.083/0.005" flags ( astrom ) )
+      ( name "RU-152F" type std ra "07:29:53.70" dec "-02:04:52.0"
+        comments "Rubin 152F    "
+        mag 14.6 smags "v(landolt)=14.564/0.005 b(landolt)=15.199/0.005 u(landolt)=15.268/0.005 r(landolt)=14.182/0.005 i(landolt)=13.867/0.005" flags ( astrom ) )
+      ( name "RU-152E" type std ra "07:29:54.30" dec "-02:05:31.0"
+        comments "Rubin 152E    "
+        mag 12.4 smags "v(landolt)=12.362/0.005 b(landolt)=12.404/0.005 u(landolt)=12.318/0.005 r(landolt)=12.332/0.005 i(landolt)=12.298/0.005" flags ( astrom ) )
+      ( name "RU-152" type std ra "07:29:58.50" dec "-02:06:38.0"
+        comments "Rubin 152     "
+        mag 13.0 smags "v(landolt)=13.014/0.005 b(landolt)=12.824/0.005 u(landolt)=11.751/0.005 r(landolt)=13.071/0.005 i(landolt)=13.158/0.005" flags ( astrom ) )
+      ( name "RU-152B" type std ra "07:29:59.20" dec "-02:05:58.0"
+        comments "Rubin 152B    "
+        mag 15.0 smags "v(landolt)=15.019/0.005 b(landolt)=15.519/0.005 u(landolt)=15.541/0.005 r(landolt)=14.729/0.005 i(landolt)=14.420/0.005" flags ( astrom ) )
+      ( name "RU-152A" type std ra "07:30:00.40" dec "-02:06:23.0"
+        comments "Rubin 152A    "
+        mag 14.3 smags "v(landolt)=14.341/0.005 b(landolt)=14.884/0.005 u(landolt)=14.799/0.005 r(landolt)=14.016/0.005 i(landolt)=13.687/0.005" flags ( astrom ) )
+      ( name "RU-152C" type std ra "07:30:02.60" dec "-02:05:39.0"
+        comments "Rubin 152C    "
+        mag 12.2 smags "v(landolt)=12.222/0.005 b(landolt)=12.795/0.005 u(landolt)=12.782/0.005 r(landolt)=11.880/0.005 i(landolt)=11.540/0.005" flags ( astrom ) )
+      ( name "RU-152D" type std ra "07:30:06.10" dec "-02:04:38.0"
+        comments "Rubin 152D    "
+        mag 11.1 smags "v(landolt)=11.076/0.005 b(landolt)=11.951/0.005 u(landolt)=12.442/0.005 r(landolt)=10.603/0.005 i(landolt)=10.154/0.005" flags ( astrom ) )
+      ( name "99-438" type std ra "07:55:54.20" dec "-00:16:50.0"
+        comments "SA99 438  "
+        mag 9.4 smags "v(landolt)=9.398/0.005 b(landolt)=9.243/0.005 u(landolt)=8.518/0.005 r(landolt)=9.457/0.005 i(landolt)=9.538/0.005" flags ( astrom ) )
+      ( name "99-447" type std ra "07:56:06.60" dec "-00:20:42.0"
+        comments "SA99 447  "
+        mag 9.4 smags "v(landolt)=9.417/0.005 b(landolt)=9.350/0.005 u(landolt)=9.125/0.005 r(landolt)=9.449/0.005 i(landolt)=9.490/0.005" flags ( astrom ) )
+      ( name "100-241" type std ra "08:52:34.00" dec "-00:39:50.0"
+        comments "SA100 241 "
+        mag 10.1 smags "v(landolt)=10.139/0.005 b(landolt)=10.296/0.005 u(landolt)=10.397/0.005 r(landolt)=10.061/0.005 i(landolt)=9.976/0.005" flags ( astrom ) )
+      ( name "100-162" type std ra "08:53:14.40" dec "-00:43:30.0"
+        comments "SA100 162 "
+        mag 9.1 smags "v(landolt)=9.150/0.005 b(landolt)=10.426/0.005 u(landolt)=11.923/0.005 r(landolt)=8.501/0.005 i(landolt)=7.948/0.005" flags ( astrom ) )
+      ( name "100-267" type std ra "08:53:17.20" dec "-00:41:31.0"
+        comments "SA100 267 "
+        mag 13.0 smags "v(landolt)=13.027/0.005 b(landolt)=13.512/0.005 u(landolt)=13.450/0.005 r(landolt)=12.720/0.005 i(landolt)=12.418/0.005" flags ( astrom ) )
+      ( name "100-269" type std ra "08:53:18.40" dec "-00:41:11.0"
+        comments "SA100 269 "
+        mag 12.4 smags "v(landolt)=12.350/0.005 b(landolt)=12.897/0.005 u(landolt)=12.857/0.005 r(landolt)=12.015/0.005 i(landolt)=11.684/0.005" flags ( astrom ) )
+      ( name "100-280" type std ra "08:53:35.40" dec "-00:36:42.0"
+        comments "SA100 280 "
+        mag 11.8 smags "v(landolt)=11.799/0.005 b(landolt)=12.293/0.005 u(landolt)=12.291/0.005 r(landolt)=11.504/0.005 i(landolt)=11.213/0.005" flags ( astrom ) )
+      ( name "100-394" type std ra "08:53:54.50" dec "-00:32:24.0"
+        comments "SA100 394 "
+        mag 11.4 smags "v(landolt)=11.384/0.005 b(landolt)=12.701/0.005 u(landolt)=14.158/0.005 r(landolt)=10.679/0.005 i(landolt)=10.043/0.005" flags ( astrom ) )
+      ( name "0918+029" type std ra "09:21:22.00" dec "02:47:29.0"
+        comments "PG0918+029"
+        mag 12.3 smags "v(landolt)=12.272/0.005 b(landolt)=13.316/0.005 u(landolt)=14.137/0.005 r(landolt)=11.697/0.005 i(landolt)=11.162/0.005" flags ( astrom ) )
+      ( name "0918+029" type std ra "09:21:28.30" dec "02:46:04.0"
+        comments "PG0918+029"
+        mag 13.3 smags "v(landolt)=13.327/0.005 b(landolt)=13.056/0.005 u(landolt)=11.975/0.005 r(landolt)=13.456/0.005 i(landolt)=13.615/0.005" flags ( astrom ) )
+      ( name "0918+029" type std ra "09:21:33.00" dec "02:48:01.0"
+        comments "PG0918+029"
+        mag 14.0 smags "v(landolt)=13.963/0.005 b(landolt)=14.728/0.005 u(landolt)=15.094/0.005 r(landolt)=13.546/0.005 i(landolt)=13.176/0.005" flags ( astrom ) )
+      ( name "0918+029" type std ra "09:21:35.10" dec "02:46:20.0"
+        comments "PG0918+029"
+        mag 14.5 smags "v(landolt)=14.490/0.005 b(landolt)=15.026/0.005 u(landolt)=14.994/0.005 r(landolt)=14.165/0.005 i(landolt)=13.829/0.005" flags ( astrom ) )
+      ( name "0918+029" type std ra "09:21:42.40" dec "02:46:37.0"
+        comments "PG0918+029"
+        mag 13.5 smags "v(landolt)=13.537/0.005 b(landolt)=14.168/0.005 u(landolt)=14.255/0.005 r(landolt)=13.170/0.005 i(landolt)=12.813/0.005" flags ( astrom ) )
+      ( name "-12-2918" type std ra "09:31:19.30" dec "-13:29:19.0"
+        comments "BD-12 2918"
+        mag 10.1 smags "v(landolt)=10.067/0.005 b(landolt)=11.568/0.005 u(landolt)=12.734/0.005 r(landolt)=9.000/0.005 i(landolt)=7.682/0.005" flags ( astrom ) )
+      ( name "0942-029" type std ra "09:45:08.60" dec "-03:05:55.0"
+        comments "PG0942-029"
+        mag 13.7 smags "v(landolt)=13.707/0.005 b(landolt)=14.271/0.005 u(landolt)=14.400/0.005 r(landolt)=13.359/0.005 i(landolt)=13.016/0.005" flags ( astrom ) )
+      ( name "0942-029" type std ra "09:45:09.90" dec "-03:10:15.0"
+        comments "PG0942-029"
+        mag 14.7 smags "v(landolt)=14.731/0.005 b(landolt)=15.514/0.005 u(landolt)=15.853/0.005 r(landolt)=14.121/0.005 i(landolt)=13.644/0.005" flags ( astrom ) )
+      ( name "0942-029" type std ra "09:45:11.60" dec "-03:06:58.0"
+        comments "PG0942-029"
+        mag 14.1 smags "v(landolt)=14.108/0.005 b(landolt)=14.633/0.005 u(landolt)=14.718/0.005 r(landolt)=13.740/0.005 i(landolt)=13.407/0.005" flags ( astrom ) )
+      ( name "0942-029" type std ra "09:45:11.80" dec "-03:09:21.0"
+        comments "PG0942-029"
+        mag 14.0 smags "v(landolt)=14.004/0.005 b(landolt)=13.710/0.005 u(landolt)=12.535/0.005 r(landolt)=14.134/0.005 i(landolt)=14.283/0.005" flags ( astrom ) )
+      ( name "0942-029" type std ra "09:45:14.40" dec "-03:06:41.0"
+        comments "PG0942-029"
+        mag 15.0 smags "v(landolt)=14.989/0.005 b(landolt)=15.716/0.005 u(landolt)=16.085/0.005 r(landolt)=14.450/0.005 i(landolt)=14.074/0.005" flags ( astrom ) )
+      ( name "101-315" type std ra "09:54:51.30" dec "-00:27:32.0"
+        comments "SA101 315 "
+        mag 11.2 smags "v(landolt)=11.249/0.005 b(landolt)=12.402/0.005 u(landolt)=13.458/0.005 r(landolt)=10.637/0.005 i(landolt)=10.078/0.005" flags ( astrom ) )
+      ( name "101-316" type std ra "09:54:52.00" dec "-00:18:35.0"
+        comments "SA101 316 "
+        mag 11.6 smags "v(landolt)=11.552/0.005 b(landolt)=12.045/0.005 u(landolt)=12.077/0.005 r(landolt)=11.259/0.005 i(landolt)=10.968/0.005" flags ( astrom ) )
+      ( name "101-L1" type std ra "09:55:29.10" dec "-00:21:43.0"
+        comments "SA101 L1 "
+        mag 16.5 smags "v(landolt)=16.501/0.005 b(landolt)=17.258/0.005 u(landolt)=17.154/0.005 r(landolt)=16.080/0.005 i(landolt)=15.553/0.005" flags ( astrom ) )
+      ( name "101-320" type std ra "09:55:32.90" dec "-00:22:34.0"
+        comments "SA101 320 "
+        mag 13.8 smags "v(landolt)=13.823/0.005 b(landolt)=14.875/0.005 u(landolt)=15.565/0.005 r(landolt)=13.242/0.005 i(landolt)=12.681/0.005" flags ( astrom ) )
+      ( name "101-L2" type std ra "09:55:34.70" dec "-00:18:51.0"
+        comments "SA101 L2 "
+        mag 15.8 smags "v(landolt)=15.770/0.005 b(landolt)=16.372/0.005 u(landolt)=16.454/0.005 r(landolt)=15.449/0.005 i(landolt)=15.145/0.005" flags ( astrom ) )
+      ( name "101-404" type std ra "09:55:40.70" dec "-00:18:23.0"
+        comments "SA101 404 "
+        mag 13.5 smags "v(landolt)=13.459/0.005 b(landolt)=14.455/0.005 u(landolt)=15.152/0.005 r(landolt)=12.929/0.005 i(landolt)=12.429/0.005" flags ( astrom ) )
+      ( name "101-324" type std ra "09:55:56.60" dec "-00:23:15.0"
+        comments "SA101 324 "
+        mag 9.7 smags "v(landolt)=9.742/0.005 b(landolt)=10.903/0.005 u(landolt)=12.051/0.005 r(landolt)=9.151/0.005 i(landolt)=8.632/0.005" flags ( astrom ) )
+      ( name "101-262" type std ra "09:56:08.10" dec "-00:29:51.0"
+        comments "SA101 262 "
+        mag 14.3 smags "v(landolt)=14.295/0.005 b(landolt)=15.079/0.005 u(landolt)=15.376/0.005 r(landolt)=13.855/0.005 i(landolt)=13.468/0.005" flags ( astrom ) )
+      ( name "101-408" type std ra "09:56:08.10" dec "-00:12:42.0"
+        comments "SA101 408 "
+        mag 14.8 smags "v(landolt)=14.785/0.005 b(landolt)=15.985/0.005 u(landolt)=17.332/0.005 r(landolt)=14.067/0.005 i(landolt)=13.464/0.005" flags ( astrom ) )
+      ( name "101-326" type std ra "09:56:08.10" dec "-00:27:12.0"
+        comments "SA101 326 "
+        mag 14.9 smags "v(landolt)=14.923/0.005 b(landolt)=15.652/0.005 u(landolt)=15.879/0.005 r(landolt)=14.517/0.005 i(landolt)=14.142/0.005" flags ( astrom ) )
+      ( name "101-410" type std ra "09:56:09.20" dec "-00:14:03.0"
+        comments "SA101 410 "
+        mag 13.6 smags "v(landolt)=13.646/0.005 b(landolt)=14.192/0.005 u(landolt)=14.129/0.005 r(landolt)=13.348/0.005 i(landolt)=13.022/0.005" flags ( astrom ) )
+      ( name "101-327" type std ra "09:56:08.90" dec "-00:25:53.0"
+        comments "SA101 327 "
+        mag 13.4 smags "v(landolt)=13.441/0.005 b(landolt)=14.596/0.005 u(landolt)=15.735/0.005 r(landolt)=12.724/0.005 i(landolt)=12.150/0.005" flags ( astrom ) )
+      ( name "101-413" type std ra "09:56:14.00" dec "-00:11:56.0"
+        comments "SA101 413 "
+        mag 12.6 smags "v(landolt)=12.583/0.005 b(landolt)=13.566/0.005 u(landolt)=14.282/0.005 r(landolt)=12.054/0.005 i(landolt)=11.557/0.005" flags ( astrom ) )
+      ( name "101-268" type std ra "09:56:17.60" dec "-00:31:59.0"
+        comments "SA101 268 "
+        mag 14.4 smags "v(landolt)=14.380/0.005 b(landolt)=15.911/0.005 u(landolt)=17.292/0.005 r(landolt)=13.340/0.005 i(landolt)=12.140/0.005" flags ( astrom ) )
+      ( name "101-330" type std ra "09:56:20.60" dec "-00:27:23.0"
+        comments "SA101 330 "
+        mag 13.7 smags "v(landolt)=13.723/0.005 b(landolt)=14.300/0.005 u(landolt)=14.274/0.005 r(landolt)=13.377/0.005 i(landolt)=13.039/0.005" flags ( astrom ) )
+      ( name "101-415" type std ra "09:56:23.20" dec "-00:16:54.0"
+        comments "SA101 415 "
+        mag 15.3 smags "v(landolt)=15.259/0.005 b(landolt)=15.836/0.005 u(landolt)=15.828/0.005 r(landolt)=14.913/0.005 i(landolt)=14.563/0.005" flags ( astrom ) )
+      ( name "101-270" type std ra "09:56:27.10" dec "-00:35:45.0"
+        comments "SA101 270 "
+        mag 13.7 smags "v(landolt)=13.711/0.005 b(landolt)=14.265/0.005 u(landolt)=14.320/0.005 r(landolt)=13.379/0.005 i(landolt)=13.073/0.005" flags ( astrom ) )
+      ( name "101-278" type std ra "09:56:54.50" dec "-00:29:40.0"
+        comments "SA101 278 "
+        mag 15.5 smags "v(landolt)=15.494/0.005 b(landolt)=16.535/0.005 u(landolt)=17.272/0.005 r(landolt)=14.898/0.005 i(landolt)=14.350/0.005" flags ( astrom ) )
+      ( name "101-L3" type std ra "09:56:55.10" dec "-00:30:26.0"
+        comments "SA101 L3 "
+        mag 16.0 smags "v(landolt)=15.953/0.005 b(landolt)=16.590/0.005 u(landolt)=16.557/0.005 r(landolt)=15.557/0.005 i(landolt)=15.162/0.005" flags ( astrom ) )
+      ( name "101-281" type std ra "09:57:05.00" dec "-00:31:44.0"
+        comments "SA101 281 "
+        mag 11.6 smags "v(landolt)=11.575/0.005 b(landolt)=12.387/0.005 u(landolt)=12.806/0.005 r(landolt)=11.123/0.005 i(landolt)=10.711/0.005" flags ( astrom ) )
+      ( name "101-L4" type std ra "09:57:07.80" dec "-00:31:25.0"
+        comments "SA101 L4 "
+        mag 16.3 smags "v(landolt)=16.264/0.005 b(landolt)=17.057/0.005 u(landolt)=17.419/0.005 r(landolt)=15.686/0.005 i(landolt)=15.624/0.005" flags ( astrom ) )
+      ( name "101-L5" type std ra "09:57:10.20" dec "-00:30:41.0"
+        comments "SA101 L5 "
+        mag 15.9 smags "v(landolt)=15.928/0.005 b(landolt)=16.550/0.005 u(landolt)=16.665/0.005 r(landolt)=15.514/0.005 i(landolt)=15.209/0.005" flags ( astrom ) )
+      ( name "101-421" type std ra "09:57:16.10" dec "-00:17:19.0"
+        comments "SA101 421 "
+        mag 13.2 smags "v(landolt)=13.180/0.005 b(landolt)=13.687/0.005 u(landolt)=13.656/0.005 r(landolt)=12.853/0.005 i(landolt)=12.557/0.005" flags ( astrom ) )
+      ( name "101-338" type std ra "09:57:17.80" dec "-00:21:01.0"
+        comments "SA101 338 "
+        mag 13.8 smags "v(landolt)=13.788/0.005 b(landolt)=14.422/0.005 u(landolt)=14.446/0.005 r(landolt)=13.438/0.005 i(landolt)=13.098/0.005" flags ( astrom ) )
+      ( name "101-339" type std ra "09:57:18.40" dec "-00:25:03.0"
+        comments "SA101 339 "
+        mag 14.4 smags "v(landolt)=14.449/0.005 b(landolt)=15.299/0.005 u(landolt)=15.800/0.005 r(landolt)=13.991/0.005 i(landolt)=13.593/0.005" flags ( astrom ) )
+      ( name "101-424" type std ra "09:57:20.30" dec "-00:16:26.0"
+        comments "SA101 424 "
+        mag 15.1 smags "v(landolt)=15.058/0.005 b(landolt)=15.822/0.005 u(landolt)=16.095/0.005 r(landolt)=14.629/0.005 i(landolt)=14.204/0.005" flags ( astrom ) )
+      ( name "101-427" type std ra "09:57:26.50" dec "-00:17:18.0"
+        comments "SA101 427 "
+        mag 15.0 smags "v(landolt)=14.964/0.005 b(landolt)=15.769/0.005 u(landolt)=16.090/0.005 r(landolt)=14.480/0.005 i(landolt)=14.111/0.005" flags ( astrom ) )
+      ( name "101-341" type std ra "09:57:29.90" dec "-00:21:55.0"
+        comments "SA101 341 "
+        mag 14.3 smags "v(landolt)=14.342/0.005 b(landolt)=14.917/0.005 u(landolt)=14.976/0.005 r(landolt)=14.010/0.005 i(landolt)=13.701/0.005" flags ( astrom ) )
+      ( name "101-342" type std ra "09:57:31.20" dec "-00:21:52.0"
+        comments "SA101 342 "
+        mag 15.6 smags "v(landolt)=15.556/0.005 b(landolt)=16.085/0.005 u(landolt)=16.020/0.005 r(landolt)=15.217/0.005 i(landolt)=14.798/0.005" flags ( astrom ) )
+      ( name "101-343" type std ra "09:57:31.30" dec "-00:22:56.0"
+        comments "SA101 343 "
+        mag 15.5 smags "v(landolt)=15.504/0.005 b(landolt)=16.110/0.005 u(landolt)=16.204/0.005 r(landolt)=15.108/0.005 i(landolt)=14.770/0.005" flags ( astrom ) )
+      ( name "101-429" type std ra "09:57:31.80" dec "-00:18:17.0"
+        comments "SA101 429 "
+        mag 13.5 smags "v(landolt)=13.496/0.005 b(landolt)=14.476/0.005 u(landolt)=15.258/0.005 r(landolt)=12.879/0.005 i(landolt)=12.353/0.005" flags ( astrom ) )
+      ( name "101-431" type std ra "09:57:37.40" dec "-00:17:54.0"
+        comments "SA101 431 "
+        mag 13.7 smags "v(landolt)=13.684/0.005 b(landolt)=14.930/0.005 u(landolt)=16.074/0.005 r(landolt)=12.876/0.005 i(landolt)=12.168/0.005" flags ( astrom ) )
+      ( name "101-L6" type std ra "09:57:39.60" dec "-00:17:54.0"
+        comments "SA101 L6 "
+        mag 16.5 smags "v(landolt)=16.497/0.005 b(landolt)=17.208/0.005 u(landolt)=17.391/0.005 r(landolt)=16.052/0.005 i(landolt)=15.469/0.005" flags ( astrom ) )
+      ( name "101-207" type std ra "09:57:52.50" dec "-00:47:37.0"
+        comments "SA101 207 "
+        mag 12.4 smags "v(landolt)=12.419/0.005 b(landolt)=12.934/0.005 u(landolt)=12.856/0.005 r(landolt)=12.098/0.005 i(landolt)=11.778/0.005" flags ( astrom ) )
+      ( name "101-363" type std ra "09:58:18.70" dec "-00:25:37.0"
+        comments "SA101 363 "
+        mag 9.9 smags "v(landolt)=9.874/0.005 b(landolt)=10.135/0.005 u(landolt)=10.264/0.005 r(landolt)=9.728/0.005 i(landolt)=9.577/0.005" flags ( astrom ) )
+      ( name "GD-108" type std ra "10:00:47.20" dec "-07:33:31.0"
+        comments "GD 108    "
+        mag 13.6 smags "v(landolt)=13.561/0.005 b(landolt)=13.346/0.005 u(landolt)=12.404/0.005 r(landolt)=13.659/0.005 i(landolt)=13.781/0.005" flags ( astrom ) )
+      ( name "G162-66" type std ra "10:33:42.80" dec "-11:41:38.0"
+        comments "G162-66   "
+        mag 13.0 smags "v(landolt)=13.012/0.005 b(landolt)=12.847/0.005 u(landolt)=11.851/0.005 r(landolt)=13.138/0.005 i(landolt)=13.279/0.005" flags ( astrom ) )
+      ( name "G44-27" type std ra "10:36:01.30" dec "05:07:13.0"
+        comments "G44-27    "
+        mag 12.6 smags "v(landolt)=12.636/0.005 b(landolt)=14.222/0.005 u(landolt)=15.310/0.005 r(landolt)=11.451/0.005 i(landolt)=9.925/0.005" flags ( astrom ) )
+      ( name "1034+001" type std ra "10:37:03.90" dec "-00:08:20.0"
+        comments "PG1034+001"
+        mag 13.2 smags "v(landolt)=13.228/0.005 b(landolt)=12.863/0.005 u(landolt)=11.589/0.005 r(landolt)=13.383/0.005 i(landolt)=13.586/0.005" flags ( astrom ) )
+      ( name "G163-6" type std ra "10:42:54.10" dec "02:47:20.0"
+        comments "G163-6    "
+        mag 14.7 smags "v(landolt)=14.706/0.005 b(landolt)=16.256/0.005 u(landolt)=17.484/0.005 r(landolt)=13.616/0.005 i(landolt)=12.232/0.005" flags ( astrom ) )
+      ( name "1047+003" type std ra "10:50:02.90" dec "-00:00:38.0"
+        comments "PG1047+003"
+        mag 13.5 smags "v(landolt)=13.474/0.005 b(landolt)=13.184/0.005 u(landolt)=12.063/0.005 r(landolt)=13.606/0.005 i(landolt)=13.768/0.005" flags ( astrom ) )
+      ( name "1047+003" type std ra "10:50:05.70" dec "-00:01:12.0"
+        comments "PG1047+003"
+        mag 13.5 smags "v(landolt)=13.512/0.005 b(landolt)=14.200/0.005 u(landolt)=14.368/0.005 r(landolt)=13.090/0.005 i(landolt)=12.672/0.005" flags ( astrom ) )
+      ( name "1047+003" type std ra "10:50:08.00" dec "-00:02:06.0"
+        comments "PG1047+003"
+        mag 14.8 smags "v(landolt)=14.751/0.005 b(landolt)=15.430/0.005 u(landolt)=15.602/0.005 r(landolt)=14.360/0.005 i(landolt)=13.989/0.005" flags ( astrom ) )
+      ( name "1047+003" type std ra "10:50:13.70" dec "-00:00:33.0"
+        comments "PG1047+003"
+        mag 12.5 smags "v(landolt)=12.453/0.005 b(landolt)=13.060/0.005 u(landolt)=13.041/0.005 r(landolt)=12.075/0.005 i(landolt)=11.717/0.005" flags ( astrom ) )
+      ( name "G44-40" type std ra "10:50:52.00" dec "06:48:29.0"
+        comments "G44-40    "
+        mag 11.7 smags "v(landolt)=11.675/0.005 b(landolt)=13.319/0.005 u(landolt)=14.532/0.005 r(landolt)=10.459/0.005 i(landolt)=8.891/0.005" flags ( astrom ) )
+      ( name "102-620" type std ra "10:55:04.40" dec "-00:48:19.0"
+        comments "SA102 620 "
+        mag 10.1 smags "v(landolt)=10.069/0.005 b(landolt)=11.152/0.005 u(landolt)=12.172/0.005 r(landolt)=9.427/0.005 i(landolt)=8.903/0.005" flags ( astrom ) )
+      ( name "G45-20" type std ra "10:56:29.10" dec "07:00:54.0"
+        comments "G45-20    "
+        mag 13.5 smags "v(landolt)=13.507/0.005 b(landolt)=15.541/0.005 u(landolt)=16.706/0.005 r(landolt)=11.684/0.005 i(landolt)=9.510/0.005" flags ( astrom ) )
+      ( name "102-1081" type std ra "10:57:04.00" dec "-00:13:13.0"
+        comments "SA102 1081"
+        mag 9.9 smags "v(landolt)=9.903/0.005 b(landolt)=10.567/0.005 u(landolt)=10.822/0.005 r(landolt)=9.537/0.005 i(landolt)=9.204/0.005" flags ( astrom ) )
+      ( name "G163-27" type std ra "10:57:35.10" dec "-07:31:23.0"
+        comments "G163-27   "
+        mag 14.3 smags "v(landolt)=14.338/0.005 b(landolt)=14.626/0.005 u(landolt)=14.078/0.005 r(landolt)=14.132/0.005 i(landolt)=13.922/0.005" flags ( astrom ) )
+      ( name "G163-50" type std ra "11:08:00.00" dec "-05:09:26.0"
+        comments "G163-50   "
+        mag 13.1 smags "v(landolt)=13.059/0.005 b(landolt)=13.094/0.005 u(landolt)=12.406/0.005 r(landolt)=13.144/0.005 i(landolt)=13.216/0.005" flags ( astrom ) )
+      ( name "G163-51" type std ra "11:08:06.50" dec "-05:13:47.0"
+        comments "G163-51   "
+        mag 12.6 smags "v(landolt)=12.576/0.005 b(landolt)=14.082/0.005 u(landolt)=15.310/0.005 r(landolt)=11.492/0.005 i(landolt)=10.133/0.005" flags ( astrom ) )
+      ( name "G10-50" type std ra "11:47:44.30" dec "00:48:16.0"
+        comments "G10-50    "
+        mag 11.2 smags "v(landolt)=11.153/0.005 b(landolt)=12.905/0.005 u(landolt)=14.223/0.005 r(landolt)=9.859/0.005 i(landolt)=8.186/0.005" flags ( astrom ) )
+      ( name "103-302" type std ra "11:56:06.10" dec "-00:47:55.0"
+        comments "SA103 302 "
+        mag 9.9 smags "v(landolt)=9.861/0.005 b(landolt)=10.229/0.005 u(landolt)=10.173/0.005 r(landolt)=9.633/0.005 i(landolt)=9.396/0.005" flags ( astrom ) )
+      ( name "103-626" type std ra "11:56:46.10" dec "-00:23:14.0"
+        comments "SA103 626 "
+        mag 11.8 smags "v(landolt)=11.836/0.005 b(landolt)=12.249/0.005 u(landolt)=12.192/0.005 r(landolt)=11.574/0.005 i(landolt)=11.300/0.005" flags ( astrom ) )
+      ( name "G12-43" type std ra "12:33:17.60" dec "09:01:15.0"
+        comments "G12-43    "
+        mag 12.5 smags "v(landolt)=12.467/0.005 b(landolt)=14.313/0.005 u(landolt)=15.398/0.005 r(landolt)=10.937/0.005 i(landolt)=8.993/0.005" flags ( astrom ) )
+      ( name "104-306" type std ra "12:41:03.60" dec "-00:37:13.0"
+        comments "SA104 306 "
+        mag 9.4 smags "v(landolt)=9.370/0.005 b(landolt)=10.962/0.005 u(landolt)=12.628/0.005 r(landolt)=8.538/0.005 i(landolt)=7.776/0.005" flags ( astrom ) )
+      ( name "104-423" type std ra "12:41:36.00" dec "-00:31:12.0"
+        comments "SA104 423 "
+        mag 15.6 smags "v(landolt)=15.602/0.005 b(landolt)=16.232/0.005 u(landolt)=16.282/0.005 r(landolt)=15.340/0.005 i(landolt)=14.781/0.005" flags ( astrom ) )
+      ( name "104-428" type std ra "12:41:41.30" dec "-00:26:27.0"
+        comments "SA104 428 "
+        mag 12.6 smags "v(landolt)=12.630/0.005 b(landolt)=13.615/0.005 u(landolt)=14.363/0.005 r(landolt)=12.096/0.005 i(landolt)=11.599/0.005" flags ( astrom ) )
+      ( name "104-L1" type std ra "12:41:43.60" dec "-00:23:08.0"
+        comments "SA104 L1 "
+        mag 14.6 smags "v(landolt)=14.608/0.005 b(landolt)=15.238/0.005 u(landolt)=15.302/0.005 r(landolt)=14.234/0.005 i(landolt)=13.870/0.005" flags ( astrom ) )
+      ( name "104-430" type std ra "12:41:50.30" dec "-00:25:52.0"
+        comments "SA104 430 "
+        mag 13.9 smags "v(landolt)=13.858/0.005 b(landolt)=14.510/0.005 u(landolt)=14.641/0.005 r(landolt)=13.494/0.005 i(landolt)=13.131/0.005" flags ( astrom ) )
+      ( name "104-325" type std ra "12:42:02.30" dec "-00:41:36.0"
+        comments "SA104 325 "
+        mag 15.6 smags "v(landolt)=15.581/0.005 b(landolt)=16.275/0.005 u(landolt)=16.326/0.005 r(landolt)=15.236/0.005 i(landolt)=14.929/0.005" flags ( astrom ) )
+      ( name "104-330" type std ra "12:42:11.50" dec "-00:40:42.0"
+        comments "SA104 330 "
+        mag 15.3 smags "v(landolt)=15.296/0.005 b(landolt)=15.890/0.005 u(landolt)=15.862/0.005 r(landolt)=14.927/0.005 i(landolt)=14.556/0.005" flags ( astrom ) )
+      ( name "104-440" type std ra "12:42:14.50" dec "-00:24:47.0"
+        comments "SA104 440 "
+        mag 15.1 smags "v(landolt)=15.114/0.005 b(landolt)=15.554/0.005 u(landolt)=15.327/0.005 r(landolt)=14.825/0.005 i(landolt)=14.508/0.005" flags ( astrom ) )
+      ( name "104-237" type std ra "12:42:16.90" dec "-00:51:19.0"
+        comments "SA104 237 "
+        mag 15.4 smags "v(landolt)=15.395/0.005 b(landolt)=16.483/0.005 u(landolt)=17.401/0.005 r(landolt)=14.748/0.005 i(landolt)=14.120/0.005" flags ( astrom ) )
+      ( name "104-L2" type std ra "12:42:18.60" dec "-00:34:39.0"
+        comments "SA104 L2 "
+        mag 16.0 smags "v(landolt)=16.048/0.005 b(landolt)=16.698/0.005 u(landolt)=16.526/0.005 r(landolt)=15.704/0.005 i(landolt)=15.381/0.005" flags ( astrom ) )
+      ( name "104-443" type std ra "12:42:19.90" dec "-00:25:22.0"
+        comments "SA104 443 "
+        mag 15.4 smags "v(landolt)=15.372/0.005 b(landolt)=16.703/0.005 u(landolt)=17.983/0.005 r(landolt)=14.555/0.005 i(landolt)=13.777/0.005" flags ( astrom ) )
+      ( name "104-444" type std ra "12:42:20.10" dec "-00:32:29.0"
+        comments "SA104 444 "
+        mag 13.5 smags "v(landolt)=13.477/0.005 b(landolt)=13.989/0.005 u(landolt)=13.919/0.005 r(landolt)=13.164/0.005 i(landolt)=12.833/0.005" flags ( astrom ) )
+      ( name "104-335" type std ra "12:42:20.90" dec "-00:33:09.0"
+        comments "SA104 335 "
+        mag 11.7 smags "v(landolt)=11.665/0.005 b(landolt)=12.287/0.005 u(landolt)=12.432/0.005 r(landolt)=11.308/0.005 i(landolt)=10.974/0.005" flags ( astrom ) )
+      ( name "104-334" type std ra "12:42:20.50" dec "-00:40:29.0"
+        comments "SA104 334 "
+        mag 13.5 smags "v(landolt)=13.484/0.005 b(landolt)=14.002/0.005 u(landolt)=13.935/0.005 r(landolt)=13.161/0.005 i(landolt)=12.830/0.005" flags ( astrom ) )
+      ( name "104-239" type std ra "12:42:23.00" dec "-00:46:36.0"
+        comments "SA104 239 "
+        mag 13.9 smags "v(landolt)=13.936/0.005 b(landolt)=15.292/0.005 u(landolt)=16.583/0.005 r(landolt)=13.068/0.005 i(landolt)=12.263/0.005" flags ( astrom ) )
+      ( name "104-336" type std ra "12:42:24.70" dec "-00:39:59.0"
+        comments "SA104 336 "
+        mag 14.4 smags "v(landolt)=14.404/0.005 b(landolt)=15.234/0.005 u(landolt)=15.729/0.005 r(landolt)=13.943/0.005 i(landolt)=13.540/0.005" flags ( astrom ) )
+      ( name "104-338" type std ra "12:42:30.20" dec "-00:38:33.0"
+        comments "SA104 338 "
+        mag 16.1 smags "v(landolt)=16.059/0.005 b(landolt)=16.650/0.005 u(landolt)=16.568/0.005 r(landolt)=15.711/0.005 i(landolt)=15.339/0.005" flags ( astrom ) )
+      ( name "104-339" type std ra "12:42:33.30" dec "-00:41:41.0"
+        comments "SA104 339 "
+        mag 15.5 smags "v(landolt)=15.459/0.005 b(landolt)=16.291/0.005 u(landolt)=17.000/0.005 r(landolt)=14.983/0.005 i(landolt)=14.609/0.005" flags ( astrom ) )
+      ( name "104-244" type std ra "12:42:34.30" dec "-00:45:48.0"
+        comments "SA104 244 "
+        mag 16.0 smags "v(landolt)=16.011/0.005 b(landolt)=16.601/0.005 u(landolt)=16.449/0.005 r(landolt)=15.673/0.005 i(landolt)=15.184/0.005" flags ( astrom ) )
+      ( name "104-455" type std ra "12:42:52.20" dec "-00:24:19.0"
+        comments "SA104 455 "
+        mag 15.1 smags "v(landolt)=15.105/0.005 b(landolt)=15.686/0.005 u(landolt)=15.662/0.005 r(landolt)=14.745/0.005 i(landolt)=14.388/0.005" flags ( astrom ) )
+      ( name "104-456" type std ra "12:42:53.60" dec "-00:32:02.0"
+        comments "SA104 456 "
+        mag 12.4 smags "v(landolt)=12.362/0.005 b(landolt)=12.984/0.005 u(landolt)=13.119/0.005 r(landolt)=12.005/0.005 i(landolt)=11.668/0.005" flags ( astrom ) )
+      ( name "104-457" type std ra "12:42:54.20" dec "-00:28:50.0"
+        comments "SA104 457 "
+        mag 16.0 smags "v(landolt)=16.048/0.005 b(landolt)=16.801/0.005 u(landolt)=17.323/0.005 r(landolt)=15.564/0.005 i(landolt)=15.074/0.005" flags ( astrom ) )
+      ( name "104-460" type std ra "12:43:03.10" dec "-00:28:20.0"
+        comments "SA104 460 "
+        mag 12.9 smags "v(landolt)=12.886/0.005 b(landolt)=14.173/0.005 u(landolt)=15.416/0.005 r(landolt)=12.073/0.005 i(landolt)=11.380/0.005" flags ( astrom ) )
+      ( name "104-461" type std ra "12:43:06.10" dec "-00:32:18.0"
+        comments "SA104 461 "
+        mag 9.7 smags "v(landolt)=9.705/0.005 b(landolt)=10.181/0.005 u(landolt)=10.151/0.005 r(landolt)=9.416/0.005 i(landolt)=9.126/0.005" flags ( astrom ) )
+      ( name "104-350" type std ra "12:43:14.20" dec "-00:33:21.0"
+        comments "SA104 350 "
+        mag 13.6 smags "v(landolt)=13.634/0.005 b(landolt)=14.307/0.005 u(landolt)=14.472/0.005 r(landolt)=13.251/0.005 i(landolt)=12.898/0.005" flags ( astrom ) )
+      ( name "104-470" type std ra "12:43:22.40" dec "-00:29:54.0"
+        comments "SA104 470 "
+        mag 14.3 smags "v(landolt)=14.310/0.005 b(landolt)=15.042/0.005 u(landolt)=15.143/0.005 r(landolt)=14.015/0.005 i(landolt)=13.659/0.005" flags ( astrom ) )
+      ( name "104-364" type std ra "12:43:46.00" dec "-00:34:32.0"
+        comments "SA104 364 "
+        mag 15.8 smags "v(landolt)=15.799/0.005 b(landolt)=16.400/0.005 u(landolt)=16.269/0.005 r(landolt)=15.485/0.005 i(landolt)=15.088/0.005" flags ( astrom ) )
+      ( name "104-366" type std ra "12:43:53.30" dec "-00:34:47.0"
+        comments "SA104 366 "
+        mag 12.9 smags "v(landolt)=12.908/0.005 b(landolt)=13.778/0.005 u(landolt)=14.202/0.005 r(landolt)=12.391/0.005 i(landolt)=11.927/0.005" flags ( astrom ) )
+      ( name "104-479" type std ra "12:43:55.30" dec "-00:32:51.0"
+        comments "SA104 479 "
+        mag 16.1 smags "v(landolt)=16.087/0.005 b(landolt)=17.358/0.005 u(landolt)=18.031/0.005 r(landolt)=15.430/0.005 i(landolt)=14.823/0.005" flags ( astrom ) )
+      ( name "104-367" type std ra "12:43:58.50" dec "-00:33:35.0"
+        comments "SA104 367 "
+        mag 15.8 smags "v(landolt)=15.844/0.005 b(landolt)=16.483/0.005 u(landolt)=16.357/0.005 r(landolt)=15.462/0.005 i(landolt)=15.166/0.005" flags ( astrom ) )
+      ( name "104-484" type std ra "12:44:20.60" dec "-00:30:56.0"
+        comments "SA104 484 "
+        mag 14.4 smags "v(landolt)=14.406/0.005 b(landolt)=15.430/0.005 u(landolt)=16.162/0.005 r(landolt)=13.892/0.005 i(landolt)=13.406/0.005" flags ( astrom ) )
+      ( name "104-485" type std ra "12:44:23.90" dec "-00:30:17.0"
+        comments "SA104 485 "
+        mag 15.0 smags "v(landolt)=15.017/0.005 b(landolt)=15.855/0.005 u(landolt)=16.348/0.005 r(landolt)=14.539/0.005 i(landolt)=14.051/0.005" flags ( astrom ) )
+      ( name "104-490" type std ra "12:44:33.40" dec "-00:25:52.0"
+        comments "SA104 490 "
+        mag 12.6 smags "v(landolt)=12.572/0.005 b(landolt)=13.107/0.005 u(landolt)=13.155/0.005 r(landolt)=12.254/0.005 i(landolt)=11.942/0.005" flags ( astrom ) )
+      ( name "104-598" type std ra "12:45:17.00" dec "-00:16:40.0"
+        comments "SA104 598 "
+        mag 11.5 smags "v(landolt)=11.479/0.005 b(landolt)=12.585/0.005 u(landolt)=13.635/0.005 r(landolt)=10.809/0.005 i(landolt)=10.263/0.005" flags ( astrom ) )
+      ( name "G14-55" type std ra "13:28:21.00" dec "-02:21:37.0"
+        comments "G14-55    "
+        mag 11.3 smags "v(landolt)=11.336/0.005 b(landolt)=12.827/0.005 u(landolt)=13.984/0.005 r(landolt)=10.258/0.005 i(landolt)=8.870/0.005" flags ( astrom ) )
+      ( name "1323-085" type std ra "13:25:39.40" dec "-08:49:20.0"
+        comments "PG1323-085"
+        mag 13.5 smags "v(landolt)=13.481/0.005 b(landolt)=13.341/0.005 u(landolt)=12.660/0.005 r(landolt)=13.529/0.005 i(landolt)=13.607/0.005" flags ( astrom ) )
+      ( name "1323-085" type std ra "13:25:49.70" dec "-08:50:24.0"
+        comments "PG1323-085"
+        mag 13.6 smags "v(landolt)=13.591/0.005 b(landolt)=13.984/0.005 u(landolt)=13.965/0.005 r(landolt)=13.339/0.005 i(landolt)=13.087/0.005" flags ( astrom ) )
+      ( name "1323-085" type std ra "13:25:50.20" dec "-08:48:40.0"
+        comments "PG1323-085"
+        mag 14.0 smags "v(landolt)=14.003/0.005 b(landolt)=14.710/0.005 u(landolt)=14.955/0.005 r(landolt)=13.608/0.005 i(landolt)=13.245/0.005" flags ( astrom ) )
+      ( name "1323-085" type std ra "13:25:50.60" dec "-08:50:56.0"
+        comments "PG1323-085"
+        mag 13.4 smags "v(landolt)=13.406/0.005 b(landolt)=14.167/0.005 u(landolt)=14.432/0.005 r(landolt)=12.980/0.005 i(landolt)=12.573/0.005" flags ( astrom ) )
+      ( name "1323-085" type std ra "13:26:05.20" dec "-08:50:37.0"
+        comments "PG1323-085"
+        mag 12.1 smags "v(landolt)=12.080/0.005 b(landolt)=12.667/0.005 u(landolt)=12.672/0.005 r(landolt)=11.734/0.005 i(landolt)=11.399/0.005" flags ( astrom ) )
+      ( name "105-505" type std ra "13:35:24.70" dec "-00:23:23.0"
+        comments "SA105 505"
+        mag 10.3 smags "v(landolt)=10.270/0.005 b(landolt)=11.692/0.005 u(landolt)=12.910/0.005 r(landolt)=9.360/0.005 i(landolt)=8.499/0.005" flags ( astrom ) )
+      ( name "105-437" type std ra "13:37:16.70" dec "-00:37:56.0"
+        comments "SA105 437 "
+        mag 12.5 smags "v(landolt)=12.535/0.005 b(landolt)=12.783/0.005 u(landolt)=12.850/0.005 r(landolt)=12.399/0.005 i(landolt)=12.256/0.005" flags ( astrom ) )
+      ( name "105-815" type std ra "13:40:02.70" dec "-00:02:18.0"
+        comments "SA105 815 "
+        mag 11.5 smags "v(landolt)=11.453/0.005 b(landolt)=11.838/0.005 u(landolt)=11.601/0.005 r(landolt)=11.186/0.005 i(landolt)=10.895/0.005" flags ( astrom ) )
+      ( name "+2-2711" type std ra "13:42:19.00" dec "01:30:18.0"
+        comments "BD+02 2711"
+        mag 10.4 smags "v(landolt)=10.367/0.005 b(landolt)=10.201/0.005 u(landolt)=9.504/0.005 r(landolt)=10.439/0.005 i(landolt)=10.534/0.005" flags ( astrom ) )
+      ( name "121968" type std ra "13:58:51.10" dec "-02:54:53.0"
+        comments "HD 121968 "
+        mag 10.3 smags "v(landolt)=10.254/0.005 b(landolt)=10.068/0.005 u(landolt)=9.160/0.005 r(landolt)=10.327/0.005 i(landolt)=10.425/0.005" flags ( astrom ) )
+      ( name "1407-013" type std ra "14:10:25.90" dec "-01:30:18.0"
+        comments "PG1407-013"
+        mag 13.8 smags "v(landolt)=13.750/0.005 b(landolt)=13.491/0.005 u(landolt)=12.372/0.005 r(landolt)=13.880/0.005 i(landolt)=14.024/0.005" flags ( astrom ) )
+      ( name "106-1024" type std ra "14:40:07.00" dec "00:01:45.0"
+        comments "SA106 1024"
+        mag 11.6 smags "v(landolt)=11.599/0.005 b(landolt)=11.931/0.005 u(landolt)=12.016/0.005 r(landolt)=11.403/0.005 i(landolt)=11.208/0.005" flags ( astrom ) )
+      ( name "106-700" type std ra "14:40:51.00" dec "-00:23:37.0"
+        comments "SA106 700"
+        mag 9.8 smags "v(landolt)=9.785/0.005 b(landolt)=11.147/0.005 u(landolt)=12.729/0.005 r(landolt)=9.057/0.005 i(landolt)=8.416/0.005" flags ( astrom ) )
+      ( name "1514+034" type std ra "15:17:14.30" dec "03:10:27.0"
+        comments "PG1514+034"
+        mag 14.0 smags "v(landolt)=13.997/0.005 b(landolt)=13.988/0.005 u(landolt)=13.033/0.005 r(landolt)=13.910/0.005 i(landolt)=13.784/0.005" flags ( astrom ) )
+      ( name "1525-071" type std ra "15:28:11.60" dec "-07:16:34.0"
+        comments "PG1525-071"
+        mag 15.1 smags "v(landolt)=15.053/0.005 b(landolt)=14.855/0.005 u(landolt)=13.707/0.005 r(landolt)=15.141/0.005 i(landolt)=15.216/0.005" flags ( astrom ) )
+      ( name "1525-071" type std ra "15:28:12.00" dec "-07:16:39.0"
+        comments "PG1525-071"
+        mag 16.3 smags "v(landolt)=16.301/0.005 b(landolt)=16.865/0.005 u(landolt)=17.170/0.005 r(landolt)=15.890/0.005 i(landolt)=15.544/0.005" flags ( astrom ) )
+      ( name "1525-071" type std ra "15:28:13.40" dec "-07:16:01.0"
+        comments "PG1525-071"
+        mag 13.5 smags "v(landolt)=13.509/0.005 b(landolt)=14.266/0.005 u(landolt)=14.523/0.005 r(landolt)=13.064/0.005 i(landolt)=12.639/0.005" flags ( astrom ) )
+      ( name "1525-071" type std ra "15:28:14.40" dec "-07:16:14.0"
+        comments "PG1525-071"
+        mag 16.4 smags "v(landolt)=16.403/0.005 b(landolt)=17.133/0.005 u(landolt)=17.268/0.005 r(landolt)=15.961/0.005 i(landolt)=15.595/0.005" flags ( astrom ) )
+      ( name "1525-071" type std ra "15:28:16.50" dec "-07:14:31.0"
+        comments "PG1525-071"
+        mag 13.5 smags "v(landolt)=13.530/0.005 b(landolt)=14.639/0.005 u(landolt)=15.769/0.005 r(landolt)=12.940/0.005 i(landolt)=12.427/0.005" flags ( astrom ) )
+      ( name "1528+062" type std ra "15:30:39.50" dec "06:01:13.0"
+        comments "PG1528+062"
+        mag 12.0 smags "v(landolt)=11.989/0.005 b(landolt)=12.582/0.005 u(landolt)=12.587/0.005 r(landolt)=11.625/0.005 i(landolt)=11.281/0.005" flags ( astrom ) )
+      ( name "1528+062" type std ra "15:30:49.00" dec "06:01:23.0"
+        comments "PG1528+062"
+        mag 15.6 smags "v(landolt)=15.553/0.005 b(landolt)=16.383/0.005 u(landolt)=16.739/0.005 r(landolt)=15.120/0.005 i(landolt)=14.731/0.005" flags ( astrom ) )
+      ( name "1528+062" type std ra "15:30:49.90" dec "06:00:57.0"
+        comments "PG1528+062"
+        mag 14.8 smags "v(landolt)=14.767/0.005 b(landolt)=14.515/0.005 u(landolt)=13.424/0.005 r(landolt)=14.878/0.005 i(landolt)=15.060/0.005" flags ( astrom ) )
+      ( name "1528+062" type std ra "15:30:55.70" dec "06:00:09.0"
+        comments "PG1528+062"
+        mag 13.5 smags "v(landolt)=13.477/0.005 b(landolt)=14.121/0.005 u(landolt)=14.195/0.005 r(landolt)=13.120/0.005 i(landolt)=12.780/0.005" flags ( astrom ) )
+      ( name "1530+057" type std ra "15:33:10.20" dec "05:33:43.0"
+        comments "PG1530+057"
+        mag 13.7 smags "v(landolt)=13.711/0.005 b(landolt)=14.540/0.005 u(landolt)=14.954/0.005 r(landolt)=13.238/0.005 i(landolt)=12.826/0.005" flags ( astrom ) )
+      ( name "1530+057" type std ra "15:33:10.70" dec "05:32:27.0"
+        comments "PG1530+057"
+        mag 14.2 smags "v(landolt)=14.211/0.005 b(landolt)=14.362/0.005 u(landolt)=13.573/0.005 r(landolt)=14.049/0.005 i(landolt)=14.013/0.005" flags ( astrom ) )
+      ( name "1530+057" type std ra "15:33:17.40" dec "05:33:46.0"
+        comments "PG1530+057"
+        mag 12.8 smags "v(landolt)=12.842/0.005 b(landolt)=13.587/0.005 u(landolt)=13.912/0.005 r(landolt)=12.419/0.005 i(landolt)=12.043/0.005" flags ( astrom ) )
+      ( name "107-970" type std ra "15:37:25.80" dec "00:18:34.0"
+        comments "SA107 970 "
+        mag 10.9 smags "v(landolt)=10.939/0.005 b(landolt)=12.535/0.005 u(landolt)=14.285/0.005 r(landolt)=9.797/0.005 i(landolt)=8.362/0.005" flags ( astrom ) )
+      ( name "107-568" type std ra "15:37:52.70" dec "-00:17:18.0"
+        comments "SA107 568 "
+        mag 13.1 smags "v(landolt)=13.054/0.005 b(landolt)=14.203/0.005 u(landolt)=15.065/0.005 r(landolt)=12.429/0.005 i(landolt)=11.834/0.005" flags ( astrom ) )
+      ( name "107-1006" type std ra "15:38:33.30" dec "00:14:20.0"
+        comments "SA107 1006 "
+        mag 11.7 smags "v(landolt)=11.712/0.005 b(landolt)=12.478/0.005 u(landolt)=12.757/0.005 r(landolt)=11.270/0.005 i(landolt)=10.849/0.005" flags ( astrom ) )
+      ( name "107-720" type std ra "15:38:36.90" dec "-00:02:25.0"
+        comments "SA107 720 "
+        mag 13.1 smags "v(landolt)=13.121/0.005 b(landolt)=13.720/0.005 u(landolt)=13.808/0.005 r(landolt)=12.747/0.005 i(landolt)=12.392/0.005" flags ( astrom ) )
+      ( name "107-456" type std ra "15:38:42.70" dec "-00:19:47.0"
+        comments "SA107 456 "
+        mag 12.9 smags "v(landolt)=12.919/0.005 b(landolt)=13.840/0.005 u(landolt)=14.429/0.005 r(landolt)=12.382/0.005 i(landolt)=11.904/0.005" flags ( astrom ) )
+      ( name "107-457" type std ra "15:38:46.70" dec "-00:20:15.0"
+        comments "SA107 457 "
+        mag 14.9 smags "v(landolt)=14.910/0.005 b(landolt)=15.702/0.005 u(landolt)=16.052/0.005 r(landolt)=14.416/0.005 i(landolt)=13.947/0.005" flags ( astrom ) )
+      ( name "107-351" type std ra "15:38:45.70" dec "-00:32:06.0"
+        comments "SA107 351 "
+        mag 12.3 smags "v(landolt)=12.342/0.005 b(landolt)=12.904/0.005 u(landolt)=12.899/0.005 r(landolt)=11.991/0.005 i(landolt)=11.633/0.005" flags ( astrom ) )
+      ( name "107-592" type std ra "15:38:50.30" dec "-00:17:09.0"
+        comments "SA107 592 "
+        mag 11.8 smags "v(landolt)=11.847/0.005 b(landolt)=13.165/0.005 u(landolt)=14.545/0.005 r(landolt)=11.138/0.005 i(landolt)=10.491/0.005" flags ( astrom ) )
+      ( name "107-458" type std ra "15:38:50.10" dec "-00:24:27.0"
+        comments "SA107 458 "
+        mag 11.7 smags "v(landolt)=11.676/0.005 b(landolt)=12.890/0.005 u(landolt)=14.079/0.005 r(landolt)=11.009/0.005 i(landolt)=10.407/0.005" flags ( astrom ) )
+      ( name "107-459" type std ra "15:38:50.70" dec "-00:22:34.0"
+        comments "SA107 459 "
+        mag 12.3 smags "v(landolt)=12.284/0.005 b(landolt)=13.184/0.005 u(landolt)=13.611/0.005 r(landolt)=11.759/0.005 i(landolt)=11.242/0.005" flags ( astrom ) )
+      ( name "107-212" type std ra "15:38:56.00" dec "-00:45:31.0"
+        comments "SA107 212 "
+        mag 13.4 smags "v(landolt)=13.383/0.005 b(landolt)=14.066/0.005 u(landolt)=14.201/0.005 r(landolt)=12.979/0.005 i(landolt)=12.568/0.005" flags ( astrom ) )
+      ( name "107-215" type std ra "15:38:57.60" dec "-00:43:06.0"
+        comments "SA107 215 "
+        mag 16.0 smags "v(landolt)=16.046/0.005 b(landolt)=16.161/0.005 u(landolt)=16.079/0.005 r(landolt)=16.078/0.005 i(landolt)=16.553/0.005" flags ( astrom ) )
+      ( name "107-213" type std ra "15:38:57.60" dec "-00:44:15.0"
+        comments "SA107 213 "
+        mag 14.3 smags "v(landolt)=14.262/0.005 b(landolt)=15.064/0.005 u(landolt)=15.325/0.005 r(landolt)=13.731/0.005 i(landolt)=13.222/0.005" flags ( astrom ) )
+      ( name "107-357" type std ra "15:39:05.40" dec "-00:39:12.0"
+        comments "SA107 357 "
+        mag 14.4 smags "v(landolt)=14.418/0.005 b(landolt)=15.093/0.005 u(landolt)=15.118/0.005 r(landolt)=14.002/0.005 i(landolt)=13.581/0.005" flags ( astrom ) )
+      ( name "107-599" type std ra "15:39:09.40" dec "-00:14:29.0"
+        comments "SA107 599 "
+        mag 14.7 smags "v(landolt)=14.675/0.005 b(landolt)=15.373/0.005 u(landolt)=15.616/0.005 r(landolt)=14.242/0.005 i(landolt)=13.804/0.005" flags ( astrom ) )
+      ( name "107-359" type std ra "15:39:09.00" dec "-00:35:38.0"
+        comments "SA107 359 "
+        mag 12.8 smags "v(landolt)=12.797/0.005 b(landolt)=13.377/0.005 u(landolt)=13.253/0.005 r(landolt)=12.418/0.005 i(landolt)=12.037/0.005" flags ( astrom ) )
+      ( name "107-600" type std ra "15:39:10.00" dec "-00:15:51.0"
+        comments "SA107 600 "
+        mag 14.9 smags "v(landolt)=14.884/0.005 b(landolt)=15.387/0.005 u(landolt)=15.436/0.005 r(landolt)=14.545/0.005 i(landolt)=14.184/0.005" flags ( astrom ) )
+      ( name "107-601" type std ra "15:39:13.80" dec "-00:13:28.0"
+        comments "SA107 601 "
+        mag 14.6 smags "v(landolt)=14.646/0.005 b(landolt)=16.058/0.005 u(landolt)=17.323/0.005 r(landolt)=13.723/0.005 i(landolt)=12.888/0.005" flags ( astrom ) )
+      ( name "107-602" type std ra "15:39:18.80" dec "-00:15:30.0"
+        comments "SA107 602 "
+        mag 12.1 smags "v(landolt)=12.116/0.005 b(landolt)=13.107/0.005 u(landolt)=13.692/0.005 r(landolt)=11.571/0.005 i(landolt)=11.040/0.005" flags ( astrom ) )
+      ( name "107-612" type std ra "15:39:35.40" dec "-00:15:08.0"
+        comments "SA107 612 "
+        mag 14.3 smags "v(landolt)=14.256/0.005 b(landolt)=15.152/0.005 u(landolt)=15.448/0.005 r(landolt)=13.705/0.005 i(landolt)=13.175/0.005" flags ( astrom ) )
+      ( name "107-611" type std ra "15:39:35.00" dec "-00:12:36.0"
+        comments "SA107 611 "
+        mag 14.3 smags "v(landolt)=14.329/0.005 b(landolt)=15.219/0.005 u(landolt)=15.674/0.005 r(landolt)=13.809/0.005 i(landolt)=13.362/0.005" flags ( astrom ) )
+      ( name "107-614" type std ra "15:39:41.10" dec "-00:13:11.0"
+        comments "SA107 614 "
+        mag 13.9 smags "v(landolt)=13.926/0.005 b(landolt)=14.548/0.005 u(landolt)=14.581/0.005 r(landolt)=13.565/0.005 i(landolt)=13.195/0.005" flags ( astrom ) )
+      ( name "107-626" type std ra "15:40:05.30" dec "-00:17:29.0"
+        comments "SA107 626 "
+        mag 13.5 smags "v(landolt)=13.468/0.005 b(landolt)=14.468/0.005 u(landolt)=15.196/0.005 r(landolt)=12.868/0.005 i(landolt)=12.341/0.005" flags ( astrom ) )
+      ( name "107-627" type std ra "15:40:07.40" dec "-00:17:23.0"
+        comments "SA107 627 "
+        mag 13.3 smags "v(landolt)=13.349/0.005 b(landolt)=14.128/0.005 u(landolt)=14.354/0.005 r(landolt)=12.884/0.005 i(landolt)=12.430/0.005" flags ( astrom ) )
+      ( name "107-484" type std ra "15:40:16.80" dec "-00:21:15.0"
+        comments "SA107 484 "
+        mag 11.3 smags "v(landolt)=11.311/0.005 b(landolt)=12.548/0.005 u(landolt)=13.839/0.005 r(landolt)=10.647/0.005 i(landolt)=10.070/0.005" flags ( astrom ) )
+      ( name "107-636" type std ra "15:40:40.40" dec "-00:14:53.0"
+        comments "SA107 636 "
+        mag 14.9 smags "v(landolt)=14.873/0.005 b(landolt)=15.624/0.005 u(landolt)=15.745/0.005 r(landolt)=14.441/0.005 i(landolt)=13.976/0.005" flags ( astrom ) )
+      ( name "107-639" type std ra "15:40:44.70" dec "-00:17:10.0"
+        comments "SA107 639 "
+        mag 14.2 smags "v(landolt)=14.197/0.005 b(landolt)=14.837/0.005 u(landolt)=14.811/0.005 r(landolt)=13.798/0.005 i(landolt)=13.394/0.005" flags ( astrom ) )
+      ( name "107-640" type std ra "15:40:49.10" dec "-00:16:48.0"
+        comments "SA107 640 "
+        mag 15.1 smags "v(landolt)=15.050/0.005 b(landolt)=15.805/0.005 u(landolt)=15.897/0.005 r(landolt)=14.539/0.005 i(landolt)=14.033/0.005" flags ( astrom ) )
+      ( name "G153-41" type std ra "16:17:55.20" dec "-15:35:53.0"
+        comments "G153-41   "
+        mag 13.4 smags "v(landolt)=13.422/0.005 b(landolt)=13.217/0.005 u(landolt)=12.084/0.005 r(landolt)=13.557/0.005 i(landolt)=13.711/0.005" flags ( astrom ) )
+      ( name "G138-25" type std ra "16:25:14.00" dec "15:40:54.0"
+        comments "G138-25   "
+        mag 13.5 smags "v(landolt)=13.513/0.005 b(landolt)=14.932/0.005 u(landolt)=16.197/0.005 r(landolt)=12.630/0.005 i(landolt)=11.834/0.005" flags ( astrom ) )
+      ( name "-12-4523" type std ra "16:30:18.00" dec "-12:39:46.0"
+        comments "BD-12 4523"
+        mag 10.1 smags "v(landolt)=10.069/0.005 b(landolt)=11.637/0.005 u(landolt)=12.829/0.005 r(landolt)=8.917/0.005 i(landolt)=7.419/0.005" flags ( astrom ) )
+      ( name "1633+099" type std ra "16:35:24.00" dec "09:47:50.0"
+        comments "PG1633+099"
+        mag 14.4 smags "v(landolt)=14.397/0.005 b(landolt)=14.205/0.005 u(landolt)=13.231/0.005 r(landolt)=14.490/0.005 i(landolt)=14.606/0.005" flags ( astrom ) )
+      ( name "1633+099" type std ra "16:35:25.90" dec "09:47:53.0"
+        comments "PG1633+099"
+        mag 15.3 smags "v(landolt)=15.256/0.005 b(landolt)=16.129/0.005 u(landolt)=16.449/0.005 r(landolt)=14.751/0.005 i(landolt)=14.240/0.005" flags ( astrom ) )
+      ( name "1633+099" type std ra "16:35:33.30" dec "09:46:21.0"
+        comments "PG1633+099"
+        mag 13.0 smags "v(landolt)=12.969/0.005 b(landolt)=14.050/0.005 u(landolt)=15.057/0.005 r(landolt)=12.379/0.005 i(landolt)=11.877/0.005" flags ( astrom ) )
+      ( name "1633+099" type std ra "16:35:37.20" dec "09:46:16.0"
+        comments "PG1633+099"
+        mag 13.2 smags "v(landolt)=13.229/0.005 b(landolt)=14.363/0.005 u(landolt)=15.501/0.005 r(landolt)=12.611/0.005 i(landolt)=12.088/0.005" flags ( astrom ) )
+      ( name "1633+099" type std ra "16:35:40.10" dec "09:46:42.0"
+        comments "PG1633+099"
+        mag 13.7 smags "v(landolt)=13.691/0.005 b(landolt)=14.226/0.005 u(landolt)=14.201/0.005 r(landolt)=13.367/0.005 i(landolt)=13.040/0.005" flags ( astrom ) )
+      ( name "108-719" type std ra "16:36:11.00" dec "-00:25:30.0"
+        comments "SA108 719 "
+        mag 12.7 smags "v(landolt)=12.690/0.005 b(landolt)=13.721/0.005 u(landolt)=14.369/0.005 r(landolt)=12.137/0.005 i(landolt)=11.604/0.005" flags ( astrom ) )
+      ( name "108-1848" type std ra "16:36:58.40" dec "00:05:55.0"
+        comments "SA108 1848"
+        mag 11.7 smags "v(landolt)=11.738/0.005 b(landolt)=12.297/0.005 u(landolt)=12.370/0.005 r(landolt)=11.407/0.005 i(landolt)=11.082/0.005" flags ( astrom ) )
+      ( name "108-475" type std ra "16:37:00.60" dec "-00:34:39.0"
+        comments "SA108 475 "
+        mag 11.3 smags "v(landolt)=11.309/0.005 b(landolt)=12.689/0.005 u(landolt)=14.151/0.005 r(landolt)=10.565/0.005 i(landolt)=9.900/0.005" flags ( astrom ) )
+      ( name "108-1863" type std ra "16:37:12.40" dec "00:02:30.0"
+        comments "SA108 1863"
+        mag 12.2 smags "v(landolt)=12.244/0.005 b(landolt)=13.047/0.005 u(landolt)=13.425/0.005 r(landolt)=11.798/0.005 i(landolt)=11.400/0.005" flags ( astrom ) )
+      ( name "108-551" type std ra "16:37:47.80" dec "-00:33:06.0"
+        comments "SA108 551 "
+        mag 10.7 smags "v(landolt)=10.703/0.005 b(landolt)=10.882/0.005 u(landolt)=11.060/0.005 r(landolt)=10.604/0.005 i(landolt)=10.494/0.005" flags ( astrom ) )
+      ( name "108-1918" type std ra "16:37:50.10" dec "-00:00:37.0"
+        comments "SA108 1918"
+        mag 11.4 smags "v(landolt)=11.384/0.005 b(landolt)=12.816/0.005 u(landolt)=14.655/0.005 r(landolt)=10.611/0.005 i(landolt)=9.950/0.005" flags ( astrom ) )
+      ( name "108-981" type std ra "16:39:16.60" dec "-00:25:07.0"
+        comments "SA108 981 "
+        mag 12.1 smags "v(landolt)=12.071/0.005 b(landolt)=12.565/0.005 u(landolt)=12.802/0.005 r(landolt)=11.761/0.005 i(landolt)=11.449/0.005" flags ( astrom ) )
+      ( name "1647+056" type std ra "16:50:18.50" dec "05:32:56.0"
+        comments "PG1647+056"
+        mag 14.8 smags "v(landolt)=14.773/0.005 b(landolt)=14.600/0.005 u(landolt)=13.536/0.005 r(landolt)=14.831/0.005 i(landolt)=14.853/0.005" flags ( astrom ) )
+      ( name "W629" type std ra "16:55:25.30" dec "-08:19:22.0"
+        comments "WOLF 629     "
+        mag 11.8 smags "v(landolt)=11.759/0.005 b(landolt)=13.436/0.005 u(landolt)=14.692/0.005 r(landolt)=10.574/0.005 i(landolt)=9.049/0.005" flags ( astrom ) )
+      ( name "1657+078" type std ra "16:59:32.20" dec "07:43:32.0"
+        comments "PG1657+078"
+        mag 15.0 smags "v(landolt)=15.015/0.005 b(landolt)=14.866/0.005 u(landolt)=13.926/0.005 r(landolt)=15.078/0.005 i(landolt)=15.111/0.005" flags ( astrom ) )
+      ( name "1657+078" type std ra "16:59:32.00" dec "07:42:08.0"
+        comments "PG1657+078"
+        mag 14.7 smags "v(landolt)=14.721/0.005 b(landolt)=15.429/0.005 u(landolt)=15.494/0.005 r(landolt)=14.304/0.005 i(landolt)=13.884/0.005" flags ( astrom ) )
+      ( name "1657+078" type std ra "16:59:33.20" dec "07:42:20.0"
+        comments "PG1657+078"
+        mag 14.0 smags "v(landolt)=14.033/0.005 b(landolt)=15.102/0.005 u(landolt)=15.832/0.005 r(landolt)=13.460/0.005 i(landolt)=12.921/0.005" flags ( astrom ) )
+      ( name "1657+078" type std ra "16:59:35.30" dec "07:42:27.0"
+        comments "PG1657+078"
+        mag 15.2 smags "v(landolt)=15.225/0.005 b(landolt)=16.065/0.005 u(landolt)=16.450/0.005 r(landolt)=14.704/0.005 i(landolt)=14.260/0.005" flags ( astrom ) )
+      ( name "-4-4226" type std ra "17:05:13.80" dec "-05:05:39.0"
+        comments "BD-4 4226"
+        mag 10.1 smags "v(landolt)=10.071/0.005 b(landolt)=11.486/0.005 u(landolt)=12.571/0.005 r(landolt)=9.101/0.005 i(landolt)=7.960/0.005" flags ( astrom ) )
+      ( name "109-71" type std ra "17:44:06.80" dec "-00:24:57.0"
+        comments "SA109 71 "
+        mag 11.5 smags "v(landolt)=11.493/0.005 b(landolt)=11.816/0.005 u(landolt)=11.969/0.005 r(landolt)=11.307/0.005 i(landolt)=11.084/0.005" flags ( astrom ) )
+      ( name "109-381" type std ra "17:44:12.30" dec "-00:20:33.0"
+        comments "SA109 381 "
+        mag 11.7 smags "v(landolt)=11.730/0.005 b(landolt)=12.434/0.005 u(landolt)=12.659/0.005 r(landolt)=11.302/0.005 i(landolt)=10.867/0.005" flags ( astrom ) )
+      ( name "109-949" type std ra "17:44:13.60" dec "-00:02:27.0"
+        comments "SA109 949 "
+        mag 12.8 smags "v(landolt)=12.828/0.005 b(landolt)=13.634/0.005 u(landolt)=13.997/0.005 r(landolt)=12.328/0.005 i(landolt)=11.811/0.005" flags ( astrom ) )
+      ( name "109-954" type std ra "17:44:15.80" dec "-00:02:16.0"
+        comments "SA109 954 "
+        mag 12.4 smags "v(landolt)=12.436/0.005 b(landolt)=13.732/0.005 u(landolt)=14.688/0.005 r(landolt)=11.672/0.005 i(landolt)=10.941/0.005" flags ( astrom ) )
+      ( name "109-956" type std ra "17:44:17.50" dec "-00:02:31.0"
+        comments "SA109 956 "
+        mag 14.6 smags "v(landolt)=14.639/0.005 b(landolt)=15.922/0.005 u(landolt)=16.780/0.005 r(landolt)=13.860/0.005 i(landolt)=13.117/0.005" flags ( astrom ) )
+      ( name "109-199" type std ra "17:45:02.60" dec "-00:29:28.0"
+        comments "SA109 199 "
+        mag 11.0 smags "v(landolt)=10.990/0.005 b(landolt)=12.729/0.005 u(landolt)=14.696/0.005 r(landolt)=9.984/0.005 i(landolt)=9.084/0.005" flags ( astrom ) )
+      ( name "109-231" type std ra "17:45:19.90" dec "-00:25:51.0"
+        comments "SA109 231 "
+        mag 9.3 smags "v(landolt)=9.332/0.005 b(landolt)=10.794/0.005 u(landolt)=12.387/0.005 r(landolt)=8.547/0.005 i(landolt)=7.843/0.005" flags ( astrom ) )
+      ( name "109-537" type std ra "17:45:42.50" dec "-00:21:36.0"
+        comments "SA109 537 "
+        mag 10.4 smags "v(landolt)=10.353/0.005 b(landolt)=10.962/0.005 u(landolt)=11.189/0.005 r(landolt)=9.977/0.005 i(landolt)=9.585/0.005" flags ( astrom ) )
+      ( name "G21-15" type std ra "18:27:13.00" dec "04:03:45.0"
+        comments "G21-15    "
+        mag 13.9 smags "v(landolt)=13.889/0.005 b(landolt)=13.981/0.005 u(landolt)=13.383/0.005 r(landolt)=13.928/0.005 i(landolt)=13.958/0.005" flags ( astrom ) )
+      ( name "110-229" type std ra "18:40:45.70" dec "00:01:50.0"
+        comments "SA110 229 "
+        mag 13.6 smags "v(landolt)=13.649/0.005 b(landolt)=15.559/0.005 u(landolt)=16.950/0.005 r(landolt)=12.451/0.005 i(landolt)=11.296/0.005" flags ( astrom ) )
+      ( name "110-230" type std ra "18:40:51.40" dec "00:02:23.0"
+        comments "SA110 230 "
+        mag 14.3 smags "v(landolt)=14.281/0.005 b(landolt)=15.365/0.005 u(landolt)=16.093/0.005 r(landolt)=13.657/0.005 i(landolt)=13.061/0.005" flags ( astrom ) )
+      ( name "110-232" type std ra "18:40:52.30" dec "00:01:56.0"
+        comments "SA110 232 "
+        mag 12.5 smags "v(landolt)=12.516/0.005 b(landolt)=13.245/0.005 u(landolt)=13.392/0.005 r(landolt)=12.077/0.005 i(landolt)=11.627/0.005" flags ( astrom ) )
+      ( name "110-233" type std ra "18:40:52.70" dec "00:00:51.0"
+        comments "SA110 233 "
+        mag 12.8 smags "v(landolt)=12.771/0.005 b(landolt)=14.052/0.005 u(landolt)=14.864/0.005 r(landolt)=11.998/0.005 i(landolt)=11.180/0.005" flags ( astrom ) )
+      ( name "110-239" type std ra "18:41:19.80" dec "00:00:14.0"
+        comments "SA110 239 "
+        mag 13.9 smags "v(landolt)=13.858/0.005 b(landolt)=14.757/0.005 u(landolt)=15.341/0.005 r(landolt)=13.317/0.005 i(landolt)=12.800/0.005" flags ( astrom ) )
+      ( name "110-339" type std ra "18:41:26.60" dec "00:08:26.0"
+        comments "SA110 339 "
+        mag 13.6 smags "v(landolt)=13.607/0.005 b(landolt)=14.595/0.005 u(landolt)=15.371/0.005 r(landolt)=13.044/0.005 i(landolt)=12.576/0.005" flags ( astrom ) )
+      ( name "110-340" type std ra "18:41:28.40" dec "00:15:24.0"
+        comments "SA110 340 "
+        mag 10.0 smags "v(landolt)=10.025/0.005 b(landolt)=10.328/0.005 u(landolt)=10.455/0.005 r(landolt)=9.855/0.005 i(landolt)=9.673/0.005" flags ( astrom ) )
+      ( name "110-477" type std ra "18:41:43.20" dec "00:26:43.0"
+        comments "SA110 477 "
+        mag 14.0 smags "v(landolt)=13.988/0.005 b(landolt)=15.333/0.005 u(landolt)=16.048/0.005 r(landolt)=13.138/0.005 i(landolt)=12.281/0.005" flags ( astrom ) )
+      ( name "110-246" type std ra "18:41:50.80" dec "00:05:09.0"
+        comments "SA110 246 "
+        mag 12.7 smags "v(landolt)=12.706/0.005 b(landolt)=13.292/0.005 u(landolt)=13.163/0.005 r(landolt)=12.325/0.005 i(landolt)=11.915/0.005" flags ( astrom ) )
+      ( name "110-346" type std ra "18:41:55.20" dec "00:09:59.0"
+        comments "SA110 346 "
+        mag 14.8 smags "v(landolt)=14.757/0.005 b(landolt)=15.756/0.005 u(landolt)=16.508/0.005 r(landolt)=14.060/0.005 i(landolt)=13.414/0.005" flags ( astrom ) )
+      ( name "110-349" type std ra "18:42:13.40" dec "00:10:16.0"
+        comments "SA110 349 "
+        mag 15.1 smags "v(landolt)=15.095/0.005 b(landolt)=16.183/0.005 u(landolt)=16.851/0.005 r(landolt)=14.592/0.005 i(landolt)=14.651/0.005" flags ( astrom ) )
+      ( name "110-355" type std ra "18:42:18.90" dec "00:08:25.0"
+        comments "SA110 355 "
+        mag 11.9 smags "v(landolt)=11.944/0.005 b(landolt)=12.967/0.005 u(landolt)=13.471/0.005 r(landolt)=11.292/0.005 i(landolt)=10.565/0.005" flags ( astrom ) )
+      ( name "110-358" type std ra "18:42:35.50" dec "00:15:02.0"
+        comments "SA110 358 "
+        mag 14.4 smags "v(landolt)=14.430/0.005 b(landolt)=15.469/0.005 u(landolt)=15.887/0.005 r(landolt)=13.827/0.005 i(landolt)=13.284/0.005" flags ( astrom ) )
+      ( name "110-360" type std ra "18:42:40.40" dec "00:09:11.0"
+        comments "SA110 360 "
+        mag 14.6 smags "v(landolt)=14.618/0.005 b(landolt)=15.815/0.005 u(landolt)=16.354/0.005 r(landolt)=13.903/0.005 i(landolt)=13.186/0.005" flags ( astrom ) )
+      ( name "110-361" type std ra "18:42:45.00" dec "00:08:05.0"
+        comments "SA110 361 "
+        mag 12.4 smags "v(landolt)=12.425/0.005 b(landolt)=13.057/0.005 u(landolt)=13.092/0.005 r(landolt)=12.064/0.005 i(landolt)=11.716/0.005" flags ( astrom ) )
+      ( name "110-362" type std ra "18:42:48.20" dec "00:06:29.0"
+        comments "SA110 362 "
+        mag 15.7 smags "v(landolt)=15.693/0.005 b(landolt)=17.026/0.005 u(landolt)=20.945/0.005 r(landolt)=14.775/0.005 i(landolt)=13.890/0.005" flags ( astrom ) )
+      ( name "110-L1" type std ra "18:42:50.10" dec "00:07:13.0"
+        comments "SA110 L1 "
+        mag 16.3 smags "v(landolt)=16.252/0.005 b(landolt)=18.004/0.005 u(landolt)=20.957/0.005 r(landolt)=15.186/0.005 i(landolt)=14.194/0.005" flags ( astrom ) )
+      ( name "110-266" type std ra "18:42:48.70" dec "00:05:06.0"
+        comments "SA110 266 "
+        mag 12.0 smags "v(landolt)=12.018/0.005 b(landolt)=12.907/0.005 u(landolt)=13.318/0.005 r(landolt)=11.480/0.005 i(landolt)=10.903/0.005" flags ( astrom ) )
+      ( name "110-364" type std ra "18:42:52.70" dec "00:07:56.0"
+        comments "SA110 364 "
+        mag 13.6 smags "v(landolt)=13.615/0.005 b(landolt)=14.748/0.005 u(landolt)=15.843/0.005 r(landolt)=12.918/0.005 i(landolt)=12.333/0.005" flags ( astrom ) )
+      ( name "110-365" type std ra "18:42:57.40" dec "00:07:23.0"
+        comments "SA110 365 "
+        mag 13.5 smags "v(landolt)=13.470/0.005 b(landolt)=15.731/0.005 u(landolt)=17.626/0.005 r(landolt)=12.110/0.005 i(landolt)=10.840/0.005" flags ( astrom ) )
+      ( name "110-157" type std ra "18:42:56.40" dec "-00:08:58.0"
+        comments "SA110 157 "
+        mag 13.5 smags "v(landolt)=13.491/0.005 b(landolt)=15.614/0.005 u(landolt)=17.293/0.005 r(landolt)=12.234/0.005 i(landolt)=11.095/0.005" flags ( astrom ) )
+      ( name "110-496" type std ra "18:42:59.30" dec "00:31:09.0"
+        comments "SA110 496 "
+        mag 13.0 smags "v(landolt)=13.004/0.005 b(landolt)=14.044/0.005 u(landolt)=14.781/0.005 r(landolt)=12.397/0.005 i(landolt)=11.716/0.005" flags ( astrom ) )
+      ( name "110-273" type std ra "18:42:59.50" dec "00:02:24.0"
+        comments "SA110 273 "
+        mag 14.7 smags "v(landolt)=14.686/0.005 b(landolt)=17.213/0.005 u(landolt)=18.213/0.005 r(landolt)=13.177/0.005 i(landolt)=11.832/0.005" flags ( astrom ) )
+      ( name "110-497" type std ra "18:43:02.40" dec "00:30:57.0"
+        comments "SA110 497 "
+        mag 14.2 smags "v(landolt)=14.196/0.005 b(landolt)=15.248/0.005 u(landolt)=15.628/0.005 r(landolt)=13.590/0.005 i(landolt)=12.993/0.005" flags ( astrom ) )
+      ( name "110-280" type std ra "18:43:06.90" dec "-00:03:41.0"
+        comments "SA110 280 "
+        mag 13.0 smags "v(landolt)=12.996/0.005 b(landolt)=15.147/0.005 u(landolt)=17.280/0.005 r(landolt)=11.761/0.005 i(landolt)=10.613/0.005" flags ( astrom ) )
+      ( name "110-499" type std ra "18:43:07.60" dec "00:28:02.0"
+        comments "SA110 499 "
+        mag 11.7 smags "v(landolt)=11.737/0.005 b(landolt)=12.724/0.005 u(landolt)=13.363/0.005 r(landolt)=11.137/0.005 i(landolt)=10.463/0.005" flags ( astrom ) )
+      ( name "110-502" type std ra "18:43:10.00" dec "00:27:43.0"
+        comments "SA110 502 "
+        mag 12.3 smags "v(landolt)=12.330/0.005 b(landolt)=14.656/0.005 u(landolt)=16.982/0.005 r(landolt)=10.957/0.005 i(landolt)=9.707/0.005" flags ( astrom ) )
+      ( name "110-504" type std ra "18:43:11.70" dec "00:30:05.0"
+        comments "SA110 504 "
+        mag 14.0 smags "v(landolt)=14.022/0.005 b(landolt)=15.270/0.005 u(landolt)=16.593/0.005 r(landolt)=13.225/0.005 i(landolt)=12.542/0.005" flags ( astrom ) )
+      ( name "110-503" type std ra "18:43:11.60" dec "00:29:43.0"
+        comments "SA110 503 "
+        mag 11.8 smags "v(landolt)=11.773/0.005 b(landolt)=12.444/0.005 u(landolt)=12.950/0.005 r(landolt)=11.400/0.005 i(landolt)=10.964/0.005" flags ( astrom ) )
+      ( name "110-506" type std ra "18:43:18.90" dec "00:30:27.0"
+        comments "SA110 506 "
+        mag 11.3 smags "v(landolt)=11.312/0.005 b(landolt)=11.880/0.005 u(landolt)=11.939/0.005 r(landolt)=10.977/0.005 i(landolt)=10.665/0.005" flags ( astrom ) )
+      ( name "110-507" type std ra "18:43:19.10" dec "00:29:26.0"
+        comments "SA110 507 "
+        mag 12.4 smags "v(landolt)=12.440/0.005 b(landolt)=13.581/0.005 u(landolt)=14.411/0.005 r(landolt)=11.807/0.005 i(landolt)=11.228/0.005" flags ( astrom ) )
+      ( name "110-290" type std ra "18:43:22.10" dec "-00:01:15.0"
+        comments "SA110 290 "
+        mag 11.9 smags "v(landolt)=11.898/0.005 b(landolt)=12.606/0.005 u(landolt)=12.802/0.005 r(landolt)=11.480/0.005 i(landolt)=11.062/0.005" flags ( astrom ) )
+      ( name "110-441" type std ra "18:43:33.50" dec "00:19:41.0"
+        comments "SA110 441 "
+        mag 11.1 smags "v(landolt)=11.121/0.005 b(landolt)=11.676/0.005 u(landolt)=11.788/0.005 r(landolt)=10.797/0.005 i(landolt)=10.461/0.005" flags ( astrom ) )
+      ( name "110-311" type std ra "18:43:47.50" dec "-00:00:21.0"
+        comments "SA110 311 "
+        mag 15.5 smags "v(landolt)=15.505/0.005 b(landolt)=17.301/0.005 u(landolt)=18.480/0.005 r(landolt)=14.495/0.005 i(landolt)=13.631/0.005" flags ( astrom ) )
+      ( name "110-312" type std ra "18:43:48.90" dec "00:00:06.0"
+        comments "SA110 312 "
+        mag 16.1 smags "v(landolt)=16.093/0.005 b(landolt)=17.412/0.005 u(landolt)=16.624/0.005 r(landolt)=14.956/0.005 i(landolt)=13.802/0.005" flags ( astrom ) )
+      ( name "110-450" type std ra "18:43:51.40" dec "00:22:59.0"
+        comments "SA110 450 "
+        mag 11.6 smags "v(landolt)=11.585/0.005 b(landolt)=12.529/0.005 u(landolt)=13.220/0.005 r(landolt)=11.033/0.005 i(landolt)=10.408/0.005" flags ( astrom ) )
+      ( name "110-316" type std ra "18:43:52.30" dec "00:01:04.0"
+        comments "SA110 316 "
+        mag 14.8 smags "v(landolt)=14.821/0.005 b(landolt)=16.552/0.005 u(landolt)=20.907/0.005 r(landolt)=13.963/0.005 i(landolt)=13.053/0.005" flags ( astrom ) )
+      ( name "110-315" type std ra "18:43:52.10" dec "00:00:49.0"
+        comments "SA110 315 "
+        mag 13.6 smags "v(landolt)=13.637/0.005 b(landolt)=15.706/0.005 u(landolt)=17.962/0.005 r(landolt)=12.431/0.005 i(landolt)=11.298/0.005" flags ( astrom ) )
+      ( name "110-319" type std ra "18:43:55.30" dec "00:02:00.0"
+        comments "SA110 319 "
+        mag 11.9 smags "v(landolt)=11.861/0.005 b(landolt)=13.170/0.005 u(landolt)=14.246/0.005 r(landolt)=11.119/0.005 i(landolt)=10.419/0.005" flags ( astrom ) )
+      ( name "111-775" type std ra "19:37:16.30" dec "00:12:06.0"
+        comments "SA111 775 "
+        mag 10.7 smags "v(landolt)=10.744/0.005 b(landolt)=12.482/0.005 u(landolt)=14.511/0.005 r(landolt)=9.779/0.005 i(landolt)=8.883/0.005" flags ( astrom ) )
+      ( name "111-773" type std ra "19:37:15.80" dec "00:10:58.0"
+        comments "SA111 773 "
+        mag 9.0 smags "v(landolt)=8.963/0.005 b(landolt)=9.169/0.005 u(landolt)=8.959/0.005 r(landolt)=8.844/0.005 i(landolt)=8.700/0.005" flags ( astrom ) )
+      ( name "111-1925" type std ra "19:37:28.60" dec "00:25:03.0"
+        comments "SA111 1925"
+        mag 12.4 smags "v(landolt)=12.388/0.005 b(landolt)=12.783/0.005 u(landolt)=13.045/0.005 r(landolt)=12.167/0.005 i(landolt)=11.914/0.005" flags ( astrom ) )
+      ( name "111-1965" type std ra "19:37:41.60" dec "00:26:51.0"
+        comments "SA111 1965"
+        mag 11.4 smags "v(landolt)=11.419/0.005 b(landolt)=13.129/0.005 u(landolt)=14.994/0.005 r(landolt)=10.468/0.005 i(landolt)=9.591/0.005" flags ( astrom ) )
+      ( name "111-1969" type std ra "19:37:43.30" dec "00:25:49.0"
+        comments "SA111 1969"
+        mag 10.4 smags "v(landolt)=10.382/0.005 b(landolt)=12.341/0.005 u(landolt)=14.647/0.005 r(landolt)=9.205/0.005 i(landolt)=7.983/0.005" flags ( astrom ) )
+      ( name "111-2039" type std ra "19:38:04.60" dec "00:32:13.0"
+        comments "SA111 2039"
+        mag 12.4 smags "v(landolt)=12.395/0.005 b(landolt)=13.764/0.005 u(landolt)=15.001/0.005 r(landolt)=11.656/0.005 i(landolt)=10.967/0.005" flags ( astrom ) )
+      ( name "111-2088" type std ra "19:38:21.20" dec "00:31:00.0"
+        comments "SA111 2088"
+        mag 13.2 smags "v(landolt)=13.193/0.005 b(landolt)=14.803/0.005 u(landolt)=16.481/0.005 r(landolt)=12.305/0.005 i(landolt)=11.487/0.005" flags ( astrom ) )
+      ( name "111-2093" type std ra "19:38:23.40" dec "00:31:26.0"
+        comments "SA111 2093"
+        mag 12.5 smags "v(landolt)=12.538/0.005 b(landolt)=13.175/0.005 u(landolt)=13.458/0.005 r(landolt)=12.168/0.005 i(landolt)=11.771/0.005" flags ( astrom ) )
+      ( name "112-595" type std ra "20:41:18.40" dec "00:16:29.0"
+        comments "SA112 595 "
+        mag 11.4 smags "v(landolt)=11.352/0.005 b(landolt)=12.953/0.005 u(landolt)=14.946/0.005 r(landolt)=10.453/0.005 i(landolt)=9.552/0.005" flags ( astrom ) )
+      ( name "112-704" type std ra "20:42:02.00" dec "00:19:09.0"
+        comments "SA112 704 "
+        mag 11.5 smags "v(landolt)=11.452/0.005 b(landolt)=12.988/0.005 u(landolt)=14.730/0.005 r(landolt)=10.630/0.005 i(landolt)=9.884/0.005" flags ( astrom ) )
+      ( name "112-223" type std ra "20:42:14.60" dec "00:09:01.0"
+        comments "SA112 223 "
+        mag 11.4 smags "v(landolt)=11.424/0.005 b(landolt)=11.878/0.005 u(landolt)=11.888/0.005 r(landolt)=11.151/0.005 i(landolt)=10.877/0.005" flags ( astrom ) )
+      ( name "112-250" type std ra "20:42:26.40" dec "00:07:43.0"
+        comments "SA112 250 "
+        mag 12.1 smags "v(landolt)=12.095/0.005 b(landolt)=12.627/0.005 u(landolt)=12.602/0.005 r(landolt)=11.778/0.005 i(landolt)=11.455/0.005" flags ( astrom ) )
+      ( name "112-275" type std ra "20:42:35.40" dec "00:07:20.0"
+        comments "SA112 275 "
+        mag 9.9 smags "v(landolt)=9.905/0.005 b(landolt)=11.115/0.005 u(landolt)=12.414/0.005 r(landolt)=9.258/0.005 i(landolt)=8.689/0.005" flags ( astrom ) )
+      ( name "112-805" type std ra "20:42:46.70" dec "00:16:09.0"
+        comments "SA112 805 "
+        mag 12.1 smags "v(landolt)=12.086/0.005 b(landolt)=12.238/0.005 u(landolt)=12.388/0.005 r(landolt)=12.023/0.005 i(landolt)=11.948/0.005" flags ( astrom ) )
+      ( name "112-822" type std ra "20:42:54.90" dec "00:15:03.0"
+        comments "SA112 822 "
+        mag 11.5 smags "v(landolt)=11.549/0.005 b(landolt)=12.580/0.005 u(landolt)=13.463/0.005 r(landolt)=10.991/0.005 i(landolt)=10.489/0.005" flags ( astrom ) )
+      ( name "M-A2" type std ra "20:43:55.00" dec "-10:45:31.0"
+        comments "Mark A2      "
+        mag 14.5 smags "v(landolt)=14.540/0.005 b(landolt)=15.206/0.005 u(landolt)=15.302/0.005 r(landolt)=14.161/0.005 i(landolt)=13.790/0.005" flags ( astrom ) )
+      ( name "M-A1" type std ra "20:43:58.50" dec "-10:47:12.0"
+        comments "Mark A1      "
+        mag 15.9 smags "v(landolt)=15.911/0.005 b(landolt)=16.520/0.005 u(landolt)=16.506/0.005 r(landolt)=15.544/0.005 i(landolt)=15.171/0.005" flags ( astrom ) )
+      ( name "M-A" type std ra "20:43:59.20" dec "-10:47:42.0"
+        comments "Mark A       "
+        mag 13.3 smags "v(landolt)=13.258/0.005 b(landolt)=13.016/0.005 u(landolt)=11.854/0.005 r(landolt)=13.373/0.005 i(landolt)=13.498/0.005" flags ( astrom ) )
+      ( name "M-A3" type std ra "20:44:03.80" dec "-10:45:37.0"
+        comments "Mark A3      "
+        mag 14.8 smags "v(landolt)=14.818/0.005 b(landolt)=15.756/0.005 u(landolt)=16.407/0.005 r(landolt)=14.231/0.005 i(landolt)=13.721/0.005" flags ( astrom ) )
+      ( name "W918" type std ra "21:09:17.40" dec "-13:18:08.0"
+        comments "Wolf 918     "
+        mag 10.9 smags "v(landolt)=10.868/0.005 b(landolt)=12.362/0.005 u(landolt)=13.508/0.005 r(landolt)=9.887/0.005 i(landolt)=8.799/0.005" flags ( astrom ) )
+      ( name "G26-7" type std ra "21:31:18.60" dec "-09:47:25.0"
+        comments "G26-7     "
+        mag 12.0 smags "v(landolt)=12.005/0.005 b(landolt)=13.674/0.005 u(landolt)=14.909/0.005 r(landolt)=10.705/0.005 i(landolt)=9.010/0.005" flags ( astrom ) )
+      ( name "113-440" type std ra "21:40:34.50" dec "00:41:47.0"
+        comments "SA113 440 "
+        mag 11.8 smags "v(landolt)=11.796/0.005 b(landolt)=12.433/0.005 u(landolt)=12.600/0.005 r(landolt)=11.433/0.005 i(landolt)=11.083/0.005" flags ( astrom ) )
+      ( name "113-221" type std ra "21:40:36.60" dec "00:21:03.0"
+        comments "SA113 221 "
+        mag 12.1 smags "v(landolt)=12.071/0.005 b(landolt)=13.102/0.005 u(landolt)=13.976/0.005 r(landolt)=11.521/0.005 i(landolt)=11.031/0.005" flags ( astrom ) )
+      ( name "113-L1" type std ra "21:40:47.40" dec "00:28:35.0"
+        comments "SA113 L1 "
+        mag 15.5 smags "v(landolt)=15.530/0.005 b(landolt)=16.873/0.005 u(landolt)=18.053/0.005 r(landolt)=14.663/0.005 i(landolt)=13.940/0.005" flags ( astrom ) )
+      ( name "113-337" type std ra "21:40:49.50" dec "00:27:58.0"
+        comments "SA113 337 "
+        mag 14.2 smags "v(landolt)=14.225/0.005 b(landolt)=14.744/0.005 u(landolt)=14.719/0.005 r(landolt)=13.874/0.005 i(landolt)=13.543/0.005" flags ( astrom ) )
+      ( name "113-339" type std ra "21:40:55.70" dec "00:27:59.0"
+        comments "SA113 339 "
+        mag 12.2 smags "v(landolt)=12.250/0.005 b(landolt)=12.818/0.005 u(landolt)=12.784/0.005 r(landolt)=11.910/0.005 i(landolt)=11.563/0.005" flags ( astrom ) )
+      ( name "113-342" type std ra "21:40:59.80" dec "00:27:37.0"
+        comments "SA113 342 "
+        mag 10.9 smags "v(landolt)=10.878/0.005 b(landolt)=11.893/0.005 u(landolt)=12.589/0.005 r(landolt)=10.341/0.005 i(landolt)=9.828/0.005" flags ( astrom ) )
+      ( name "113-233" type std ra "21:40:59.20" dec "00:22:03.0"
+        comments "SA113 233 "
+        mag 12.4 smags "v(landolt)=12.398/0.005 b(landolt)=12.947/0.005 u(landolt)=13.043/0.005 r(landolt)=12.060/0.005 i(landolt)=11.738/0.005" flags ( astrom ) )
+      ( name "113-239" type std ra "21:41:06.90" dec "00:22:34.0"
+        comments "SA113 239 "
+        mag 13.0 smags "v(landolt)=13.038/0.005 b(landolt)=13.554/0.005 u(landolt)=13.605/0.005 r(landolt)=12.720/0.005 i(landolt)=12.393/0.005" flags ( astrom ) )
+      ( name "113-241" type std ra "21:41:09.20" dec "00:25:49.0"
+        comments "SA113 241 "
+        mag 14.4 smags "v(landolt)=14.352/0.005 b(landolt)=15.696/0.005 u(landolt)=17.148/0.005 r(landolt)=13.455/0.005 i(landolt)=12.658/0.005" flags ( astrom ) )
+      ( name "113-245" type std ra "21:41:13.40" dec "00:21:53.0"
+        comments "SA113 245 "
+        mag 15.7 smags "v(landolt)=15.665/0.005 b(landolt)=16.293/0.005 u(landolt)=16.405/0.005 r(landolt)=15.269/0.005 i(landolt)=14.951/0.005" flags ( astrom ) )
+      ( name "113-459" type std ra "21:41:15.00" dec "00:43:05.0"
+        comments "SA113 459 "
+        mag 12.1 smags "v(landolt)=12.125/0.005 b(landolt)=12.660/0.005 u(landolt)=12.642/0.005 r(landolt)=11.818/0.005 i(landolt)=11.505/0.005" flags ( astrom ) )
+      ( name "113-250" type std ra "21:41:24.60" dec "00:20:41.0"
+        comments "SA113 250 "
+        mag 13.2 smags "v(landolt)=13.160/0.005 b(landolt)=13.665/0.005 u(landolt)=13.662/0.005 r(landolt)=12.851/0.005 i(landolt)=12.535/0.005" flags ( astrom ) )
+      ( name "113-466" type std ra "21:41:27.40" dec "00:40:16.0"
+        comments "SA113 466 "
+        mag 10.0 smags "v(landolt)=10.004/0.005 b(landolt)=10.458/0.005 u(landolt)=10.457/0.005 r(landolt)=9.723/0.005 i(landolt)=9.441/0.005" flags ( astrom ) )
+      ( name "113-259" type std ra "21:41:44.90" dec "00:17:41.0"
+        comments "SA113 259 "
+        mag 11.7 smags "v(landolt)=11.742/0.005 b(landolt)=12.936/0.005 u(landolt)=14.157/0.005 r(landolt)=11.121/0.005 i(landolt)=10.578/0.005" flags ( astrom ) )
+      ( name "113-260" type std ra "21:41:48.10" dec "00:23:53.0"
+        comments "SA113 260 "
+        mag 12.4 smags "v(landolt)=12.406/0.005 b(landolt)=12.920/0.005 u(landolt)=12.989/0.005 r(landolt)=12.098/0.005 i(landolt)=11.800/0.005" flags ( astrom ) )
+      ( name "113-475" type std ra "21:41:51.30" dec "00:39:21.0"
+        comments "SA113 475 "
+        mag 10.3 smags "v(landolt)=10.306/0.005 b(landolt)=11.364/0.005 u(landolt)=12.208/0.005 r(landolt)=9.736/0.005 i(landolt)=9.209/0.005" flags ( astrom ) )
+      ( name "113-366" type std ra "21:41:53.60" dec "00:29:23.0"
+        comments "SA113 366 "
+        mag 13.5 smags "v(landolt)=13.537/0.005 b(landolt)=14.633/0.005 u(landolt)=15.529/0.005 r(landolt)=12.914/0.005 i(landolt)=12.326/0.005" flags ( astrom ) )
+      ( name "113-263" type std ra "21:41:52.90" dec "00:25:37.0"
+        comments "SA113 263 "
+        mag 15.5 smags "v(landolt)=15.481/0.005 b(landolt)=15.761/0.005 u(landolt)=15.835/0.005 r(landolt)=15.287/0.005 i(landolt)=15.080/0.005" flags ( astrom ) )
+      ( name "113-265" type std ra "21:41:53.80" dec "00:18:05.0"
+        comments "SA113 265 "
+        mag 14.9 smags "v(landolt)=14.934/0.005 b(landolt)=15.573/0.005 u(landolt)=15.674/0.005 r(landolt)=14.523/0.005 i(landolt)=14.128/0.005" flags ( astrom ) )
+      ( name "113-268" type std ra "21:41:57.10" dec "00:19:56.0"
+        comments "SA113 268 "
+        mag 15.3 smags "v(landolt)=15.281/0.005 b(landolt)=15.870/0.005 u(landolt)=15.852/0.005 r(landolt)=14.902/0.005 i(landolt)=14.495/0.005" flags ( astrom ) )
+      ( name "113-34" type std ra "21:41:58.80" dec "00:01:07.0"
+        comments "SA 113 34 "
+        mag 15.2 smags "v(landolt)=15.173/0.005 b(landolt)=15.657/0.005 u(landolt)=15.603/0.005 r(landolt)=14.867/0.005 i(landolt)=14.521/0.005" flags ( astrom ) )
+      ( name "113-372" type std ra "21:42:02.00" dec "00:28:39.0"
+        comments "SA113 372 "
+        mag 13.7 smags "v(landolt)=13.681/0.005 b(landolt)=14.351/0.005 u(landolt)=14.431/0.005 r(landolt)=13.286/0.005 i(landolt)=12.916/0.005" flags ( astrom ) )
+      ( name "113-149" type std ra "21:42:05.60" dec "00:09:26.0"
+        comments "SA113 149 "
+        mag 13.5 smags "v(landolt)=13.469/0.005 b(landolt)=14.090/0.005 u(landolt)=14.133/0.005 r(landolt)=13.090/0.005 i(landolt)=12.704/0.005" flags ( astrom ) )
+      ( name "113-153" type std ra "21:42:08.90" dec "00:15:05.0"
+        comments "SA113 153 "
+        mag 14.5 smags "v(landolt)=14.476/0.005 b(landolt)=15.221/0.005 u(landolt)=15.506/0.005 r(landolt)=14.014/0.005 i(landolt)=13.573/0.005" flags ( astrom ) )
+      ( name "113-272" type std ra "21:42:20.30" dec "00:20:59.0"
+        comments "SA113 272 "
+        mag 13.9 smags "v(landolt)=13.904/0.005 b(landolt)=14.537/0.005 u(landolt)=14.604/0.005 r(landolt)=13.534/0.005 i(landolt)=13.194/0.005" flags ( astrom ) )
+      ( name "113-158" type std ra "21:42:21.80" dec "00:14:10.0"
+        comments "SA113 158 "
+        mag 13.1 smags "v(landolt)=13.116/0.005 b(landolt)=13.839/0.005 u(landolt)=14.086/0.005 r(landolt)=12.709/0.005 i(landolt)=12.335/0.005" flags ( astrom ) )
+      ( name "113-156" type std ra "21:42:21.70" dec "00:12:10.0"
+        comments "SA113 156 "
+        mag 11.2 smags "v(landolt)=11.224/0.005 b(landolt)=11.750/0.005 u(landolt)=11.693/0.005 r(landolt)=10.921/0.005 i(landolt)=10.607/0.005" flags ( astrom ) )
+      ( name "113-491" type std ra "21:42:24.60" dec "00:43:55.0"
+        comments "SA113 491 "
+        mag 14.4 smags "v(landolt)=14.373/0.005 b(landolt)=15.137/0.005 u(landolt)=15.443/0.005 r(landolt)=13.939/0.005 i(landolt)=13.519/0.005" flags ( astrom ) )
+      ( name "113-492" type std ra "21:42:27.80" dec "00:38:22.0"
+        comments "SA113 492 "
+        mag 12.2 smags "v(landolt)=12.174/0.005 b(landolt)=12.727/0.005 u(landolt)=12.732/0.005 r(landolt)=11.832/0.005 i(landolt)=11.491/0.005" flags ( astrom ) )
+      ( name "113-493" type std ra "21:42:28.60" dec "00:38:12.0"
+        comments "SA113 493 "
+        mag 11.8 smags "v(landolt)=11.767/0.005 b(landolt)=12.553/0.005 u(landolt)=12.945/0.005 r(landolt)=11.337/0.005 i(landolt)=10.944/0.005" flags ( astrom ) )
+      ( name "113-495" type std ra "21:42:29.80" dec "00:38:08.0"
+        comments "SA113 495 "
+        mag 12.4 smags "v(landolt)=12.437/0.005 b(landolt)=13.384/0.005 u(landolt)=13.914/0.005 r(landolt)=11.925/0.005 i(landolt)=11.428/0.005" flags ( astrom ) )
+      ( name "113-163" type std ra "21:42:35.50" dec "00:16:46.0"
+        comments "SA113 163 "
+        mag 14.5 smags "v(landolt)=14.540/0.005 b(landolt)=15.198/0.005 u(landolt)=15.304/0.005 r(landolt)=14.160/0.005 i(landolt)=13.805/0.005" flags ( astrom ) )
+      ( name "113-281" type std ra "21:42:38.70" dec "00:18:57.0"
+        comments "SA113 281 "
+        mag 15.2 smags "v(landolt)=15.247/0.005 b(landolt)=15.776/0.005 u(landolt)=15.750/0.005 r(landolt)=14.900/0.005 i(landolt)=14.541/0.005" flags ( astrom ) )
+      ( name "113-165" type std ra "21:42:38.00" dec "00:15:34.0"
+        comments "SA113 165 "
+        mag 15.6 smags "v(landolt)=15.639/0.005 b(landolt)=16.240/0.005 u(landolt)=16.243/0.005 r(landolt)=15.285/0.005 i(landolt)=14.893/0.005" flags ( astrom ) )
+      ( name "113-167" type std ra "21:42:41.00" dec "00:16:08.0"
+        comments "SA113 167 "
+        mag 14.8 smags "v(landolt)=14.841/0.005 b(landolt)=15.438/0.005 u(landolt)=15.404/0.005 r(landolt)=14.490/0.005 i(landolt)=14.114/0.005" flags ( astrom ) )
+      ( name "113-177" type std ra "21:42:56.50" dec "00:14:44.0"
+        comments "SA113 177 "
+        mag 13.6 smags "v(landolt)=13.560/0.005 b(landolt)=14.349/0.005 u(landolt)=14.667/0.005 r(landolt)=13.104/0.005 i(landolt)=12.668/0.005" flags ( astrom ) )
+      ( name "113-182" type std ra "21:43:08.40" dec "00:14:50.0"
+        comments "SA113 182 "
+        mag 14.4 smags "v(landolt)=14.370/0.005 b(landolt)=15.029/0.005 u(landolt)=15.094/0.005 r(landolt)=13.968/0.005 i(landolt)=13.546/0.005" flags ( astrom ) )
+      ( name "113-187" type std ra "21:43:20.60" dec "00:16:54.0"
+        comments "SA113 187 "
+        mag 15.1 smags "v(landolt)=15.080/0.005 b(landolt)=16.143/0.005 u(landolt)=17.112/0.005 r(landolt)=14.442/0.005 i(landolt)=13.907/0.005" flags ( astrom ) )
+      ( name "113-189" type std ra "21:43:27.50" dec "00:17:22.0"
+        comments "SA113 189 "
+        mag 15.4 smags "v(landolt)=15.421/0.005 b(landolt)=16.539/0.005 u(landolt)=17.497/0.005 r(landolt)=14.708/0.005 i(landolt)=14.103/0.005" flags ( astrom ) )
+      ( name "113-307" type std ra "21:43:30.50" dec "00:18:04.0"
+        comments "SA113 307 "
+        mag 14.2 smags "v(landolt)=14.214/0.005 b(landolt)=15.342/0.005 u(landolt)=16.253/0.005 r(landolt)=13.584/0.005 i(landolt)=12.970/0.005" flags ( astrom ) )
+      ( name "113-191" type std ra "21:43:33.60" dec "00:15:55.0"
+        comments "SA113 191 "
+        mag 12.3 smags "v(landolt)=12.337/0.005 b(landolt)=13.136/0.005 u(landolt)=13.359/0.005 r(landolt)=11.866/0.005 i(landolt)=11.400/0.005" flags ( astrom ) )
+      ( name "113-195" type std ra "21:43:40.90" dec "00:17:22.0"
+        comments "SA113 195 "
+        mag 13.7 smags "v(landolt)=13.692/0.005 b(landolt)=14.422/0.005 u(landolt)=14.623/0.005 r(landolt)=13.274/0.005 i(landolt)=12.861/0.005" flags ( astrom ) )
+      ( name "G93-48" type std ra "21:52:25.40" dec "02:23:20.0"
+        comments "G93-48    "
+        mag 12.7 smags "v(landolt)=12.739/0.005 b(landolt)=12.731/0.005 u(landolt)=11.939/0.005 r(landolt)=12.836/0.005 i(landolt)=12.930/0.005" flags ( astrom ) )
+      ( name "2213-006" type std ra "22:16:17.70" dec "-00:22:14.0"
+        comments "PG2213-006"
+        mag 15.1 smags "v(landolt)=15.109/0.005 b(landolt)=15.830/0.005 u(landolt)=16.007/0.005 r(landolt)=14.683/0.005 i(landolt)=14.279/0.005" flags ( astrom ) )
+      ( name "2213-006" type std ra "22:16:21.70" dec "-00:21:47.0"
+        comments "PG2213-006"
+        mag 12.7 smags "v(landolt)=12.706/0.005 b(landolt)=13.455/0.005 u(landolt)=13.752/0.005 r(landolt)=12.279/0.005 i(landolt)=11.877/0.005" flags ( astrom ) )
+      ( name "2213-006" type std ra "22:16:23.20" dec "-00:21:26.0"
+        comments "PG2213-006"
+        mag 14.2 smags "v(landolt)=14.178/0.005 b(landolt)=14.851/0.005 u(landolt)=14.951/0.005 r(landolt)=13.772/0.005 i(landolt)=13.369/0.005" flags ( astrom ) )
+      ( name "2213-006" type std ra "22:16:28.30" dec "-00:21:13.0"
+        comments "PG2213-006"
+        mag 14.1 smags "v(landolt)=14.124/0.005 b(landolt)=13.907/0.005 u(landolt)=12.782/0.005 r(landolt)=14.216/0.005 i(landolt)=14.326/0.005" flags ( astrom ) )
+      ( name "G156" type std ra "31:00:00.00" dec "22:38:33.6"
+        comments "G156-31   "
+        mag 12.4 smags "v(landolt)=12.361/0.005 b(landolt)=14.354/0.005 u(landolt)=15.762/0.005 r(landolt)=10.713/0.005 i(landolt)=8.671/0.005" flags ( astrom ) )
+      ( name "114-531" type std ra "22:40:36.80" dec "00:51:56.0"
+        comments "SA114 531 "
+        mag 12.1 smags "v(landolt)=12.094/0.005 b(landolt)=12.827/0.005 u(landolt)=13.013/0.005 r(landolt)=11.672/0.005 i(landolt)=11.269/0.005" flags ( astrom ) )
+      ( name "114-637" type std ra "22:40:42.50" dec "01:03:11.0"
+        comments "SA114 637 "
+        mag 12.1 smags "v(landolt)=12.070/0.005 b(landolt)=12.871/0.005 u(landolt)=13.178/0.005 r(landolt)=11.614/0.005 i(landolt)=11.199/0.005" flags ( astrom ) )
+      ( name "114-446" type std ra "22:41:03.80" dec "00:46:02.0"
+        comments "SA114 446 "
+        mag 12.1 smags "v(landolt)=12.064/0.005 b(landolt)=12.801/0.005 u(landolt)=13.038/0.005 r(landolt)=11.667/0.005 i(landolt)=11.298/0.005" flags ( astrom ) )
+      ( name "114-654" type std ra "22:41:26.10" dec "01:10:11.0"
+        comments "SA114 654 "
+        mag 11.8 smags "v(landolt)=11.833/0.005 b(landolt)=12.489/0.005 u(landolt)=12.667/0.005 r(landolt)=11.465/0.005 i(landolt)=11.124/0.005" flags ( astrom ) )
+      ( name "114-656" type std ra "22:41:35.10" dec "01:11:10.0"
+        comments "SA114 656 "
+        mag 12.6 smags "v(landolt)=12.644/0.005 b(landolt)=13.609/0.005 u(landolt)=14.307/0.005 r(landolt)=12.097/0.005 i(landolt)=11.591/0.005" flags ( astrom ) )
+      ( name "114-548" type std ra "22:41:36.80" dec "00:59:07.0"
+        comments "SA114 548 "
+        mag 11.6 smags "v(landolt)=11.601/0.005 b(landolt)=12.963/0.005 u(landolt)=14.536/0.005 r(landolt)=10.863/0.005 i(landolt)=10.212/0.005" flags ( astrom ) )
+      ( name "114-750" type std ra "22:41:44.70" dec "01:12:37.0"
+        comments "SA114 750 "
+        mag 11.9 smags "v(landolt)=11.916/0.005 b(landolt)=11.875/0.005 u(landolt)=11.521/0.005 r(landolt)=11.889/0.005 i(landolt)=11.904/0.005" flags ( astrom ) )
+      ( name "114-670" type std ra "22:42:09.30" dec "01:10:17.0"
+        comments "SA114 670 "
+        mag 11.1 smags "v(landolt)=11.101/0.005 b(landolt)=12.307/0.005 u(landolt)=13.530/0.005 r(landolt)=10.456/0.005 i(landolt)=9.895/0.005" flags ( astrom ) )
+      ( name "114-176" type std ra "22:43:10.20" dec "00:21:16.0"
+        comments "SA114 176 "
+        mag 9.2 smags "v(landolt)=9.239/0.005 b(landolt)=10.724/0.005 u(landolt)=12.577/0.005 r(landolt)=8.439/0.005 i(landolt)=7.722/0.005" flags ( astrom ) )
+      ( name "G156-57" type std ra "22:53:16.80" dec "-14:15:50.0"
+        comments "G156-57   "
+        mag 10.2 smags "v(landolt)=10.180/0.005 b(landolt)=11.736/0.005 u(landolt)=12.918/0.005 r(landolt)=9.006/0.005 i(landolt)=7.464/0.005" flags ( astrom ) )
+      ( name "GD-246" type std ra "23:12:21.70" dec "10:47:04.0"
+        comments "GD 246    "
+        mag 13.1 smags "v(landolt)=13.094/0.005 b(landolt)=12.776/0.005 u(landolt)=11.589/0.005 r(landolt)=13.242/0.005 i(landolt)=13.425/0.005" flags ( astrom ) )
+      ( name "F-108" type std ra "23:16:12.40" dec "-01:50:35.0"
+        comments "Feige 108     "
+        mag 13.0 smags "v(landolt)=12.958/0.005 b(landolt)=12.723/0.005 u(landolt)=11.671/0.005 r(landolt)=13.061/0.005 i(landolt)=13.196/0.005" flags ( astrom ) )
+      ( name "2317+046" type std ra "23:19:55.30" dec "04:52:35.0"
+        comments "PG2317+046"
+        mag 12.9 smags "v(landolt)=12.876/0.005 b(landolt)=12.630/0.005 u(landolt)=11.493/0.005 r(landolt)=12.950/0.005 i(landolt)=12.985/0.005" flags ( astrom ) )
+      ( name "2331+055" type std ra "23:33:44.40" dec "05:46:40.0"
+        comments "PG2331+055"
+        mag 15.2 smags "v(landolt)=15.182/0.005 b(landolt)=15.116/0.005 u(landolt)=14.629/0.005 r(landolt)=15.194/0.005 i(landolt)=15.225/0.005" flags ( astrom ) )
+      ( name "2331+055" type std ra "23:33:49.40" dec "05:46:53.0"
+        comments "PG2331+055"
+        mag 13.1 smags "v(landolt)=13.051/0.005 b(landolt)=13.792/0.005 u(landolt)=14.049/0.005 r(landolt)=12.632/0.005 i(landolt)=12.231/0.005" flags ( astrom ) )
+      ( name "2331+055" type std ra "23:33:51.10" dec "05:45:09.0"
+        comments "PG2331+055"
+        mag 14.7 smags "v(landolt)=14.744/0.005 b(landolt)=15.563/0.005 u(landolt)=15.992/0.005 r(landolt)=14.263/0.005 i(landolt)=13.809/0.005" flags ( astrom ) )
+      ( name "2336+004" type std ra "23:38:38.30" dec "00:42:47.0"
+        comments "PG2336+004"
+        mag 12.4 smags "v(landolt)=12.431/0.005 b(landolt)=12.938/0.005 u(landolt)=12.903/0.005 r(landolt)=12.117/0.005 i(landolt)=11.801/0.005" flags ( astrom ) )
+      ( name "2336+004" type std ra "23:38:42.40" dec "00:42:29.0"
+        comments "PG2336+004"
+        mag 11.3 smags "v(landolt)=11.277/0.005 b(landolt)=11.956/0.005 u(landolt)=12.091/0.005 r(landolt)=10.879/0.005 i(landolt)=10.507/0.005" flags ( astrom ) )
+      ( name "2336+004" type std ra "23:38:43.50" dec "00:42:59.0"
+        comments "PG2336+004"
+        mag 15.9 smags "v(landolt)=15.899/0.005 b(landolt)=15.727/0.005 u(landolt)=14.946/0.005 r(landolt)=15.960/0.005 i(landolt)=16.008/0.005" flags ( astrom ) )
+      ( name "115-554" type std ra "23:41:30.80" dec "01:26:25.0"
+        comments "SA115 554 "
+        mag 11.8 smags "v(landolt)=11.812/0.005 b(landolt)=12.817/0.005 u(landolt)=13.365/0.005 r(landolt)=11.226/0.005 i(landolt)=10.688/0.005" flags ( astrom ) )
+      ( name "115-486" type std ra "23:41:33.00" dec "01:16:45.0"
+        comments "SA115 486 "
+        mag 12.5 smags "v(landolt)=12.482/0.005 b(landolt)=12.975/0.005 u(landolt)=12.926/0.005 r(landolt)=12.184/0.005 i(landolt)=11.876/0.005" flags ( astrom ) )
+      ( name "115-412" type std ra "23:42:00.90" dec "01:09:01.0"
+        comments "SA115 412 "
+        mag 12.2 smags "v(landolt)=12.209/0.005 b(landolt)=12.782/0.005 u(landolt)=12.742/0.005 r(landolt)=11.882/0.005 i(landolt)=11.547/0.005" flags ( astrom ) )
+      ( name "115-268" type std ra "23:42:30.60" dec "00:52:11.0"
+        comments "SA115 268 "
+        mag 12.5 smags "v(landolt)=12.494/0.005 b(landolt)=13.128/0.005 u(landolt)=13.205/0.005 r(landolt)=12.128/0.005 i(landolt)=11.780/0.005" flags ( astrom ) )
+      ( name "115-420" type std ra "23:42:36.40" dec "01:05:59.0"
+        comments "SA115 420 "
+        mag 11.2 smags "v(landolt)=11.161/0.005 b(landolt)=11.629/0.005 u(landolt)=11.602/0.005 r(landolt)=10.875/0.005 i(landolt)=10.582/0.005" flags ( astrom ) )
+      ( name "115-271" type std ra "23:42:41.80" dec "00:45:13.0"
+        comments "SA115 271 "
+        mag 9.7 smags "v(landolt)=9.695/0.005 b(landolt)=10.310/0.005 u(landolt)=10.411/0.005 r(landolt)=9.342/0.005 i(landolt)=8.993/0.005" flags ( astrom ) )
+      ( name "115-516" type std ra "23:44:15.30" dec "01:14:12.0"
+        comments "SA115 516 "
+        mag 10.4 smags "v(landolt)=10.434/0.005 b(landolt)=11.462/0.005 u(landolt)=12.221/0.005 r(landolt)=9.871/0.005 i(landolt)=9.337/0.005" flags ( astrom ) )
+      ( name "2349+002" type std ra "23:51:53.30" dec "00:28:18.0"
+        comments "PG2349+002"
+        mag 13.3 smags "v(landolt)=13.277/0.005 b(landolt)=13.086/0.005 u(landolt)=12.165/0.005 r(landolt)=13.380/0.005 i(landolt)=13.496/0.005" flags ( astrom ) )
+    )
+)

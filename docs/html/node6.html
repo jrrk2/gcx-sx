@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>World Coordinates</TITLE>
+<META NAME="description" CONTENT="World Coordinates">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html553"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html549"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html543"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html551"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html554"
+  HREF="node7.html">CCD Reduction</A>
+<B> Up:</B> <A NAME="tex2html550"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html544"
+  HREF="node5.html">Stars and Catalogs</A>
+ &nbsp <B>  <A NAME="tex2html552"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html555"
+  HREF="node6.html#SECTION00610000000000000000">World Coordinate System Parameters</A>
+<LI><A NAME="tex2html556"
+  HREF="node6.html#SECTION00620000000000000000">World Coordinate System States</A>
+<LI><A NAME="tex2html557"
+  HREF="node6.html#SECTION00630000000000000000">Obtaining an Initial WCS</A>
+<LI><A NAME="tex2html558"
+  HREF="node6.html#SECTION00640000000000000000">Fitting the WCS to an Image</A>
+<UL>
+<LI><A NAME="tex2html559"
+  HREF="node6.html#SECTION00641000000000000000">WCS Fitting Commands</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00600000000000000000">
+World Coordinates</A>
+</H1>
+
+<P>
+World coordinates are the ``real'' equatorial coordinates of objects
+in catalogs: right ascension, declination and their epoch.<A NAME="tex2html14"
+  HREF="footnode.html#foot307"><SUP>5.1</SUP></A> 
+Given an image frame, we reffer to the transformation between <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$"> and
+ <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$y$"> pixel coordinates and their world coordinate counterparts as the
+<EM>World Coordinte System</EM> (WCS for short) of the frame.
+
+<P>
+The transformation between the spherical equatorial and the ``flat''
+image coordinates cannot be done without choosing a projection
+system. <SMALL>GCX </SMALL>uses the plane-tangent projection system, which is
+appropiate for relatively narrow fields.<A NAME="tex2html15"
+  HREF="footnode.html#foot1215"><SUP>5.2</SUP></A>
+<P>
+
+<H1><A NAME="SECTION00610000000000000000">
+World Coordinate System Parameters</A>
+</H1>
+
+<P>
+In the plane-tangent system, the WCS is specified by the following
+values:
+
+<OL>
+<LI>The frame coordinates of a reference pixel in the image (usually
+  the center of the frame) in the <TT>CRPIX1</TT>
+  and <TT>CRPIX2</TT> fits header fields;
+</LI>
+<LI>The world coordinates (r.a.&nbsp; and dec) of the reference pixel in 
+  the <TT>CRVAL1</TT> and <TT>CRVAL2</TT> fields;
+</LI>
+<LI>The epoch of the coordinates in the <TT>EQUINOX</TT> header
+  field;
+</LI>
+<LI>The horisontal and vertical scale of the image in degrees per
+  pixel in the <TT>CDELT1</TT> and <TT>CDELT2</TT> fields;
+</LI>
+<LI>The rotation of the frame in the <TT>CROTA1</TT> field.
+</LI>
+</OL>
+A slightly different form of these parameters is presented in the 
+WCS editing dialog: the scale parameters are expressed in the more
+friendly arc seconds per pixel units, and the coordinates are
+expressed in the HMS and DMS formats.
+
+<P>
+
+<H1><A NAME="SECTION00620000000000000000">
+World Coordinate System States</A>
+</H1>
+
+<P>
+A given frame's WCS can be in one of the following states:
+<DL>
+<DT><STRONG>Unset</STRONG></DT>
+<DD>When the WCS is unset, the program has no idea about the 
+WCS. It will refuse to do any operation that requires the WCS.
+</DD>
+<DT><STRONG>Initial</STRONG></DT>
+<DD>An initial WCS is an approximate set of values for the 
+WCS parameters. It enables the program to load catalog stars and
+display them on the image (more or less around their true
+positions). It also provides a starting point for WCS fitting. <SMALL>GCX </SMALL>
+will not use an initial WCS for any operation that requires precise 
+coordinates (like aperture photometry).
+</DD>
+<DT><STRONG>Fitted</STRONG></DT>
+<DD>The WCS has been
+  successfully fitted, but the quality of the fit was not enough
+  to allow it to be validated. A <EM>fitted</EM> WCS is treated very much like 
+  an initial WCS.
+</DD>
+<DT><STRONG>Valid</STRONG></DT>
+<DD>If a fit was good enough (enough stars were fitted, and
+  the error was low enough), the WCS is deemed <EM>valid</EM>. All
+  operations that use the WCS are enabled in this situation.
+</DD>
+</DL>
+
+<P>
+
+<H1><A NAME="SECTION00630000000000000000">
+Obtaining an Initial WCS</A>
+</H1>
+
+<P>
+When a frame is loaded, the WCS is initially unset. The header of the
+frame is searched for information about the initial WCS. The following
+fields are searched, in order:<A NAME="tex2html16"
+  HREF="footnode.html#foot327"><SUP>5.3</SUP></A>
+<OL>
+<LI><TT>CRVAL1/2, CDELT1/2, CROTA1, CRPIX1/2, EQUINOX</TT>. The bare
+  minimum set consists of<TT>CRVAL1, CRVAL2</TT> and one of the <TT>  CDELTs</TT>.
+</LI>
+<LI><TT>RA</TT> or <TT>OBJCTRA</TT>, <TT>DEC</TT> or <TT>OBJCTDEC</TT>, <TT>  PIXSCALE</TT> or <TT>SECPIX</TT>. If neither of the scale fields is found, 
+  a default scale values is taken from <EM>Wcs Fitting
+  Options/Default image scale</EM>;
+</LI>
+<LI><TT>OBJECT</TT> If this field is present, the object's name is
+  searched in the catalog, and its coordinates used. The image scale
+  is set from <EM>Wcs Fitting Options/Default image scale</EM>;
+</LI>
+</OL>
+When neither of the above fields are found, the WCS is left in the
+<EM>unset</EM> state. An initial WCS can be set in this case by either
+entering the parameters in
+the WCS edit dialog (<EM>Wcs/Edit Wcs</EM>), loading a catalog object
+using <EM>Stars/Add From Catalog</EM> or loading a recipy file that 
+has the target object or field center specified. In the last two cases, the default
+scale is used.
+
+<P>
+
+<H1><A NAME="SECTION00640000000000000000">
+Fitting the WCS to an Image</A>
+</H1>
+
+<P>
+By WCS fitting we understand the process of comparing the
+positions of stars extracted from the image frame versus the projected
+positions of catalog stars, and the subsequent adjustment of the WCS
+for the best match. 
+
+<P>
+The fitting process consists of the following steps:
+
+<OL>
+<LI>Detecting frame stars. This step is described in section
+  <A HREF="node5.html#sec:stardet">4.1</A>;
+</LI>
+<LI>Obtaining catalog stars for the match. These can come from
+  either a recipy file or one of the field stars catalogs. The program
+  will load stars from the Tycho2 and GSC catalogs. All the stars from
+  a loaded recipy file that have the ``astrimetric'' flag set will
+  also be used for WCS fitting;
+</LI>
+<LI>Finding star pairs. This step tries to find similar asterism in
+  the detected and catalog sets and match the corresponding stars. 
+
+<P>
+The algorithm tolerates frame rotation and changes in scale. If some
+  bounds can be placed on initial errors (for instance if we know that
+  only a limited rotation range is expected) it is possible to pass
+  that information to the algorithm in order to narrow the search.
+
+<P>
+</LI>
+<LI>Fitting the solution. This is an iterative step consisting of
+  calculating the required offset, scale and rotation in the frame
+  coordinates, then adjusting the WCS accordingly. After that, the
+  image coordinates of the catalog stars are recalculated and the step
+  repeated until there is no significant change in the WCS. The
+  iterative approach is necessary because the projection operation is
+  non-linear. At the end of the fitting step, a <EM>rms</EM> position
+  error is calculated, and compared to the value of the <EM>Max error
+  for WCS validation</EM>. If the error is lower and enough pairs have
+  been used in the fit (more than <EM>Min pars for WCS validation</EM>),
+  the WCS is marked ``valid''.
+</LI>
+</OL>
+
+<P>
+The <EM>Scale tolerance</EM> option sets the maximum initial error of the
+image scale for the pairing alogorithm. A value of 0.1 specifies that
+the scale of the initial WCS has an error of at most <IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$\pm 10\%$">. The
+<EM>Rotation tolerance</EM> specifies how much field rotation is expected
+by the pairs matching algorithm. A value of 180 will let the algorithm
+match frames of any rotation. A third important parameter is
+<EM>Minimum number of pairs</EM>. This specifies the number of pairs at
+which the algorithm decides it has found a match. The default values
+for these parameters almost never generate a bad match, even for quite
+dense fields. If one increases the scale tolerance, there is an
+increased risk of having a bad match, and the minimum pairs should be
+increased as well. 
+
+<P>
+The pairing algorithm requires the initial WCS to have the correct 
+mirroring. When the initial WCS's scale comes from the <TT>CDELT1/2</TT>
+fields, their signs will determine the mirroring: when both have the
+same sign, the frame is ``normal'', i.e. W is to the right when N is
+up. If the signs are different, the field is flipped.
+
+<P>
+When the initial WCS's scale comes from a single scale parameter, the
+mirroring will be set by the program according to the value of the 
+<EM>General Observation Setup Data/Flipped field</EM> option.
+
+<P>
+
+<H2><A NAME="SECTION00641000000000000000">
+WCS Fitting Commands</A>
+</H2>
+
+<P>
+The WCS fitting steps can be performed one at a time, or all together.
+The <EM>Wcs/Auto Wcs</EM> operation will do the following steps:
+<EM>Stars/Detect sources</EM>, <EM>File/Load Field Stars/From Tycho2
+  Catalog</EM>, <EM>Wcs/Auto pairs</EM>, <EM>Wcs/Fit Wcs from pairs</EM>.
+The <EM>Wcs/Quiet Auto Wcs</EM> variant will also delete the detected and
+field stars at the end of the fit.
+
+<P>
+Selecting <EM>Wcs/Reload from frame</EM> will revert the WCS to the
+parameters before the fit. The pairs will remain marked.
+
+<P>
+In the unlikely event that the pairing algorithm fails,<A NAME="tex2html17"
+  HREF="footnode.html#foot365"><SUP>5.4</SUP></A> it is possible to create pairs ``by hand''. Select a detected star,
+ then right-click on the catalog star you want to pair it with and
+ select <EM>Create Pair</EM> from the pop-up menu. When at least 2 pairs
+ have been marked, we can fit the wcs with <EM>Wcs/Fit Wcs from
+ Pairs</EM>. Note that the fit will not be marked as 
+``valid'' unless at least 
+ <EM>Minimum number of pairs</EM> have been marked.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html553"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html549"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html543"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html551"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html554"
+  HREF="node7.html">CCD Reduction</A>
+<B> Up:</B> <A NAME="tex2html550"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html544"
+  HREF="node5.html">Stars and Catalogs</A>
+ &nbsp <B>  <A NAME="tex2html552"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

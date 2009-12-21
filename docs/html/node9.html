@@ -1,0 +1,1349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Multi-Frame and All-Sky Reduction</TITLE>
+<META NAME="description" CONTENT="Multi-Frame and All-Sky Reduction">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html627"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html623"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html617"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html625"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html628"
+  HREF="node10.html">Noise Modelling</A>
+<B> Up:</B> <A NAME="tex2html624"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html618"
+  HREF="node8.html">Aperture Photometry</A>
+ &nbsp <B>  <A NAME="tex2html626"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html629"
+  HREF="node9.html#SECTION00910000000000000000">Color Transformation Coefficients</A>
+<UL>
+<LI><A NAME="tex2html630"
+  HREF="node9.html#SECTION00911000000000000000">Transforming the Stars</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html631"
+  HREF="node9.html#SECTION00920000000000000000">All-Sky Reduction</A>
+<UL>
+<LI><A NAME="tex2html632"
+  HREF="node9.html#SECTION00921000000000000000">Extinction Coefficient Fitting</A>
+<LI><A NAME="tex2html633"
+  HREF="node9.html#SECTION00922000000000000000">Calculating Zero Points</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html634"
+  HREF="node9.html#SECTION00930000000000000000">Running Multi-Frame Reduction</A>
+<UL>
+<LI><A NAME="tex2html635"
+  HREF="node9.html#SECTION00931000000000000000">Specifying Reduction Bands</A>
+<LI><A NAME="tex2html636"
+  HREF="node9.html#SECTION00932000000000000000">Loading Report Files</A>
+<UL>
+<LI><A NAME="tex2html637"
+  HREF="node9.html#SECTION00932010000000000000">Frames</A>
+<LI><A NAME="tex2html638"
+  HREF="node9.html#SECTION00932020000000000000">Stars</A>
+<LI><A NAME="tex2html639"
+  HREF="node9.html#SECTION00932030000000000000">Bands</A>
+</UL>
+<LI><A NAME="tex2html640"
+  HREF="node9.html#SECTION00933000000000000000">Fitting Individual Zero Points</A>
+<LI><A NAME="tex2html641"
+  HREF="node9.html#SECTION00934000000000000000">Plots</A>
+<LI><A NAME="tex2html642"
+  HREF="node9.html#SECTION00935000000000000000">Fitting Color Transformation Coefficients</A>
+<LI><A NAME="tex2html643"
+  HREF="node9.html#SECTION00936000000000000000">All-Sky Reduction</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html644"
+  HREF="node9.html#SECTION00940000000000000000">Reporting</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00900000000000000000"></A><A NAME="ch:multiframe"></A>
+<BR>
+Multi-Frame and All-Sky Reduction
+</H1>
+
+<P>
+If we want to determine star colors, calculate transformation
+coefficients to transform data to a standard system or obtain 
+magnitudes of stars for which we don't have standards in the same
+field, we must reduce multiple observation frames together.
+
+<P>
+People fortunate enough to observe in photometric conditions can use
+a number of packages to reduce their data. For low altitude dwellers,
+the selection is not that large. For them, <SMALL>GCX </SMALL>implements
+multiple-frame 
+reduction routines that are designed to
+work in less than perfect conditions. 
+
+<P>
+Input data to the multi-frame reduction consists of observation
+reports as produced by the aperture photometry routine. For color
+coefficient fitting and transformation to a standard system, we need
+frames of the target objects taken in enough bands. For
+all-sky reductions, the observation reports need to have accurate time
+and airmass information (which implies that the original frames need
+to have enough information for the airmass determination).
+
+<P>
+
+<H1><A NAME="SECTION00910000000000000000">
+Color Transformation Coefficients</A>
+</H1>
+
+<P>
+To keep notation simple, let's assume that we reduce data taken in B
+and V. We'll use <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$B$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.png"
+ ALT="$V$"> for the standard magnitudes, and <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$b$"> and
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$v$"> for the instrumental magnitudes. The expressions for the standard
+magnitudes are:<A NAME="tex2html39"
+  HREF="footnode.html#foot791"><SUP>8.1</SUP></A>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+B_j = b_j + Z_k + k_B(B_j-V_j)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:transform"></A><IMG
+ WIDTH="212" HEIGHT="32" BORDER="0"
+ SRC="img70.png"
+ ALT="\begin{displaymath}
+B_j = b_j + Z_k + k_B(B_j-V_j)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V_j = v_j + Z_k + k_V(B_j-V_j)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="209" HEIGHT="32" BORDER="0"
+ SRC="img71.png"
+ ALT="\begin{displaymath}
+V_j = v_j + Z_k + k_V(B_j-V_j)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The <IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$j$"> subscripts go over all individual star observations in a given
+band, while the <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$k$"> subscripts iterate over the observation frames.
+For standard stars, the <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$B_j$"> and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$V_j$"> are known while <IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$b_j$"> and <IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$v_j$"> are
+measured from the frames themselves. We have to fit the zeropoints
+<IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$Z_k$"> and the transformation coefficients <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$k$">. Because we have chosen
+to express the transformation coefficients in function of the standard
+magnitudes, we can proceed with one band at a time. We'll assume it is 
+V. The steps are:
+
+<OL>
+<LI>Set an starting value of the transformation coefficient. We can
+  start with 0 without problems, as the coefficients are generally
+  small numbers.
+</LI>
+<LI>For each V frame, fit the zeropoint using the robust algorithm
+  in Appendix&nbsp;<A HREF="node11.html#ap:robust">B</A>, with the difference that the current color
+  transformation is applied when calculating the residuals, so
+  Equation&nbsp;<A HREF="node11.html#eq:residuals">B.5</A> becomes:
+  <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\rho_j=y_j - \widetilde{Z_k} - k_V (B_j - V_j)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="209" HEIGHT="32" BORDER="0"
+ SRC="img79.png"
+ ALT="\begin{displaymath}
+\rho_j=y_j - \widetilde{Z_k} - k_V (B_j - V_j)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Note that in this equation, the <IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$j$"> subscripts iterate over the
+  stars in frame <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$k$">.
+</LI>
+<LI>Now, for all the stars in all the V frames, estimate the
+  ``tilt'' of the residuals, and adjust the transformation coefficient
+  and zeropoints accordingly. We use the weights from the individual
+  frames' fits when estimating the tilt:
+  <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\theta = \frac{\sum_j\rho_j(B_j-V_j) W'_j}{\sum_j(B_j-V_j)^2 W'_j}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="173" HEIGHT="53" BORDER="0"
+ SRC="img80.png"
+ ALT="\begin{displaymath}
+\theta = \frac{\sum_j\rho_j(B_j-V_j) W'_j}{\sum_j(B_j-V_j)^2 W'_j}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+  <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+k_V = k_V + \theta
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="95" HEIGHT="29" BORDER="0"
+ SRC="img81.png"
+ ALT="\begin{displaymath}
+k_V = k_V + \theta
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+  <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Z_k = Z_k + \theta\frac{\sum_j(B_j-V_j) W'_j}{\sum_jW'_j}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="214" HEIGHT="53" BORDER="0"
+ SRC="img82.png"
+ ALT="\begin{displaymath}
+Z_k = Z_k + \theta\frac{\sum_j(B_j-V_j) W'_j}{\sum_jW'_j}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+</LI>
+<LI>Iterate the last two steps until the solution converges (the
+  transformation coefficient doesn't change significantly).
+</LI>
+</OL>
+We have now obtained the transformation coefficient for the V
+magnitudes, and also adjusted all the frame zeropoints so that their
+dependence on the color of the standard stars in each frame is
+eliminated.<A NAME="tex2html40"
+  HREF="footnode.html#foot814"><SUP>8.2</SUP></A>The above is repeated for each band we want to reduce. Note that we
+have obtained the transformation coefficients without assuming any
+relation between the zero points of various frames--just differential 
+photometry.
+
+<P>
+We can choose any color index for a given band. For instance, there is
+nothing stopping us from calculating a <IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.png"
+ ALT="$(B-V)$"> transformation
+coefficient for <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$I$"> or <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img84.png"
+ ALT="$R$"> magnitudes. In fact, if we have more
+standards data in B and V, it may prove better to do so. In general,
+Equation&nbsp;(<A HREF="node9.html#eq:transform">8.1</A>) can be written for any band <IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$M$"> as:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+M_j = m_j + Z_k + k_M(C_1^M - C_2^M)\\
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:transform2"></A><IMG
+ WIDTH="247" HEIGHT="32" BORDER="0"
+ SRC="img85.png"
+ ALT="\begin{displaymath}
+M_j = m_j + Z_k + k_M(C_1^M - C_2^M)\\
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="33" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$C_1^M$"> and <IMG
+ WIDTH="33" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$C_2^M$"> are any bands for which we have standards
+data. We can fit the transformation coefficient <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$k_M$"> using only the
+<IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$M$"> observations. However, when we want to transform the stars, we
+will need observations in <IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$M$">, <IMG
+ WIDTH="33" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$C_1^M$">, <IMG
+ WIDTH="33" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$C_2^M$"> and all the bands that
+these depend on. 
+
+<P>
+
+<H2><A NAME="SECTION00911000000000000000">
+Transforming the Stars</A>
+</H2>
+To calculate the transformed standard magnitudes of our target stars,
+all we have to do is to write Equation&nbsp;(<A HREF="node9.html#eq:transform2">8.7</A>) for each
+band, and solve the resulting system of linear equations for the
+standard magnitudes. The system is very well behaved (it's matrix is
+close to unity) so <SMALL>GCX </SMALL>uses the simple Gauss-Jordan elimination method to
+solve it.
+
+<P>
+
+<H1><A NAME="SECTION00920000000000000000">
+All-Sky Reduction</A>
+</H1>
+
+<P>
+When the field of our intended target doesn't contain any suitable
+standard stars, we have to determine their magnitudes by comparing to
+stars in a different field. To do this, we need to determine a
+relation between the zeropoints of different frames.
+
+<P>
+Under photometric conditions, we can consider that the <EM>atmospheric
+extinction</EM><A NAME="tex2html41"
+  HREF="footnode.html#foot823"><SUP>8.3</SUP></A>depends only on the thickness of the atmosphere along the light
+path. The ratio between the thickness of the atmosphere in the
+direction of field and it's thickness towards zenith is called the
+<EM>airmass</EM> of the field. The airmass depends on the zenital angle
+<EM>z</EM> of the field, and is close to <IMG
+ WIDTH="79" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$1+\sec(z)$"> when far from the
+horison. The formula used by <SMALL>GCX </SMALL>is the following:<A NAME="tex2html42"
+  HREF="footnode.html#foot1245"><SUP>8.4</SUP></A>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A=1 + \sec(z)[0.9981833 - \sec(z)(0.002875+0.0008083\sec(z))]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="482" HEIGHT="31" BORDER="0"
+ SRC="img90.png"
+ ALT="\begin{displaymath}
+A=1 + \sec(z)[0.9981833 - \sec(z)(0.002875+0.0008083\sec(z))]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The zenital angle of a frame can be determined given it's equatorial
+coordinates, the geographical coordinates of the observing site, and time.
+
+<P>
+If the extinction is unform in all directions, we can define an <EM>  extinction coefficient</EM> <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$E$">, so that for any frame:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Z(A) = Z_0 - EA
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="129" HEIGHT="31" BORDER="0"
+ SRC="img92.png"
+ ALT="\begin{displaymath}
+Z(A) = Z_0 - EA
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.png"
+ ALT="$Z_0$"> is the zeropoint outside the atmosphere, and A is the
+frame's airmass. If we have two frames with airmasses <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.png"
+ ALT="$A_1$">
+and <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.png"
+ ALT="$A_2$">, their zeropoints can be related by:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Z_2 = Z_1 - E(A_2-A_1)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ext2"></A><IMG
+ WIDTH="171" HEIGHT="31" BORDER="0"
+ SRC="img96.png"
+ ALT="\begin{displaymath}
+Z_2 = Z_1 - E(A_2-A_1)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Under photometric conditions, it is customary to determine the
+extinction coefficient by observing the same field at different
+airmasses and then fitting E from (<A HREF="node9.html#eq:ext2">8.10</A>). This is only
+possible when <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$E$"> doesn't change (or changes in a smooth, linear
+fashion) over a period of the order of hours.
+
+<P>
+Because the <SMALL>GCX </SMALL>all-sky routine is targeted at less-than-perfect 
+conditions, we will choose another strategy in determining the
+extinction coefficient. We use several standard fields located 
+relatively near our target fields. Then we we try to ``chop'' the
+extinction coefficient as much as possible by alternating between the 
+standard and target fields.<A NAME="tex2html43"
+  HREF="footnode.html#foot837"><SUP>8.5</SUP></A>
+<P>
+We end up with a series of observations from different fields, all in
+the same general airmass range. By examining the standard fields'
+zeropoints variation with time and airmass, we can determine if there
+were any ``windows'' during which the extinction was stable.  
+
+<P>
+Once a stable window was found, we can fit the extinction coefficient
+from the observations in that window. It is unlikely that the
+observations will span a wide range of airmasses, which will make the
+fitted value of the extinction coefficient somewhat imprecise. But
+this is offset by the fact that the airmass of the target frames is the
+same range, so the contribution of the extinction term is not very
+large. As long as the airmass of the standard fields brackets those of
+the target fields, we are <EM>interpolating</EM> rather than
+extrapolating the extinction.<A NAME="tex2html44"
+  HREF="footnode.html#foot839"><SUP>8.6</SUP></A>
+<P>
+
+<H2><A NAME="SECTION00921000000000000000">
+Extinction Coefficient Fitting</A>
+</H2>
+
+<P>
+Before attempting to fit the extinction coefficient, the zeropoints
+and color transformation coefficient of all frames must be fitted. It
+is highly recommended to examine plots of the resulting zeropoints
+versus time and airmass to see if it's worth trying to do any all-sky
+reduction at all (more on this below).
+
+<P>
+With these precautions, the program will proceed to fit the extinction
+coefficients using a variant of the algorithm described in
+Appendix&nbsp;<A HREF="node11.html#ap:robust">B</A>,<A NAME="tex2html45"
+  HREF="footnode.html#foot842"><SUP>8.7</SUP></A>with the initial weights assigned based on the calculated errors of 
+the zeropoints. The fitted model is:<A NAME="tex2html46"
+  HREF="footnode.html#foot843"><SUP>8.8</SUP></A>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Z = \bar{Z} + E (A - \bar{A})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:zmodel"></A><IMG
+ WIDTH="143" HEIGHT="31" BORDER="0"
+ SRC="img97.png"
+ ALT="\begin{displaymath}
+Z = \bar{Z} + E (A - \bar{A})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="17" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img98.png"
+ ALT="$\bar{A}$"> is the mean airmass of the standard frames, while
+<IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img99.png"
+ ALT="$\bar{Z}$"> is the zeropoint of a mean airmass frame.
+
+<P>
+A different extinction coefficient is fitted for each
+band. Frames that are outliers of the fit (their standard error
+exceeds the threshold set in <EM>Multi-Frame Photometry
+  Options/Zeropoint outlier threshold</EM>) are marked as such.
+
+<P>
+
+<H2><A NAME="SECTION00922000000000000000">
+Calculating Zero Points</A>
+</H2>
+
+<P>
+After fitting the extinction coefficient, we can apply
+Equation&nbsp;<A HREF="node9.html#eq:zmodel">8.11</A> and calculate the zeropoint of any target
+frame. The program tries to filter the frames for which such a
+determination would likely be in error. It will only calculate a
+zeropoint for frames which satisfy the following:
+
+<OL>
+<LI>The frame has to be both preceded and succeded in time by
+  non-outlier standard frames;
+</LI>
+<LI>The frame's airmass has to be in the same range as the standard
+  frames from which the extinction coefficient was fitted. 
+
+<P>
+If <IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.png"
+ ALT="$A_m$"> is the minimum and <IMG
+ WIDTH="33" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.png"
+ ALT="$A_M$"> is the maximum standard airmass,
+  and <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img102.png"
+ ALT="$r$"> is the value of <EM>Multi-Frame Photometry
+    Options/Airmass range</EM>
+  the zeropoint is only calculated for frames with airmasses between 
+  <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{A_M + A_m}{2} - \frac{r}{2}(A_M - A_m)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="198" HEIGHT="42" BORDER="0"
+ SRC="img103.png"
+ ALT="\begin{displaymath}
+\frac{A_M + A_m}{2} - \frac{r}{2}(A_M - A_m)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+and 
+  <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{A_M + A_m}{2} + \frac{r}{2}(A_M + A_m)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="198" HEIGHT="42" BORDER="0"
+ SRC="img104.png"
+ ALT="\begin{displaymath}
+\frac{A_M + A_m}{2} + \frac{r}{2}(A_M + A_m)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+</LI>
+</OL>
+
+<P>
+
+<H1><A NAME="SECTION00930000000000000000">
+Running Multi-Frame Reduction</A>
+</H1>
+
+<P>
+This section is a step-by-step tour of the multi-frame reduction
+tool. An realistically-sized example input file is provided in the
+distribution data directory (<TT>cygs-aug19.out</TT>). This file was generated by
+<SMALL>GCX </SMALL>aperture photometry from 143 frames taken in B, V, R and I in a
+single night, all in Cygnus. The standards data is from
+Henden sequence files, which were converted into <SMALL>GCX </SMALL>recipies with
+the import function.
+The file consists of individual aperture photometry reports appended
+together.
+
+<P>
+
+<H2><A NAME="SECTION00931000000000000000">
+Specifying Reduction Bands</A>
+</H2>
+
+<P>
+Before we can reduce data, we have to define which color indices are
+used for each band. The <EM>Multi-Frame Photometry Options/Bands
+  setup</EM> option specifies this. It contains a list of specifiers of
+the form: <code>&lt;band&gt;(&lt;c1&gt;-&lt;c2&gt;)</code> separated by spaces. Each specifier
+tells the program to use the color index ``<TT>&lt;c1&gt;-&lt;c2&gt;</TT>'' to reduce
+frames taken in ``<TT>band</TT>''. For example, the default setting:
+<DIV ALIGN="CENTER"><BLOCKQUOTE><TT>b(b-v) v(b-v) r(v-r) i(v-i)</TT></BLOCKQUOTE></DIV>
+will set the following transformation model:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+B&=&b+Z_B+k_B(B-V)\\
+V&=&v+Z_V+k_V(B-V)\\
+R&=&r+Z_R+k_R(V-R)\\
+I&=&i+Z_I+k_I(V-I)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.png"
+ ALT="$\displaystyle B$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="162" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.png"
+ ALT="$\displaystyle b+Z_B+k_B(B-V)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.14)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.png"
+ ALT="$\displaystyle V$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="164" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$\displaystyle v+Z_V+k_V(B-V)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.15)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.png"
+ ALT="$\displaystyle R$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="161" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$\displaystyle r+Z_R+k_R(V-R)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.16)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="13" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\displaystyle I$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="147" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\displaystyle i+Z_I+k_I(V-I)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.17)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This model is appropiate if we reduce BV, BVI, BVR or BVRI
+data. However, it will have to be changed if for instance we want to
+reduce VI data, as using it will require B, V and I observations,
+because of the V dependence on B. An appropiate model for VI data
+would be:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+V&=&v+Z_V+k_V(V-I)\\
+I&=&i+Z_I+k_I(V-I)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.png"
+ ALT="$\displaystyle V$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="158" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$\displaystyle v+Z_V+k_V(V-I)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.18)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="13" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\displaystyle I$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="147" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\displaystyle i+Z_I+k_I(V-I)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8.19)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+which is specified by setting:
+<DIV ALIGN="CENTER"><BLOCKQUOTE><TT>v(v-i) i(v-i)</TT></BLOCKQUOTE></DIV>
+in the <EM>Bands setup</EM> option.
+
+<P>
+The same option can be used to set initial transformation coefficients
+and their errors, by appending ``<TT>=&lt;coeff&gt;/err</TT>'' to each band
+specifier like for example:
+<BLOCKQUOTE>
+<TT>b(b-v)=0.12/0.001 v(b-v)=-0.07/0.02</TT>
+</BLOCKQUOTE>
+
+<P>
+
+<H2><A NAME="SECTION00932000000000000000">
+Loading Report Files</A>
+</H2>
+
+<P>
+The data to be reduced can reside in one or more files. 
+To load data, open the the multi-frame reduction dialog using 
+<EM>Processing/Multi-frame reduction</EM> or <B>Ctrl-M</B>, and select
+<EM>File/Add to Dataset</EM>. Select the file name and press <EM>Ok</EM>.
+The data from the frames contained in the file will load, and the
+frames will appear in the ``Frames'' tab of the dialog.
+
+<P>
+More observations can be added by using <EM>Add to Dataset</EM>
+repeteadly.<A NAME="tex2html47"
+  HREF="footnode.html#foot1248"><SUP>8.9</SUP></A> We'll assume the example file (<TT>cygs-aug19.out</TT>) is loaded for the next
+steps.
+
+<P>
+
+<H4><A NAME="SECTION00932010000000000000">
+Frames</A>
+</H4> The ``Frames'' tab contains a list with all the frames in the
+dataset, one per line. It will display increasing amounts of
+information as the fit progresses. The columns that are filled up 
+right after loading the data files should be self-explanatory. The
+other columns show:
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Zpoint</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The fitted zero point of the frame;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Err</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The calculated error of the zero point;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Fitted</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The number of standard stars used in the fit;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Outliers</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The number of standard stars that are considered 
+outliers of the fit (have large standard errors);</TD>
+</TR>
+<TR><TD ALIGN="LEFT">MEU</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The mean error of unit weight for the zeropoint fit of
+the frame.</TD>
+</TR>
+</TABLE>
+
+<P>
+Clicking on the column headers will make the program sort the list by
+the respective column. Clicking again will reverse the sort order. 
+One or more frames can be selected in the list. All operations apply
+to the selected frames or, if none are selected, to the whole list.
+
+<P>
+
+<H4><A NAME="SECTION00932020000000000000">
+Stars</A>
+</H4> When a frame line is clicked, the stars from that frame are displayed
+in the ``Stars'' tab. Like the frames, the stars can be
+sorted on various columns by clicking on the column headers. The
+columns of the stars table show:
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Name</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The star's name. A star is identified across multiple frame by
+it's name;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Star type (standard or target);</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Band</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The band the magnitudes are in;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Smag</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The standard magnitude for the star. If the contents of this
+field are calculated by the program, as for target stars, the
+magnitude appears in square brackets;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Err</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Error of the standard magnitude (either taken from the report
+file, or calculated by the program);</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Imag</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Instrumental magnitude in this observation;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Err</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Error of the instrumental magnitude, taken from the report file;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Residual</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>The residual in the last fit of the frame. Only appears for
+standard stars;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Std Error</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Standard error of the star (the residual divided by the
+estimated error). Only for the standard stars;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Outlier</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>''Y'' or ``N'' depending on whether the star has a large
+standard error or not;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">R.A, Dec</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Star catalog position;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Flags</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>A list of flags that apply to the star. Some are taken from the
+report file, some are added by the fitting routines.</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H4><A NAME="SECTION00932030000000000000">
+Bands</A>
+</H4> The bands tab shows the currently configured bands,
+and the various transformation coefficients relating to these
+bands. They only show the fitted coefficients as they resulted from
+the last fit operation. If only some frames were selected in that
+operation, then these values may only apply to those frames. 
+
+<P>
+
+<H2><A NAME="SECTION00933000000000000000">
+Fitting Individual Zero Points</A>
+</H2>
+
+<P>
+The simplest type of fit we can do is fit the zeropoints of each frame
+individually, without taking the other frames into consideration (like
+the last step in the aperture photometry routine). Even though the
+report files likely contained the individual fit information, it was
+discarded when the report was loaded. We need to perform at least
+this step before we can generate any plots for the data.
+
+<P>
+There are two variants of this command: one zeroes all the
+transformation coefficients before doing the fit (<EM>Fit Zero
+  Points with Null Coefficients</EM>), while the other will apply the
+current transformation coefficients to the standard stars first.
+(<EM>Fit Zero Points with Current Coefficients</EM>).
+
+<P>
+Make sure the frames you want to fit are selected before applying the
+command (if no frames are selected, the command will apply to all
+frames).
+
+<P>
+After the fit, examine the MEU column, which will show the quality of
+the fit (the number should be around 1.0). Since we only fitted the
+zeropoint, and not the color coefficients the values are slightly
+larger than the best than can be obtained.
+
+<P>
+
+<H2><A NAME="SECTION00934000000000000000">
+Plots</A>
+</H2>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:v-res-mag-zponly"></A><A NAME="907"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.1:</STRONG>
+Residuals vesus standard magnitudes for all frames in the
+  example data set, after zero point fitting without color
+  transformation.</CAPTION>
+<TR><TD><IMG
+ WIDTH="524" HEIGHT="381" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.png"
+ ALT="\includegraphics[width=\textwidth]{v-res-mag-zponly}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+At this point, we can generate various plots, which are instrumental
+in judging the quality of the data, especially when we consider the more
+ellaborate fits. The program generates data file for the <TT>gnuplot</TT>
+utility, and will run <TT>gnuplot</TT> directly if the option <EM>File
+  and Device Options/Gnuplot command</EM> is correctly set.<A NAME="tex2html49"
+  HREF="footnode.html#foot913"><SUP>8.10</SUP></A> If the <EM>Plot to File</EM> option in the <EM>Plot</EM> menu is 
+selected, the program will generate a data file instead of running 
+gnuplot directly.<A NAME="tex2html50"
+  HREF="footnode.html#foot916"><SUP>8.11</SUP></A>
+<P>
+Let's select the V frames (click on the band column header twice to
+bring the V band at the top, then click on the first V frame, and
+finaly shift-click on the last V frame). Now run <EM>Plot/Residuals
+  vs Magnitude</EM>. A plot should appear that is similar to the
+one in Figure&nbsp;<A HREF="node9.html#fig:v-res-mag-zponly">8.1</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:aucyg-res-std"></A><A NAME="921"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.2:</STRONG>
+Residuals versus standard magnitudes of one AU CYG frame.</CAPTION>
+<TR><TD><IMG
+ WIDTH="523" HEIGHT="380" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="\includegraphics[width=\textwidth]{aucyg-res-std}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The plot generally has the familiar shape of photon-shot
+noise dominated observations, with random errors increasing as the
+stars become fainter. An additional feature of this dataset are the 
+``branches'' going up starting at around mag 12 and 11. These are
+caused by saturated standard stars (the standards we used are not
+reliable above mag 12.5 or so). If the stars would be saturated in our
+observations, the ``branches'' would go downward.<A NAME="tex2html52"
+  HREF="footnode.html#foot1251"><SUP>8.12</SUP></A>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:aucyg-wres-std"></A><A NAME="927"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.3:</STRONG>
+Standard errors versus magnitudes of one AU CYG frame.</CAPTION>
+<TR><TD><IMG
+ WIDTH="524" HEIGHT="380" ALIGN="BOTTOM" BORDER="0"
+ SRC="img117.png"
+ ALT="\includegraphics[width=\textwidth]{aucyg-wres-std}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+To investigate the matter further, we select a frame with a large
+number of outliers, which is likely to contain such a ``branch''. For
+example, let's select aucyg. The <EM>Residuals vs
+  Magnitude</EM> plot for this frame is shown in
+Figure&nbsp;<A HREF="node9.html#fig:aucyg-res-std">8.2</A>. The bright stars branching up are
+obvious in this plot. However, the importance of the errors is
+difficult to judge, as the ``normal'' error changes with the stars'
+magnitudes (and fainter stars show similar residuals). The
+<EM>Standard Errors vs Magnitude</EM> plot comes handy in this
+situation. It is similar to the previous plot, only the residuals are
+divided by the expected error of the respective stars. We expect all
+stars to show similar standard errors, all within a 6 units wide band
+around zero. This plot is shown in Figure&nbsp;<A HREF="node9.html#fig:aucyg-wres-std">8.3</A>.
+We can clearly see that the relatively large residuals to the right of
+the plot are within normal limits (also indicated by the value of the 
+MEU fit parameter). The ``branch'' is clearly deviant (with standard
+errors going up to 30 and more).<A NAME="tex2html54"
+  HREF="footnode.html#foot934"><SUP>8.13</SUP></A> Fortunately, the robust fitting
+algorithm has downweighted the deviant points significantly, so the
+``good'' values still spread symetrically around zero.<A NAME="tex2html55"
+  HREF="footnode.html#foot935"><SUP>8.14</SUP></A>
+<P>
+
+<H2><A NAME="SECTION00935000000000000000">
+Fitting Color Transformation Coefficients</A>
+</H2>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:v-se-color-zponly"></A><A NAME="939"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.4:</STRONG>
+Standard errors vs color for the V frames, before
+  transformation coefficient fitting.</CAPTION>
+<TR><TD><IMG
+ WIDTH="497" HEIGHT="375" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.png"
+ ALT="\includegraphics[width=\textwidth]{v-se-color-zponly}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:v-se-color"></A><A NAME="944"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.5:</STRONG>
+Standard errors vs color for the V frames, after
+  transformation coefficient fitting.</CAPTION>
+<TR><TD><IMG
+ WIDTH="497" HEIGHT="375" ALIGN="BOTTOM" BORDER="0"
+ SRC="img121.png"
+ ALT="\includegraphics[width=\textwidth]{v-se-color}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+With the V frames selected, let's plot the standard errors again, this
+time against the star's color index. For this, select <EM>Plot/Standard Errors
+vs Color</EM>. The output should look similar to
+Figure&nbsp;<A HREF="node9.html#fig:v-se-color-zponly">8.4</A>. Even given the scatter of the
+individual observations, the plot shows a clear sloping (making the
+residuals proportional to the color index).<A NAME="tex2html58"
+  HREF="footnode.html#foot949"><SUP>8.15</SUP></A> To remove this slope and 
+at the same time calculate the color transformation coefficient, we
+use <EM>Reduce/Fit Zero Points and Transformation Coefficients</EM>. 
+After the fit is done, the slope is removed, as shown in 
+Figure&nbsp;<A HREF="node9.html#fig:v-se-color">8.5</A>. The title of the figure shows the
+transformation used. In our case, the resulting tranformation
+coefficient is 0.062, a rather small figure indicating a good fit
+between the filters used and the standard ones. If we check the MEU 
+fields for each frame, we will see that they have decreased, showing 
+that the data more closely matches the standard magnitudes after the
+color transformation.
+
+<P>
+After the fit, the list in the ``Bands'' tab is updated to show the
+fitted transformation coefficients and their expected errors. Note
+that the error is quite small in our case (0.002),<A NAME="tex2html59"
+  HREF="footnode.html#foot952"><SUP>8.16</SUP></A> even though the
+data seemed to spread a lot. The large number of stars used in the fit
+helped reduce the error considerably.
+
+<P>
+A good sanity check for the transformation coefficient fit is to run
+the same routine on subsets of the initial data set and compare the 
+resulting transformation coefficients. They should match within the
+reported error figures.
+
+<P>
+Before proceeding, let's do the transformation coefficient fit for the
+whole dataset: <EM>Edit/Unselect All</EM>, then <EM>Reduce/Fit Zero 
+Points and Transformation Coefficients</EM>. 
+
+<P>
+
+<H2><A NAME="SECTION00936000000000000000">
+All-Sky Reduction</A>
+</H2>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:zp-am-1"></A><A NAME="958"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.6:</STRONG>
+Zero points vs airmass for frames with standards data.</CAPTION>
+<TR><TD><IMG
+ WIDTH="536" HEIGHT="375" ALIGN="BOTTOM" BORDER="0"
+ SRC="img124.png"
+ ALT="\includegraphics[width=\textwidth]{zp-am-1}"></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="fig:zp-t-1"></A><A NAME="963"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.7:</STRONG>
+Zero points vs time for frames with standards data.</CAPTION>
+<TR><TD><IMG
+ WIDTH="537" HEIGHT="378" ALIGN="BOTTOM" BORDER="0"
+ SRC="img125.png"
+ ALT="\includegraphics[width=\textwidth]{zp-t-1}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The example data set contains BVRI frames for all fields. However,
+only some of the fields have R and I standards data. The night was
+clear, but conditions were changing. Let's see what we can do about
+the R and I frames that need all-sky reduction.
+
+<P>
+We can examine the frame zero points versus the airmass, expecting
+them to fall on a down-sloping line.<A NAME="tex2html62"
+  HREF="footnode.html#foot966"><SUP>8.17</SUP></A> Using <EM>Plot/Zeropoints vs Airmass</EM> will produce the plot in
+Figure&nbsp;<A HREF="node9.html#fig:zp-am-1">8.6</A>, which shows all the bands' zeropoints on the
+same graph. We see that most of the frames do indeed lie on
+down-sloping lines with a scatter consistent with their expected
+errors as shows by the error bars, but there are some outliers. So the
+conditions weren't photometric. If we now plot the same zeropoints
+against time (<EM>Plot/Zeropoints vs Time</EM>), Figure&nbsp;<A HREF="node9.html#fig:zp-t-1">8.7</A> we
+can see what has happened: the transparency has improved starting at
+MJD 53236.95, to the point where we can use the all-sky method for
+frames taken after that point. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:zp-am-2"></A><A NAME="973"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.8:</STRONG>
+Zero points vs airmass for all frames, after the extinction fit.</CAPTION>
+<TR><TD><IMG
+ WIDTH="536" HEIGHT="375" ALIGN="BOTTOM" BORDER="0"
+ SRC="img126.png"
+ ALT="\includegraphics[width=\textwidth]{zp-am-2}"></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="fig:zp-t-2"></A><A NAME="978"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.9:</STRONG>
+Zero points vs time for all frames, after the extinction fit.</CAPTION>
+<TR><TD><IMG
+ WIDTH="537" HEIGHT="378" ALIGN="BOTTOM" BORDER="0"
+ SRC="img127.png"
+ ALT="\includegraphics[width=\textwidth]{zp-t-2}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Let's run the all-sky reduction (<EM>Reduce/Fit Extinction and
+  All-Sky Zero Points</EM>) and generate the plots again. As we can see in 
+Figures&nbsp;<A HREF="node9.html#fig:zp-am-2">8.8</A> and&nbsp;<A HREF="node9.html#fig:zp-t-2">8.9</A>, the program has
+  selected the frames which are bracketed by other ``good'' frames,
+<A NAME="tex2html65"
+  HREF="footnode.html#foot984"><SUP>8.18</SUP></A> and calculated their all-sky zeropoints. The all-sky frames are
+  shown with different colors. These plots should be carefully
+  examined and any suspicious frames removed from the all-sky
+  reduction. In our case however, it seems that the program has made a
+  good choice of frames. 
+
+<P>
+The calculated extinction coefficients and their errors are displayed
+in the ``Bands'' tab. The errors of the exctinction coefficients are
+relatively large. In this case, this is due to the fact that the
+frames are taken in a narrow range of airmasses. The same narrow range
+of airmasses will however reduce the impact of the errors on the
+calculated zeropoints. this can be seen on the graphs, where the error
+bars of the all-sky frames, which take the extinction coefficient
+errors into account, are of the same order as those of the ``normal''
+frames.<A NAME="tex2html66"
+  HREF="footnode.html#foot985"><SUP>8.19</SUP></A>
+<P>
+
+<H1><A NAME="SECTION00940000000000000000">
+Reporting</A>
+</H1>
+
+<P>
+After the fits are done, the complete dataset can be saved in the
+native format using <EM>File/Save Dataset</EM>. The native format
+preserves all the information in a future-proof fashion, but importing
+it into other applications can be a little involved.
+
+<P>
+The <TT>-rep-to-table</TT> or <TT>-T</TT> command-line option allows the native format
+to be converted into a table with fixed-width columns. The format and 
+content of the columns are fully programmable by changing the <EM>File
+and Device Options/Report converter output format</EM> option. The
+following command will convert dataset.out from the native format to a
+table (dataset.txt) with the format as set in the option:
+<BLOCKQUOTE>
+<TT>gcx -T dataset.out <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$&gt;$">dataset.txt</TT>
+</BLOCKQUOTE>
+Alternatively, the table format can be specified on the command
+line. For example, to create a table with the stars' name, mjd of
+observation, and V magnitudes and errors use:
+<BLOCKQUOTE>
+<TT>gcx -T dataset.out -S ".file.tab_format=name jdate
+  <IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\backslash$">
+<BR>
+smag 'v' serr 'v'" <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$&gt;$">dataset.txt</TT>
+</BLOCKQUOTE>
+The complete format string specification can be found in
+Appendix&nbsp;<A HREF="node14.html#ap:repconv">E</A>.
+
+<P>
+Finally, it is possible to list the target stars in the AAVSO
+format. If a validation file location is set in the <EM>File and
+  Device Options/Aavso validation file</EM>, it will be searched 
+for the designation of the stars. The observer code field will be
+filled in from the <EM>general Observation Setup Data/Observer code</EM>
+option.
+
+<P>
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html627"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html623"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html617"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html625"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html628"
+  HREF="node10.html">Noise Modelling</A>
+<B> Up:</B> <A NAME="tex2html624"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html618"
+  HREF="node8.html">Aperture Photometry</A>
+ &nbsp <B>  <A NAME="tex2html626"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

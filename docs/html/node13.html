@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Command Line Options</TITLE>
+<META NAME="description" CONTENT="Command Line Options">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html698"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html694"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html688"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html696"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html699"
+  HREF="node14.html">Report Converter</A>
+<B> Up:</B> <A NAME="tex2html695"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html689"
+  HREF="node12.html">Native Star Files</A>
+ &nbsp <B>  <A NAME="tex2html697"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001300000000000000000">
+Command Line Options</A>
+</H1>
+
+<P>
+Most of the data reduction functions of <SMALL>GCX </SMALL>are available from the
+command line. The program's command-line options are listed below. The
+same text can be obtained using <TT>gcx -help</TT>.
+<FONT SIZE="-1"></FONT><PRE>
+gcx version 0.7.6
+
+usage: gcx [options] [&lt;fits file&gt; ...]
+
+                       General options:
+-h, --help                         Print command line options
+    --help-all                     Print all the on-line help on stdout
+    --version                      Print program version
+-D, --debug &lt;level&gt;                Set debug level to &lt;level&gt;; 0=quiet, 4=noisy
+-o, --output &lt;file_name&gt;           Specify output file name for import, convert
+                                     and frame operations
+-r, --rcfile &lt;params_file&gt;         Load parameters file
+-S, --set &lt;option&gt;=&lt;value&gt;         Set an option overriding the parameters file
+-i, --interactive                  Display frames as they are being processed
+
+       Observation scripting, photometry and file conversion options:
+-p, --recipy &lt;recipy_file&gt;         Load recipy file (searches rcp_path)
+-P, --phot-run &lt;recipy_file&gt;       Load recipy file and run photometry
+                                     in batch mode. Report in native
+                                     format.
+-V, --phot-run-aavso &lt;recipy_file&gt; Load recipy file and run photometry
+                                     in batch mode. Report in AAVSO format.
+    --import &lt;catalog name&gt;        Convert a tabular catalog file to the gcx
+                                     Lisp-like format. Reads stdin.
+                                     Current table formats are:
+                                     gcvs, gcvs-pos, landolt, henden
+    --merge &lt;recipy_file&gt;          Merge a new recipy file over the one loaded
+                                     with the --recipy option. Checks are made
+                                     for either positional or name duplicates.
+                                     Only stars brighter than mag_limit are
+                                     merged.
+    --set-target                   Specify a target object to be merged into a
+                                     recipy file. It will also set the recipy
+                                     object, ra and dec fields.
+    --make-tycho-rcp &lt;radius&gt;      Create a recipy file for the object specified
+                                     with --object using tycho2 stars in a box
+                                     radius arcminutes around the object
+    --rcp-to-aavso &lt;recipy_file&gt;   Conevrt a recipy file to the aavso db
+                                     (tab-delimited) format
+                                     If the file argument is '-', stdin is read
+                                     The recipy comment and star comment fields
+                                     are interpreted to get some db fields.
+                                     see the --help-all for more info
+-T, --rep-to-table &lt;report_file&gt;   Convert a report file to tabular format
+                                     If an output file name is not specified
+                                     (with the '-o' argument), stdout is used
+                                     If the file argument is '-', stdin is read
+-O, --obsfile &lt;obs_file&gt;           Load/run obs file (searches obs_path)
+-n, --to-pnm                       Convert a fits file to 8-bit pnm
+                                     If an output file name is not specified
+                                     (with the '-o' argument), stdout is used
+-j, --object                       Specify a target object (useful for setting
+                                     an initial wcs
+    --mag-limit                    Set a magnitude limit for the output of
+                                     import and merge commands.
+
+                    CCD Reduction Options
+-d, --dark &lt;dark_frame&gt;            Set the dark frame / do dark subtraction
+-b, --bias &lt;bias_frame&gt;            Set the bias frame / do bias subtraction
+-f, --flat &lt;flat_frame&gt;            Set the flat field frame / flatfield
+-G, --gaussian-blur &lt;fwhm &gt;        Set blur FWHM / apply Gaussian blur
+-a, --align &lt;align_ref_frame&gt;      Set the alignment reference frame
+                                      / align frames
+-A, --add-bias &lt;bias&gt;              Set a constant bias to add to all frames
+                                      / add a bias to frames
+-M, --multiply &lt;multiplier&gt;        Set a constant to multiply all frames with
+                                      / multiply frames by a scalar
+                                   Multiplication is performed before addition.
+-u, --update-file                  Save reduction results back to
+                                     the original files
+-s, --stack                        Stack the frames using the method set in
+                                     the parameters file; for some methods
+                                     additive background alignment is performed
+-F, --superflat                    Stack the frames using an multiplicative
+                                     background alignment procedure; the frames
+                                     should be dark-substracted
+-N, --no-reduce                    Do not run the reduction operations, just
+                                     load the frame list / reduction options
+
+    When any of the CCD reduction options is set and the -i flag
+    is not specified, the reduction operations are run in batch mode
+    on all the supplied fits files. When no output file is specified
+    or -i is set, the files are loaded into the batch processing file
+    list, the reduction options set in the dialog, and the program
+    starts up in gui mode
+</PRE><FONT SIZE="-1">
+</FONT>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

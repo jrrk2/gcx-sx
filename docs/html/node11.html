@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Robust Averaging</TITLE>
+<META NAME="description" CONTENT="Robust Averaging">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html674"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html670"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html664"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html672"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html675"
+  HREF="node12.html">Native Star Files</A>
+<B> Up:</B> <A NAME="tex2html671"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html665"
+  HREF="node10.html">Noise Modelling</A>
+ &nbsp <B>  <A NAME="tex2html673"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001100000000000000000"></A><A NAME="ap:robust"></A>
+<BR>
+Robust Averaging
+</H1>
+
+<P>
+A robust averaging algorithm is implemented by <SMALL>GCX </SMALL>and used in
+several places, most notably for zeropoint fitting by the aperture
+photometry and multiframe reduction routines. 
+The algorithm calculates the robust average of a number of values
+(for the zeropoint routines, these are the differences between the
+standard and instrumental magnitudes of standard stars). 
+
+<P>
+The data used consists of the values we want to calculate, and
+the estimated error of each value. For fitting frame zeropoints
+they are:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+y_k = S_k - I_k\\
+\epsilon^2_k = \epsilon_{ik}^2 + \epsilon_{sk}^2
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="100" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img173.png"
+ ALT="$\displaystyle y_k = S_k - I_k$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.1)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img174.png"
+ ALT="$\displaystyle \epsilon^2_k = \epsilon_{ik}^2 + \epsilon_{sk}^2$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img134.png"
+ ALT="$S$"> is the standard magnitude, <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$I$"> is the instrumental magnitude, 
+<IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img175.png"
+ ALT="$\epsilon_i$"> is the estimated error of the instrumental magnitude, 
+<IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img176.png"
+ ALT="$\epsilon_s$"> is the error of the standard magnitude of each star.
+Each star is assigned a <EM>natural weight</EM>, calculated as
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+W_k = \frac{1}{\epsilon_k^2}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="65" HEIGHT="47" BORDER="0"
+ SRC="img177.png"
+ ALT="\begin{displaymath}
+W_k = \frac{1}{\epsilon_k^2}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+We start with a very robust estimate of the average:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{Z}={\rm median}(y_k)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="119" HEIGHT="31" BORDER="0"
+ SRC="img178.png"
+ ALT="\begin{displaymath}
+\widetilde{Z}={\rm median}(y_k)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+and calculate the <EM>residuals</EM> of each value:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\rho_k=y_k - \widetilde{Z}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:residuals"></A><IMG
+ WIDTH="91" HEIGHT="30" BORDER="0"
+ SRC="img179.png"
+ ALT="\begin{displaymath}
+\rho_k=y_k - \widetilde{Z}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+and the <EM>standard errors</EM>:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\rho'_k=(y_k - \widetilde{Z})\sqrt{W_k}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="146" HEIGHT="31" BORDER="0"
+ SRC="img180.png"
+ ALT="\begin{displaymath}
+\rho'_k=(y_k - \widetilde{Z})\sqrt{W_k}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The expected value of each standard error is 1. We can identify
+possible outliers by their large standard errors. A simple way to
+treat outliers is to just exclude from the fit any value that has a
+standard error larger than a certain threshold. This has the
+disadvantage that small changes in the values can cause large jumps in
+the solution if an outlier just crosses the threshold. Instead, we
+adjust the weights of the data points to reduce the outliers'
+contribution to the solution:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+W'_k = \frac{W_k}{1 + \left({\rho'_k}\over{\alpha}\right)^\beta}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="125" HEIGHT="62" BORDER="0"
+ SRC="img181.png"
+ ALT="\begin{displaymath}
+W'_k = \frac{W_k}{1 + \left({\rho'_k}\over{\alpha}\right)^\beta}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The weighting function reduces the weight of values that have residuals <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img182.png"
+ ALT="$\alpha$"> times larger 
+than expected to one half. Of course values with even larger residuals are downweighted even 
+more. The parameter <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img183.png"
+ ALT="$\beta$"> tunes the ``sharpness'' of the weighting
+function.<A NAME="tex2html68"
+  HREF="footnode.html#foot1261"><SUP>B.1</SUP></A>A new estimate of the average is produced by:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{Z}=\sum_k(y_k-\widetilde{Z})W'_k
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="146" HEIGHT="48" BORDER="0"
+ SRC="img184.png"
+ ALT="\begin{displaymath}
+\widetilde{Z}=\sum_k(y_k-\widetilde{Z})W'_k
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The residual calculation, weighting and average estimating are
+iterated until the estimate doesn't change. 
+
+<P>
+Finally, the error for the estimated parameters is calculated. 
+the error of the zero point is:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\epsilon_{\rm zp}^2 = \frac{\sum\rho_k^2W'_k}{\sum W'_k}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="108" HEIGHT="50" BORDER="0"
+ SRC="img185.png"
+ ALT="\begin{displaymath}
+\epsilon_{\rm zp}^2 = \frac{\sum\rho_k^2W'_k}{\sum W'_k}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+and the <EM>mean error of unit weight</EM> is:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+{\rm me1}^2 = \frac{\sum\rho_k^2W'_k}{N-1}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="126" HEIGHT="46" BORDER="0"
+ SRC="img186.png"
+ ALT="\begin{displaymath}
+{\rm me1}^2 = \frac{\sum\rho_k^2W'_k}{N-1}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(B.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$N$"> is the number of standard stars. The mean error of unit weight 
+is 1 in the ideal case (when all the errors are estimated correctly). A significantly
+larger value should raise doubts about the error estimates.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html674"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html670"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html664"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html672"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html675"
+  HREF="node12.html">Native Star Files</A>
+<B> Up:</B> <A NAME="tex2html671"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html665"
+  HREF="node10.html">Noise Modelling</A>
+ &nbsp <B>  <A NAME="tex2html673"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,5 @@
+helpmsg.o: helpmsg.c helpmsg.h config.h
+
+helpmsg.h:
+
+config.h:

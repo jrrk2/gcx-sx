@@ -1,0 +1,52 @@
+
+# CD-GEM (M) 96.2537 24.9228 Pmag=12.8-16.8 
+goto cdgem
+get
+match
+mget 2
+# VV-GEM (M) 96.4833 25.54 Pmag=12.0-16.2 
+goto vvgem
+get
+match
+mget 2
+# UV-GEM (UGSS) 99.6842 18.2697 Pmag=14.7-18.5 
+goto uvgem
+get
+match
+mget 2
+# UY-GEM (M) 101.4817 12.9764 Pmag=12.2-15.3 
+goto uygem
+get
+match
+mget 2
+# IR-GEM (pec(UG)) 101.8937 28.1064 Vmag=10.7-14.5 
+goto irgem
+get
+match
+mget 2
+# KZ-GEM (UG) 103.2613 16.6642 Pmag=14.7-18.5 
+goto kzgem
+get
+match
+mget 2
+# UZ-GEM (M9) 108.2237 17.6544 Pmag=11.8-16.2 
+goto uzgem
+get
+match
+mget 2
+# AW-GEM (UGSS) 110.67 28.5047 Pmag=12.9-17.5 
+goto awgem
+get
+match
+mget 2
+# BE-GEM (M8) 116.1504 14.0492 Pmag=11.7-16 +rcp+
+goto begem
+get
+match
+mget 2
+# U-GEM (pec(UG)+M4.5V) 118.7717 22.0014 Vmag=8.2-14.9 
+goto ugem
+get
+match
+mget 2
+

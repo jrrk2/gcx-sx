@@ -1,0 +1,943 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Noise Modelling</TITLE>
+<META NAME="description" CONTENT="Noise Modelling">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html655"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html651"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html645"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html653"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html656"
+  HREF="node11.html">Robust Averaging</A>
+<B> Up:</B> <A NAME="tex2html652"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html646"
+  HREF="node9.html">Multi-Frame and All-Sky Reduction</A>
+ &nbsp <B>  <A NAME="tex2html654"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html657"
+  HREF="node10.html#SECTION001000010000000000000">Precision and Accuracy.</A>
+<LI><A NAME="tex2html658"
+  HREF="node10.html#SECTION001000020000000000000">Noise</A>
+</UL>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html659"
+  HREF="node10.html#SECTION001010000000000000000">CCD Noise Sources</A>
+<LI><A NAME="tex2html660"
+  HREF="node10.html#SECTION001020000000000000000">Noise of a Pixel Value</A>
+<LI><A NAME="tex2html661"
+  HREF="node10.html#SECTION001030000000000000000">Dark Frame Subtraction</A>
+<LI><A NAME="tex2html662"
+  HREF="node10.html#SECTION001040000000000000000">Flat Fielding</A>
+<LI><A NAME="tex2html663"
+  HREF="node10.html#SECTION001050000000000000000">Instrumental Magnitude Error of a Star</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION001000000000000000000"></A><A NAME="ap:noise"></A>
+<BR>
+Noise Modelling
+</H1>
+
+<P>
+The issue of noise modelling is essential in any photometric endeavour. Measurement values 
+are next to meaningless if they aren't acompanied by a measure of ther uncertainty. 
+
+<P>
+One can assume that the noise and error modelling only applies to deriving an error figure. 
+This in true only in extremely simple cases. In general, the noise estimates will also affect 
+the actual values. For instance, suppose that we use several standards to calibrate a field. 
+From the noise estimate, we know that one of the standards has a large probable error. Then, 
+we choose to exclude (or downweight) that value from the solution--this will change the
+calibration, and directly affect the result (not just it's noise estimate).
+
+<P>
+
+<H4><A NAME="SECTION001000010000000000000">
+Precision and Accuracy.</A>
+</H4> The precision of a measurement denotes the degree to 
+which different measurements of the same value will yield the same result; it measures the 
+repeatability of the measurement process. A precise measurement has a small <EM>random error</EM>.
+
+<P>
+The accuracy of a measurement denotes the degree to which a measurement result will represent 
+the true value. The accuracy includes the <EM>random error</EM> of the measurement, as well as 
+the <EM>systematic error</EM>.
+
+<P>
+Random errors are in a way the worst kind. We have to accept them and take into account, but 
+they cannot be calculated out. We can try to use better equipment, or more telescope time
+and reduce them. On the other hand, since random errors are, well, random in nature (they 
+don't correlate to anything), we can in principle reduce them to an aribitrarily low level 
+by averaging a lerge number of measurements.
+
+<P>
+Systematic errors on the other hand can usually be eliminated (or at least reduced) by 
+calibration. Systematic errors are not that different from random errors. They differ
+fundamentally in the fact the they depend on <EM>something</EM>. Of course, even random
+errors ultimately depend on something. But that something changes incontrollably, and 
+in a time frame that is short compared to the measurement time scale.
+
+<P>
+A systematic error can turn into a random error if we have no control over the thing that 
+the error depends on, or we don't have something to calibrate against. We could treat this 
+error as ``random'' and try to average many measurements to reduce it, but we have to make 
+sure that the something that the error depends on has had a change to vary between the 
+measurements we average, or we won't get very far.
+
+<P>
+
+<H4><A NAME="SECTION001000020000000000000">
+Noise</A>
+</H4> is the ``randomest'' source of random errors. We have no way to 
+calibrate out noise, but it's features are well understood and relatively easy to model.
+One doesn't have a good excuse not to model noise reasonably well.
+
+<P>
+We will generally talk about ``noise'' when estimating random errors that derive from 
+an electrical or optical noise source. Once these are combine with
+other error  sources (like for instance 
+expected errors of the standards), we will use the term ``error''. Of course, there are two
+ways of understanding an error value. If we know what the true value should be, we can talk 
+about and <EM>actual error</EM>. If we just consider what error level we can expect, we talk 
+about an estimated, or <EM>expected error</EM>.
+
+<P>
+
+<H1><A NAME="SECTION001010000000000000000">
+CCD Noise Sources</A>
+</H1>
+
+<P>
+There are several noise sources in a CCD sensor. We will see that in the end they can 
+usually be modeled with just two parameters, but we list the main noise contributors 
+for reference.
+
+<OL>
+<LI><EM>Photon shot noise</EM> is the noise associated with the random arrival of photons 
+at any detector. Shot noise exists because of the discrete nature of light and 
+electrical charge. The time between photon arrivals is goverened by Poisson 
+statistics. For a phase-insensitive detector, such as a CCD, 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm ph} = \sqrt{S_{\rm ph}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="92" HEIGHT="36" BORDER="0"
+ SRC="img128.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm ph} = \sqrt{S_{\rm ph}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img129.png"
+ ALT="$S_{\rm ph}$"> is the signal expressed in electrons. Shot noise is sometimes called 
+``Poisson noise''.
+</LI>
+<LI><EM>Output amplifier noise</EM> originates in the output amplifier of the sensor. 
+It consists of two components: thermal (white) noise and flicker noise. Thermal noise 
+is independent of frequency and has a mild temperature dependence (is proportional to 
+the square root of the absolute temperature). It fundamentally originates in the thermal 
+movement of atoms. Flicker noise (or <IMG
+ WIDTH="32" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img130.png"
+ ALT="$1/f$"> noise) is strongly dependent on frequency. 
+It originates in the existance of long-lived states in the silicon crystal (most notably
+``traps'' at the silicon-oxide interface). 
+
+<P>
+For a given readout configuration and speed, these noise sources contribute a constant 
+level, that is also independant of the signal level, usually called the <EM>readout noise</EM>. 
+The effect of read noise can be reduced by increasing the 
+time in which the sensor is read out. There is a limit to that, as
+flicker noise will begin to kick in. For some cameras, one has the option of trading readout
+speed for a decrease in readout noise.
+
+<P>
+</LI>
+<LI><EM>Camera noise.</EM> Thermal and flicker noise are also generated in
+the camera electronics. the noise level will be independent on the signal. 
+While the camera designer needs to make a distiction between the 
+various noise sources, for a given camera, noise originating in the camera and the ccd 
+amplifier are indistinguishable.
+
+<P>
+</LI>
+<LI><EM>Dark current noise.</EM> Even in the absence of light, electron-hole pairs are generated 
+inside the sensor. The rate of generation depends exponentially on temperature (typically
+doubles every 6-7 degrees). The thermally generated electrons cannot be separated from
+photo-generated photons, and obey the same Poisson statistic, so
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm dark} = \sqrt{S_{\rm dark}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="116" HEIGHT="30" BORDER="0"
+ SRC="img131.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm dark} = \sqrt{S_{\rm dark}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+We can subtract the average 
+dark signal, but the shot noise associated with it remains. The level of the dark current 
+noise depends on temperature and integration time.
+
+<P>
+</LI>
+<LI><EM>Clock noise.</EM> Fast changing clocks on the ccd can also generate spurious charge. 
+This charge also has a shot noise component associated. However, one cannot read the sensor 
+without clocking it, so clock noise cannot be discerned from readout noise. The clock noise 
+is fairly constant for a given camera and readout speed, and independent of the signal level.
+</LI>
+</OL>
+
+<P>
+Examining the above list, we see that some noise sources are independent of the signal level. 
+They are: the output amplifier noise, camera noise and clock noise. They can be combined in
+a single equivalent noise source. The level of this source is called <EM>readout noise</EM>, and
+is a characteristic of the camera. It can be expressed in electrons, or in the camera output
+units (ADU). 
+
+<P>
+The rest of the noise sources are all shot noise sources. The resulting value will be:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm shot} = \sqrt{\sigma_{\rm ph}^2 + \sigma_{\rm dark}^2}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="160" HEIGHT="36" BORDER="0"
+ SRC="img132.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm shot} = \sqrt{\sigma_{\rm ph}^2 + \sigma_{\rm dark}^2}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm shot} = \sqrt{S_{\rm ph} + S_{\rm dark}} = \sqrt{S}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="211" HEIGHT="36" BORDER="0"
+ SRC="img133.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm shot} = \sqrt{S_{\rm ph} + S_{\rm dark}} = \sqrt{S}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img134.png"
+ ALT="$S$"> is the total signal from the sensor above bias, expressed in electrons. So to calculate the 
+shot noise component, we just need to know how many ADUs/electron the camera produces. This
+is a constant value, or one of a few constant values for cameras that have different gain
+settings. We will use <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img135.png"
+ ALT="$A$"> to denote this value. 
+
+<P>
+
+<H1><A NAME="SECTION001020000000000000000">
+Noise of a Pixel Value</A>
+</H1>
+We will now try to model the level of noise in a pixel value. The result of reading one pixel 
+(excluding noise) is:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+s = s_b + A ( S_d + S_p)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="150" HEIGHT="32" BORDER="0"
+ SRC="img136.png"
+ ALT="\begin{displaymath}
+s = s_b + A ( S_d + S_p)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.png"
+ ALT="$s_b$"> is a fixed bias introduced by the camera electronics, <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.png"
+ ALT="$S_d$"> is the number of 
+dark electrons, and <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.png"
+ ALT="$S_p$"> is the number of photo-generated electrons (which is the number 
+of photons incident on the pixel multiplied by the sensor's quantum efficiency).
+
+<P>
+Now let's calculate the noise associated with this value.
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma^2 = \sigma_r^2 + A^2 (S_d + S_p) = \sigma_r^2 + A(s - s_b)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="304" HEIGHT="32" BORDER="0"
+ SRC="img140.png"
+ ALT="\begin{displaymath}
+\sigma^2 = \sigma_r^2 + A^2 (S_d + S_p) = \sigma_r^2 + A(s - s_b)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Where <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$\sigma_r$"> is the readout noise expressed in ADU, and <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img134.png"
+ ALT="$S$"> is the total signal
+expressed in electrons. Note that we cannot calculate 
+the noise if we don't know the bias value. The bias can be determined by reading 
+frames with zero exposure time (bias frames). These will contribute some read noise though. 
+By averaging several bias frames, the noise contribution can be reduced. Another approach is 
+to take the average across a bias frame and use that value for the noise calculation of all
+pixels. Except for very non-uniform sensors this approach works well. <SMALL>GCX </SMALL>supports both 
+ways.
+
+<P>
+Note that a bias frame will only contain readout noise. By calculating the standard 
+deviation of pixels across the difference between two bias frames we obtain <IMG
+ WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img142.png"
+ ALT="$\sqrt{2}$"> times the
+readout noise.
+
+<P>
+
+<H1><A NAME="SECTION001030000000000000000">
+Dark Frame Subtraction</A>
+</H1>
+
+<P>
+A common situation is when one subtracts a dark frame, but doesn't use bias frames. 
+The noise associated with the dark frame is:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_d^2 = \sigma_r^2 + A^2 S_d
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="119" HEIGHT="31" BORDER="0"
+ SRC="img143.png"
+ ALT="\begin{displaymath}
+\sigma_d^2 = \sigma_r^2 + A^2 S_d
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The resulting pixel noise after dark frame subtraction will be:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm ds}^2 = 2\sigma_r^2 + A^2 (2 S_d + S_p)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="194" HEIGHT="32" BORDER="0"
+ SRC="img144.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm ds}^2 = 2\sigma_r^2 + A^2 (2 S_d + S_p)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+while the signal will be
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+s_{\rm ds} = AS_p
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="76" HEIGHT="32" BORDER="0"
+ SRC="img145.png"
+ ALT="\begin{displaymath}
+s_{\rm ds} = AS_p
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Using just the camera noise parameters, we cannot determine the noise anymore. 
+We have to keep track of the dark subtraction and it's noise effects. We however
+rewrite the dark-subtracted noise equation as follows:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm ds}^2 = \left(\sqrt{2\sigma_r^2 + 2 A^2 S_d}\right)^2 + A^2 S_p
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="249" HEIGHT="48" BORDER="0"
+ SRC="img146.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm ds}^2 = \left(\sqrt{2\sigma_r^2 + 2 A^2 S_d}\right)^2 + A^2 S_p
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+If we use the notation <!-- MATH
+ $\sigma_r' = \sqrt{2\sigma_r^2 + 2 A^2 S_d}$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.png"
+ ALT="$\sigma_r' = \sqrt{2\sigma_r^2 + 2 A^2 S_d}$">, we get: 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm ds}^2 = \sigma_r'^2 + A^2 S_p
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="128" HEIGHT="32" BORDER="0"
+ SRC="img148.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm ds}^2 = \sigma_r'^2 + A^2 S_p
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This is identical in form to the simple pixel noise equation, except that the true 
+camera readout noise is replaced by the equivalent read noise <IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img149.png"
+ ALT="$\sigma_r'$">. What's more, the
+bias is no longer an issue, as it doesn't appeear in the signal equation anymore. We can 
+derive the pixel noise from the signal directly, as:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm ds}^2 = \sigma_r'^2 + As_{\rm ds}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="124" HEIGHT="31" BORDER="0"
+ SRC="img150.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm ds}^2 = \sigma_r'^2 + As_{\rm ds}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The same parameters, <IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img149.png"
+ ALT="$\sigma_r'$"> and <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img135.png"
+ ALT="$A$"> are sufficient to describe the noise in the 
+dark-subtracted frame.
+
+<P>
+
+<H1><A NAME="SECTION001040000000000000000">
+Flat Fielding</A>
+</H1>
+
+<P>
+To flat-field a frame, we divide the dark-subtracted pixel value <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img151.png"
+ ALT="$s_{\rm ds}$"> by the flat field
+value <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.png"
+ ALT="$f$">. The noise of the flat field is <IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img153.png"
+ ALT="$\sigma_f$">. The resulting signal value is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+s_{\rm ff} = \frac{1}{f}AS_p
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="86" HEIGHT="45" BORDER="0"
+ SRC="img154.png"
+ ALT="\begin{displaymath}
+s_{\rm ff} = \frac{1}{f}AS_p
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+If we neglect second-order noise terms, the noise of the flat-fielded, dark subtracted pixel 
+is: 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm ff}^2 = f \sigma_r'^2 + A^2 S_p + \left(\frac{\sigma_f}{f}AS_p\right)^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="240" HEIGHT="49" BORDER="0"
+ SRC="img155.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm ff}^2 = f \sigma_r'^2 + A^2 S_p + \left(\frac{\sigma_f}{f}AS_p\right)^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm ff}^2 = f^2 \sigma_r'^2 + A f s_{\rm ff} + \left(\sigma_f s_{\rm ff}\right)^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="222" HEIGHT="32" BORDER="0"
+ SRC="img156.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm ff}^2 = f^2 \sigma_r'^2 + A f s_{\rm ff} + \left(\sigma_f s_{\rm ff}\right)^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The problem with this result is that f is not constant across the frame. So in general, the noise
+of a flat-fielded frame cannot be described by a small number of parameters. In many cases though, 
+<IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.png"
+ ALT="$f$"> doesn't vary too much across the frame. We can then use it's average value, <IMG
+ WIDTH="15" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$\widetilde{f}$"> 
+for the noise calculation. This is the approach taken by the program.
+
+<P>
+We can identify the previous noise parameters, <!-- MATH
+ $\sigma_r'' = 
+\widetilde{f}\sigma_r'$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.png"
+ ALT="$\sigma_r'' =
+\widetilde{f}\sigma_r'$"> and <!-- MATH
+ $A' = A\widetilde{f}$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.png"
+ ALT="$A' = A\widetilde{f}$">. For specifing the
+effect of the flat-fielding, we introduce a new parameter, 
+<IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img153.png"
+ ALT="$\sigma_f$">.
+
+<P>
+Without reducing generality, we can arrange for <!-- MATH
+ $\widetilde{f} = 1$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img160.png"
+ ALT="$\widetilde{f} = 1$">. This means that the 
+average values on the frames don't change with the flatfielding operation, and is a common 
+choice.
+
+<P>
+In this case, <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$\sigma_r$"> and <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img135.png"
+ ALT="$A$"> aren't affected by the flatfielding operation, while the 
+third noise parameter becomes <!-- MATH
+ $\sigma_f/\widetilde{f}$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.png"
+ ALT="$\sigma_f/\widetilde{f}$">, which is the reciprocal of the SNR of 
+the flat field.
+
+<P>
+<SMALL>GCX </SMALL>models the noise of each pixel in the frame by four parameters: <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$\sigma_r$">, <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img135.png"
+ ALT="$A$">, 
+<!-- MATH
+ $\sigma_f/\widetilde{f}$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.png"
+ ALT="$\sigma_f/\widetilde{f}$"> and <!-- MATH
+ $\widetilde{s_b}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.png"
+ ALT="$\widetilde{s_b}$">. The noise function <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img163.png"
+ ALT="$n(s)$"> of each pixel 
+is:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+n^2(s) = \sigma^2 = \sigma_r^2 + A |(s-\widetilde{s_b})| + 
+\left(\frac{\sigma_f}{\widetilde{f}}\right)^2(s-\widetilde{s_b})^2
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="368" HEIGHT="58" BORDER="0"
+ SRC="img164.png"
+ ALT="\begin{displaymath}
+n^2(s) = \sigma^2 = \sigma_r^2 + A \vert(s-\widetilde{s_b})\...
+...t(\frac{\sigma_f}{\widetilde{f}}\right)^2(s-\widetilde{s_b})^2
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$\sigma_r$"> comes from the <TT>RDNOISE</TT> field in the frame header. <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img135.png"
+ ALT="$A$"> is the
+reciprocal of the value of the <TT>ELADU</TT> field. <!-- MATH
+ $\sigma_f/\widetilde{f}$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.png"
+ ALT="$\sigma_f/\widetilde{f}$"> comes from
+<TT>FLNOISE</TT>, while <!-- MATH
+ $\widetilde{s_b}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.png"
+ ALT="$\widetilde{s_b}$"> comes from <TT>DCBIAS</TT>. 
+
+<P>
+Every time frames are processed 
+(dark and bias subtracted, flatfielded, scaled etc), the noise parameters are updated.
+
+<P>
+
+<H1><A NAME="SECTION001050000000000000000">
+Instrumental Magnitude Error of a Star</A>
+</H1>
+
+<P>
+Once we know the noise of each pixel, deriving the expected error of an instrumental magnitude 
+is straightforward. Let <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img165.png"
+ ALT="$N_b$"> be the number of pixels in the sky annulus, and <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img166.png"
+ ALT="$s_i$"> the level
+of each pixel. The noise of the sky estimate is:<A NAME="tex2html67"
+  HREF="footnode.html#foot1100"><SUP>A.1</SUP></A>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_b^2 = \frac{1}{N_b}\sum_{i=1}^{N_b}n^2(s_i)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="137" HEIGHT="59" BORDER="0"
+ SRC="img167.png"
+ ALT="\begin{displaymath}
+\sigma_b^2 = \frac{1}{N_b}\sum_{i=1}^{N_b}n^2(s_i)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Now let <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img168.png"
+ ALT="$N_s$"> be the number of pixels in the central aperture. The noise from these pixels is:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_s^2 = \sum_{i=1}^{N_s}n^2(s_i)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="111" HEIGHT="59" BORDER="0"
+ SRC="img169.png"
+ ALT="\begin{displaymath}
+\sigma_s^2 = \sum_{i=1}^{N_s}n^2(s_i)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The total noise after sky subtraction will be:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_n^2 = \sigma_s^2 + N_s \sigma_b^2.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="125" HEIGHT="31" BORDER="0"
+ SRC="img170.png"
+ ALT="\begin{displaymath}
+\sigma_n^2 = \sigma_s^2 + N_s \sigma_b^2.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The program keeps track and reports separately the photon shot noise, the sky noise, 
+the read noise contribution and the scintillation noise.
+
+<P>
+Scintillation is an atmospheric effect, which results in a random variation of the
+received flux from a star. We use the following formula for scintillation noise:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{\rm sc} = 0.09 F \frac{A^{1.75}}{D^\frac{2}{3}\sqrt{2t}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="147" HEIGHT="51" BORDER="0"
+ SRC="img171.png"
+ ALT="\begin{displaymath}
+\sigma_{\rm sc} = 0.09 F \frac{A^{1.75}}{D^\frac{2}{3}\sqrt{2t}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Where <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$F$"> is the total flux received from the star, <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img135.png"
+ ALT="$A$"> is the airmass of the observation, 
+<IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$D$"> is the telescope aperture in cm, and <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$t$"> is the integration time. Scintillation varies
+widely over time, so the above is just an estimate.
+
+<P>
+Finally, we can calculate the expected error of the instrumental magnitude as
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\epsilon_i = 2.51188 \log\left(1 + \frac{\sqrt{\sigma_n^2 + \sigma_{\rm sc}^2}}{F}\right).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="265" HEIGHT="54" BORDER="0"
+ SRC="img172.png"
+ ALT="\begin{displaymath}
+\epsilon_i = 2.51188 \log\left(1 + \frac{\sqrt{\sigma_n^2 + \sigma_{\rm sc}^2}}{F}\right).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(A.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html655"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html651"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html645"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html653"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html656"
+  HREF="node11.html">Robust Averaging</A>
+<B> Up:</B> <A NAME="tex2html652"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html646"
+  HREF="node9.html">Multi-Frame and All-Sky Reduction</A>
+ &nbsp <B>  <A NAME="tex2html654"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

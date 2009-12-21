@@ -1,0 +1,450 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Getting Started</TITLE>
+<META NAME="description" CONTENT="Getting Started">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html494"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html490"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html484"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html492"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html495"
+  HREF="node4.html">Image Files</A>
+<B> Up:</B> <A NAME="tex2html491"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html485"
+  HREF="node2.html">Introduction</A>
+ &nbsp <B>  <A NAME="tex2html493"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html496"
+  HREF="node3.html#SECTION00310000000000000000">Building and Running gcx</A>
+<LI><A NAME="tex2html497"
+  HREF="node3.html#SECTION00320000000000000000">Starting with gcx</A>
+<LI><A NAME="tex2html498"
+  HREF="node3.html#SECTION00330000000000000000">Navigating the Image</A>
+<LI><A NAME="tex2html499"
+  HREF="node3.html#SECTION00340000000000000000">Examining the FITS Header</A>
+<LI><A NAME="tex2html500"
+  HREF="node3.html#SECTION00350000000000000000">Stars</A>
+<LI><A NAME="tex2html501"
+  HREF="node3.html#SECTION00360000000000000000">World Coordinate System</A>
+<LI><A NAME="tex2html502"
+  HREF="node3.html#SECTION00370000000000000000">Aperture Photometry</A>
+<LI><A NAME="tex2html503"
+  HREF="node3.html#SECTION00380000000000000000">Going Further</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00300000000000000000">
+Getting Started</A>
+</H1>
+This section is a tour of gcx's features that don't require any data files 
+other than the ones provided with the distribution, or any special hardware.
+It should best be read while playing with the program.
+
+<P>
+
+<H1><A NAME="SECTION00310000000000000000">
+Building and Running gcx</A>
+</H1>
+
+<P>
+If you're lucky (meaning that you have an i386 GNU/Linux system with compatible libc 
+and <TT>gtk+-1.2</TT> is installed on your system), the precompiled binary supplied with the 
+distribution will just work.
+To test, cd to the toplevel distribution directory (gcx-x.x.x) and run:
+<BLOCKQUOTE>
+<TT>src/gcx</TT>
+</BLOCKQUOTE>
+If all goes well, you should get an empty window with a menu. Type <B>ctrl-Q</B> or 
+<EM>File/Quit</EM> to exit the program. It is recommended that the program is installed
+in <TT>/usr/local/bin</TT> for example. 
+
+<P>
+If the above doesn't work,<A NAME="tex2html1"
+  HREF="footnode.html#foot76"><SUP>2.1</SUP></A> you have to recompile the program. Make 
+sure <TT>gtk+-1.2</TT> is installed on the system (if you have Gnome, you also have gtk), then in 
+the toplevel directory type:
+<BLOCKQUOTE>
+<TT>./configure ; make clean ; make</TT>
+</BLOCKQUOTE>
+Configure takes some options. See the INSTALL file supplied with the distribution for more 
+details. 
+
+<P>
+If the above step completes successfully, become root and do a 
+<BLOCKQUOTE>
+<TT>make install</TT>
+</BLOCKQUOTE>
+This will place the program in /usr/local/bin, and may also install data files in future
+versions. 
+
+<P>
+The installation is now complete. 
+
+<H1><A NAME="SECTION00320000000000000000">
+Starting with gcx</A>
+</H1>
+
+<P>
+The <TT>data</TT> subdirectory of the distribution contains an example fits frame (<TT>uori-v-001.fits.gz</TT>), and an 
+example recipy file for the frame (<TT>uori.rcp</TT>). These will be used throughout this section.
+
+<P>
+First, start the program:<A NAME="tex2html2"
+  HREF="footnode.html#foot1209"><SUP>2.2</SUP></A><BLOCKQUOTE>
+<TT>gcx</TT>
+</BLOCKQUOTE>
+You should be presented with a empty window, with a menu at the top.
+
+<P>
+To load the example frame, type <B>ctrl-O</B> or use <EM>File/Open Fits</EM>; select the example 
+fits file (<TT>uori-v-001.fits.gz</TT>) in the <TT>data</TT> directory an click <EM>Ok</EM>. The program will load 
+and display the frame. 
+
+<P>
+Alternatively, the fits file name can be supplied on the command line. Something like:
+<BLOCKQUOTE>
+<TT>gcx data/<TT>uori-v-001.fits.gz</TT></TT>
+</BLOCKQUOTE>
+will star the program and load the frame at the same time.
+
+<P>
+Two status bars are displayed at the bottom of the window. The left one shows the current display
+parameters: the zoom level, the <EM>low cut</EM> and the <EM>high cut</EM>. The low cut corresponds to 
+black on the monitor, while the high cut corresponds to 100% white. The values are expressed in 
+the same units the FITS file is.
+
+<P>
+The right-side status bar shows the various status and error messages. When loading an image, 
+global statistics for the image are displayed. This will be referred to as the ``status bar'' 
+throughout this manual.
+
+<P>
+On most errors, a beep is sounded and an error message is printed in the status bar. Sometimes 
+though, a command may appear to do nothing. Checking the terminal from
+which the program was launched will sometimes give an extra hint as to what happened.
+
+<P>
+
+<H1><A NAME="SECTION00330000000000000000">
+Navigating the Image</A>
+</H1>
+
+<P>
+To pan around the image, either use the scrollbars, or place the cursor over the point that 
+you want in the center of the image and press the spacebar or the
+center mouse button.<A NAME="tex2html3"
+  HREF="footnode.html#foot93"><SUP>2.3</SUP></A>
+<P>
+You can pan back to the center of the image using <B>ctrl-L</B> or select <EM>Image/Pan Center</EM> 
+from the menu. 
+
+<P>
+To zoom in, place the cursor over the point you want to zoom in around, and press the <B>=</B> 
+key (same key that has the <TT>'+'</TT> symbol). To zoom out, press <B>-</B>. The <EM>Image</EM> 
+menu also has <EM>Zoom In</EM> and <EM>Zoom Out</EM> options.
+
+<P>
+When loading a frame, the image cuts are automatically selected for a convenient display of 
+astronomical frames. The background is set at a somewhat dark level, and the dynamic range 
+is set to span 22 times the standard deviation of the intensity across the frame. You can 
+always return to these cuts by pressing <B>0</B> or selecting <EM>Image/Auto Cuts</EM>.
+
+<P>
+Pressing <B>1</B> - <B>8</B> will select various predefined contrast levels. <B>1</B> is the most 
+contrasty: the image spans 4 sigmas, while <B>8</B> spans 90 sigmas.
+<B>9</B> will scale the image so that the full input range is represented (the cuts are set to 
+the min/max values of the frame). Selecting <EM>Image/Set Contrast/...</EM> from the menu will 
+accomplish the same effect.
+
+<P>
+To vary the brightness of the background, use <B>B</B> (<EM>Image/Brighter</EM>) and <B>D</B> 
+(<EM>Image/Darker</EM>).
+
+<P>
+Another, sometimes more convenient way of making contrast/brightness
+adjustments is to drag<A NAME="tex2html4"
+  HREF="footnode.html#foot114"><SUP>2.4</SUP></A> 
+the pointer over the image. Dragging horisontally
+will change the brightness, while dragging vertically will adjust the contrast. 
+
+<P>
+The key presses mentioned above are displayed in the menus alongside the respective options. 
+<B>F1</B> or <EM>Help/Show Bindings</EM> will show on-line help about mouse actions.
+
+<P>
+It is important to know that all the ajustments described only apply to the display. The 
+internal representation of the frame (and of course the disc file) is never changed 
+in any way.
+
+<P>
+
+<H1><A NAME="SECTION00340000000000000000">
+Examining the FITS Header</A>
+</H1>
+
+<P>
+Select <EM>File/Fits Header</EM> from the menu. A new window will display the optional 
+FITS header fields from the loaded frame.<A NAME="tex2html5"
+  HREF="footnode.html#foot1210"><SUP>2.5</SUP></A>
+<P>
+
+<H1><A NAME="SECTION00350000000000000000">
+Stars</A>
+</H1>
+
+<P>
+<SMALL>GCX </SMALL>maintains a list of objects it can overlay on the display and run various processing 
+steps on. They are called ``stars'' or sources. The stars can be extracted from the image, or 
+loaded from catalogs or star files.
+
+<P>
+Ctrl-click on a star image. A round circle will appear around it (you cannot mark very 
+faint or saturated stars). You don't need to click precisely on the peak - the program will 
+search around, find a star and create an object (a <EM>user star</EM>) positioned at the 
+centroid of the star image.
+
+<P>
+Click inside the circle. Information about the star will be displayed in the status bar: 
+the start type (field star), the pixel coordinates (counting from the top-left corner), and the
+world coordinates if possible. Since the frame we loaded contained WCS information, but 
+it couldn't be verified by the program, the status bar will show world coordinates, but will mark
+them as ``uncertain'' and disable all operations that depend on these objects' WCS. More on
+validating the WCS below.
+
+<P>
+Right clicking on a star will pop up a specific menu. As our WCS isn't validated yet, only 
+the 'delete' option is active at this point.
+
+<P>
+Now press <B>S</B> or select <EM>Stars/Detect Sources</EM>. The program will search the whole 
+frame, and mark stars. There is a limit as to how many stars will be marked. The limit can 
+be changed by selecting <EM>File/Edit Options</EM>, clicking on the ``+'' next to <EM>Star 
+Detection and Search Options</EM> and increasing the number in the <EM>Maximum Detected Stars</EM> field.
+
+<P>
+There is also a limit on how faint the detected stars can be. Decreasing the value in the <EM>Star Detection SNR</EM> field will make the program look for fainter stars. Note that a very low
+value of SNR will increase the run time of the detection routine considerably. Don't go below 
+2 or so.
+
+<P>
+To remove the detected stars from the display, use <EM>Stars/Remove Detected Stars</EM> or 
+press <B>shift-S</B>. 
+
+<P>
+Automatically detected stars and manually marked (user) stars are displayed 
+with different symbols and deleted with separate commands, but otherwise equivalent. The program
+considers automatically detected stars somewhat expendable, but tries not to remove user stars
+unless specifically requested.
+
+<P>
+A second class of stars handled by <SMALL>GCX </SMALL>are catalog stars. They can be loaded from catalogs if 
+installed on the system, or from star files. 
+
+<P>
+Installing catalogs will be described later in this manual. For the moment, we will load the 
+example recipy file from the <TT>data</TT> directory of the distribution. 
+
+<P>
+Select <EM>File/Load Recipy</EM> from the menu, then select the example recipy file in the
+<TT>data</TT> directory (<TT>uori.rcp</TT>) and click ok.
+
+<P>
+Three types of stars will show up. Diamond-shaped ones are field stars. They are used to fit
+and validate the WCS. Target-shaped symbols are the standard stars. Their magnitudes are used
+to photometrically calibrate the frame. Cross symbols are ``variable''
+or ``target'' stars - stars that we want 
+to measure, but we don't know their magnitude in advance.<A NAME="tex2html6"
+  HREF="footnode.html#foot135"><SUP>2.6</SUP></A>
+<P>
+To find out more about a star, right-click on a star symbol, and select <EM>Edit Star</EM> 
+from the pop-up menu. This will open a dialog and display information about the star, 
+which can be edited. The name, coordinates and comments fields should be obvious.
+Two types of magnitudes are shown: standard magnitudes are obtained from the catalog or 
+recipy file; instrumental magnitudes are measured by the program.
+
+<P>
+A magnitude entry looks like this: 
+<BLOCKQUOTE>
+<TT><TT>&lt;band_name&gt;(&lt;system&gt;)=&lt;magnitude&gt;/&lt;error&gt;</TT></TT>
+</BLOCKQUOTE>
+The error and system fields are 
+optional. The <EM>band name</EM> is the name of the filter ('v', 'b', etc). The <EM>system</EM>
+describes the source of the data. For instance, v(aavso) means 'v' magnitudes taken from 
+aavso charts, while b(landolt) would be used for 'b' magnitudes of landolt standards. 
+
+<P>
+For more information about stars, please see Chapter&nbsp;<A HREF="node5.html#ch:stars">4</A>
+
+<P>
+
+<H1><A NAME="SECTION00360000000000000000">
+World Coordinate System</A>
+</H1>
+Each time a frame is loaded, the program keeps track of the relation between the the positions 
+within the frame, and the ``true'' positions of the objects. This relation is called the ``WCS'' 
+inside the program. 
+
+<P>
+If no information is known about the position of the field, the WCS is called ``invalid''. 
+This can happen if the frame doesn't have WCS information in the header. When some information
+is available, we say the we have an ``initial WCS''. The program will treat wcs information from
+the header as approximate. If we have an initial WCS and some field stars, we can match the 
+positions of the field stars with stars detected from the frame. If the program finds a 
+good-enough match, it will decide that the WCS can be reliably used, and mark the WCS as 'valid'.
+
+<P>
+Our example frame already has an initial WCS. We have field stars loaded from the recipy file
+(or we could have some from GSC). We will first press <B>S</B> to detect starts from the frame.
+Select <EM>Wcs/Auto Pairs</EM> (or press <B>P</B>). This will match the stars and create pairs, 
+which are drawn with dotted lines. Next, press <B>Shift-W</B> (or <EM>Wcs/Fit Wcs from Pairs</EM>), 
+and the program will fit the WCS so that the pairs overlap, and display the mean error of the fit
+in the status bar. If enough pairs are fitted and the error is small enough, the fit will 
+be validated.
+
+<P>
+Pressing <B>M</B> or <EM>Wcs/Auto Wcs</EM> will do all the above steps in one operation (detect 
+stars, load field stars from GSC if possible, find pairs and fit the WCS). Pressing <B>shift-M</B>
+or <EM>Wcs/Quiet Auto Wcs</EM> will do the same, but will remove the detected stars and field 
+stars after the fit. It will do nothing if the WCS is already valid.
+
+<P>
+The fitting algorithm can be tuned by changing parameters under <EM>WCS fitting options</EM> in
+the options dialog.
+
+<P>
+Once we have a valid WCS, we have new uses for the detected and user stars. Clicking on them will
+print their true coordinates on the status bar. It is also possible to mark them as variable stars,
+so they can be measured, or as standard stars, so they can participate in the photometry solution
+(for example when inputting data from a paper chart).
+
+<P>
+Choose a few detected stars, right click on them and choose <EM>Edit Star</EM>. 
+Now check the ``variable'' flag. The star will be transformed into a variable, and its
+symbol changed to a cross.
+
+<P>
+
+<H1><A NAME="SECTION00370000000000000000">
+Aperture Photometry</A>
+</H1>
+
+<P>
+Now that we have our valid WCS and we know which stars we want to measure and which standards 
+to use, the actual photometry is easy: just press <B>shift-P</B> or 
+<EM>Processing/Quick Aperture Photometry</EM>.
+
+<P>
+A quick result for the first variable star is printed in the status
+bar. All stars' magnitudes are updated, and can be examined using the
+<EM>Edit Star</EM> function.
+
+<P>
+The reduction process has a number of parameters, which can be accessed through the options 
+dialog, under <EM>Aperture Photometry Defaults</EM>. For  more details
+about the photometry process check Chapter&nbsp;<A HREF="node8.html#ch:aphot">7</A>.
+
+<P>
+All the clicking in this section can be eliminated with one command. From the toplevel directory,
+run: 
+<BLOCKQUOTE>
+<TT>gcx data/<TT>uori-v-001.fits.gz</TT>&nbsp;-P data/<TT>uori.rcp</TT></TT>
+</BLOCKQUOTE>
+The program will load the frame, load the recipy, fit the WCS and run the photometry. A report
+will be written to standard out (all debugging messages are printed to stderr, so redirecting 
+stdout to a file will write just the report to that file. For example:
+<BLOCKQUOTE>
+<TT>gcx data/<TT>uori-v-001.fits.gz</TT>&nbsp;-P data/<TT>uori.rcp</TT>&nbsp;&gt;outf</TT>
+</BLOCKQUOTE>
+will write the report to outf.
+
+<P>
+
+<H1><A NAME="SECTION00380000000000000000">
+Going Further</A>
+</H1>
+<SMALL>GCX </SMALL>has many more features and options than the ones described above. To find out about them, 
+read below, browse the menus, or ask the author. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html494"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html490"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html484"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html492"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html495"
+  HREF="node4.html">Image Files</A>
+<B> Up:</B> <A NAME="tex2html491"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html485"
+  HREF="node2.html">Introduction</A>
+ &nbsp <B>  <A NAME="tex2html493"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

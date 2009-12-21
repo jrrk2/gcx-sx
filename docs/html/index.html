@@ -1,0 +1,691 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>GCX User's Manual</TITLE>
+<META NAME="description" CONTENT="GCX User's Manual">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html71"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev_g.png"> 
+<A NAME="tex2html69"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html72"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html70"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1 ALIGN="CENTER">GCX User's Manual</H1>
+<P ALIGN="CENTER"><STRONG>Radu Corlan</STRONG></P>
+<P ALIGN="CENTER"><STRONG>Version 0.7.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;December 7, 2004</STRONG></P>
+
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html73"
+  HREF="node1.html">Contents</A>
+<LI><A NAME="tex2html74"
+  HREF="node2.html">Introduction</A>
+<UL>
+<LI><A NAME="tex2html75"
+  HREF="node2.html#SECTION00210000000000000000">Features</A>
+<LI><A NAME="tex2html76"
+  HREF="node2.html#SECTION00220000000000000000">Free Software</A>
+<LI><A NAME="tex2html77"
+  HREF="node2.html#SECTION00230000000000000000">Contributing</A>
+<LI><A NAME="tex2html78"
+  HREF="node2.html#SECTION00240000000000000000">About this Manual</A>
+<LI><A NAME="tex2html79"
+  HREF="node2.html#SECTION00250000000000000000">Related Projects</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html80"
+  HREF="node3.html">Getting Started</A>
+<UL>
+<LI><A NAME="tex2html81"
+  HREF="node3.html#SECTION00310000000000000000">Building and Running gcx</A>
+<LI><A NAME="tex2html82"
+  HREF="node3.html#SECTION00320000000000000000">Starting with gcx</A>
+<LI><A NAME="tex2html83"
+  HREF="node3.html#SECTION00330000000000000000">Navigating the Image</A>
+<LI><A NAME="tex2html84"
+  HREF="node3.html#SECTION00340000000000000000">Examining the FITS Header</A>
+<LI><A NAME="tex2html85"
+  HREF="node3.html#SECTION00350000000000000000">Stars</A>
+<LI><A NAME="tex2html86"
+  HREF="node3.html#SECTION00360000000000000000">World Coordinate System</A>
+<LI><A NAME="tex2html87"
+  HREF="node3.html#SECTION00370000000000000000">Aperture Photometry</A>
+<LI><A NAME="tex2html88"
+  HREF="node3.html#SECTION00380000000000000000">Going Further</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html89"
+  HREF="node4.html">Image Files</A>
+<UL>
+<LI><A NAME="tex2html90"
+  HREF="node4.html#SECTION00410000000000000000">FITS Header fields</A>
+<LI><A NAME="tex2html91"
+  HREF="node4.html#SECTION00420000000000000000">Viewing Image Files</A>
+<LI><A NAME="tex2html92"
+  HREF="node4.html#SECTION00430000000000000000">Saving and Exporting Images</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html93"
+  HREF="node5.html">Stars and Catalogs</A>
+<UL>
+<LI><A NAME="tex2html94"
+  HREF="node5.html#SECTION00510000000000000000">Star Detection</A>
+<LI><A NAME="tex2html95"
+  HREF="node5.html#SECTION00520000000000000000">Loading Catalog Stars</A>
+<UL>
+<LI><A NAME="tex2html96"
+  HREF="node5.html#SECTION00521000000000000000">Object Catalogs</A>
+<LI><A NAME="tex2html97"
+  HREF="node5.html#SECTION00522000000000000000">Field Star Catalogs</A>
+</UL>
+<LI><A NAME="tex2html98"
+  HREF="node5.html#SECTION00530000000000000000">Star Files</A>
+<LI><A NAME="tex2html99"
+  HREF="node5.html#SECTION00540000000000000000">Setting up Catalogs</A>
+<UL>
+<LI><A NAME="tex2html100"
+  HREF="node5.html#SECTION00541000000000000000">Setting up GSC</A>
+<LI><A NAME="tex2html101"
+  HREF="node5.html#SECTION00542000000000000000">Setting up Tycho2</A>
+<LI><A NAME="tex2html102"
+  HREF="node5.html#SECTION00543000000000000000">Setting up Object Catalog Files</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html103"
+  HREF="node6.html">World Coordinates</A>
+<UL>
+<LI><A NAME="tex2html104"
+  HREF="node6.html#SECTION00610000000000000000">World Coordinate System Parameters</A>
+<LI><A NAME="tex2html105"
+  HREF="node6.html#SECTION00620000000000000000">World Coordinate System States</A>
+<LI><A NAME="tex2html106"
+  HREF="node6.html#SECTION00630000000000000000">Obtaining an Initial WCS</A>
+<LI><A NAME="tex2html107"
+  HREF="node6.html#SECTION00640000000000000000">Fitting the WCS to an Image</A>
+<UL>
+<LI><A NAME="tex2html108"
+  HREF="node6.html#SECTION00641000000000000000">WCS Fitting Commands</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html109"
+  HREF="node7.html">CCD Reduction</A>
+<UL>
+<LI><A NAME="tex2html110"
+  HREF="node7.html#SECTION00710000000000000000">CCD Camera Response Model</A>
+<LI><A NAME="tex2html111"
+  HREF="node7.html#SECTION00720000000000000000">Bias and Dark Frames</A>
+<UL>
+<LI><A NAME="tex2html112"
+  HREF="node7.html#SECTION00721000000000000000">Working without Bias Frames</A>
+</UL>
+<LI><A NAME="tex2html113"
+  HREF="node7.html#SECTION00730000000000000000">Flat-field Frames</A>
+<LI><A NAME="tex2html114"
+  HREF="node7.html#SECTION00740000000000000000">Reducing the Data Frames</A>
+<LI><A NAME="tex2html115"
+  HREF="node7.html#SECTION00750000000000000000">Frame Combining Methods</A>
+<LI><A NAME="tex2html116"
+  HREF="node7.html#SECTION00760000000000000000">CCD Reduction with gcx</A>
+<UL>
+<LI><A NAME="tex2html117"
+  HREF="node7.html#SECTION00761000000000000000">Loading and Selecting Image Frames</A>
+<LI><A NAME="tex2html118"
+  HREF="node7.html#SECTION00762000000000000000">Creating a Master Bias or Master Dark Frame</A>
+<LI><A NAME="tex2html119"
+  HREF="node7.html#SECTION00763000000000000000">Creating a Bias-Subtracted Master Dark Frame</A>
+<LI><A NAME="tex2html120"
+  HREF="node7.html#SECTION00764000000000000000">Creating a Master Flat Frame</A>
+<LI><A NAME="tex2html121"
+  HREF="node7.html#SECTION00765000000000000000">Reducing the Data Frames</A>
+<LI><A NAME="tex2html122"
+  HREF="node7.html#SECTION00766000000000000000">Aligning and Stacking Frames</A>
+<LI><A NAME="tex2html123"
+  HREF="node7.html#SECTION00767000000000000000">Running CCD Reductions from the Command Line</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html124"
+  HREF="node8.html">Aperture Photometry</A>
+<UL>
+<LI><A NAME="tex2html125"
+  HREF="node8.html#SECTION00810000000000000000">Measuring Apertures</A>
+<LI><A NAME="tex2html126"
+  HREF="node8.html#SECTION00820000000000000000">Sky Estimation</A>
+<LI><A NAME="tex2html127"
+  HREF="node8.html#SECTION00830000000000000000">Placing the Apertures</A>
+<LI><A NAME="tex2html128"
+  HREF="node8.html#SECTION00840000000000000000">Finding the Ensemble Photometry Solution</A>
+<LI><A NAME="tex2html129"
+  HREF="node8.html#SECTION00850000000000000000">Annotations</A>
+<LI><A NAME="tex2html130"
+  HREF="node8.html#SECTION00860000000000000000">Running Aperture Photometry</A>
+<LI><A NAME="tex2html131"
+  HREF="node8.html#SECTION00870000000000000000">Creating Recipy Files</A>
+<UL>
+<LI><A NAME="tex2html132"
+  HREF="node8.html#SECTION00871000000000000000">Target Stars</A>
+<LI><A NAME="tex2html133"
+  HREF="node8.html#SECTION00872000000000000000">Standard Stars</A>
+<LI><A NAME="tex2html134"
+  HREF="node8.html#SECTION00873000000000000000">Creating the Recipy File</A>
+<LI><A NAME="tex2html135"
+  HREF="node8.html#SECTION00874000000000000000">Working without an Image Frame</A>
+<LI><A NAME="tex2html136"
+  HREF="node8.html#SECTION00875000000000000000">Creating Recipies from the Command Line</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html137"
+  HREF="node9.html">Multi-Frame and All-Sky Reduction</A>
+<UL>
+<LI><A NAME="tex2html138"
+  HREF="node9.html#SECTION00910000000000000000">Color Transformation Coefficients</A>
+<UL>
+<LI><A NAME="tex2html139"
+  HREF="node9.html#SECTION00911000000000000000">Transforming the Stars</A>
+</UL>
+<LI><A NAME="tex2html140"
+  HREF="node9.html#SECTION00920000000000000000">All-Sky Reduction</A>
+<UL>
+<LI><A NAME="tex2html141"
+  HREF="node9.html#SECTION00921000000000000000">Extinction Coefficient Fitting</A>
+<LI><A NAME="tex2html142"
+  HREF="node9.html#SECTION00922000000000000000">Calculating Zero Points</A>
+</UL>
+<LI><A NAME="tex2html143"
+  HREF="node9.html#SECTION00930000000000000000">Running Multi-Frame Reduction</A>
+<UL>
+<LI><A NAME="tex2html144"
+  HREF="node9.html#SECTION00931000000000000000">Specifying Reduction Bands</A>
+<LI><A NAME="tex2html145"
+  HREF="node9.html#SECTION00932000000000000000">Loading Report Files</A>
+<LI><A NAME="tex2html146"
+  HREF="node9.html#SECTION00933000000000000000">Fitting Individual Zero Points</A>
+<LI><A NAME="tex2html147"
+  HREF="node9.html#SECTION00934000000000000000">Plots</A>
+<LI><A NAME="tex2html148"
+  HREF="node9.html#SECTION00935000000000000000">Fitting Color Transformation Coefficients</A>
+<LI><A NAME="tex2html149"
+  HREF="node9.html#SECTION00936000000000000000">All-Sky Reduction</A>
+</UL>
+<LI><A NAME="tex2html150"
+  HREF="node9.html#SECTION00940000000000000000">Reporting</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html151"
+  HREF="node10.html">Noise Modelling</A>
+<UL>
+<LI><A NAME="tex2html152"
+  HREF="node10.html#SECTION001010000000000000000">CCD Noise Sources</A>
+<LI><A NAME="tex2html153"
+  HREF="node10.html#SECTION001020000000000000000">Noise of a Pixel Value</A>
+<LI><A NAME="tex2html154"
+  HREF="node10.html#SECTION001030000000000000000">Dark Frame Subtraction</A>
+<LI><A NAME="tex2html155"
+  HREF="node10.html#SECTION001040000000000000000">Flat Fielding</A>
+<LI><A NAME="tex2html156"
+  HREF="node10.html#SECTION001050000000000000000">Instrumental Magnitude Error of a Star</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html157"
+  HREF="node11.html">Robust Averaging</A>
+<LI><A NAME="tex2html158"
+  HREF="node12.html">Native Star Files</A>
+<LI><A NAME="tex2html159"
+  HREF="node13.html">Command Line Options</A>
+<LI><A NAME="tex2html160"
+  HREF="node14.html">Report Converter</A>
+<LI><A NAME="tex2html161"
+  HREF="node15.html">Global Options</A>
+<UL>
+<LI><A NAME="tex2html162"
+  HREF="node15.html#SECTION001510000000000000000">File and Device Options</A>
+<UL>
+<LI><A NAME="tex2html163"
+  HREF="node15.html#SECTION001510100000000000000">Serial line for gps receiver control</A>
+<LI><A NAME="tex2html164"
+  HREF="node15.html#SECTION001510200000000000000">Command for uncompressing files</A>
+<LI><A NAME="tex2html165"
+  HREF="node15.html#SECTION001510300000000000000">Command for compressing files</A>
+<LI><A NAME="tex2html166"
+  HREF="node15.html#SECTION001510400000000000000">Gnuplot command</A>
+<LI><A NAME="tex2html167"
+  HREF="node15.html#SECTION001510500000000000000">Monospaced Font</A>
+<LI><A NAME="tex2html168"
+  HREF="node15.html#SECTION001510600000000000000">Phot report file</A>
+<LI><A NAME="tex2html169"
+  HREF="node15.html#SECTION001510700000000000000">Obs files search path</A>
+<LI><A NAME="tex2html170"
+  HREF="node15.html#SECTION001510800000000000000">Rcp files search path</A>
+<LI><A NAME="tex2html171"
+  HREF="node15.html#SECTION001510900000000000000">GSC location</A>
+<LI><A NAME="tex2html172"
+  HREF="node15.html#SECTION0015101000000000000000">Tycho2 location</A>
+<LI><A NAME="tex2html173"
+  HREF="node15.html#SECTION0015101100000000000000">Catalog files</A>
+<LI><A NAME="tex2html174"
+  HREF="node15.html#SECTION0015101200000000000000">Preload catalogs</A>
+<LI><A NAME="tex2html175"
+  HREF="node15.html#SECTION0015101300000000000000">Edb directory</A>
+<LI><A NAME="tex2html176"
+  HREF="node15.html#SECTION0015101400000000000000">Aavso validation file</A>
+<LI><A NAME="tex2html177"
+  HREF="node15.html#SECTION0015101500000000000000">Force unsigned FITS</A>
+<LI><A NAME="tex2html178"
+  HREF="node15.html#SECTION0015101600000000000000">Western longitudes</A>
+<LI><A NAME="tex2html179"
+  HREF="node15.html#SECTION0015101700000000000000">Report converter output format</A>
+<LI><A NAME="tex2html180"
+  HREF="node15.html#SECTION0015101800000000000000">Auto-unload frames</A>
+<LI><A NAME="tex2html181"
+  HREF="node15.html#SECTION0015101900000000000000">New frame width</A>
+<LI><A NAME="tex2html182"
+  HREF="node15.html#SECTION0015102000000000000000">New frame height</A>
+<LI><A NAME="tex2html183"
+  HREF="node15.html#SECTION0015102100000000000000">New frame scale</A>
+<LI><A NAME="tex2html184"
+  HREF="node15.html#SECTION0015102200000000000000">Merge positional tolerance </A>
+<LI><A NAME="tex2html185"
+  HREF="node15.html#SECTION001511000000000000000">Fits Field Names</A>
+<UL>
+<LI><A NAME="tex2html186"
+  HREF="node15.html#SECTION001511100000000000000">Fits field for X coordinate of reference pixel</A>
+<LI><A NAME="tex2html187"
+  HREF="node15.html#SECTION001511200000000000000">Fits field for Y coordinate of reference pixel</A>
+<LI><A NAME="tex2html188"
+  HREF="node15.html#SECTION001511300000000000000">Fits field for WCS R.A. of reference pixel</A>
+<LI><A NAME="tex2html189"
+  HREF="node15.html#SECTION001511400000000000000">Fits field for WCS Dec of reference pixel</A>
+<LI><A NAME="tex2html190"
+  HREF="node15.html#SECTION001511500000000000000">Fits field for degrees/pixel in R.A.</A>
+<LI><A NAME="tex2html191"
+  HREF="node15.html#SECTION001511600000000000000">Fits field for degrees/pixel in dec</A>
+<LI><A NAME="tex2html192"
+  HREF="node15.html#SECTION001511700000000000000">Fits field for field rotation</A>
+<LI><A NAME="tex2html193"
+  HREF="node15.html#SECTION001511800000000000000">Fits field for equinox of WCS</A>
+<LI><A NAME="tex2html194"
+  HREF="node15.html#SECTION001511900000000000000">Fits field for equinox of WCS</A>
+<LI><A NAME="tex2html195"
+  HREF="node15.html#SECTION0015111000000000000000">Fits field for object name</A>
+<LI><A NAME="tex2html196"
+  HREF="node15.html#SECTION0015111100000000000000">Fits field for object R.A.</A>
+<LI><A NAME="tex2html197"
+  HREF="node15.html#SECTION0015111200000000000000">Fits field for object dec</A>
+<LI><A NAME="tex2html198"
+  HREF="node15.html#SECTION0015111300000000000000">Fits field for image scale</A>
+<LI><A NAME="tex2html199"
+  HREF="node15.html#SECTION0015111400000000000000">Fits field for field center</A>
+<LI><A NAME="tex2html200"
+  HREF="node15.html#SECTION0015111500000000000000">Fits field for field center</A>
+<LI><A NAME="tex2html201"
+  HREF="node15.html#SECTION0015111600000000000000">Fits field for filter name</A>
+<LI><A NAME="tex2html202"
+  HREF="node15.html#SECTION0015111700000000000000">Fits field for exposure time</A>
+<LI><A NAME="tex2html203"
+  HREF="node15.html#SECTION0015111800000000000000">Fits field for julian date of observation</A>
+<LI><A NAME="tex2html204"
+  HREF="node15.html#SECTION0015111900000000000000">Fits field for modified julian date of observation</A>
+<LI><A NAME="tex2html205"
+  HREF="node15.html#SECTION0015112000000000000000">Fits field for date/time of observation</A>
+<LI><A NAME="tex2html206"
+  HREF="node15.html#SECTION0015112100000000000000">Fits field for time of observation</A>
+<LI><A NAME="tex2html207"
+  HREF="node15.html#SECTION0015112200000000000000">Fits field for telescope name</A>
+<LI><A NAME="tex2html208"
+  HREF="node15.html#SECTION0015112300000000000000">Fits field for focus designation</A>
+<LI><A NAME="tex2html209"
+  HREF="node15.html#SECTION0015112400000000000000">Fits field for telescope aperture</A>
+<LI><A NAME="tex2html210"
+  HREF="node15.html#SECTION0015112500000000000000">Fits field for focal length</A>
+<LI><A NAME="tex2html211"
+  HREF="node15.html#SECTION0015112600000000000000">Fits field for instrument name</A>
+<LI><A NAME="tex2html212"
+  HREF="node15.html#SECTION0015112700000000000000">Fits field for observer name</A>
+<LI><A NAME="tex2html213"
+  HREF="node15.html#SECTION0015112800000000000000">Fits field for latitude of observing site</A>
+<LI><A NAME="tex2html214"
+  HREF="node15.html#SECTION0015112900000000000000">Fits field for longitude of observing site</A>
+<LI><A NAME="tex2html215"
+  HREF="node15.html#SECTION0015113000000000000000">Fits field for altitude of observing site</A>
+<LI><A NAME="tex2html216"
+  HREF="node15.html#SECTION0015113100000000000000">Fits field for airmas</A>
+<LI><A NAME="tex2html217"
+  HREF="node15.html#SECTION0015113200000000000000">Fits field for sensor temperature</A>
+<LI><A NAME="tex2html218"
+  HREF="node15.html#SECTION0015113300000000000000">Fits field for horisontal binning</A>
+<LI><A NAME="tex2html219"
+  HREF="node15.html#SECTION0015113400000000000000">Fits field for vertical binning</A>
+<LI><A NAME="tex2html220"
+  HREF="node15.html#SECTION0015113500000000000000">Fits field for horisontal window origin</A>
+<LI><A NAME="tex2html221"
+  HREF="node15.html#SECTION0015113600000000000000">Fits field for vertical window origin</A>
+<LI><A NAME="tex2html222"
+  HREF="node15.html#SECTION0015113700000000000000">Fits field for electrons per ADU</A>
+<LI><A NAME="tex2html223"
+  HREF="node15.html#SECTION0015113800000000000000">Fits field for average bias of frame</A>
+<LI><A NAME="tex2html224"
+  HREF="node15.html#SECTION0015113900000000000000">Fits field for readout noise</A>
+<LI><A NAME="tex2html225"
+  HREF="node15.html#SECTION0015114000000000000000">Fits field for multiplicative noise coefficient</A>
+</UL>
+</UL>
+<LI><A NAME="tex2html226"
+  HREF="node15.html#SECTION001520000000000000000">General Observation Setup Data</A>
+<UL>
+<LI><A NAME="tex2html227"
+  HREF="node15.html#SECTION001520100000000000000">Latitude of observing site</A>
+<LI><A NAME="tex2html228"
+  HREF="node15.html#SECTION001520200000000000000">Longitude of observing site</A>
+<LI><A NAME="tex2html229"
+  HREF="node15.html#SECTION001520300000000000000">Altitude of observing site</A>
+<LI><A NAME="tex2html230"
+  HREF="node15.html#SECTION001520400000000000000">Observer name</A>
+<LI><A NAME="tex2html231"
+  HREF="node15.html#SECTION001520500000000000000">Observer code</A>
+<LI><A NAME="tex2html232"
+  HREF="node15.html#SECTION001520600000000000000">Telescope name</A>
+<LI><A NAME="tex2html233"
+  HREF="node15.html#SECTION001520700000000000000">Telescope focal length</A>
+<LI><A NAME="tex2html234"
+  HREF="node15.html#SECTION001520800000000000000">Flipped field</A>
+<LI><A NAME="tex2html235"
+  HREF="node15.html#SECTION001520900000000000000">Telescope aperture</A>
+<LI><A NAME="tex2html236"
+  HREF="node15.html#SECTION0015201000000000000000">Focus designation</A>
+<LI><A NAME="tex2html237"
+  HREF="node15.html#SECTION0015201100000000000000">List of filters</A>
+<LI><A NAME="tex2html238"
+  HREF="node15.html#SECTION0015201200000000000000">Status window pop-up</A>
+</UL>
+<LI><A NAME="tex2html239"
+  HREF="node15.html#SECTION001530000000000000000">Telescope control options</A>
+<UL>
+<LI><A NAME="tex2html240"
+  HREF="node15.html#SECTION001530100000000000000">Serial line for telescope control</A>
+<LI><A NAME="tex2html241"
+  HREF="node15.html#SECTION001530200000000000000">Serial line for filter wheel control</A>
+<LI><A NAME="tex2html242"
+  HREF="node15.html#SECTION001530300000000000000">Eastern limit for goto ops (hour angle)</A>
+<LI><A NAME="tex2html243"
+  HREF="node15.html#SECTION001530400000000000000">Enable eastern limit</A>
+<LI><A NAME="tex2html244"
+  HREF="node15.html#SECTION001530500000000000000">Western limit for goto ops (hour angle)</A>
+<LI><A NAME="tex2html245"
+  HREF="node15.html#SECTION001530600000000000000">Enable western limit</A>
+<LI><A NAME="tex2html246"
+  HREF="node15.html#SECTION001530700000000000000">Southern limit for goto ops (degrees)</A>
+<LI><A NAME="tex2html247"
+  HREF="node15.html#SECTION001530800000000000000">Enable southern limit</A>
+<LI><A NAME="tex2html248"
+  HREF="node15.html#SECTION001530900000000000000">Northern limit for goto ops (degrees)</A>
+<LI><A NAME="tex2html249"
+  HREF="node15.html#SECTION0015301000000000000000">Enable northern limit</A>
+<LI><A NAME="tex2html250"
+  HREF="node15.html#SECTION0015301100000000000000">Abort obscript gotos that cause a meridian flip</A>
+<LI><A NAME="tex2html251"
+  HREF="node15.html#SECTION0015301200000000000000">Mount speed when centering (times sidereal rate)</A>
+<LI><A NAME="tex2html252"
+  HREF="node15.html#SECTION0015301300000000000000">Mount speed when guiding (times sidereal rate)</A>
+<LI><A NAME="tex2html253"
+  HREF="node15.html#SECTION0015301400000000000000">Use timed centering moves for small slews</A>
+<LI><A NAME="tex2html254"
+  HREF="node15.html#SECTION0015301500000000000000">Precess coordinated sent to the scope to the epoch of the day</A>
+<LI><A NAME="tex2html255"
+  HREF="node15.html#SECTION0015301600000000000000">Amount of gear play we take out at the end of slews (degrees)</A>
+<LI><A NAME="tex2html256"
+  HREF="node15.html#SECTION0015301700000000000000">Mount stabilisation delay (ms)</A>
+<LI><A NAME="tex2html257"
+  HREF="node15.html#SECTION0015301800000000000000">Amount of pointing dither between frames (arcmin)</A>
+<LI><A NAME="tex2html258"
+  HREF="node15.html#SECTION0015301900000000000000">Enable pointing dithering</A>
+<LI><A NAME="tex2html259"
+  HREF="node15.html#SECTION0015302000000000000000">Max error we accept in telescope pointing (degrees)</A>
+</UL>
+<LI><A NAME="tex2html260"
+  HREF="node15.html#SECTION001540000000000000000">Guiding options</A>
+<UL>
+<LI><A NAME="tex2html261"
+  HREF="node15.html#SECTION001540100000000000000">Guiding algorithm</A>
+<LI><A NAME="tex2html262"
+  HREF="node15.html#SECTION001540200000000000000">Reticle size</A>
+<LI><A NAME="tex2html263"
+  HREF="node15.html#SECTION001540300000000000000">Centroid area radius</A>
+<LI><A NAME="tex2html264"
+  HREF="node15.html#SECTION001540400000000000000">Guide box size</A>
+<LI><A NAME="tex2html265"
+  HREF="node15.html#SECTION001540500000000000000">Guide box zoom</A>
+</UL>
+<LI><A NAME="tex2html266"
+  HREF="node15.html#SECTION001550000000000000000">CCD Reduction options</A>
+<UL>
+<LI><A NAME="tex2html267"
+  HREF="node15.html#SECTION001550100000000000000">Minimum backgound sigmas</A>
+<LI><A NAME="tex2html268"
+  HREF="node15.html#SECTION001550200000000000000">Method used for stacking frames</A>
+<LI><A NAME="tex2html269"
+  HREF="node15.html#SECTION001550300000000000000">Iteration limit for stacking operations</A>
+<LI><A NAME="tex2html270"
+  HREF="node15.html#SECTION001550400000000000000">Clipping sigmas for mmedian and k-s</A>
+<LI><A NAME="tex2html271"
+  HREF="node15.html#SECTION001550500000000000000">Run CCD reductions automatically on frame display</A>
+</UL>
+<LI><A NAME="tex2html272"
+  HREF="node15.html#SECTION001560000000000000000">Star Detection and Search Options</A>
+<UL>
+<LI><A NAME="tex2html273"
+  HREF="node15.html#SECTION001560100000000000000">Star Detection SNR</A>
+<LI><A NAME="tex2html274"
+  HREF="node15.html#SECTION001560200000000000000">Maximum Detected Stars</A>
+<LI><A NAME="tex2html275"
+  HREF="node15.html#SECTION001560300000000000000">Maximum Catalog Stars</A>
+<LI><A NAME="tex2html276"
+  HREF="node15.html#SECTION001560400000000000000">Faintest Magnitude for Catalog Stars</A>
+<LI><A NAME="tex2html277"
+  HREF="node15.html#SECTION001560500000000000000">Maximum Radius for Catalog Stars</A>
+</UL>
+<LI><A NAME="tex2html278"
+  HREF="node15.html#SECTION001570000000000000000">Wcs Fitting Options</A>
+<UL>
+<LI><A NAME="tex2html279"
+  HREF="node15.html#SECTION001570100000000000000">Scale tolerance</A>
+<LI><A NAME="tex2html280"
+  HREF="node15.html#SECTION001570200000000000000">Star position tolerance</A>
+<LI><A NAME="tex2html281"
+  HREF="node15.html#SECTION001570300000000000000">Rotation tolerance</A>
+<LI><A NAME="tex2html282"
+  HREF="node15.html#SECTION001570400000000000000">Minimum number of pairs</A>
+<LI><A NAME="tex2html283"
+  HREF="node15.html#SECTION001570500000000000000">Max skip</A>
+<LI><A NAME="tex2html284"
+  HREF="node15.html#SECTION001570600000000000000">Maximum pairs</A>
+<LI><A NAME="tex2html285"
+  HREF="node15.html#SECTION001570700000000000000">Min A-B distance </A>
+<LI><A NAME="tex2html286"
+  HREF="node15.html#SECTION001570800000000000000">Max error for WCS validation</A>
+<LI><A NAME="tex2html287"
+  HREF="node15.html#SECTION001570900000000000000">Min pairs for WCS validation</A>
+<LI><A NAME="tex2html288"
+  HREF="node15.html#SECTION0015701000000000000000">Scale change per iteration</A>
+<LI><A NAME="tex2html289"
+  HREF="node15.html#SECTION0015701100000000000000">Default image scale</A>
+</UL>
+<LI><A NAME="tex2html290"
+  HREF="node15.html#SECTION001580000000000000000">Aperture Photometry Options</A>
+<UL>
+<LI><A NAME="tex2html291"
+  HREF="node15.html#SECTION001580100000000000000">Radius of central aperture</A>
+<LI><A NAME="tex2html292"
+  HREF="node15.html#SECTION001580200000000000000">Inner radius of sky annulus </A>
+<LI><A NAME="tex2html293"
+  HREF="node15.html#SECTION001580300000000000000">Outer radius of sky annulus </A>
+<LI><A NAME="tex2html294"
+  HREF="node15.html#SECTION001580400000000000000">Center apertures</A>
+<LI><A NAME="tex2html295"
+  HREF="node15.html#SECTION001580500000000000000">Max centering error</A>
+<LI><A NAME="tex2html296"
+  HREF="node15.html#SECTION001580600000000000000">Discard unlocated standards</A>
+<LI><A NAME="tex2html297"
+  HREF="node15.html#SECTION001580700000000000000">Max center distance</A>
+<LI><A NAME="tex2html298"
+  HREF="node15.html#SECTION001580800000000000000">Sky method</A>
+<LI><A NAME="tex2html299"
+  HREF="node15.html#SECTION001580900000000000000">Sigmas</A>
+<LI><A NAME="tex2html300"
+  HREF="node15.html#SECTION0015801000000000000000">Saturation limit</A>
+<LI><A NAME="tex2html301"
+  HREF="node15.html#SECTION0015801100000000000000">Instrumental band</A>
+<LI><A NAME="tex2html302"
+  HREF="node15.html#SECTION0015801200000000000000">Force iband </A>
+<LI><A NAME="tex2html303"
+  HREF="node15.html#SECTION0015801300000000000000">Default catalog error</A>
+<LI><A NAME="tex2html304"
+  HREF="node15.html#SECTION0015801400000000000000">Alpha</A>
+<LI><A NAME="tex2html305"
+  HREF="node15.html#SECTION0015801500000000000000">Beta</A>
+</UL>
+<LI><A NAME="tex2html306"
+  HREF="node15.html#SECTION001590000000000000000">Multi-Frame Photometry Options</A>
+<UL>
+<LI><A NAME="tex2html307"
+  HREF="node15.html#SECTION001590100000000000000">Bands setup</A>
+<LI><A NAME="tex2html308"
+  HREF="node15.html#SECTION001590200000000000000">Outlier threshold </A>
+<LI><A NAME="tex2html309"
+  HREF="node15.html#SECTION001590300000000000000">Zeropoint outlier threshold </A>
+<LI><A NAME="tex2html310"
+  HREF="node15.html#SECTION001590400000000000000">Minimum airmass variance </A>
+<LI><A NAME="tex2html311"
+  HREF="node15.html#SECTION001590500000000000000">Minimum airmass variance </A>
+<LI><A NAME="tex2html312"
+  HREF="node15.html#SECTION001590600000000000000">Airmass range </A>
+<LI><A NAME="tex2html313"
+  HREF="node15.html#SECTION001590700000000000000">Airmass maximum range </A>
+<LI><A NAME="tex2html314"
+  HREF="node15.html#SECTION001590800000000000000">Limiting magnitude from zeropoint </A>
+</UL>
+<LI><A NAME="tex2html315"
+  HREF="node15.html#SECTION0015100000000000000000">Star Display Options</A>
+<UL>
+<LI><A NAME="tex2html316"
+  HREF="node15.html#SECTION0015100100000000000000">Label Target Stars</A>
+<LI><A NAME="tex2html317"
+  HREF="node15.html#SECTION0015100200000000000000">Label Catalog Objects</A>
+<LI><A NAME="tex2html318"
+  HREF="node15.html#SECTION0015100300000000000000">Label Standard Stars</A>
+<LI><A NAME="tex2html319"
+  HREF="node15.html#SECTION0015100400000000000000">Standard Star Label Band</A>
+<LI><A NAME="tex2html320"
+  HREF="node15.html#SECTION0015100500000000000000">Minimum star size</A>
+<LI><A NAME="tex2html321"
+  HREF="node15.html#SECTION0015100600000000000000">Maximum display star size</A>
+<LI><A NAME="tex2html322"
+  HREF="node15.html#SECTION0015100700000000000000">Default display star size</A>
+<LI><A NAME="tex2html323"
+  HREF="node15.html#SECTION0015100800000000000000">Display pixels per magnitude</A>
+<LI><A NAME="tex2html324"
+  HREF="node15.html#SECTION0015100900000000000000">Brightest symbol magnitude</A>
+<LI><A NAME="tex2html325"
+  HREF="node15.html#SECTION00151001000000000000000">Display limiting magnitude</A>
+<LI><A NAME="tex2html326"
+  HREF="node15.html#SECTION00151001100000000000000">Show fainter stars</A>
+<LI><A NAME="tex2html327"
+  HREF="node15.html#SECTION00151001200000000000000">Zoom star shapes</A>
+<LI><A NAME="tex2html328"
+  HREF="node15.html#SECTION00151001300000000000000">Star shapes zoom limit</A>
+<LI><A NAME="tex2html329"
+  HREF="node15.html#SECTION00151001400000000000000">Plot error scale</A>
+<LI><A NAME="tex2html330"
+  HREF="node15.html#SECTION0015101000000000000000">Star Display Colors</A>
+<UL>
+<LI><A NAME="tex2html331"
+  HREF="node15.html#SECTION0015101100000000000000">Autodected Stars Color</A>
+<LI><A NAME="tex2html332"
+  HREF="node15.html#SECTION0015101200000000000000">Field Stars Color</A>
+<LI><A NAME="tex2html333"
+  HREF="node15.html#SECTION0015101300000000000000">Standard Stars Color</A>
+<LI><A NAME="tex2html334"
+  HREF="node15.html#SECTION0015101400000000000000">Target Stars Color</A>
+<LI><A NAME="tex2html335"
+  HREF="node15.html#SECTION0015101500000000000000">Catalog Objects Color</A>
+<LI><A NAME="tex2html336"
+  HREF="node15.html#SECTION0015101600000000000000">User-Marked Stars Color</A>
+<LI><A NAME="tex2html337"
+  HREF="node15.html#SECTION0015101700000000000000">Align Stars Color</A>
+<LI><A NAME="tex2html338"
+  HREF="node15.html#SECTION0015101800000000000000">Selected Stars Color</A>
+</UL>
+<LI><A NAME="tex2html339"
+  HREF="node15.html#SECTION0015102000000000000000">Star Display Shapes</A>
+<UL>
+<LI><A NAME="tex2html340"
+  HREF="node15.html#SECTION0015102100000000000000">Autodected Stars Shape</A>
+<LI><A NAME="tex2html341"
+  HREF="node15.html#SECTION0015102200000000000000">Field Stars Shape</A>
+<LI><A NAME="tex2html342"
+  HREF="node15.html#SECTION0015102300000000000000">Standard Stars Shape</A>
+<LI><A NAME="tex2html343"
+  HREF="node15.html#SECTION0015102400000000000000">Target Stars Shape</A>
+<LI><A NAME="tex2html344"
+  HREF="node15.html#SECTION0015102500000000000000">Catalog Objects Shape</A>
+<LI><A NAME="tex2html345"
+  HREF="node15.html#SECTION0015102600000000000000">User-Marked Stars Shape</A>
+<LI><A NAME="tex2html346"
+  HREF="node15.html#SECTION0015102700000000000000">Align Stars Shape</A>
+</UL>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html347"
+  HREF="node16.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

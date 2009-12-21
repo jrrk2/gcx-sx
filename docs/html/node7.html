@@ -1,0 +1,1267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>CCD Reduction</TITLE>
+<META NAME="description" CONTENT="CCD Reduction">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html570"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html566"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html560"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html568"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html571"
+  HREF="node8.html">Aperture Photometry</A>
+<B> Up:</B> <A NAME="tex2html567"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html561"
+  HREF="node6.html">World Coordinates</A>
+ &nbsp <B>  <A NAME="tex2html569"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html572"
+  HREF="node7.html#SECTION00710000000000000000">CCD Camera Response Model</A>
+<LI><A NAME="tex2html573"
+  HREF="node7.html#SECTION00720000000000000000">Bias and Dark Frames</A>
+<UL>
+<LI><A NAME="tex2html574"
+  HREF="node7.html#SECTION00720010000000000000">Dark frames</A>
+<LI><A NAME="tex2html575"
+  HREF="node7.html#SECTION00720020000000000000">Noise contribution of bias and dark frames.</A>
+<LI><A NAME="tex2html576"
+  HREF="node7.html#SECTION00721000000000000000">Working without Bias Frames</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html577"
+  HREF="node7.html#SECTION00730000000000000000">Flat-field Frames</A>
+<LI><A NAME="tex2html578"
+  HREF="node7.html#SECTION00740000000000000000">Reducing the Data Frames</A>
+<LI><A NAME="tex2html579"
+  HREF="node7.html#SECTION00750000000000000000">Frame Combining Methods</A>
+<UL>
+<LI><A NAME="tex2html580"
+  HREF="node7.html#SECTION00750010000000000000">Average</A>
+<LI><A NAME="tex2html581"
+  HREF="node7.html#SECTION00750020000000000000">Median</A>
+<LI><A NAME="tex2html582"
+  HREF="node7.html#SECTION00750030000000000000">Mean-Median</A>
+<LI><A NAME="tex2html583"
+  HREF="node7.html#SECTION00750040000000000000">Kappa-Sigma Clipping</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html584"
+  HREF="node7.html#SECTION00760000000000000000">CCD Reduction with gcx</A>
+<UL>
+<LI><A NAME="tex2html585"
+  HREF="node7.html#SECTION00761000000000000000">Loading and Selecting Image Frames</A>
+<LI><A NAME="tex2html586"
+  HREF="node7.html#SECTION00762000000000000000">Creating a Master Bias or Master Dark Frame</A>
+<LI><A NAME="tex2html587"
+  HREF="node7.html#SECTION00763000000000000000">Creating a Bias-Subtracted Master Dark Frame</A>
+<LI><A NAME="tex2html588"
+  HREF="node7.html#SECTION00764000000000000000">Creating a Master Flat Frame</A>
+<UL>
+<LI><A NAME="tex2html589"
+  HREF="node7.html#SECTION00764010000000000000">Making a Superflat</A>
+</UL>
+<LI><A NAME="tex2html590"
+  HREF="node7.html#SECTION00765000000000000000">Reducing the Data Frames</A>
+<LI><A NAME="tex2html591"
+  HREF="node7.html#SECTION00766000000000000000">Aligning and Stacking Frames</A>
+<LI><A NAME="tex2html592"
+  HREF="node7.html#SECTION00767000000000000000">Running CCD Reductions from the Command Line</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00700000000000000000">
+CCD Reduction</A>
+</H1>
+
+<P>
+Ideally, an image taked by a CCD camera through a telescope will give accurate information 
+about the light flux distribution over a portion of the sky. Unfortunately, this is not 
+generally the case. Instrument imperfections and the discrete nature of light itself
+concur to introduce errors in the measured data. The errors (differences between 
+the measured values and the ``true'' ones) are the result of several factors, some 
+random in nature, and some deteministic. 
+
+<P>
+The goal of the CCD reduction process is to eliminate (or at least minimise) the contribution 
+of deterministic factors in the errors, in other words to remove the <EM>instrument signature</EM>
+from the data.
+
+<P>
+A second, but not less important, goal is to preserve information about the noise sources, so that 
+users of the reduced data can evaluate the random errors of the data.
+
+<P>
+We begin this chapter by describing the way the general CCD reduction
+process works, and in the process define bias, dark and flat
+files. The second part of the chapter is devoted to the practical
+implementation of the reduction tasks in the program.
+
+<P>
+
+<H1><A NAME="SECTION00710000000000000000">
+CCD Camera Response Model</A>
+</H1>
+Raw pixel values for a CCD frame can be calculated as
+follows:<A NAME="tex2html18"
+  HREF="footnode.html#foot372"><SUP>6.1</SUP></A>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+s(x,y) = B(x,y) + t D(x,y) + t G(x, y) I(x, y) + {\rm noise}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ccd1"></A><IMG
+ WIDTH="400" HEIGHT="31" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{displaymath}
+s(x,y) = B(x,y) + t D(x,y) + t G(x, y) I(x, y) + {\rm noise}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$B(x,y)$"> is the <EM>bias</EM> value of each pixel, <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$t$"> is the integration time, 
+<IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$D(x,y)$"> is the <EM>dark current</EM>, 
+<IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$G(x,y)$"> is the <EM>sensitivity</EM> and <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$I(x,y)$"> is the light flux reaching the pixel.
+We cannot predict the instantaneous values of the noise component but some statistics 
+about it can be calculated (Appendix&nbsp;<A HREF="node10.html#ap:noise">A</A>).
+
+<P>
+To estimate the flux values reaching the sensor from the raw frame, we need to
+estimate <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$B$">, <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$D$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$G$">. After that, Equation <A HREF="node7.html#eq:ccd1">6.1</A> can be solved for <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$I$">.
+<IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$B$">, <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$D$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$G$"> are calculated starting from calibration frames taken
+under controlled conditions: 
+<EM>bias</EM>, <EM>dark</EM> and <EM>flat</EM> frames.
+
+<P>
+
+<H1><A NAME="SECTION00720000000000000000">
+Bias and Dark Frames</A>
+</H1>
+
+<P>
+If we take very short exposures without opening the camera's shutter (<EM>bias frames</EM>
+<IMG
+ WIDTH="43" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$t = 0$"> and <IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$I(x,y)=0$">; Equation&nbsp;(<A HREF="node7.html#eq:ccd1">6.1</A>) becomes: 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+b(x,y) = B(x,y) + {\rm noise}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:bias"></A><IMG
+ WIDTH="185" HEIGHT="31" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}
+b(x,y) = B(x,y) + {\rm noise}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+To obtain an estimate of <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$B$">, we simply use <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$b$">:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{B}(x,y) = b(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="124" HEIGHT="31" BORDER="0"
+ SRC="img18.png"
+ ALT="\begin{displaymath}
+\widetilde{B}(x,y) = b(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+We use the tilde to denote that we can only estimate <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$B$">, because of the noise. If we average 
+several bias frames together we can get arbitrarily close to <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$B$">, as the relative noise 
+contribution decreases with the square root of the number of frames averaged.
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{B}(x,y) = \frac{1}{N}\sum_i b_i(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="177" HEIGHT="51" BORDER="0"
+ SRC="img19.png"
+ ALT="\begin{displaymath}
+\widetilde{B}(x,y) = \frac{1}{N}\sum_i b_i(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+We will call this the <EM>master bias frame</EM>.
+
+<P>
+
+<H4><A NAME="SECTION00720010000000000000">
+Dark frames</A>
+</H4> If we now take longer exposures with the shutter closed, 
+we obtain <EM>dark frames</EM>:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+d(x,y) = B(x,y)+tD(x,y)+{\rm noise}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:dark"></A><IMG
+ WIDTH="270" HEIGHT="31" BORDER="0"
+ SRC="img20.png"
+ ALT="\begin{displaymath}
+d(x,y) = B(x,y)+tD(x,y)+{\rm noise}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+From this, we can simply subtract the bias and divide by the exposure time, and we get
+our dark current estimate:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{D}(x,y) = \frac{d(x,y) - \widetilde{B}(x,y)}{t_{\rm dark}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="206" HEIGHT="50" BORDER="0"
+ SRC="img21.png"
+ ALT="\begin{displaymath}
+\widetilde{D}(x,y) = \frac{d(x,y) - \widetilde{B}(x,y)}{t_{\rm dark}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Of course, to reduce the noise contribution we can also average several dark frames:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{D}(x,y) = \frac{1}{t_{\rm dark}}\frac{1}{M}\sum_i d_i(x,y) - \widetilde{B}(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="296" HEIGHT="51" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}
+\widetilde{D}(x,y) = \frac{1}{t_{\rm dark}}\frac{1}{M}\sum_i d_i(x,y) - \widetilde{B}(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+It is convenient to work with a different form of the dark current frame:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{D}'(x,y)=t_{\rm dark}\widetilde{D}(x,y)=\frac{1}{M}\sum_i d_i(x,y) - \widetilde{B}(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="375" HEIGHT="51" BORDER="0"
+ SRC="img23.png"
+ ALT="\begin{displaymath}
+\widetilde{D}'(x,y)=t_{\rm dark}\widetilde{D}(x,y)=\frac{1}{M}\sum_i d_i(x,y) - \widetilde{B}(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which will be called the <EM>bias subtracted master dark frame</EM>.
+
+<P>
+If we have a data frame with an integration time of <IMG
+ WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$t_{\rm data}$">, the first two
+terms in (<A HREF="node7.html#eq:ccd1">6.1</A>) are estimated by the <EM>master dark</EM> frame <!-- MATH
+ $\widetilde{D}_M$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\widetilde{D}_M$">:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{D}_M(x,y)
+=\widetilde{B}(x,y) + t_{\rm data}\widetilde{D}(x,y)=
+\widetilde{B}(x,y)+\frac{t_{\rm data}}{t_{\rm dark}}\widetilde{D}'(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:mdark"></A><IMG
+ WIDTH="452" HEIGHT="44" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{displaymath}
+\widetilde{D}_M(x,y)
+=\widetilde{B}(x,y) + t_{\rm data}\wide...
+...e{B}(x,y)+\frac{t_{\rm data}}{t_{\rm dark}}\widetilde{D}'(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+
+<H4><A NAME="SECTION00720020000000000000">
+Noise contribution of bias and dark frames.</A>
+</H4>
+A detailed description of noise sources in CCD cameras is provided in Appendix&nbsp;<A HREF="node10.html#ap:noise">A</A>. 
+If the dark current contribution is not very large, the <EM>noise</EM> terms of (<A HREF="node7.html#eq:bias">6.2</A>) and 
+(<A HREF="node7.html#eq:dark">6.5</A>) are both equal to the camera <EM>read noise</EM>. 
+
+<P>
+If we use our estimated <IMG
+ WIDTH="19" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$\widetilde{B}$"> and <IMG
+ WIDTH="19" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$\widetilde{D}$"> to reduce a data frame with
+an integration time of <IMG
+ WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$t_{\rm data}$">, the bias and dark subtraction will contribute a
+noise level of:<A NAME="tex2html19"
+  HREF="footnode.html#foot453"><SUP>6.2</SUP></A>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{DB} = N_R\sqrt{\frac{1}{N}+\frac{1}{M}
+  \left(\frac{t_{\rm data}}{t_{\rm dark}}\right)^2}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:dbnoise"></A><IMG
+ WIDTH="233" HEIGHT="55" BORDER="0"
+ SRC="img29.png"
+ ALT="\begin{displaymath}
+\sigma_{DB} = N_R\sqrt{\frac{1}{N}+\frac{1}{M}
+\left(\frac{t_{\rm data}}{t_{\rm dark}}\right)^2}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$N_R$"> is the camera read noise, <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$N$"> is the number of bias frames averaged, <IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$M$"> the number of 
+dark frames averaged and <IMG
+ WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$t_{\rm dark}$"> the integration time used for the dark frames.
+
+<P>
+We generally want to keep the square root in (<A HREF="node7.html#eq:dbnoise">6.10</A>) between <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$1/3$"> and <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.png"
+ ALT="$1$">. 
+A value lower than <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$1/3$"> will provide a negligible improvement in the overall signal/noise 
+ratio, while for values larger than 1, this term will dominate the camera read noise and 
+become significant.
+
+<P>
+
+<H2><A NAME="SECTION00721000000000000000">
+Working without Bias Frames</A>
+</H2>
+It is easy to observe from (<A HREF="node7.html#eq:mdark">6.9</A>) that we can obtain our master dark frame by simply
+averaging dark frames taken with the same integration time as our data frames. In this
+case, we don't need the bias frames at all:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{D}_M(x,y) = \frac{1}{M}\sum_i d_i(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="198" HEIGHT="51" BORDER="0"
+ SRC="img36.png"
+ ALT="\begin{displaymath}
+\widetilde{D}_M(x,y) = \frac{1}{M}\sum_i d_i(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+As a bonus, the noise contribution of the master dark frame is reduced to:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sigma_{D} = N_R\sqrt{\frac{1}{M}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:dnoise"></A><IMG
+ WIDTH="109" HEIGHT="45" BORDER="0"
+ SRC="img37.png"
+ ALT="\begin{displaymath}
+\sigma_{D} = N_R\sqrt{\frac{1}{M}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+In general, people using large telescopes and <IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$LN_2$"> cooled cameras preffer using bias frames,
+as they require less time than dark frames; The dark current of these cameras is 
+very low and stable, and a single set of darks can be used to reduce many
+observations. Users of thermoelectrically-cooled cameras, which have more significant 
+dark currents, are more likely to use dark frames exclussively. 
+
+<P>
+
+<H1><A NAME="SECTION00730000000000000000">
+Flat-field Frames</A>
+</H1>
+
+<P>
+With <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$B$"> and <IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$D$"> out of the way, we need a way to estimate <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$G$"> in (<A HREF="node7.html#eq:ccd1">6.1</A>) before we can
+recover the incident flux. To do this, we apply a flat-field (even)
+illumination to 
+the camera<A NAME="tex2html20"
+  HREF="footnode.html#foot481"><SUP>6.3</SUP></A>and acquire several <EM>flat-field frames</EM>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+f(x,y)=B(x,y)+t_{\rm flat}D(x,y)+t_{\rm flat}G(x,y)L+{\rm noise}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="405" HEIGHT="31" BORDER="0"
+ SRC="img39.png"
+ ALT="\begin{displaymath}
+f(x,y)=B(x,y)+t_{\rm flat}D(x,y)+t_{\rm flat}G(x,y)L+{\rm noise}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$L$"> is the light flux reaching each pixel, assumed equal across the frame.
+
+<P>
+We then calculate a master dark frame for the flat fields <IMG
+ WIDTH="74" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$D_M^F(x,y)$"> and subtract it from the
+flats, obtaining:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+f'(x,y)=f(x,y)-D_M^F(x,y)=t_{\rm flat}G(x,y)L+{\rm noise}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:flat1"></A><IMG
+ WIDTH="396" HEIGHT="31" BORDER="0"
+ SRC="img42.png"
+ ALT="\begin{displaymath}
+f'(x,y)=f(x,y)-D_M^F(x,y)=t_{\rm flat}G(x,y)L+{\rm noise}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Again, to reduce the noise contribution, we usually average several flat frames, to arrive at a
+<EM>master flat</EM> frame 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{F}_M(x,y) = \frac{1}{N}\sum_i f'(x,y) = \frac{1}{N}\sum_i f(x,y)-D_M^F(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:flat2"></A><IMG
+ WIDTH="405" HEIGHT="51" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}
+\widetilde{F}_M(x,y) = \frac{1}{N}\sum_i f'(x,y) = \frac{1}{N}\sum_i f(x,y)-D_M^F(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+If we knew <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$F$">, we could solve the above equation for <IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$G(x,y)$">. However, the aboslute value of 
+<IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$F$"> is not known, and in many cases can vary between different flats. So, instead of 
+calibrating the absolute value of <IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$G(x,y)$">, we only try to remove it's variation across
+the frame. We write:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+G(x,y)=\bar{G}g(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="138" HEIGHT="31" BORDER="0"
+ SRC="img45.png"
+ ALT="\begin{displaymath}
+G(x,y)=\bar{G}g(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the average of <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$g(x,y)$"> across the frame is 1. (<A HREF="node7.html#eq:flat2">6.15</A>) becomes:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{F}_M(x,y)=t_{\rm flat}\bar{G}g(x,y)L
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:flat3"></A><IMG
+ WIDTH="191" HEIGHT="31" BORDER="0"
+ SRC="img47.png"
+ ALT="\begin{displaymath}
+\widetilde{F}_M(x,y)=t_{\rm flat}\bar{G}g(x,y)L
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+We take the average of <!-- MATH
+ $\widetilde{F}_M(x,y)$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\widetilde{F}_M(x,y)$"> across the frame:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\bar{F}=\sum_x\sum_yt_{\rm flat}\bar{G}g(x,y)L=t_{\rm flat}\bar{G}L\sum_x\sum_yg(x,y)=
+  t_{\rm flat}\bar{G}L
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:flat4"></A><IMG
+ WIDTH="445" HEIGHT="49" BORDER="0"
+ SRC="img49.png"
+ ALT="\begin{displaymath}
+\bar{F}=\sum_x\sum_yt_{\rm flat}\bar{G}g(x,y)L=t_{\rm flat}\bar{G}L\sum_x\sum_yg(x,y)=
+t_{\rm flat}\bar{G}L
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Dividing equation <A HREF="node7.html#eq:flat3">6.17</A> by <IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$\bar{F}$">, we obtain:<A NAME="tex2html21"
+  HREF="footnode.html#foot525"><SUP>6.4</SUP></A>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{\widetilde{F}_M(x,y)}{\bar{F}}=g(x,y)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:flat5"></A><IMG
+ WIDTH="139" HEIGHT="47" BORDER="0"
+ SRC="img51.png"
+ ALT="\begin{displaymath}
+\frac{\widetilde{F}_M(x,y)}{\bar{F}}=g(x,y)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+
+<H1><A NAME="SECTION00740000000000000000">
+Reducing the Data Frames</A>
+</H1>
+Armed with our master dark and master flat frames, we can proceed to reduce our data frame. 
+Starting from:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+s(x,y) = B(x,y) + t_{data} D(x,y) + t_{\rm data} \bar{G} g(x, y) I(x, y)) + {\rm noise}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ccd2"></A><IMG
+ WIDTH="470" HEIGHT="31" BORDER="0"
+ SRC="img52.png"
+ ALT="\begin{displaymath}
+s(x,y) = B(x,y) + t_{data} D(x,y) + t_{\rm data} \bar{G} g(x, y) I(x, y)) + {\rm noise}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+we subtract the master dark frame (<A HREF="node7.html#eq:mdark">6.9</A>) and divide by the normalised 
+master flat (<A HREF="node7.html#eq:flat5">6.19</A>) and obtain:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\frac{\bar{F}}{\widetilde{F}_M(x,y)}[s(x,y) - \widetilde{D}_M(x,y)] = 
+t_{\rm data} \bar{G} I(x,y) + {\rm noise}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ccd3"></A><IMG
+ WIDTH="397" HEIGHT="52" BORDER="0"
+ SRC="img53.png"
+ ALT="\begin{displaymath}
+\frac{\bar{F}}{\widetilde{F}_M(x,y)}[s(x,y) - \widetilde{D}_M(x,y)] =
+t_{\rm data} \bar{G} I(x,y) + {\rm noise}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{I}(x,y) = \frac{1}{\bar{G}\cdot t_{\rm data}}\frac{\bar{F}}{\widetilde{F}_M(x,y)}
+[s(x,y) - \widetilde{D}_M(x,y)]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ccd4"></A><IMG
+ WIDTH="354" HEIGHT="52" BORDER="0"
+ SRC="img54.png"
+ ALT="\begin{displaymath}
+\widetilde{I}(x,y) = \frac{1}{\bar{G}\cdot t_{\rm data}}\frac{\bar{F}}{\widetilde{F}_M(x,y)}
+[s(x,y) - \widetilde{D}_M(x,y)]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Or, in terms of the master bias and bias-subtracted master dark frames:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{I}(x,y) = \frac{1}{\bar{G}\cdot t_{\rm data}}\frac{\bar{F}}{\widetilde{F}_M(x,y)}
+[s(x,y) - \frac{t_{\rm data}}{t_{\rm dark}}\widetilde{D}'(x,y) - \widetilde{B}(x,y)]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ccd5"></A><IMG
+ WIDTH="457" HEIGHT="52" BORDER="0"
+ SRC="img55.png"
+ ALT="\begin{displaymath}
+\widetilde{I}(x,y) = \frac{1}{\bar{G}\cdot t_{\rm data}}\fra...
+... data}}{t_{\rm dark}}\widetilde{D}'(x,y) - \widetilde{B}(x,y)]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.23)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+We have obtained an estimate of the incident light flux up to a constant 
+(<!-- MATH
+ $\bar{G}t_{\rm data}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$\bar{G}t_{\rm data}$">) which represents the average sensitivity of the camera
+multiplied by the integration time, which is the best we can do without a reference 
+source calibrated in absolute units. 
+
+<P>
+
+<H1><A NAME="SECTION00750000000000000000"></A><A NAME="sec:combining"></A>
+<BR>
+Frame Combining Methods
+</H1>
+
+<P>
+Earlier in this chapter we mentioned that it is useful in many cases to ``average'' several frames
+in order to reduce the noise. It turns out that while arithmetic averaging does indeed reduce
+the resulting noise, it doesn't go very far in removing the effect of
+devinat values that are far from the mean. When combining CCD frames, the most common causes of deviant values are
+cosmic ray hits on all frames and unwanted star images on sky flats. 
+
+<P>
+When combining <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$N$"> CCD frames, we start with <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$N$"> values for each pixel and want to arrive
+at a combined pixel value that uses as much as possible of the available information (so that 
+we obtain the maximum noise reduction), while rejecting any values that are affected by artifacts.
+<SMALL>GCX </SMALL>implements four combining methods, described below.
+
+<P>
+
+<H4><A NAME="SECTION00750010000000000000">
+Average</A>
+</H4>
+Average is the ``baseline'' method of frame combining. The values are added together and the 
+result divided by the number of values (arithmetic mean). For Gaussian-distributed data, averaging
+produces the values with the least variance (so it has the maximal <EM>statistical efficiency</EM>).
+Averaging is independent of the individual frame scaling, and
+computationally efficient.
+
+<P>
+The deviant value rejection of averaging is only modest; deviant values are reduced by a factor
+of <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$N$">. For this reason, it is recommended that averaging only be used when we know that deviant 
+values are not present (for example, when combining frames for which the outlier rejection has
+already been done).
+
+<P>
+
+<H4><A NAME="SECTION00750020000000000000">
+Median</A>
+</H4>
+A far more robust method of obtaining a combined value is the median (selecting the values which 
+has an equal number of values greater and smaller than itself). The median is easily calculated 
+and very little influenced by deviant values. It requires all frames 
+to have the same intensity scale.
+
+<P>
+On the down side, the median's statistical efficiency for Gaussian distributed values is only 
+0.65 of average's. Also, when combining integer values, the median does nothing to smooth out the
+quantisation effects; the median of any number of integer values is also an integer.
+
+<P>
+
+<H4><A NAME="SECTION00750030000000000000">
+Mean-Median</A>
+</H4>
+
+<P>
+Mean-median is a variant of the median method intended to improve the statistical efficiency
+of the median, and get around the quantisation problem. In the mean-median method, we compute the
+standard deviation of the pixel values around the median, and discard all the values than are 
+farther away than a specified number of standard deviations (usually 1.5 or 2). 
+The remaining values are averaged together.
+
+<P>
+Mean-median is fast, and works well for large sets. With small sets, the fact that the deviant 
+pixels increase the calculated standard deviation limits it's efficiency. It requires all frames 
+to have the same intensity scale.
+
+<P>
+
+<H4><A NAME="SECTION00750040000000000000">
+Kappa-Sigma Clipping</A>
+</H4>
+
+<P>
+<IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$\kappa\sigma$">-clipping is the most ellaborate combining method provided by <SMALL>GCX </SMALL>. It starts 
+by calculating the median and the standard deviation around it. The values with large
+deviations relative to the standard deviation are excluded. Then, the mean and standard 
+deviation of the remaining values are computed. Again, the values that are away for the 
+mean are excluded, and the process is repeated until there is no change in the mean or the
+iteration limit is reached. 
+
+<P>
+<IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$\kappa\sigma$">-clipping is very effective at removing cosmic rays and star images from sky
+flats, even with a reduced number of frames. It is also capable of removing all the star 
+images from a number of frames of different fields, leaving only the sky background, which makes
+it possible to create a flat frame from the regular data frames (see below for <EM>super-flat</EM>).
+
+<P>
+<IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$\kappa\sigma$">-clipping is the most computationally-intensive method of frame combining. 
+It requires all frames to have the same intensity scale.
+
+<P>
+
+<H1><A NAME="SECTION00760000000000000000">
+CCD Reduction with gcx</A>
+</H1>
+
+<P>
+Like most tasks in <SMALL>GCX </SMALL>CCD Reductions can be performed either interactively or using 
+the command-line interface. We'll discuss the interactive way first.
+
+<P>
+
+<H2><A NAME="SECTION00761000000000000000">
+Loading and Selecting Image Frames</A>
+</H2>
+
+<P>
+To open up the CCD reduction dialog, select <EM>Processing/CCD Reduction</EM> or press <B>L</B>.
+In the <EM>Image Files</EM> tab, click on <EM>Add</EM> and in the file selector select any number of files
+and click <EM>Ok</EM>. The selected files will appear in the file list.
+
+<P>
+To display any of the frames in the list, click on it (it will become selected) and then click
+<EM>Display</EM>. The image will show in the main window. The loaded files can be viewed in sequence 
+by clicking <EM>next</EM> or pressing <B>N</B> repeteadly. If for some reson we want to exclude a 
+frame from being processed, clicking on <EM>Skip</EM> or pressing <B>S</B> will mark it to be skipped.
+
+<P>
+Skipped frames appear in the list with their names enclosed in square brackets. If we want 
+to remove the skip mark, clicking <EM>Unskip</EM> while the frames are selected will accomplish 
+that. Note that all reduction operations apply to all the frames in the file list that don't have 
+the skip mark, regardless of which are selected.
+
+<P>
+Whenever a frame is selected, a status line at the bottom of the dialog shows the file's name 
+and any operations already performed on it.<A NAME="tex2html22"
+  HREF="footnode.html#foot596"><SUP>6.5</SUP></A>
+<P>
+To revert some frames to their original status, select them and click on <EM>Reload</EM>. Frames 
+can be completely removed from the list by selecting them and the clicking on <EM>Remove</EM>.
+
+<P>
+
+<H2><A NAME="SECTION00762000000000000000">
+Creating a Master Bias or Master Dark Frame</A>
+</H2>
+
+<P>
+We will create a master bias frame by stacking several bias frames. If
+we preffer to work without bias 
+frames, we can use the same procedure to create a master dark frame.
+First clear the file list 
+(<EM>Select all</EM> then <EM>Remove</EM>) and add the bias frames to be
+stacked to the list.
+
+<P>
+Then, in the <EM>CCD Reduction</EM> tab, check that all the ``enable'' ticks are off (we don't want 
+to apply any operation to the bias frames). Same for the <EM>Aligment</EM> tab.
+
+<P>
+In the <EM>Stacking</EM> tab, select the desired parameters for the stacking operation (the method 
+and method parameters). A good initial setting is kappa_sigma, 1.5 sigmas and an iteration limit
+of 4. Set background matching to Off, and check ``Enable stacking''.
+
+<P>
+Finally, in the <EM>Run</EM> tab type in a file name<A NAME="tex2html23"
+  HREF="footnode.html#foot606"><SUP>6.6</SUP></A><A NAME="tex2html24"
+  HREF="footnode.html#foot1237"><SUP>6.7</SUP></A> (for example ``master_bias'') and click <EM>Run</EM>. The progress of the stacking operation 
+can be followed in the text window. After stacking is complete, the resulting frame is
+shown in the main window.
+
+<P>
+
+<H2><A NAME="SECTION00763000000000000000">
+Creating a Bias-Subtracted Master Dark Frame</A>
+</H2>
+
+<P>
+Suppose now that we have a number of dark frames taken with the same integration time 
+and we want to create a bias subtracted master dark frame from them. We'll use the
+master bias frame we just created.
+
+<P>
+Like above, clear the frame list and load the dark frames. Then, in the <EM>CCD Reduction</EM> tab
+enter the name of the master bias frame we just created (or click on the ``...'' button and select
+it in the file selector). The ``enable'' mark for bias subtraction should be on.
+
+<P>
+Then make sure that stacking is still enabled, enter an output file name and click on <EM>Run</EM>.
+The program will subtract the master bias frame from each of the dark frames, and then combine 
+the results. As before, the result will be shown in the main window.
+
+<P>
+Sometimes we need to scale the bias-subtracted dark frame, so it can be used to reduce data 
+frames taken with a different integration time. We can also do that now. Suppose our
+dark frames used 60 seconds on integration time, and we want to reduce 30-seconds data frames.
+We will need out bias-subtracted master dark to be scaled by a factor of 0.5. 
+In the <EM>CCD Reduction</EM> tab check the ``multiply enable'' box and enter 0.5 in the
+multiply entry. Then click on <EM>Run</EM> again,<A NAME="tex2html25"
+  HREF="footnode.html#foot1238"><SUP>6.8</SUP></A>of course not before changing the output 
+file name into something meaningful, like ``bmdark-30'' or something similar.
+
+<P>
+
+<H2><A NAME="SECTION00764000000000000000">
+Creating a Master Flat Frame</A>
+</H2>
+
+<P>
+To create a master frame, we need either a master dark frame of suitable integration time for
+the flats, or a master bias and suitably scaled bias-subtracted master dark frame.
+
+<P>
+Clear the file list and add the flat frames to it. In the <EM>CCD Reduction</EM> tab, set the
+bias and dark frame file names,<A NAME="tex2html26"
+  HREF="footnode.html#foot618"><SUP>6.9</SUP></A> and make sure their ``enable'' boxes are checked. 
+Go to the <EM>Stacking</EM> tab and enable stacking, set your algorithm and parameters. Except 
+if you are very sure that the flat frames have the same intensity (such as when using a
+known stable light box), enable multiplicative background matching.
+Finally, select an output file name, and run the flat generation.
+
+<P>
+
+<H4><A NAME="SECTION00764010000000000000">
+Making a Superflat</A>
+</H4> If we have enough data frames with a significant sky background and 
+different fields, they can be combined and the sky background used as a flat. We proceed 
+the same as for normal flats, except that we select data frames with a good background. 
+It is recommended that frames with low sky level are excluded from the superflat set. 
+
+<P>
+We probably want to multiply the frames by a constant to make sure the relatively low level 
+flat resulting is not affected by quatisation when the frame is saved in an integer format. 
+
+<P>
+
+<H2><A NAME="SECTION00765000000000000000">
+Reducing the Data Frames</A>
+</H2>
+
+<P>
+Reducing the data frames should is easy now; load them into the file list, specify the 
+bias, dark and flat to be used, select an output directory name and click on <EM>Run</EM>.
+
+<P>
+<SMALL>GCX </SMALL>will never overwrite the original frames, so we will need to create a second set of 
+reduced files. However, unless we have some use for the reduces frames, we can avoid saving
+them and just run the reduction every time we use the frames. For instance, we can align 
+and stack the frame, or run aperture photometry on the reduced frames by just specifying
+the bias/dark/flats together with the required operation. 
+
+<P>
+
+<H2><A NAME="SECTION00766000000000000000">
+Aligning and Stacking Frames</A>
+</H2>
+
+<P>
+When combining data frames, it is often required that they are aligned before their values are 
+combined. <SMALL>GCX </SMALL>contains an automatic alignment algorithm that works well with frames taken
+with the same setup (for instance multiple exposures). In the current version, the alignment 
+routine only performs image translations (it does not rotate or scale
+the images).<A NAME="tex2html27"
+  HREF="footnode.html#foot624"><SUP>6.10</SUP></A>
+<P>
+To align frames, they need to be in the file list. Then, in the <EM>Alignment</EM> tab select an
+alignment frame file name. This is the frame used as a reference--all others will be shifted 
+to match this one. Clicking the <EM>Show Alignment Stars</EM> button will detect suitable stars 
+from the alignment frame and display them in the main
+window.<A NAME="tex2html28"
+  HREF="footnode.html#foot627"><SUP>6.11</SUP></A>
+<P>
+Clicking on <EM>Run</EM> will perform the actual alignment. Stars are detected from each frame, and
+their position matched to the reference frame.<A NAME="tex2html29"
+  HREF="footnode.html#foot1239"><SUP>6.12</SUP></A> The frame will then be translated the appropiate
+amount. It is also possible to apply a gaussian smoothing filter here. Usually small FWHMs work
+best (0.1-0.5 pixels). 
+
+<P>
+After the frames are aligned, we can use the <EM>Display</EM> and <EM>Next</EM> buttons in the file list
+tab to browse the aligned files. Stars should show well centered inside the alignment star 
+markings. This is also a good time to exclude any bad frames (such as frames with 
+tracking problems).
+
+<P>
+When satisfied with the aligned frames, we can stack them and produce a final image. Just enable
+the stack check box and click on <EM>Run</EM> again. 
+
+<P>
+
+<H2><A NAME="SECTION00767000000000000000">
+Running CCD Reductions from the Command Line</A>
+</H2>
+
+<P>
+All CCD reduction operations are also accessible from the command line, which makes it easy
+to integrate <SMALL>GCX </SMALL>with other applications. The command-line options are described by calling
+<BLOCKQUOTE>
+<TT>gcx -help</TT>
+</BLOCKQUOTE>
+Here we'll provide some examples of use. Let's assume that we have a number of 20-second 
+data frames, some 20-second dark frames, some 1-sec sky flats, and some bias frames.
+We want to reduce the data frames and align and stack them together.
+
+<P>
+First, we check that the stacking method and parameters are properly set in the
+<EM>CCD Reduction Options</EM> page or the <TT>&nbsp;/.gcxrc</TT> file.
+
+<P>
+We combine the bias frames to create a master bias file (<TT>m-bias.fits</TT>):
+<BLOCKQUOTE>
+<TT>gcx -s -o m-bias bias*</TT>
+</BLOCKQUOTE>
+Then we combine the dark frames to create the master dark frame for
+the data frames (<TT>m-dark-20.fits</TT>):
+<BLOCKQUOTE>
+<TT>gcx -s -o m-dark-20 dark*</TT>
+</BLOCKQUOTE> 
+We create a bias-subtracted master dark frame and scale it to be used
+on the flats (<TT>dark-1s.fits</TT>):
+<BLOCKQUOTE>
+<TT>gcx -b m-bias -s -M 0.05 -o dark-1s dark*</TT>
+</BLOCKQUOTE> 
+And then the master flat frame (<TT>m-flat.fits</TT>):
+<BLOCKQUOTE>
+<TT>gcx -b m-bias -d dark-1s -F -o m-flat flat*</TT>
+</BLOCKQUOTE> 
+Assuming that <TT>red</TT> is a directory, we reduce all frames and save them there:
+<BLOCKQUOTE>
+<TT>gcx -d m-dark-20 -f m-flat -o red data*</TT>
+</BLOCKQUOTE> 
+We align and stack the data files (with a 0.1 pixels FWHM gaussian blur):
+<BLOCKQUOTE>
+<TT>gcx -a red/data001 -s -G 0.1 -o stack1 red/data*</TT>
+</BLOCKQUOTE>
+As an alternative, we align and stack directly from the original files, this time without any
+blur:
+<BLOCKQUOTE>
+<TT>gcx -d m-dark-20 -f m-flat -a data001 -s -o stack1 data*</TT>
+</BLOCKQUOTE>
+The order of the command-line options is not important. CCD reduction operations
+are always performed in the order: bias, dark, flat, multiply by a constant, add a constant,
+align and gaussian blur, stack. If no extension is provided on the file names, <SMALL>GCX </SMALL>will
+append <TT>.fits</TT> or <TT>.fits.gz</TT> automatically on saved image files, and will look
+for one of <TT>.fits</TT> or <TT>.fit</TT> with or without a <TT>.gz</TT> suffix.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html570"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html566"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html560"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html568"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html571"
+  HREF="node8.html">Aperture Photometry</A>
+<B> Up:</B> <A NAME="tex2html567"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html561"
+  HREF="node6.html">World Coordinates</A>
+ &nbsp <B>  <A NAME="tex2html569"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Report Converter</TITLE>
+<META NAME="description" CONTENT="Report Converter">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html710"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html706"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html700"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html708"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html711"
+  HREF="node15.html">Global Options</A>
+<B> Up:</B> <A NAME="tex2html707"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html701"
+  HREF="node13.html">Command Line Options</A>
+ &nbsp <B>  <A NAME="tex2html709"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001400000000000000000"></A><A NAME="ap:repconv"></A>
+<BR>
+Report Converter
+</H1>
+
+<P>
+The output format of <SMALL>GCX </SMALL>can be converted to a more common tabular
+form using the <TT>-T</TT> option. This option uses the value of the
+<TT>.file.tab_format</TT> option (<EM>File and Device Options/Report converter
+  output format</EM>) to specify it's output format. The text
+below, taken from the on-line help, describes this option.
+
+<P>
+<FONT SIZE="-1"></FONT><PRE>
+             Report Converter Format String
+
+The report converter option converts the native gcx output to a
+fixed-width tabular format that is easy to import in other programs
+for further processing. The table's format is defined by an option
+string. The option string consists of tokens separated by spaces.
+There are two types of tokens: option tokens, and column tokens.
+
+Options tokens set global table options when present. They can appear
+anywhere in the format string.
+
+tablehead        Generate a table header line containing
+                   the column titles
+collist          Generate a list of columns with position information
+                   at the start of the output
+
+Column tokens specify what information gets output in each column.
+The first column token corresponds to the first output column, and so
+on in order. Each column token can optionally be followed by a specifier
+of the form: width.precision. The width excludes a single character
+spacer between the columns. Supported colum tokens are:
+
+name [w]         Output the star's designator
+ra [w]           Output the right ascension in h:m:s format
+dra [w.p]        Output the right ascension in decimal degrees format
+dec [w]          Output the declination in d:m:s format
+ddec [w.p]       Output the declination in decimal degrees format
+smag [w.p] "&lt;band&gt;" Output the standard magnitude with the given name
+serr [w.p] "&lt;band&gt;" Output the error of the standard magnitude
+                    with the given name
+imag [w.p] "&lt;band&gt;" Output the instrumental magnitude with the given name
+ierr [w.p] "&lt;band&gt;" Output the error of the instrumental magnitude
+                    with the given name
+flags [w]        Output reduction flags and the star type
+observation [w]  Output the name of the observation (a synthetic name that
+                   can be used to group stars reduced from the same frame
+airmass [w.p]    Output the airmass of the observation
+jdate [w.p]      Output the Julian date of the observation
+mjd [w.p]        Output the modified Julian date of the observation
+filter [w]       Output the filter name used for the observation
+
+Fields for which data is not available are left blank
+
+
+When converting recipies to AAVSO database format, some fields are obtained
+from the recipy and star comments. Tokens of the form &lt;token&gt;=&lt;value&gt; are
+searched for. The value is taken for the database field, with underscores and
+minus signs converted to spaces. The following tokens are used:
+
+                         Chart comment tokens:
+
+d                AAVSO (Harward) designation of the main var on the chart
+s                Original chart scale
+t                Latest chart date (MM/YY, YYYY or YYMMDD)
+n                Name of the main variable on the chart
+w                Who converted the chart
+p                Sequence source
+
+                         Star comment tokens:
+
+p                Position source
+c                Comments
+n                Name of variable star
+i                Id of star on chart (if different from v(aavso))
+</PRE><FONT SIZE="-1">
+</FONT>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

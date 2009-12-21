@@ -1,0 +1,785 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Aperture Photometry</TITLE>
+<META NAME="description" CONTENT="Aperture Photometry">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html603"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html599"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html593"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html601"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html604"
+  HREF="node9.html">Multi-Frame and All-Sky Reduction</A>
+<B> Up:</B> <A NAME="tex2html600"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html594"
+  HREF="node7.html">CCD Reduction</A>
+ &nbsp <B>  <A NAME="tex2html602"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html605"
+  HREF="node8.html#SECTION00810000000000000000">Measuring Apertures</A>
+<LI><A NAME="tex2html606"
+  HREF="node8.html#SECTION00820000000000000000">Sky Estimation</A>
+<LI><A NAME="tex2html607"
+  HREF="node8.html#SECTION00830000000000000000">Placing the Apertures</A>
+<LI><A NAME="tex2html608"
+  HREF="node8.html#SECTION00840000000000000000">Finding the Ensemble Photometry Solution</A>
+<LI><A NAME="tex2html609"
+  HREF="node8.html#SECTION00850000000000000000">Annotations</A>
+<LI><A NAME="tex2html610"
+  HREF="node8.html#SECTION00860000000000000000">Running Aperture Photometry</A>
+<LI><A NAME="tex2html611"
+  HREF="node8.html#SECTION00870000000000000000">Creating Recipy Files</A>
+<UL>
+<LI><A NAME="tex2html612"
+  HREF="node8.html#SECTION00871000000000000000">Target Stars</A>
+<LI><A NAME="tex2html613"
+  HREF="node8.html#SECTION00872000000000000000">Standard Stars</A>
+<LI><A NAME="tex2html614"
+  HREF="node8.html#SECTION00873000000000000000">Creating the Recipy File</A>
+<LI><A NAME="tex2html615"
+  HREF="node8.html#SECTION00874000000000000000">Working without an Image Frame</A>
+<LI><A NAME="tex2html616"
+  HREF="node8.html#SECTION00875000000000000000">Creating Recipies from the Command Line</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00800000000000000000"></A><A NAME="ch:aphot"></A>
+<BR>
+Aperture Photometry
+</H1>
+
+<P>
+The basic funtion of the aperture photometry routine in <SMALL>GCX </SMALL>
+is to measure the flux of a number of stars in the image (which will
+be expressed as an <EM>instrumental magnitude</EM>), and estimate
+it's expected error. 
+
+<P>
+As an additional function, if some of the stars are <EM>standard
+  stars</EM> of known magnitude the program will calculate the standard
+magnitude of the measured stars using the standard stars as a
+reference (ensemble photometry).<A NAME="tex2html30"
+  HREF="footnode.html#foot658"><SUP>7.1</SUP></A>
+<P>
+
+<H1><A NAME="SECTION00810000000000000000">
+Measuring Apertures</A>
+</H1>
+
+<P>
+To measure the flux of a star, we add together the intensity values
+from a circular region around the target star (the central aperture), 
+and subtract the
+estimated background contribution. The background is estimated from
+values in a annular region surrounding the star at a distance.
+
+<P>
+Normally, we choose the size of the central aperture to be large
+enough to include most of the star image. Common ranges are between 
+3 and 5 times the FWHM of the star image.<A NAME="tex2html31"
+  HREF="footnode.html#foot660"><SUP>7.2</SUP></A>
+<P>
+The annular sky aperture is chosen to be far enough from the star so
+that it includes an insignificant amount of flux from it. The default
+values of the measurement aperture radiuses are 6 pixels for the
+central aperture and 9/13 pixels for the sky aperture. These values
+are appropiate for star images between 2.5 and 3.5 pixels FWHM. If one obtains
+consistently tighter star images, reducing the central aperture would
+help improve the SNR of faint stars. The three radiuses are specified
+by options under <EM>Aperture Photometry Options</EM>.
+
+<P>
+Assuming there are <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$N$"> pixels inside the central aperture, the total
+flux (star + background) is:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_T = \sum_i I_i
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="83" HEIGHT="48" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}
+F_T = \sum_i I_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Where the sumation is taken over the pixels in the central
+aperture. If <IMG
+ WIDTH="19" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$\widetilde{B}$"> is the estimated background level, the
+star's flux is taken to be:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F = \sum_i I_i - N \widetilde{B}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="126" HEIGHT="48" BORDER="0"
+ SRC="img59.png"
+ ALT="\begin{displaymath}
+F = \sum_i I_i - N \widetilde{B}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+and the star's instrumental magnitude is:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+M_I = -2.511886\log\left(\sum_i I_i - N \widetilde{B}\right)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="268" HEIGHT="56" BORDER="0"
+ SRC="img60.png"
+ ALT="\begin{displaymath}
+M_I = -2.511886\log\left(\sum_i I_i - N \widetilde{B}\right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+The estimated error of the instrumental magnitude is calculated taking
+most known random error sources into account. A detailed description
+of the error model and the way the instrumental magnitude error is
+calculated can be found in Appendix&nbsp;<A HREF="node10.html#ap:noise">A</A>.
+
+<P>
+
+<H1><A NAME="SECTION00820000000000000000">
+Sky Estimation</A>
+</H1>
+
+<P>
+To calculate the instrumental magnitude above we used an estimate of
+the sky background near the star. This value is calculated from the
+pixels in the annular ring.
+
+<P>
+Given the relatively large size of the sky annulus, it is very
+likely that we will find unwanted stars in at least some of the 
+annuli. We must therefore use a robust algorithm to obtain the
+expected sky value. 
+
+<P>
+The program offers a number of algorithms: <EM>average, median,
+  mean-median, <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.png"
+ ALT="$\kappa$">-<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.png"
+ ALT="$\sigma$"> and synthetic mode</EM>. The first four 
+are described in Section&nbsp;<A HREF="node7.html#sec:combining">6.5</A>.
+
+<P>
+It is generally not recommended to use average, as it is not robust. 
+The others, while not having a problem with robustness, will not
+produce the best estimate (which is the <EM>mode</EM><A NAME="tex2html32"
+  HREF="footnode.html#foot676"><SUP>7.3</SUP></A> of the sky annulus pixel values) when the distribution of the sky
+ values is skewed. In this case (which arises whenever the sky level is
+ relatively low), the synthetic mode is the best algorithm.
+The synthetic mode is calculated as follows:
+
+<P>
+The histogram of the sky values is created. Then, the histogram is
+clipped using a <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.png"
+ ALT="$\kappa$">-<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.png"
+ ALT="$\sigma$"> algorithm in order to eliminate
+the effect of unwanted stars and other defects. The mean and median of
+the clipped histogram are computed, and the synthetic mode is defined
+as:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\widetilde{B} = {\rm mode} = 3 \cdot {\rm median} - 2\cdot {\rm mean}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="261" HEIGHT="28" BORDER="0"
+ SRC="img63.png"
+ ALT="\begin{displaymath}
+\widetilde{B} = {\rm mode} = 3 \cdot {\rm median} - 2\cdot {\rm mean}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+If the distribution is not skewed, the mean equals the median,
+and the mode would be equal to both.
+
+<P>
+The desired sky estimation algorithm is selected by the <EM>Aperture
+  Photometry Options/Sky method</EM> option. The rejection band for the
+  mean-median, <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.png"
+ ALT="$\kappa$">-<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.png"
+ ALT="$\sigma$"> and synthetic mode algorithms is set by 
+<EM>Aperture Photometry Options/Sigmas</EM>. It is recommended that a
+  relatively low value is used for this option, to make sure we have a
+  good outlier rejection.
+
+<P>
+
+<H1><A NAME="SECTION00830000000000000000">
+Placing the Apertures</A>
+</H1>
+
+<P>
+In <SMALL>GCX </SMALL>all photometry targets are specified using their world coordinates (right ascension, 
+declination and epoch). The targets and standards are generally taken
+from a particular star file called a <EM>recipy file</EM>. The WCS of the
+frame is fitted, then the coordinates of the standards and targets are
+transformed to frame coordinates. The resulting positions are used as
+initial positions for the measuring apertures.
+
+<P>
+If the <EM>Aperture Photometry Options/Center apertures</EM> option is set
+the program will try to detect stars in the immediate vicinity of the
+initial positions, and center the apertures on the detected stars. The
+maximum distance from the initial position to the detected star is
+specified by <EM>Aperture Photometry Options/Max centering error</EM>. If
+this value is exceeded, the star is marked with the <EM>not found</EM>
+flag and the aperture is not moved. Otherwise it is marked with the
+<EM>centered</EM> flag.
+
+<P>
+If the apertures were centered, the amount by which each star was moved
+is indicated by a line extending from the center of the star symbol in
+the direction in which the star was moved. The length of the line is
+a factor of <EM>Star Display Options/Plot error scale</EM> longer than the 
+star's displacement.
+
+<P>
+
+<H1><A NAME="SECTION00840000000000000000">
+Finding the Ensemble Photometry Solution</A>
+</H1>
+
+<P>
+If we have the instrumental magnitudes of the target stars and at
+least one standard star, we can calculate the standard magnitude of
+our targets<A NAME="tex2html33"
+  HREF="footnode.html#foot1240"><SUP>7.4</SUP></A> by simply adding the standard magnitude to the difference
+in instrumental magnitudes between the target and the standard. This
+is the simplest form of differential photometry.
+
+<P>
+We can however obtain significant advantages using more than one
+standard in the reduction:
+
+<UL>
+<LI>The errors of the standard stars will average out. This reduces
+  both the contribution of their instrumental magnitude error and that of their
+  standard magnitude error. It also reduces the contribution of the
+  conformity error that is caused by the stars having different
+  colors.
+</LI>
+<LI>Even more importantly, using several standards in reduction will
+  provide valuable information about the quality of the frame. The
+  instrumental magnitudes of the standard stars have to follow their
+  standard magnitudes within limits set by the expected errors. If
+  this doesn't happen we know that there was a problem with the
+  frame. If it does happen, we are almost certain that the frame has
+  good data.
+</LI>
+</UL>
+
+<P>
+We try to find the best estimate of the <EM>frame zero point</EM>,
+i.e.&nbsp;the value which is added to the instrumental magnitudes to
+obtain standard magnitudes. If we had no errors, all the standard
+stars' instrumental magnitudes would differ from their standard
+magnitudes by exactly the zero point value. This of course is never the
+case in practice. The differences will be dispersed above and below
+the zero point. We call the difference between a standard star's
+standard magnitude and the sum of it's instrumental magnitude and the
+zero point the star's <EM>residual</EM>. 
+
+<P>
+We want to choose the zero point is such a way that the residuals 
+are minimised. More specifically, we try to minimize the sum of the
+residuals' squares. It is easy to see that the residuals' sum of
+squares is minimised if the zero point is chosen so that the average of
+the residuals is zero.
+
+<P>
+There are two problems with this approach: First, by using many
+standards, we have a good chance that a few of the have ``bad''
+values. They could be affected by a cosmic ray hit or a speck of dust
+that wasn't there when the flat was taken, or the catalog value may be
+in error. Or one of the standards may turn out to be variable.
+Secondly, if we use both bright and faint standards, the errors of the
+brighter ones are known to be lower. We would like the faint stars to
+have less influence on the resulting zero point than the bright ones.
+
+<P>
+The algorithm used takes care of both these problems. It assigns
+weights to each standard star according to it's estimated error, and
+iteratively downweights stars that have residuals that are larger than
+expected. For a detailed description, see Appendix&nbsp;<A HREF="node11.html#ap:robust">B</A>.
+
+<P>
+The algorithm produces it's best estimate of the frame's zero point,
+and a ``diagnostic'' value called the <EM>mean error of unit weight</EM>,
+usually abbreviated to <EM>meu</EM> or <EM>me1</EM>. The mean error of unit
+weight is a number that shows how well the spread of the residuals matches the
+estimated errors. It should have a value close to unity. A larger
+value shows that we have some error sources we didn't take into
+account. A consistently smaller value indicates that our error
+estimating parameters are overrated, and the estimated errors are too
+large.
+
+<P>
+Finally, the standard magnitude of the target stars is calculated by
+adding their instrumental magnitude to the estimated zero point. The
+error is the quadrature sum of the target's instrumental magnitude
+error and the zeropoint error.<A NAME="tex2html34"
+  HREF="footnode.html#foot702"><SUP>7.5</SUP></A>
+<P>
+
+<H1><A NAME="SECTION00850000000000000000"></A><A NAME="sec:annotations"></A>
+<BR>
+Annotations
+</H1>
+
+<P>
+The instrumental magnitude obtained is given the name of the filter
+the frame was taken with. The filter name is obtained from the <TT>  FILTER</TT> field. If the field is not present, or the <EM>Aperture
+  Photometry Options/Force iband</EM> option is set, the filter name is
+taken from <EM>Aperture Photometry Options/Instrumental band</EM>.
+If any pixel within the central aperture exceeds <EM>Aperture
+  Photometry Options/Saturation limit</EM> the star is marked with the
+  <EM>bright</EM> flag.
+
+<P>
+Relevant information from the fits header and recipy header is carried
+on to the observation report. The fields include:
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">object</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>the name of the target object, taken from the fits
+  header or recipy.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">ra, dec</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>World coordinates of target object.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">equinox</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Equinox of world coordinates and star coordintes in
+  the report.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">mjd</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Modified Julian Date of integration start from <TT>JDATE</TT>
+  or <TT>MJD</TT> fits fields.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">exptime</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Integration time from the <TT>EXPTIME</TT> field.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">airmass</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Frame airmass, from either the <TT>AIRMASS</TT> field or
+  calculated from the geographical coordinates and time.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">aperture</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Telescope aperture from the <TT>APERT</TT> field.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">telescope</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Telescope name from the <TT>TELESCOP</TT> field.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">filter</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Filter used from the <TT>FILTER</TT> field or as set by the
+  user.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">latitude</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Location of the observing site from the <TT>LAT-OBS</TT>
+  field.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">longitude</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Location of the observing site from the <TT>LONG-OBS</TT>
+  field.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">altitude</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Altitude of the observing site from the <TT>ALT-OBS</TT>
+  field.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">observer</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>Name of observer from the <TT>OBSERVER</TT> field.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">sequence</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=255>A string describing where the sequence in the recipy
+  originated, from the <TT>sequence</TT> field of the recipy.</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION00860000000000000000">
+Running Aperture Photometry</A>
+</H1>
+
+<P>
+To run the aperture photometry routine on a frame, load the frame into
+gcx (<EM>File/Open Fits</EM>), then load a recipy file or another star
+file that contains standard and target stars.<A NAME="tex2html35"
+  HREF="footnode.html#foot1242"><SUP>7.6</SUP></A>
+<P>
+Then fit the frame's WCS using <EM>Wcs/Auto Wcs</EM> and finally run the
+aperture photometry routine with <EM>Processing/Aperture Photometry
+  to File</EM>. A report file will be created, that lists all the standard and target
+stars with their instrumental and standard magnitudes, general
+information about the frame and fit information. More details about
+the report format can be found in Appendix&nbsp;<A HREF="node12.html#ap:format">C</A>.
+
+<P>
+When reducing a large number of frames, it is more convenient to
+invoke <SMALL>GCX </SMALL>from the command line, perhaps from a script. To reduce
+frame <TT>frame.fits</TT> using the recipy file <TT>vs.rcp</TT> and
+append the format at the end of the <TT>rep.out</TT> file, we can use:
+<BLOCKQUOTE>
+<TT>gcx -P vs.rcp -o rep.out frame.fits</TT>
+</BLOCKQUOTE>
+In addition, if we have a master dark frame <TT>mdark.fits</TT> and a
+master flat frame <TT>mflat.fits</TT>, we can combine CCD reduction for
+the frame with the aperture photometry, like this:<A NAME="tex2html36"
+  HREF="footnode.html#foot738"><SUP>7.7</SUP></A><BLOCKQUOTE>
+<TT>gcx -d mdark -f mflat -P vs.rcp -o rep.out frame.fits</TT>
+</BLOCKQUOTE>
+Aperture photometry reports from several frames can be combined by
+simply concatenating the files together. The combined file can be used
+for further refining the data reduction with the multi-frame reduction
+routine (Chapter&nbsp;<A HREF="node9.html#ch:multiframe">8</A>). 
+
+<P>
+Selected information from the (combined) report file can be set out in
+a tabular format using the report converter function of <SMALL>GCX.</SMALL> The
+format of the table is specified in the <EM>File and Device
+  Options/Report converter output format</EM> option. Possible values for
+the format are described in Appendix&nbsp;<A HREF="node14.html#ap:repconv">E</A> and the on-line
+help. After setting the format,<A NAME="tex2html37"
+  HREF="footnode.html#foot1243"><SUP>7.8</SUP></A> invoke the report converter using:
+<BLOCKQUOTE>
+<TT>gcx -T rep.out -o rep.txt</TT>
+</BLOCKQUOTE>
+Which will convert the report file <TT>rep.out</TT> to a table 
+named <TT>rep.txt</TT>.
+
+<P>
+
+<H1><A NAME="SECTION00870000000000000000"></A><A NAME="sec:recipy"></A>
+<BR>
+Creating Recipy Files
+</H1>
+
+<P>
+Having a recipy file is central to running aperture photometry in <SMALL>GCX</SMALL>. Fortunately, creating one is relatively straightforward. 
+
+<P>
+Let's
+create a recipy file for the <TT>uori-v-001.fits.gz</TT>&nbsp; frame, which is included in
+the <SMALL>GCX </SMALL>distribution. Open the frame and match the WCS (using
+<EM>Wcs/Auto Wcs</EM>). The WCS matching command leaves the GSC field
+  stars and the detected stars visible. 
+
+<P>
+
+<H2><A NAME="SECTION00871000000000000000">
+Target Stars</A>
+</H2>
+
+<P>
+First, we add our target: 
+select <EM>Stars/Add from Catalog</EM>, and enter it's name at the
+prompt (uori). An object symbol will appear on the screen (around the
+bright star near the center, which is U Orionis). Select it, and bring
+up the star editing dialog using <EM>Stars/Edit</EM> or right-click on
+the star and select <EM>Edit Star</EM> from the pop-up menu. Change the
+star's type to ``AP Target'' and click <EM>Ok</EM>. The symbol on the
+image should change to a big cross, indicating the star is a target.
+
+<P>
+If we don't have GCVS installed, we can identify the star from a star
+chart and edit a field star or even a detected star and make it the
+target. We normally want to change the star's name to something
+descriptive and check that the coordinates are correct.
+
+<P>
+If there is no star at the desired position (which can happen if we
+prepare a recipy for a very faint variable), just edit any star,
+change the coordinates to the desired ones and the type to target.
+A recipy can have any number of targets; more can be added in
+the same way.
+
+<P>
+
+<H2><A NAME="SECTION00872000000000000000">
+Standard Stars</A>
+</H2>
+
+<P>
+Now we need some standard stars. If we have a chart we want to use as
+the base of the recipy, we can create it on-screen similarly with the
+target (by editing field stars). The difference is that the standards
+are marked as ``Standard Star'', and we need to enter their standard
+magnitudes. Several magnitudes can be entered in the ``Standard
+magnitudes'' field of the edit dialog. A magnitude is given as:
+<BLOCKQUOTE>
+<TT><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$&lt;$">band<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$&gt;$">(source)=<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$&lt;$">magnitude<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$&gt;$">/<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$&lt;$">error<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$&gt;$"></TT>
+</BLOCKQUOTE>
+where <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$&lt;$"><EM>band</EM><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$&gt;$"> is the name of the standard band,<A NAME="tex2html38"
+  HREF="footnode.html#foot760"><SUP>7.9</SUP></A> <EM>(source)</EM> is an optional
+field describing where the magnitude value originated, <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$&lt;$"><EM>  magnitude</EM><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$&gt;$"> and <IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$&lt;$"><EM>error</EM><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$&gt;$"> are the star's magnitude and
+error, respectively. The error field is optional, and it's absence
+means that we don't know the error of the magnitude. A few examples of
+magnitude entries are:
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><TT>v(aavso)=12.5</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=184>A typical example for a value taken from a paper
+  aavso chart; the error is unknown.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>v=12.53/0.05 ic=11.2/0.03</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=184>A star for which we know the
+magnitudes in two bands.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>b=13.2 v=12.7/0.1 r=12.2</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=184>We know three magnitudes, but only one error.</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+Another way to get standard stars is to use the tycho catalog. Remove
+all field stars, then select <EM>File/Load Field Stars/From Tycho2
+  Catalog</EM>. 
+The Tycho stars will show up as field stars. All we have to do is to 
+mark the ones that we want to use as standards. 
+
+<P>
+
+<H2><A NAME="SECTION00873000000000000000">
+Creating the Recipy File</A>
+</H2>
+
+<P>
+Now we can finally create the recipy file. Select
+<EM>File/Create Recipy</EM> and enter a recipy name (or press the
+``...'' button and select a file name). Then select which stars
+we want to include in the recipy file. We will most certainly want the
+standard and target stars, but we may include objects and field stars 
+to be used for WCS matching if we envision using the recipy on a
+machine that doesn't have catalogs installed.
+
+<P>
+To verify our newly created recipy, remove all stars
+(<EM>Stars/Remove All</EM>) and load the file we just
+created (using <EM>File/Load Recipy</EM>). Run the photometry routine
+(<EM>Processing/Aperture Photometry to File</EM>) and check the output.
+
+<P>
+
+<H2><A NAME="SECTION00874000000000000000">
+Working without an Image Frame</A>
+</H2>
+
+<P>
+In the above examples, we have used a frame of the field as a
+backgound on top of which we loaded the stars. This is not
+required. If we select <EM>Stars/Add from catalog</EM> without having a
+frame loaded, the program will create a blank frame with the size set
+by <EM>File and Device Options/New frame width</EM> and <EM>height</EM>, and
+set it's WCS with the center of the frame pointing at the selected
+object, and the scale as set by <EM>File and Device Options/New frame
+  scale</EM>. 
+
+<P>
+
+<H2><A NAME="SECTION00875000000000000000">
+Creating Recipies from the Command Line</A>
+</H2>
+
+<P>
+If we want to create many recipies at a time, it can be more
+convenient to use the command line. To create a recipy from the Tycho2
+catalog, use:
+<BLOCKQUOTE>
+<TT>gcx -make-tycho-rcp 20 -j uori -o uori.rcp</TT>
+</BLOCKQUOTE>
+This will create a recipy using Tycho stars situated within a 20
+minutes radius from U Orionis and save the result to <TT>uori.rcp</TT>.
+
+<P>
+If we have a sequence file in a format supported by <SMALL>GCX </SMALL>, such as the
+``<TT>.dat</TT>'' files made available by Arne Henden at:
+<BLOCKQUOTE>
+<TT>ftp://ftp.nofs.navy.mil/pub/outgoing/aah/sequence</TT>
+</BLOCKQUOTE>
+it can be converted to a recipy file using the following command:
+<BLOCKQUOTE>
+<TT>gcx -import henden &lt;uori.dat -mag-limit 15 |<IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\backslash$">
+<BR>
+gcx -p - -set-target uori &gt;uori.rcp</TT>
+</BLOCKQUOTE>
+The first part of the command reads the <TT>uori.dat</TT> file and
+converts it to a <SMALL>GCX </SMALL>star file, keeping only stars brighter that the
+<IMG
+ WIDTH="35" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img67.png"
+ ALT="$15^{\rm th}$"> magnitude, and writes the star file to the standard
+output. The second parts of the command reads the the file from the
+standard input, adds ``uori'' as a target, and writes the resulting
+rcp file to uori.rcp.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html603"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html599"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html593"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html601"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html604"
+  HREF="node9.html">Multi-Frame and All-Sky Reduction</A>
+<B> Up:</B> <A NAME="tex2html600"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html594"
+  HREF="node7.html">CCD Reduction</A>
+ &nbsp <B>  <A NAME="tex2html602"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

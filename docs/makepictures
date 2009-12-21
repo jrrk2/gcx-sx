@@ -1,0 +1,2 @@
+for i in *.gpl; do echo $i ${i/gpl/eps}; gnuplot gpl2eps.gp $i >${i/gpl/eps}; \
+epstopdf ${i/gpl/eps}; done

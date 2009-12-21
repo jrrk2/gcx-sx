@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Image Files</TITLE>
+<META NAME="description" CONTENT="Image Files">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html514"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html510"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html504"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html512"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html515"
+  HREF="node5.html">Stars and Catalogs</A>
+<B> Up:</B> <A NAME="tex2html511"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html505"
+  HREF="node3.html">Getting Started</A>
+ &nbsp <B>  <A NAME="tex2html513"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html516"
+  HREF="node4.html#SECTION00410000000000000000">FITS Header fields</A>
+<LI><A NAME="tex2html517"
+  HREF="node4.html#SECTION00420000000000000000">Viewing Image Files</A>
+<LI><A NAME="tex2html518"
+  HREF="node4.html#SECTION00430000000000000000">Saving and Exporting Images</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00400000000000000000">
+Image Files</A>
+</H1>
+
+<P>
+The basic format used by <SMALL>GCX </SMALL>for image files is FITS. Internally, images are represented using
+32-bit (single-precision) floating-point values. The images are read and saved as 16-bit integer
+files. It it relativey easy to modify the program to read outher FITS formats (like 8-bit or 
+floating point), should the need arise. 
+
+<P>
+<SMALL>GCX </SMALL>will read and write fits files compressed in the gnuzip format (ending in <TT>.fits.gz</TT>)
+transparently. A zipped file name can be used whenever a regular fits
+file name is 
+required.<A NAME="tex2html7"
+  HREF="footnode.html#foot1211"><SUP>3.1</SUP></A>
+<P>
+While the way image data is represented in the FITS files is well specified, additional 
+information from the fits header can vary between different programs. Since the data reduction 
+functions of <SMALL>GCX </SMALL>make use of quite a few fits header values, it is important to understand
+how they are interpreted.
+
+<P>
+Some camera control programs generate broken 16-bit FITS files that
+have <TT>BZERO</TT> set to 0 and all values stored as unsigned
+numbers. When loaded, values larger than 32768 appear as negative
+numbers. To accomodate these files, <SMALL>GCX </SMALL>provides the <EM>File and
+  Device Options/Force unsigned FITS</EM> option, which will make the
+program interpret all values in frames with <TT>BZERO</TT>=0 as unsigned. Note
+that files are always saved in the standard format.
+
+<P>
+
+<H1><A NAME="SECTION00410000000000000000">
+FITS Header fields</A>
+</H1>
+
+<P>
+The default names of the fits header fields have been set to what the author considers the 
+most common. It is however possible to change any of the field names by editing the options
+or the <code>~/.gcxrc</code> file.
+
+<P>
+After loading a fits file, you can examine it's header by selecting 
+<EM>File/Show Fits Header</EM>.<A NAME="tex2html8"
+  HREF="footnode.html#foot1212"><SUP>3.2</SUP></A>When new frames are created by <SMALL>GCX </SMALL>from images captured by a CCD
+camera, the frame is annotated from one of the following sources: 
+
+<UL>
+<LI>The <EM>General Observation Setup Data</EM> options;
+</LI>
+<LI>Object information from the currently selected target object;
+</LI>
+<LI>Frame information from the camera.
+</LI>
+</UL>
+The table below details the most important fits header fields 
+set and read by <SMALL>GCX </SMALL>:
+
+<P>
+
+<P></P>
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">Name</TD>
+<TD ALIGN="CENTER">Type</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Meaning</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Comments</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>CRPIX1/2</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Coordinates of reference pixel</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set to the center of the frame; 
+               Used to set the initial WCS.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>CDELT1/2</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Scale of image in degrees per pixel</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set initially from the observation
+               setup focal length, pixel size and binning; updated after WCS fitting.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>CROTA1</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Rotation of image in degrees</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set initially to 0; updated after WCS fitting.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>CRVAL1/2</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>World coordinates of the reference pixel</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set from the target object 
+               coordinates; update after WCS fitting.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>FILTER</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Name of filter used</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set from the current observation data or filter 
+               wheel status; used for photometric reductions.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>ELADU</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Image electrons per AD unit</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set from camera parameters; used by the photometry
+               routines in the error model.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>RDNOISE</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>camera read noise in AD units</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set from camera parameters; used by the photometry
+               routines in the error model.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>EXPTIME</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>integration time in seconds</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set from camera paramters; used by the 
+               scintillation noise evaluation routine</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>JDATE</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Julian date of the start of integration</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Used, among other things to calculate
+               the frame airmass</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>MJD</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Modified Julian Date of the start of integration</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>An alternative to JDATE</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>DATE-OBS</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>The date/time of start of exposure in the format
+               specified by the fits standard</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>An alternative to JDATE</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>TIME-OBS</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>The time of day portion of the date/time, used
+               when the <TT>DATE-OBS</TT> field only sets the date</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>An alternative to JDATE</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>APERT</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Telescope aperture in cm</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set from general observation options; Used 
+               to evaluate scintillation noise</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>LAT-OBS</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Latitude of observation site in DMS format</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set from general observation options; Used 
+               to calculate airmass</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>LONG-OBS</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Latitude of observation site in DMS format; Eastern
+               latitudes are negative</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Set from general observation options; Used 
+               to calculate airmass</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>AIRMASS</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Frame airmass</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>If present, disables airmass calculation and sets the airmass 
+               value</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>OBJECT</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Target object name</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Used to set the initial WCS if other information
+               is not available</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>OBJCTRA</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Target right ascension in HMS format</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Used to set the initial WCS if other information
+               is not available</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>RA</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Target right ascension in HMS format</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Used to set the initial WCS if other information
+               is not available</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>OBJCTDEC</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Target declination in DMS format</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Used to set the initial WCS if other information
+               is not available</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>DEC</TT></TD>
+<TD ALIGN="CENTER">String</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Target declination in DMS format</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Used to set the initial WCS if other information
+               is not available</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT"><TT>SECPIX</TT></TD>
+<TD ALIGN="CENTER">Real</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Image scale in arcseconds per pixel</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=142>Used to set the initial WCS if other information
+               is not available</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H1><A NAME="SECTION00420000000000000000">
+Viewing Image Files</A>
+</H1>
+
+<P>
+To pan around the image, either use the scrollbars, or place the cursor over the point that 
+you want in the center of the image and press the spacebar or the
+center mouse button.<A NAME="tex2html9"
+  HREF="footnode.html#foot203"><SUP>3.3</SUP></A>You can pan back to the center of the image using <B>ctrl-L</B> or select <EM>Image/Pan Center</EM> 
+from the menu. 
+
+<P>
+To zoom in, place the cursor over the point you want to zoom in around, and press the <B>=</B> 
+key (same key that has the <TT>'+'</TT> symbol). To zoom out, press <B>-</B>. The <EM>Image</EM> 
+menu also has <EM>Zoom In</EM> and <EM>Zoom Out</EM> options.
+
+<P>
+When loading a frame, the image cuts are automatically selected for a convenient display of 
+astronomical frames. The background is set at a somewhat dark level, and the dynamic range 
+is set to span 22 times the standard deviation of the intensity across the frame. You can 
+always return to these cuts by pressing <B>0</B> or selecting <EM>Image/Auto Cuts</EM>.
+
+<P>
+Pressing <B>1</B> - <B>8</B> will select various predefined contrast levels. <B>1</B> is the most 
+contrasty: the image spans 4 sigmas, while <B>8</B> spans 90 sigmas.
+<B>9</B> will scale the image so that the full input range is represented (the cuts are set to 
+the min/max values of the frame). Selecting <EM>Image/Set Contrast/...</EM> from the menu will 
+accomplish the same effect.
+
+<P>
+To vary the brightness of the background, use <B>B</B> (<EM>Image/Brighter</EM>) and <B>D</B> 
+(<EM>Image/Darker</EM>).
+
+<P>
+Another (sometimes more convenient) way of making contrast/brightness
+adjustments is to drag 
+the pointer over the image. Dragging horisontally
+will change the brightness, while dragging vertically will adjust the contrast. 
+
+<P>
+It is important to know that all the ajustments described only apply to the display. The 
+internal representation of the frame (and of course the disc file) is never changed 
+in any way.
+
+<P>
+Further adjustments to the way the image is displayed can be made by bringing up the 
+<EM>Image/Curves&amp;Histogram</EM> dialog. This dialog shows a portion of the frame's histogram, 
+overlapped by the currently set intensity transfer function. The image cuts are placed
+at the red vertical bars in the histogram window. 
+
+<P>
+The shape of the transfer function can be altered by changing the Gamma and Toe parameters.
+Gamma controls the overall shape, while the Toe controls what happens in the leftmost portion
+of the curve. Increasing the toe will prevent the transfer function from having a
+very high slope near zero, as would be implied by the gamma setting.
+
+<P>
+
+<H1><A NAME="SECTION00430000000000000000">
+Saving and Exporting Images</A>
+</H1>
+
+<P>
+The image currently displayed can be saved in the FITS format by selecting 
+<EM>File/Save FITS As</EM>. When frames are saved as FITS, their values aren't affected by the
+display settings. Another option is to export the file to a different format (presently, only 
+the 8-bit pnm format is supported). When exporting, the intensity mapping used for displaying
+the image is used to convert from the original frame to the 8-bit output image.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html514"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html510"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html504"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html512"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html515"
+  HREF="node5.html">Stars and Catalogs</A>
+<B> Up:</B> <A NAME="tex2html511"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html505"
+  HREF="node3.html">Getting Started</A>
+ &nbsp <B>  <A NAME="tex2html513"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>

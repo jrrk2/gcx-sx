@@ -1,0 +1,415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="gcx">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="gcx.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="gcx.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html470"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html466"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html460"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html468"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html471"
+  HREF="node3.html">Getting Started</A>
+<B> Up:</B> <A NAME="tex2html467"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html461"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html469"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html472"
+  HREF="node2.html#SECTION00210000000000000000">Features</A>
+<UL>
+<LI><A NAME="tex2html473"
+  HREF="node2.html#SECTION00210010000000000000">Image handling</A>
+<LI><A NAME="tex2html474"
+  HREF="node2.html#SECTION00210020000000000000">Catalogs and WCS</A>
+<LI><A NAME="tex2html475"
+  HREF="node2.html#SECTION00210030000000000000">Camera Control</A>
+<LI><A NAME="tex2html476"
+  HREF="node2.html#SECTION00210040000000000000">Telescope control</A>
+<LI><A NAME="tex2html477"
+  HREF="node2.html#SECTION00210050000000000000">Aperture Photometry</A>
+<LI><A NAME="tex2html478"
+  HREF="node2.html#SECTION00210060000000000000">Multi-Frame Reductions</A>
+<LI><A NAME="tex2html479"
+  HREF="node2.html#SECTION00210070000000000000">Interfacing</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html480"
+  HREF="node2.html#SECTION00220000000000000000">Free Software</A>
+<LI><A NAME="tex2html481"
+  HREF="node2.html#SECTION00230000000000000000">Contributing</A>
+<LI><A NAME="tex2html482"
+  HREF="node2.html#SECTION00240000000000000000">About this Manual</A>
+<LI><A NAME="tex2html483"
+  HREF="node2.html#SECTION00250000000000000000">Related Projects</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00200000000000000000">
+Introduction</A>
+</H1>
+
+<P>
+The previous version of <SMALL>GCX </SMALL>, <SMALL>CX</SMALL> was written to control the newly designed
+<TT>cpx3m</TT> ccd camera. Once the basic camera control functions were running, it was easy to
+add some LX200 control functions, so that the telescope could be pointed at various objects
+without having to switch applications. 
+
+<P>
+Having telescope control and image acquisition integrated into one program makes the following
+step obvious: after entering goto/get commands over several cold nights, one wants to automate 
+the process--especially if he observes a large number of fields every night (as when doing 
+variable star work).
+
+<P>
+The fact that the author's telescope doesn't point precisely doesn't help automation. 
+So the ability to check/correct the pointing becomes essential. <TT>cx</TT> first got the ability 
+to read star information from the GSC and overlay it on the images; that eases visual checks 
+(one doesn't need maps anymore) but still is one step short of full automation.
+
+<P>
+Finally, when reliable field matching was implemented in <SMALL>GCX </SMALL>, it became possible to make 
+the program fully automatic. In the current version, <SMALL>GCX </SMALL>can run through a list of 
+observations completely unattended, and only stops if clouds roll in.  
+
+<P>
+As it happens, field matching and image processing are also essential steps for CCD photometry. 
+Over the time, the photometry functions of <SMALL>GCX </SMALL>have expanded
+continuously up to the point where they contribute the largest part of
+the program. It is currently possible to reduce photometric data
+frames in a completely automatic fashion, and perform color
+transformations, transformation coefficient fitting and all-sky reduction
+with relative ease.
+
+<P>
+
+<H1><A NAME="SECTION00210000000000000000">
+Features</A>
+</H1>
+
+<P>
+
+<H4><A NAME="SECTION00210010000000000000">
+Image handling</A>
+</H4>
+
+<UL>
+<LI>Open/save 16-bit FITS image files;
+
+<P>
+<SMALL>GCX </SMALL>uses floating-point images internally, so other FITS formats are easy to add;
+</LI>
+<LI>Zoom/Pan images, adjust brightness/contrast/gamma in an intuitive way, 
+  appropiate for astronomical images;
+</LI>
+<LI>Convert FITS files to 8-bit PNM after intensity mapping;
+</LI>
+<LI>Show image statistics (both global and local);
+</LI>
+<LI>Maintain a noise model for the image across transformations;
+//
+</LI>
+<LI>Maintain bad pixel information;
+</LI>
+<LI>Perform ccd reductions (dark/bias/flat);
+</LI>
+<LI>Automatically align (register) and stack images.
+</LI>
+</UL>
+<H4><A NAME="SECTION00210020000000000000">
+Catalogs and WCS</A>
+</H4>
+
+<UL>
+<LI>Read field star information from GSC1/2 and Tycho2;
+</LI>
+<LI>Read object information from <TT>edb</TT> and native files;
+</LI>
+<LI>Read recipy files;
+</LI>
+<LI>Detect sources (stars) from images;
+</LI>
+<LI>Overlay objects on the image;
+</LI>
+<LI>Edit objects' information;
+</LI>
+<LI>Match image stars to catalog positions;
+</LI>
+<LI>Calculate world coordinates for image objects.
+</LI>
+</UL>
+<H4><A NAME="SECTION00210030000000000000">
+Camera Control</A>
+</H4>
+
+<UL>
+<LI>Control cameras over a TCP socket using a simple protocol;
+
+<P>
+The control proces (<TT>cpxcntrl</TT>) presently supports the cpx3m camera. It can be 
+easily modified to support other cameras.
+
+<P>
+</LI>
+<LI>Acquire images under script control;
+</LI>
+<LI>Set binning/windowing/integration times/temperature;
+</LI>
+<LI>Dark frames;
+</LI>
+<LI>All acquired frames are fully annotated in their FITS headers;
+</LI>
+<LI>Auto-generate descriptive names for files.
+</LI>
+</UL>
+<H4><A NAME="SECTION00210040000000000000">
+Telescope control</A>
+</H4>
+
+<UL>
+<LI>Support LX200 protocol over serial;
+</LI>
+<LI>Point telescope under script control;
+</LI>
+<LI>Point telescope by object name (if edb catalogs are installed);
+</LI>
+<LI>Refine pointing by comparing image star positions with catalogs;
+</LI>
+</UL>
+<H4><A NAME="SECTION00210050000000000000">
+Aperture Photometry</A>
+</H4>
+
+<UL>
+<LI>Do sparse field stellar photometry using fixed circular apertures for stars, annular
+apertures for sky estimation;
+</LI>
+<LI>Aperture sizes fully programmable;
+</LI>
+<LI>Multiple sky estimation methods;
+</LI>
+<LI>Uses a complex error model thorughout, that takes into account
+photon shot noise, read noise, noise of the callibration frames and scintillation;
+</LI>
+<LI>Report noise estimates for every result;
+</LI>
+<LI>Take photometric targets (program and standard stars) from recipy files, 
+or directly from the image;
+</LI>
+<LI>Produce a comprehensive report.
+</LI>
+</UL>
+<H4><A NAME="SECTION00210060000000000000">
+Multi-Frame Reductions</A>
+</H4>
+
+<UL>
+<LI>Fit color transformation coefficients from multiple frames;
+</LI>
+<LI>Fit extinction coefficients;
+</LI>
+<LI>Perform all-sky reductions;
+</LI>
+<LI>Generate various plots for data checking;
+</LI>
+</UL>
+<H4><A NAME="SECTION00210070000000000000">
+Interfacing</A>
+</H4>
+
+<UL>
+<LI>Uses plain-ascii files for configuration files, reports and
+  recipies;
+</LI>
+<LI>Implements import filters and an output converter to interface
+  with tabular formats;
+</LI>
+<LI>Most functions available in batch mode, so the program can be made part of a script.
+</LI>
+</UL>
+<H1><A NAME="SECTION00220000000000000000">
+Free Software</A>
+</H1>
+Gcx is free software, distributed under the GNU General Public License. Users can modify 
+it to add features, reduction algoritms, support for other cameras/telescopes, file formats.
+ It is written
+in C. The GUI uses the Gtk+ 1.2 toolkit. Some GNU-specific libc functions are used, but 
+nothing fancy. It should compile and run on any system that has GNU
+tools, glibc and Gtk+ 1.2. <SMALL>GCX </SMALL>is maintained on a GNU/Linux system.
+
+<P>
+
+<H1><A NAME="SECTION00230000000000000000">
+Contributing</A>
+</H1>
+The most important contribution you can make to <SMALL>GCX </SMALL>is to try it out, and don't give up 
+immediately if something goes wrong. Complain to the author about
+it--he will try to help you.
+
+<P>
+The next most important contribution is to extend the hardware support of the program.
+When interface library are available for cameras (many manufacturers do have such libraries), 
+it is relatively straightforward to add support for a camera, as <SMALL>GCX </SMALL>has cleanly defined 
+camera interface. Likewise, many mount/telescope manufacturers use the LX200 protocol, so 
+essentially what is needed for other telescopes/mounts is testing and maybe a little 
+tweaking. The program only uses a few LX200 functions, so interfacing to even a custom mount 
+should be easy.
+
+<P>
+Third, there's the bane of free software: documentation. Any help in documenting or checking
+the documentation of the program is greatly appreciated, and will go a long way towards 
+keeping <SMALL>GCX </SMALL>users happy.
+
+<P>
+And finally, the fun part: the code itself. There are many clever algorithms that can be added 
+to the program, and which will benefit from the general infrastructure and integration provided 
+by <SMALL>GCX </SMALL>.
+
+<P>
+
+<H1><A NAME="SECTION00240000000000000000">
+About this Manual</A>
+</H1>
+
+<P>
+This manual is work in progress. It starts with a tutorial introduction, so people can get a 
+taste of what <SMALL>GCX </SMALL>is all about. The focus in that chapter is on operations that don't 
+involve particular hardware (image viewing and data reduction).
+
+<P>
+The next chapters describe the main data-reduction functions of the
+program. In general, each chapter stars with a general description of
+the algorithms and methods used, then proceeds to describing how the
+respective methods are implemented in practice. The chapters are written
+roughly in the order in which data reduction procedes.
+
+<P>
+Finally, the appendices contain either technical details of the
+program or general aspects that invlove slighlty more complex mathematics.
+
+<P>
+The manual is maintained in L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X.
+
+<P>
+
+<H1><A NAME="SECTION00250000000000000000">
+Related Projects</A>
+</H1>
+
+<P>
+<DL>
+<DT><STRONG><TT>cpxctrl</TT></STRONG></DT>
+<DD>the camera server used by <SMALL>GCX </SMALL>. Currently it supports the cpx3m camera, 
+but should be easy to modify to control different ones;
+</DD>
+<DT><STRONG><TT>cpx3m</TT></STRONG></DT>
+<DD>a free CCD camera design;
+</DD>
+<DT><STRONG><TT>avsomat</TT></STRONG></DT>
+<DD>a batch variable star reduction program; more
+  portable than <SMALL>GCX</SMALL>, it 
+shares some code but uses a different field-matching algorithm.
+</DD>
+<DT><STRONG><TT>xephem</TT></STRONG></DT>
+<DD>The well known planetarium program by Elwood
+  Downey. <SMALL>GCX </SMALL>can read the same
+object database format as xephem, namely <TT>.edb</TT>, and uses compatible WCS annotation 
+FITS fields. The star search algorithm is also inspired from xephem. 
+</DD>
+<DT><STRONG><TT>libnova</TT></STRONG></DT>
+<DD>A library for celestial mechanics and astronomical calculations; <SMALL>GCX </SMALL>
+uses some sidereal time and equatorial-to-horizontal coordinates transformation routines from
+libnova.
+</DD>
+<DT><STRONG><TT>wcstools</TT></STRONG></DT>
+<DD>A suite of utilities for setting and using the
+  world coordinate system in FITS headers; <SMALL>GCX </SMALL>
+  uses the same FITS header fields for specifying the WCS as
+  wcstools. Also, the coordinate transformation (projection) routines
+  are taken from wcstools.
+</DD>
+</DL>
+
+<P>
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html470"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html466"
+  HREF="gcx.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html460"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html468"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html471"
+  HREF="node3.html">Getting Started</A>
+<B> Up:</B> <A NAME="tex2html467"
+  HREF="gcx.html">GCX User's Manual</A>
+<B> Previous:</B> <A NAME="tex2html461"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html469"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Radu Corlan
+2004-12-07
+</ADDRESS>
+</BODY>
+</HTML>
