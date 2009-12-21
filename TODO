@@ -1,0 +1,19 @@
+read matrix wcs from headers
+flush serial between commands
+star list editing
+mag from cats
+star time series in mbds
+show res/stderr/noise in star_edit
+star find (by name)
+auto recipy name (from frame obj)
+efficient wcs std search
+extend pairs
+polynomial wcs fit
+center apertures on-screen
+rcp_to_aavso_db convert to stf
+me1, zperr, err vs aperture graphs
+move gui stars to cats
+
+check band case insensitive, long names
+residual, stderr in rep converter
+correct zpoints in zp vs time for airmass

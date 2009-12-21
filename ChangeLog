@@ -1,0 +1,295 @@
+0.7.6
+	Plot of position errors after star centering.
+	If we have enough position reference stars with defined errors,
+	  other stars are ignored in the wcs fit.
+
+0.7.5
+	Fixed strndup and getline and some headers so it compiles cleanly
+	on bsd (tested on freebsd 3.5).
+
+0.7.4
+	Reductions with '-u' run in batch mode.
+	Accept decimal and optional eastern longitudes.
+	Fast .gcx file search.
+	use fractional pixels in central aperture.
+	a second step of aperture centering refinement uses pixels inside
+	  the measuring aperture that are above sky.
+	report star frame positions and centroid errors in phot rep.
+
+0.7.3
+	support for DATE_OBS and TIME_OBS fields
+	header fields debug prints
+	scintillation pars check
+	support for IC and sao edb catalogs
+
+0.7.2 
+	Fixed initialisation of FN_EPOCH, which caused a segfault when
+	  loading fits frames that didn't have a EQUINOX keyword.
+	Added an option to handle (broken) unsigned fits files.
+	
+0.7.1
+	Synthetic mode sky estimation;
+	Renamed some pars and changed comments;
+	Option to list all options' doc in latex format;
+	_many_ chapters added to the manual;
+	Tycho stars are now field, not cat;
+	When loading field stars, they are merged in, rather than just
+	  added;
+	aavso format reporting uses the validation file to find out the
+	  designation;
+	aperture photometry uses the multiframe routines for zeropoint
+	  fitting;
+	we try to get an initial wcs from various fits fields (ra, dec,
+	  objctra, objctdec, secpix, obejct);
+	reading/writing recipy/star files is now done using the stf;
+	add a parameter to limit the standard stars used for reduction to
+	  a circular region around the frame center;
+	file output options for aperture photometry;
+	aavso format output for aperture photometry;
+	multiframe has more output options;
+	plot a star's time series;
+	create recipy moved to the file menu;
+	wcs info updated on fits save as after a fit;
+	
+	
+	
+
+0.6.1	
+	Added a new multi-frame reduction module doing transformation
+	  coefficient fitting and all-sky reduction;
+	Various plots from the multi-frame data;
+	Changed the order in which the option trees appear in the
+	  option dialog;
+	
+0.5.10
+	Added an option to discard standard stars that cannot be located;
+	Positional tolerance for merging is now a parameter;
+	Fixed the filter wheel filter list parsing;
+	
+0.5.9
+	Fixed the initialisation of stacking options from params;
+	Fixed updating the alignment stars when changing align ref frames;
+	Fixed last_open logic for "add to star list"; also set all unset
+	  last_open paths when the first file is open.
+	Changed the "convert" option name to "import";
+	The reduction band is now taken from the frame header (with an option
+	  to force it);
+	Recipy merge function added;
+	Create recipy from tycho function added;
+	
+0.5.8
+	Labels drawn on selected stars;
+	Added a zoom limit parameter for star symbol display;
+	Fixed MJD to JD in report conversion;
+	Added filter wheel support;
+
+0.5.7
+	New stars/add from catalog command can be used to set the initial wcs;
+	Added an option to create a blank frame;
+	Moved processing/photometry submenu items into processing;
+	Added stars/remove off-frame command;
+	The star edit dialog now shows coords with 1/10 arcsec precision;
+	Read/merge/save .gcx catalogs;
+	gcvs and gcvs-pos converters;
+
+0.5.6
+	Fixed a bug in boolean options parsing;
+	Added star menu commands to change the display limiting magnitude
+	  and star sizes;
+	Added an option to avoid displaying stars fainter than the display 
+	  limiting magnitude;
+	Made some cleanups in star selection;
+	Added shortcut for loading tycho stars;
+	Made gsc2 import to only generate field stars;
+	Added an option to control is the star symbols are zoomed with the display;
+	New algorithm for star sizes;
+	Added a menu option for star editing (so a right-click is no longer
+	  required);
+	Display local image stats on middle and right clicks (so that we can
+	  get those stats even near stars);
+	Fixed a bug in wcs fitting (that prevented convergence for fields that
+	  have ~90 degrees rotation).
+	Fixed Tycho loading for large fields.
+
+0.5.5
+	Convert recipy files containing some comment tags to the aavso
+	  db format (useful for digitising charts).
+	Create a blank frame for loading catalog objects onto something.
+	
+0.5.4
+	Changed the default to run ccd reduction on files specified on
+	  the command line.
+	Added the -N/--no-reduce option to skip reduction steps when loading.
+	New options editing dialog that allows more information to be displayed 
+	  on each option.
+	Star colors are now of choices type (easier to select).
+	Changed star detection to detect saturated stars.
+	Moved the photometry menu under processing.
+	Slew end ra error limits are scaled by 1/cos(delta).
+	When selected, a cat_star with no smags will display the generic mag in
+	  the statusbar.
+	
+
+0.5.3
+	Added ccd reduction functions (command-line and gui).
+	Add option to use centering moves for small scope slews.
+	Status pop-up window (visible from a distance) when obscript stops.
+	Added a telescope pointing dithering option.
+
+0.5.2  
+	Added the missing call to get an image in obscript ckpoint.
+	Corrected the bad test for existance of frame in obscript save command
+
+0.5.1
+	Added the --debug option to tune program verbosity.
+	Fixed a wcs fitting problem that prevented frames with 
+	  high rotation angles to converge.
+	Added Losmandy mount support, which is now the default. 
+	  To revert to the old "lx200 classic" mode, comment out
+	  the LOSMANDY define in tele.c; the new mode "should" work
+	  also with meade lx200, but it wasn't tested.
+	Added options in the obslist dialog to filter objects that are
+	  east or west of the meridian.
+	Report an error when an object couldn't be found by the "goto"
+	  obscript command.
+	Fixed a problem when fitting the WCS of a flipped field.
+	Made a change to the pair-finding code; The situation when
+	  many field stars don't appear in the catalog is now handled
+	  better; Increasing .wcs.max_skip will help in this case - but
+	  also increase running time.
+	Introduced a "flipped field" parameter that will make the initial
+	  wcs "flipped". A field where N is up and W is right has normal
+	  orientation. If N is down and W is right, we have a "flipped"
+	  field (CDELT1 and CDELT2 have opposing signs).
+	Fixed a bug causing an obscure crash in obslist (introduced with the
+	  change in end return value from next_token in 0.4.5).
+	Changes in camera and telescope control dialog: we have slew limits 
+	  (N, E, S, W) to be able to prevent german mounts from meridian-flipping
+	  on obscript gotos. 
+	Buttons in telescope control to generate sync/additional align commands.
+	Added "abort" buttons that stop an ongoing telescope slew.
+	Added the display of hour angle and airmass in the obs page of the 
+	  camera/telescope control dialog.
+
+0.4.6
+	Fixed the camera comm bug introduced in 0.4.5.
+		
+0.4.5
+	Went over the parameter names and changed a few for brevity. Hopefully for the 
+	  last time, as this means that some old rc files cannot be read anymore.
+	Removed all warnings from gsc.
+	Added the option to include catalog objects in generated recipies and
+	  convert them to standards.
+	Fixed some points in ccd_frame.c and photometry.c where older versions of gcc
+	  would give an error.
+	Changed the example data.
+
+0.4.4
+	Load Tycho2 stars;
+	Handle magnitudes without qualifiers;
+	Fix the situation when we don't have the standard mags 
+	  we want to reduce against (by no longer reporting stars);
+	Command-line option to modify parameters for a given run;
+	Report converter to tabular format;
+	DMS format now handles any separator between d, m and s (including space);
+	Fixed a few memory leaks
+	Will calculate airmass from time and observer location.
+	Changed the save format for .gcxrc in a compatible way (all the
+	  entries how have their full path). Removed a segfault that appeared
+	  when reading a malformed .gcxrc file.
+	
+0.4.3
+	New dialog to edit/check the wcs;
+	New dialog to create recipy files interactively;
+	Read/write new style recipy files;
+	Rationalised star types;
+	Recipy conversion batch command;
+	Moved "load recipy" to file menu;
+	Loads gsc2 field stars (will load the stars from a file downloaded from
+	http://www-gsss.stsci.edu/support/data_access.htm)
+	
+0.4.2
+
+	gcx now stays in a proper source tree, with ./configure and all that. Also
+	has some bug fixes. New features:
+
+	* can run photometry recipy files;
+	* new observation script commands;
+	* can run an obscript directly from the command line 
+	  (no need to click);
+	* path searching for obs and rcp files;
+	* a little bit of online help;
+	* work on the manual has started.
+
+0.2.1
+
+	This is a major rewrite of the interface to cx, now using gtk+. Also, the
+	camera control code has been moved to a separate process (cpxctrl).
+
+	new features include:
+
+	* can read gsc field stars and search edb files for objects;
+	* can match gsc start positions to sources in ccd frames to obtain
+	  true world coordinates
+	  * controls lx200 telescopes;
+	  * can run observations scripts.
+
+CX_EDB_DIR to point to the gsc directory (gsc must be a subdirectory of the
+one pointed to by CX_EDB_DIR). Edb format files for various other objects will 
+be searched from this directory too (see ccd/edb.c for more details).
+
+Command-line image processing options still call old-style x11 functions from x11ops. 
+These are just leftovers from the last version, and will be replaced - most likely they 
+don't work; in the meantime, use cx 0.1.0 for image calibration/stacking.
+
+=====================
+Readme for v0.1.0 (cx)
+
+This is the cx program, that controls cpx3m cameras.
+
+To build, run make in the toplevel directory, then make install, 
+which copies the binary to /usr/local/bin, and makes it setuid root.
+
+cx can be used in two modes: in interactive mode (invoked by
+cx -i) it can control a cpx3m camera and acquire images. Type help 
+at the prompt for the available commands.
+
+Images are brought up for display into windows. One can adjust the way
+the images are displayed by issuing key commands while the focus is on 
+the image window. A summary of the available key commads can be obtained
+by pressing F1.
+
+In batch mode, cx can do ccd reductions (dark/flat), bad pixel corrections,
+image stacking, combining and alignment, and run photometry on series of images.
+Batch commands can be shown by running cx without arguments.
+
+The program consists of the following parts:
+============================================
+
+libccd (in the ccd directory) contains code for
+handling image frames, reading/writing fits files, searching
+image frames for stars and doing aperture photometry.
+
+libnut contains code for matching star positions on the frames
+with catalogs, to aid in identifying objects.
+
+libgsc is a slightly modified version of the code supplied
+with the gsc catalog, used to browse GSC for catalog stars.
+
+The main program (sources in the toplevel directory) does the
+actual camera control and image display.
+
+The Future of cx.
+=================
+
+Cx is being rewritten and will be called gcx in future releases.
+gcx has many improvements, the most important being:
+
+* uses gtk for a more consistent user interface.
+* the camera control code is being moved to a separate
+  program, which connects to gcx via tcp-ip. This way,
+  gcx doesn;t need to run setuid root, and we can support
+  more cameras. 
+* gcx supports field identification at the telescope, and
+  can help with pointing problems.
+	

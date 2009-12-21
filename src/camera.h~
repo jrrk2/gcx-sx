@@ -1,0 +1,107 @@
+/* camera image readout interface control functions
+ * $Revision: 1.2 $
+ * $Date: 2004/10/31 01:57:57 $
+ */
+
+/* camera capabilities structure */
+struct cam_info {
+	int datavalid; /* the data below is valid */
+	unsigned active_pixels; /* number of active pixels per line */
+	unsigned active_lines; /* number of active frames */
+	unsigned dummy_pix_start; /* number of inactive pixels at the start of each line */
+	unsigned dummy_pix_end; /* number of inactive pixels at the end of each line */
+	unsigned dummy_lines_start; /* number of dummy lines at the beginning of frame */
+	unsigned dummy_lines_end; /* number of dummy lines at the beginning of frame */
+	double pix_x_size; /* physical x size of unbinned pixel (u) */
+	double pix_y_size; /* physical y size of unbinned pixel (u) */
+	double min_exp; /* minimum exposure (s) */
+	double max_exp; /* maximum exposure (s) */
+	double scale; 	 /* the scale of the data (in electrons/ADU) */
+	double rdnoise;  /* the readout noise */
+	char *name; /* camera name */
+};
+
+/* structure describing an exposure (observation) */
+struct exposure {
+	int w; /* total size of the frame */
+	int h; 
+	int x_skip; /* number of pixels skipped at the beginning of each line 
+		       (ref: first active pixel) */
+	int y_skip; /* number of lines skipped at the beginning of each frame */
+	int bin_x;
+	int bin_y;
+	double exp_time; /* exposure time (s) */
+	double jdate; /* exposure start time (JD) */
+	int dark; 		/* show it was a dark */
+};
+
+/* a camera cooler */
+struct cooler {
+	double temp;	/* current temperature */
+	double set_temp; /* temperature setpoint */
+	double cooling_power; /* current cooling power (percents) */
+};
+
+/* status of the imager */
+struct cam_status {
+	int state;	/* status of imager */
+	int linesread;  /* lines read so far from the sensor */
+	double expleft; /* exposure left */
+};
+
+/* a connection to the camera */
+struct connection {
+	int ref_count; /* how many open ccds use this connection */
+	int timeout; /* timeout in us for comms to the camera */
+	int fd; /* file descriptor we use to access the imager */
+	char *target; /* name of connection target (protocol+hostname) */
+};
+
+/* persistent data for the read state machine */
+struct img_reader {
+	int state;
+	struct ccd_frame *fr; /* image we read into */
+	void *dp; /* the current read pointer */
+};
+
+
+/* structure describing an open ccd (there can be more than one in a camera) */
+struct ccd { 
+	int ref_count; /* number of times this has been open */
+	struct cam_info info; /* capabilities of the ccd */
+	struct exposure exp; /* the exposure settings for this ccd */
+	struct cam_status stat; /* status of the ccd */
+	struct cooler cooler; /* the camera's cooler */
+	struct connection *conn; /* the connection to the camera */
+	char *url; /* url to camera */
+	char *name; /* protocol name of ccd */
+};
+
+
+
+/* imager states */
+#define CAM_INVALID 	0 // camera is in an invalid state (not initialised or hung up)
+#define CAM_IDLE 	1 // camera is idle
+#define CAM_EXP 	2 // camera is integrating
+#define CAM_EXPEND	3 // camera is at the end of exposure and can begin reading
+#define CAM_READ 	4 // camera is ready to read / reading out an image
+#define CAM_READ_END 	5 // camera is ready to read / reading out an image
+
+#define CAM_STAT_MASK 0x0f
+
+/* function prototypes */
+char ** find_cameras(void);
+struct ccd * ccd_open(char *name);
+int ccd_close(struct ccd *ccd);
+int ccd_reset(struct ccd * ccd);
+int ccd_start_exposure(struct ccd * ccd, int dark);
+int ccd_end_exposure(struct ccd * ccd);
+int ccd_read_status(struct ccd * ccd, struct cam_status *stat);
+int ccd_set_exposure(struct ccd * ccd, struct exposure *expo);
+int ccd_read_exposure(struct ccd * ccd, struct exposure *expo);
+int ccd_read_frame(struct ccd * ccd, void *buf, int size); 
+int ccd_read_info(struct ccd * ccd, struct cam_info *info);
+int ccd_read_cooler(struct ccd * ccd, struct cooler *cooler);
+void cam_status_string(struct ccd *ccd, char *buf, int len);
+void ccd_frame_set_exp_data(struct ccd_frame *fr, struct ccd *ccd);
+int ccd_set_temperature(struct ccd * ccd, double temp_set);
