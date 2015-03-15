@@ -1,0 +1,3 @@
+As far as I know this is the only open source project to support Starlight Express CCD Cameras under Linux. Whats more, the use of libusb means no pesky debugging of device drivers.
+
+At the moment I only have one camera to develop with (the SXV-M25c) and since there is scant chance anybody will lend me any others, I welcome any support from others with unix C programming skills, to develop the support for other models.
