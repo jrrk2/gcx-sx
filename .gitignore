@@ -8,9 +8,12 @@ autom4te.cache/
 build-aux/
 compile
 config.guess
-config.sub
+config.log
+config.status
 configure
 m4/
+Makefile
+src/Makefile
 src/ccd/Makefile
 src/gcx
 src/gcx-sx/dump.jpg
