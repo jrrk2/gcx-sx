@@ -5,7 +5,7 @@ SUBDIRS = ccd gsc gcx-sx
 PAM_CPP_FLAGS=-g 
 
 INCLUDES = \
-	@GTK_CFLAGS@
+	-I/usr/local/include/gtk-1.2 -I/usr/local/include/glib-1.2 -I/usr/local/lib/glib/include
 
 bin_PROGRAMS = gcx
 
@@ -25,6 +25,8 @@ gcx_SOURCES = \
 	mbandrep.c starfile.c getline.h
 
 
-gcx_LDADD = @GTK_LIBS@ ccd/libccd.a gsc/libgsc.a gcx-sx/libgcx-sx.a -lusb
+gcx_LDADD = /usr/local/lib/libglib.a /usr/local/lib/libgtk.a ccd/libccd.a gsc/libgsc.a gcx-sx/libgcx-sx.a /usr/local/lib/libgdk.a \
+	/usr/local/lib/libglib.a /usr/local/lib/libgtk.a /usr/local/lib/libgdk.a /usr/local/lib/libgmodule.a \
+	-lX11 -lXext -lusb -lm
 
 CLEANFILES = *~

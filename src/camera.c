@@ -686,7 +686,7 @@ static int set_structure(struct ccd *ccd, void *sstruct, struct member *memb)
  */
 int ccd_set_exposure(struct ccd * ccd, struct exposure *expo)
 {
-  memcpy(&(ccd->exp), expo, sizeof expo);
+  memcpy(&(ccd->exp), expo, sizeof *expo);
   return 0;
 }
 
@@ -750,7 +750,7 @@ int ccd_read_status(struct ccd * ccd, struct cam_status *stat)
 int ccd_read_exposure(struct ccd * ccd, struct exposure *expo)
 {
 	int ret = 0;
-	memcpy(expo, &(ccd->exp), sizeof expo);
+	memcpy(expo, &(ccd->exp), sizeof *expo);
 	return ret;
 }
 

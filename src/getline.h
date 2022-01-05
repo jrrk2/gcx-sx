@@ -10,9 +10,8 @@
 #endif  /* GCC.  */
 
 #define GETLINE_NO_LIMIT -1
+#define getline(lineptr, n, stream) getline_safe (lineptr, n, stream, GETLINE_NO_LIMIT)
 
-int
-  getline __PROTO ((char **_lineptr, size_t *_n, FILE *_stream));
 int
   getline_safe __PROTO ((char **_lineptr, size_t *_n, FILE *_stream,
                          int limit));

@@ -98,8 +98,8 @@ static int thin_ring_stats(struct ccd_frame *fr, int x, int y,
 // walk the ring and collect statistics
 	sum=0.0;
 	sumsq = 0.0;
-	rs->min = HUGE;
-	rs->max = -HUGE;
+	rs->min = HUGE_VAL;
+	rs->max = -HUGE_VAL;
 	dp = ((float *)(fr->dat)) + xs + ys * w;
 	rsq1 = sqr(r2);
 	rsq2 = sqr(r2+1);
@@ -310,7 +310,7 @@ static int star_radius(struct ccd_frame *fr, int x, int y, double peak, double s
 	hm = (peak - sky) / 2 + sky;
 	bhf = peak;
 	for (rn = 1; rn < MAXSR; rn++) {
-		thin_ring_stats(fr, x, y, rn, &rsn, -HUGE, HUGE); 
+		thin_ring_stats(fr, x, y, rn, &rsn, -HUGE_VAL, HUGE_VAL); 
 /*		if (rsn.max >= BURN) {
 		d4_printf("burnt out\n");
 			return -1;
@@ -372,7 +372,7 @@ int locate_star(struct ccd_frame *fr, double x, double y, double r, double min_f
 	double fwhm;
 
 // first, find the stats for the search region
-	ret = ring_stats(fr, x, y, 0, r, QUAD1|QUAD2|QUAD3|QUAD4, &reg, -HUGE, HUGE);
+	ret = ring_stats(fr, x, y, 0, r, QUAD1|QUAD2|QUAD3|QUAD4, &reg, -HUGE_VAL, HUGE_VAL);
 	if (ret) {
 		s->xerr = BIG_ERR;
 		s->yerr = BIG_ERR;
@@ -390,9 +390,9 @@ int locate_star(struct ccd_frame *fr, double x, double y, double r, double min_f
 	yc = (int)y;
 
 	for (ring = 0; ring < r; ring++) {
-		rmax = HUGE;
+		rmax = HUGE_VAL;
 		do {
-			thin_ring_stats(fr, xc, yc, ring, &rs, -HUGE, rmax);
+			thin_ring_stats(fr, xc, yc, ring, &rs, -HUGE_VAL, rmax);
 			if (rs.max < minpk || rs.used == 0) {// no peak found, go to next ring
 				d4_printf("Ring %d has no peak larger than %.2f\n", ring, minpk); 
 				break;
@@ -407,9 +407,9 @@ int locate_star(struct ccd_frame *fr, double x, double y, double r, double min_f
 			rn = SKYR * starr;
 			if (rn > MAXSR)
 				rn = MAXSR;
-			thin_ring_stats(fr, rs.max_x, rs.max_y, starr, &rsn, -HUGE, HUGE);
+			thin_ring_stats(fr, rs.max_x, rs.max_y, starr, &rsn, -HUGE_VAL, HUGE_VAL);
 			skycut = NSIGMA * rsn.sigma;
-			thin_ring_stats(fr, rs.max_x, rs.max_y, rn, &rsn, -HUGE, HUGE);
+			thin_ring_stats(fr, rs.max_x, rs.max_y, rn, &rsn, -HUGE_VAL, HUGE_VAL);
 			skycut += rsn.median;
 			sky = rsn.median;
 			if (rs.max < skycut) {
@@ -418,7 +418,7 @@ int locate_star(struct ccd_frame *fr, double x, double y, double r, double min_f
 			}
 // check that we have a few connected pixels above the cut
 			ring_stats(fr, 1.0*rs.max_x, 1.0*rs.max_y, 0, 3, 
-				   QUAD1|QUAD2|QUAD3|QUAD4, &rsn, skycut, HUGE);
+				   QUAD1|QUAD2|QUAD3|QUAD4, &rsn, skycut, HUGE_VAL);
 			if (rsn.used < NCONN) {
 				d4_printf("only %d connected pixels found\n", rsn.used);
 				goto badstar;
@@ -616,9 +616,9 @@ int extract_stars(struct ccd_frame *fr, struct region *reg, double min_flux, dou
 			rn = SKYR * starr;
 			if (rn > MAXSR)
 				rn = MAXSR;
-			thin_ring_stats(fr, x, y, starr, &rsn, -HUGE, HUGE);
+			thin_ring_stats(fr, x, y, starr, &rsn, -HUGE_VAL, HUGE_VAL);
 			skycut = NSIGMA * rsn.sigma;
-			thin_ring_stats(fr, x, y, rn, &rsn, -HUGE, HUGE);
+			thin_ring_stats(fr, x, y, rn, &rsn, -HUGE_VAL, HUGE_VAL);
 			skycut += rsn.median;
 			sky = rsn.median;
 			if (pk < skycut) {
@@ -627,7 +627,7 @@ int extract_stars(struct ccd_frame *fr, struct region *reg, double min_flux, dou
 			}
 // check that we have a few connected pixels above the cut
 			ring_stats(fr, 1.0*x, 1.0*y, 0, 2, 
-				   QUAD1|QUAD2|QUAD3|QUAD4, &rsn, skycut, HUGE);
+				   QUAD1|QUAD2|QUAD3|QUAD4, &rsn, skycut, HUGE_VAL);
 			if (rsn.used < NCONN) {
 //				d3_printf("only %d connected pixels found\n", rsn.used);
 				continue;

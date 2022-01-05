@@ -26,6 +26,7 @@
 #include "gcx-sx-port-result.h"
 #include "gcx-sx-port-log.h"
 
+#define extern
 #include "libgcx-sx-main.h"
 
 /*

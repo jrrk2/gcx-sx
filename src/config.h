@@ -8,7 +8,7 @@
 /* #undef HAVE_LIBSM */
 /* #undef PACKAGE_LOCALE_DIR */
 #define PACKAGE_DATA_DIR "${datarootdir}/gcx"
-#define PACKAGE_SOURCE_DIR "/home/jrrk/gcx-sx"
+#define PACKAGE_SOURCE_DIR "/home/jonathan/gcx-sx.old"
 
 /* Name of package */
 #define PACKAGE "gcx"
@@ -24,6 +24,9 @@
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME ""
+
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION ""

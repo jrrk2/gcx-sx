@@ -57,7 +57,7 @@ struct image_window {
 
 // the table of image windows
 #define MAX_WINDOWS 32
-struct image_window iwt[MAX_WINDOWS];
+extern struct image_window iwt[MAX_WINDOWS];
 
 // window magic numbers
 #define WIN_INVALID 0

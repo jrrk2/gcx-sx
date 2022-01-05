@@ -1,5 +1,4 @@
-helpmsg.o: helpmsg.c helpmsg.h config.h
-
+helpmsg.o: helpmsg.c /usr/include/stdc-predef.h helpmsg.h config.h
+/usr/include/stdc-predef.h:
 helpmsg.h:
-
 config.h:

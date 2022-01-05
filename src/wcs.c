@@ -420,7 +420,7 @@ int window_fit_wcs(GtkWidget *window)
 	struct gui_star *gs, *cgs;
 	struct wcs *wcs;
 	GSList *pairs=NULL, *goodpairs=NULL, *sl;
-	double fit_err = HUGE;
+	double fit_err = HUGE_VAL;
 	int iteration = 0;	
 	int npairs;
 	char buf[256];
@@ -465,7 +465,7 @@ int window_fit_wcs(GtkWidget *window)
 		g_slist_free(pairs);
 		pairs = goodpairs;
 	}
-	wcs->fit_err = HUGE;
+	wcs->fit_err = HUGE_VAL;
 	while (iteration < MAX_ITER) {
 		if (npairs < 2) 
 			break;

@@ -369,15 +369,6 @@ getstr (lineptr, n, stream, terminator, offset, limit)
 }
 
 int
-getline (lineptr, n, stream)
-     char **lineptr;
-     size_t *n;
-     FILE *stream;
-{
-  return getstr (lineptr, n, stream, '\n', 0, GETLINE_NO_LIMIT);
-}
-
-int
 getline_safe (lineptr, n, stream, limit)
      char **lineptr;
      size_t *n;

@@ -1,8 +1,8 @@
 ## Process this file with automake to produce Makefile.in
 
-SUBDIRS = src
+SUBDIRS = po src
 
-EXTRA_DIST = \
+EXTRA_DIST = m4/ChangeLog  \
 	autogen.sh \
 	gcx.glade \
 	data \
@@ -11,3 +11,5 @@ EXTRA_DIST = \
 	src/gcx	
 
 CLEANFILES = *~
+
+ACLOCAL_AMFLAGS = -I m4

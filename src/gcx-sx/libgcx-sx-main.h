@@ -30,14 +30,14 @@ struct t_sxccd_params
     BYTE   vclk_delay;
 };
 
-USHORT     *VideoImage;
-UCHAR      *LogVideoImage;
-USHORT xVideoBin;
-USHORT yVideoBin;
+extern USHORT     *VideoImage;
+extern UCHAR      *LogVideoImage;
+extern USHORT xVideoBin;
+extern USHORT yVideoBin;
 
-struct t_sxccd_params ccd_params;
+extern struct t_sxccd_params ccd_params;
 
-int exposure;
+extern int exposure;
 
 extern int probe (GPPort *port);
 extern int Reset (GPPort *port);

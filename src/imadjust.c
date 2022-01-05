@@ -547,7 +547,7 @@ void show_region_stats(GtkWidget *window, double x, double y)
 
 	if (i_channel->fr->pix_format == PIX_FLOAT) {
 	val = *((float *)(i_channel->fr->dat) + xi + yi * i_channel->fr->w);
-	ring_stats(i_channel->fr, x, y, 0, 10, 0xf, &rs, -HUGE, HUGE);
+	ring_stats(i_channel->fr, x, y, 0, 10, 0xf, &rs, -HUGE_VAL, HUGE_VAL);
 	sprintf(buf, " Pixel [%d,%d]=%.1f  Region: Avg:%.0f Sigma:%.1f Min:%.0f Max:%.0f", 
 		xi, yi, val, rs.avg, rs.sigma, rs.min, rs.max );
 	} else if (i_channel->fr->pix_format == PIX_BYTE) {

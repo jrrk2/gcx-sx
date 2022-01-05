@@ -158,8 +158,8 @@ int ring_stats(struct ccd_frame *fr, double x, double y,
 // walk the ring and collect statistics
 	sum=0.0;
 	sumsq = 0.0;
-	rs->min = HUGE;
-	rs->max = -HUGE;
+	rs->min = HUGE_VAL;
+	rs->max = -HUGE_VAL;
 	dp = ((float *)(fr->dat)) + xs + ys * w;
 	for (iy = ys; iy < ye; iy++) {
 		for (ix = xs; ix < xe; ix++) {
@@ -227,7 +227,7 @@ static int ap_get_sky(struct ccd_frame *fr, struct star *s,
 	double mean, median;
 
 // get a first round of ring stats
-	ret = ring_stats(fr, s->x, s->y, p->r2, p->r3, p->quads, &rs, -HUGE, HUGE);
+	ret = ring_stats(fr, s->x, s->y, p->r2, p->r3, p->quads, &rs, -HUGE_VAL, HUGE_VAL);
 	if (ret) {
 		return ret;
 	}
@@ -329,8 +329,8 @@ static double aperture_flux(struct ccd_frame *fr, double r, double x, double y,
 	if (ye >= fr->h)
 		ye = fr->h - 1;
 
-	min = HUGE;
-	max = -HUGE;
+	min = HUGE_VAL;
+	max = -HUGE_VAL;
 	sum = 0.0;
 	sumsq = 0.0;
 	n = 0.0;
@@ -484,7 +484,7 @@ static int ap_get_star(struct ccd_frame *fr, struct star *s,
 	return 0;
 
 
-	ret = ring_stats(fr, s->x, s->y, 0, p->r1, QUAD1|QUAD2|QUAD3|QUAD4, &rs, -HUGE, HUGE);
+	ret = ring_stats(fr, s->x, s->y, 0, p->r1, QUAD1|QUAD2|QUAD3|QUAD4, &rs, -HUGE_VAL, HUGE_VAL);
 	if (ret) {
 		return ret;
 	}

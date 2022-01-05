@@ -33,6 +33,7 @@
 #include <string.h>
 
 #include "gcx.h"
+#define extern
 #include "x11ops.h"
 
 
@@ -1502,7 +1503,7 @@ static void set_p1(int iw, int x, int y)
 	if (!fr->stats.statsok)
 		frame_stats(fr);
 
-	ring_stats(iwt[iw].fr, xfr, yfr, 0, RADIUS, QUAD1|QUAD2|QUAD3|QUAD4, &rs, -HUGE, HUGE);
+	ring_stats(iwt[iw].fr, xfr, yfr, 0, RADIUS, QUAD1|QUAD2|QUAD3|QUAD4, &rs, -HUGE_VAL, HUGE_VAL);
 	median = rs.median;
 	ring_stats(iwt[iw].fr, xfr, yfr, 0, RADIUS, QUAD1|QUAD2|QUAD3|QUAD4, 
 		   &rs, median - 6 * fr->stats.csigma, median + 6 * fr->stats.csigma);
@@ -1534,7 +1535,7 @@ static void set_p2(int iw, int x, int y)
 	if (!fr->stats.statsok)
 		frame_stats(fr);
 
-	ring_stats(iwt[iw].fr, xfr, yfr, 0, RADIUS, QUAD1|QUAD2|QUAD3|QUAD4, &rs, -HUGE, HUGE);
+	ring_stats(iwt[iw].fr, xfr, yfr, 0, RADIUS, QUAD1|QUAD2|QUAD3|QUAD4, &rs, -HUGE_VAL, HUGE_VAL);
 	median = rs.median;
 	ring_stats(iwt[iw].fr, xfr, yfr, 0, RADIUS, QUAD1|QUAD2|QUAD3|QUAD4, 
 		   &rs, median - 6 * fr->stats.csigma, median + 6 * fr->stats.csigma);
